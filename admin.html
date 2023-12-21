@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-    <link rel="stylesheet" href="css-index/style.css" />
+    <link rel="stylesheet" href="css/admin-style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -38,7 +38,7 @@
             <div class="useraccount">
               <div class="U-photo">
                 <!-- user photo in navbar at right side -->
-                <div class="photo"><img src="admin.jpg" alt="admin phot"></div>
+                <div class="photo"><img src="extra/admin.jpg" alt="admin phot"></div>
               </div>
               <div class="name-n-role">
                 <!-- name and roll -->
@@ -192,18 +192,14 @@
 
       <!-- notification section end -->
 
+
+      <!-- middle contents -->
       <div class="middle-content">
         <div class="inner-middle-content" id="container">
-
         </div>
       </div>
-
-
-
-
-
     </div>
-
+    <!-- middle contents end -->
     <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -211,10 +207,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="js-index/dropdownTransition.js"></script>
-    <script src="js-index/calender.js"></script>
-    <script src="js-index/notification.js"></script>
-    <script src="js-index/clickbutton.js"></script>
+    <script src="js/admin-dropdownTransition.js"></script>
+    <script src="js/admin-calendar.js"></script>
+    <script src="js/admin-notification.js"></script>
+    <script src="js/admin-clickbutton.js"></script>
 
     <script>
       const xhr = new XMLHttpRequest();
@@ -228,16 +224,9 @@
         }
       };
       
-      xhr.open('GET', 'studentdetail.html'); 
+      xhr.open('GET', 'admin-studentdetail.html'); 
       xhr.send(); 
       
   </script>
-
-
-  
-
-
-
-
   </body>
 </html>
