@@ -421,7 +421,7 @@ body.calender-announcement-notices-active {
 .inner-middle-content{
     max-width: 1300px;
     width: 100%;
-    background-color: white;
+    /* background-color: white; */
     height: 100%;
     margin-left: 100px;
 }

@@ -4,52 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Details</title>
-    <link rel="stylesheet" href="css-studentdetails/style.css">
+    <link rel="stylesheet" href="css/admin-studentdetail-style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css"
+      integrity="sha512-ZH3KB6wI5ADHaLaez5ynrzxR6lAswuNfhlXdcdhxsvOUghvf02zU1dAsOC6JrBTWbkE1WNDNs5Dcfz493fDMhA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 </head>
 <body>
 
     <!-- upper search or select part -->
     <form action="">
-        <div class="search-student">
-            <div class="select-opt">
-            <div class="class">
-                <label for="classes">Class</label>
-                <select name="classes" id="classes">
-                    <option value="one">One</option>
-                    <option value="two">Two</option>
-                    <option value="three">Three</option>
-                    <option value="four">Four</option>
-                    <option value="five">Five</option>
-                    <option value="six">Six</option>
-                    <option value="seven">Seven</option>
-                    <option value="eight">Eight</option>
-                    <option value="nine">Nine</option>
-                    <option value="ten">Ten</option>
-                </select>
+        <fieldset>
+            <legend>Student</legend>
+            <div class="search-student">
+                <div class="select-opt">
+                <div class="class">
+                    <label for="classes">Class:</label>
+                    <select name="classes" id="classes">
+                        <option value="one">One</option>
+                        <option value="two">Two</option>
+                        <option value="three">Three</option>
+                        <option value="four">Four</option>
+                        <option value="five">Five</option>
+                        <option value="six">Six</option>
+                        <option value="seven">Seven</option>
+                        <option value="eight">Eight</option>
+                        <option value="nine">Nine</option>
+                        <option value="ten">Ten</option>
+                    </select>
+                </div>
+                <div class="section">
+                    <label for="sections">Section:</label>
+                    <select name="section" id="sections">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </div>
+                </div>
+                <div class="go">
+                    <button>Go</button>
+                </div>
+                </div>
             </div>
-            <div class="section">
-                <label for="sections">Section</label>
-                <select name="section" id="sections">
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                    <option value="C">C</option>
-                </select>
-            </div>
-            </div>
-            <div class="go">
-                <div class="class"></div>
-            <div class="section"><button>Go</button></div>
-            </div>
-        </div>
+        </fieldset>
     </form>
 
     <!-- upper search or select class end -->
 
     <!-- display the record -->
 
+    <div class="lower-content">
+        <fieldset>
+            <legend>Student list</legend>
+            <div class="search-student">
+                <div class="search">
+                    <label for="search"><span class="search-here"><i class="ri-search-line"></i></span></label>
+                    <input type="text" id="search" placeholder="Search here...">
+                </div>
+            </div>
+        </fieldset>
+    </div>
 
     <!-- display end -->
     
+
+    <script>
+        document.getElementById('studentDetailForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent default form submission
+        
+          // Call the studentDetail function
+          studentDetail();
+        });
+        </script>
 
 </body>
 </html>
