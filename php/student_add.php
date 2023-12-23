@@ -1,5 +1,5 @@
 <?php
-require_once "config/db.php";
+require_once "../config/db.php";
 if(isset($_POST['s_submit'])){
 $sname=$_POST['s-name'];
 $saddress=$_POST['s-address'];

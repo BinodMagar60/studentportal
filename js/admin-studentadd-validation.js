@@ -119,5 +119,5 @@ function adminStudentAdd(event){
         e9.innerText = "";
     }
 
-    event.preventDefault();
+   
 }
