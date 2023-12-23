@@ -10,7 +10,7 @@ function adminStudentAdd(event){
     var fathername = document.getElementById("s-father").value;
     var mothername = document.getElementById("s-mother").value;
     var parentcontact = document.getElementById("s-parentcontact").value;
-
+    var studentpassword = document.getElementById("s-password").value
 
     
 
@@ -50,7 +50,7 @@ function adminStudentAdd(event){
         e4.innerText = "*Contact Number Required";
         event.preventDefault();
     } 
-    else if(!studentcontact.match(/^[9]*[7-8]*[0-9]{8}$/)){
+    else if(!studentcontact.match(/^(97|98)\d{8}$/)){
         var e4 = document.getElementsByClassName("e-contact")[0];
         e4.innerText = "*Invalid Contact Number";
         event.preventDefault();
@@ -109,7 +109,7 @@ function adminStudentAdd(event){
         e9.innerText = "*Contact Number Required";
         event.preventDefault();
     } 
-    else if(!parentcontact.match(/^[9]*[7-8]*[0-9]{8}$/)){
+    else if(!parentcontact.match(/^(97|98)\d{8}$/)){
         var e9 = document.getElementsByClassName("e-pcontact")[0];
         e9.innerText = "*Invalid Contact Number";
         event.preventDefault();
@@ -118,6 +118,24 @@ function adminStudentAdd(event){
         var e9 = document.getElementsByClassName("e-pcontact")[0];
         e9.innerText = "";
     }
+
+    if (studentpassword === "")
+    {
+        var e10 = document.getElementsByClassName("e-password")[0];
+        e10.innerText = "*Password Required";
+        event.preventDefault();
+    }
+    else if (studentpassword.includes(' '))
+    {
+        var e10 = document.getElementsByClassName("e-password")[0];
+        e10.innerText = "*Space is invalid";
+        event.preventDefault();
+    }
+    else{
+        var e10 = document.getElementsByClassName("e-password")[0];
+        e10.innerText = "";
+    }
+
 
    
 }
