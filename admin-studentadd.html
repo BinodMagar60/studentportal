@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="css/admin-studentadd-style.css">
 </head>
 <body>
+  <!-- error putting onsubmit -->
+    <!-- onsubmit="adminStudentAdd(event)" -->
     <div class="studentadd">
-        <form action="" onsubmit="adminStudentAdd(event)" novalidate>
+        <form action="student_add.php" method="post">
             <fieldset>
                 <legend>Add New Profile</legend>
                 <table>
@@ -28,8 +30,8 @@
                     <tr>
                         <td>Gender</td>
                         <td class="irregular">
-                            <input type="radio" id="s-male" name="gender" class="s-male" checked><label for="s-male">Male</label>
-                            <input type="radio" id="s-female" name="gender" class="s-female"><label for="s-female" class="irregular-1">Female</label>
+                            <input type="radio" id="s-male" name="gender" class="s-male" value="male" checked><label for="s-male">Male</label>
+                            <input type="radio" id="s-female" name="gender" class="s-female" value="female"><label for="s-female" class="irregular-1">Female</label>
                         </td>
                     </tr>
                     <tr>
@@ -49,7 +51,7 @@
                     </tr>
                     <tr>
                         <td>Image</td>
-                        <td><input type="file" accept="image/*" id="s-photo"></td>
+                        <td><input type="file" accept="image/*" id="s-photo" name="s-image"></td>
                         <td class="error e-image"></td>
                     </tr>
                     <tr>
@@ -102,7 +104,7 @@
                     </tr>
 
                 </table>
-                <button class="submit-btn">submit</button>
+                <button type="submit" class="submit-btn" name="s_submit">submit</button>
             </fieldset>
         </form>
     </div>
