@@ -19,18 +19,13 @@
     user-select: none;
 }
 
-
-
-
-
-/* upper search or select part */
-
 form{
     
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     margin: 20px 20px 0 20px;
+    font-size: 18px;
 }
 
 fieldset{
@@ -44,21 +39,41 @@ legend{
     font-weight: 500;
 }
 
-.search-student{
+.irregular{
     display: flex;
-    justify-content: space-between;
-    
+    margin-right: 90px;
+    margin-top: 15px;
+
 }
-
-
-.select-opt{
-    display: flex;
-}
-
-
-.class,.section{
+input{
+    border: 1px solid black;
+    outline: none;
     font-size: 18px;
-    font-weight: 500;
+    outline: none;
+    padding: 10px;
+    font-weight: 400;
+    max-width: 340px;
+    width: 100%;
+}
+input:not(#s-mail){
+    text-transform: capitalize;
+}
+
+
+.submit-btn{
+    margin-top: 30px;
+    font-size: 22px;
+    padding: 5px 15px;
+    background-color: var(--primary-color2);
+    color: var(--primary-text1);
+    border: 1px solid black;
+    box-shadow: 0 0 1px 1px white inset;
+    cursor: pointer;
+}
+
+.submit-btn:hover{
+    background-color: rgb(83, 180, 83);
+    border-color: rgb(83, 180, 83);
 }
 
 #classes, #sections{
@@ -68,72 +83,49 @@ legend{
     font-size: 16px;
     outline: none;
     padding: 3px 10px;
-}
-
-.go button{
-    font-size: 18px;
-    padding: 5px 15px;
-    background-color: var(--primary-color2);
-    color: var(--primary-text1);
-    border: 1px solid black;
-    box-shadow: 0 0 1px 1px white inset;
-    cursor: pointer;
-    
-}
-
-.go button:hover{
-    background-color: rgb(19, 131, 19);
-}
-
-/* upper search or select end */
-
-
-/* bottom one start */
-
-.lower-content{
-    margin: 20px 20px 0 20px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-}
-
-.search{
-    border: 1px solid black;
-    font-size: 16px;
-    max-width: 400px;
-    width: 100%;
-    
-}
-.search-here{
-    border-right: 1px solid black;
-    padding: 10px;
-    font-size: 18px;
-    
-    
-}
-.search input{
-    font-size: 18px;
-    outline: none;
-    padding: 10px;
-    font-weight: 400;
-    max-width: 340px;
-    width: 100%;
-    text-transform: capitalize;
-    
+    width: 90px;
+    text-align: center;
 }
 
 
-.search-student-table{
+.title{
+    font-size: 24px;
+    font-weight: 500;
     display: flex;
-    justify-content: center;
+    align-items: end;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.title1{
+    margin-top: 0;
+}
+.studentadd tr{
+    height: 50px;
 }
 
 
-/* bottom one end */
+.last{
+    margin-left: 10px;
+}
 
 
+input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
 
+input[type="file"]{
+    border: none;
+}
 
+.error{
+    color: red;
+    font-style: italic;
+    font-size: 16px;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 5px;
+}
 
 
 

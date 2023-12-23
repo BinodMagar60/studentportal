@@ -75,13 +75,10 @@
               ><button id="button2" onclick="toggleButton(2); studentDetail();">Student Detail</button></a
             >
             <a href="#" class="subclass-content"
-              ><button id="button3" onclick="toggleButton(3)">Student Result</button></a
+              ><button id="button3" onclick="toggleButton(3);studentAttendance();">Student Attendance</button></a
             >
             <a href="#" class="subclass-content"
-              ><button id="button4" onclick="toggleButton(4)">Student Attendance</button></a
-            >
-            <a href="#" class="subclass-content"
-              ><button id="button5" onclick="toggleButton(5)">Add New Profile</button></a
+              ><button id="button4" onclick="toggleButton(4);studentAdd();">Add New Profile</button></a
             >
           </div>
         </div>
@@ -92,10 +89,10 @@
           </button>
           <div class="subclass">
             <a href="#" class="subclass-content"
-              ><button id="button6" onclick="toggleButton(6)">Teacher Detail</button></a
+              ><button id="button5" onclick="toggleButton(5)">Teacher Detail</button></a
             >
             <a href="#" class="subclass-content"
-              ><button id="button7" onclick="toggleButton(7)">Add New Profile</button></a
+              ><button id="button6" onclick="toggleButton(6)">Add New Profile</button></a
             >
           </div>
         </div>
@@ -106,16 +103,16 @@
           </button>
           <div class="subclass">
             <a href="#" class="subclass-content"
-              ><button id="button8" onclick="toggleButton(8)">Admin Detail</button></a
+              ><button id="button7" onclick="toggleButton(7)">Admin Detail</button></a
             >
             <a href="#" class="subclass-content"
-              ><button id="button9" onclick="toggleButton(9)">Add New Profile</button></a
+              ><button id="button8" onclick="toggleButton(8)">Add New Profile</button></a
             >
           </div>
         </div>
         <div class="side-bar-titles">
           <a href="#" class="side-panel-title"
-            ><button id="button10" onclick="toggleButton(10)">
+            ><button id="button9" onclick="toggleButton(9)">
               <span><i class="ri-file-list-line"></i></span>Result
             </button></a
           >
@@ -127,10 +124,10 @@
           </button>
           <div class="subclass">
             <a href="#" class="subclass-content"
-              ><button id="button11" onclick="toggleButton(11)">Class Routine</button></a
+              ><button id="button10" onclick="toggleButton(10)">Class Routine</button></a
             >
             <a href="#" class="subclass-content"
-              ><button id="button12" onclick="toggleButton(12)">Exam Routine</button></a
+              ><button id="button11" onclick="toggleButton(11)">Exam Routine</button></a
             >
           </div>
         </div>
@@ -140,8 +137,8 @@
             <span class="last"><i class="ri-arrow-right-s-line"></i></span>
           </button>
           <div class="subclass">
-            <a href="#" class="subclass-content"><button id="button13" onclick="toggleButton(13)">Announcement</button></a>
-            <a href="#" class="subclass-content"><button id="button14" onclick="toggleButton(14)">Events</button></a>
+            <a href="#" class="subclass-content"><button id="button12" onclick="toggleButton(12)">Announcement</button></a>
+            <a href="#" class="subclass-content"><button id="button13" onclick="toggleButton(13)">Events</button></a>
           </div>
         </div>
       </div>
@@ -209,5 +206,12 @@
     <script src="js/admin-notification.js"></script>
     <script src="js/admin-clickbutton.js"></script>
     <script src="js/admin-studentdetail.js"></script>
+    <script src="js/admin-studentattendance.js"></script>
+    <script src="js/admin-studentadd.js"></script>
+    <script src="js/admin-studentadd-validation.js"></script>
+
+    <script>
+      event.preventDefault();
+    </script>
   </body>
 </html>
