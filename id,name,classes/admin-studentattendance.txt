@@ -1,0 +1,18 @@
+class(school class)
+-select(used tag)
+name,id = classes
+-option(used tag inside section)
+value =  one (in this formate for all 1 to 10)
+
+section(class ko different sections)
+-select(used tag)
+name,id = sections
+-option(used tag inside section)
+value=A, B ,C 
+
+Go button
+name,id = go-btn
+
+
+search input
+name,id = search
