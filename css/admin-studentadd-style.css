@@ -55,7 +55,7 @@ input{
     max-width: 340px;
     width: 100%;
 }
-input:not(#s-mail){
+input:not(#s-mail,#s-password){
     text-transform: capitalize;
 }
 
