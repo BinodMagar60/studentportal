@@ -14,6 +14,7 @@ $smother=$_POST['s-mother'];
 $sparentcontact=$_POST['s-parentcontact'];
 $sclass=$_POST['classes'];
 $ssection=$_POST['sections'];
+$role=0;
 //array
 /*
 echo "
@@ -34,15 +35,20 @@ $ssection
 if(isset($sname,$saddress,$sgender,$sdob,$scontact,$smail,$simage,$sfather,$smother,$sparentcontact,$sclass,$ssection)){
   //secure password
   $secure_password=password_hash($spassword,PASSWORD_DEFAULT);
-$sql= "INSERT INTO student_table(name,address, gender, date_of_birth, contact, email, password_hash, image, father_name, mother_name,parents_contact, class, section) VALUES ('$sname','$saddress','$sgender','$sdob','$scontact','$smail','$secure_password','$simage','$sfather','$smother','$sparentcontact','$sclass','$ssection')";
-
-if(mysqli_query($con,$sql)){
+$sql1= "INSERT INTO student_table(name,address, gender, date_of_birth, contact, email, image, father_name, mother_name,parents_contact, class, section) VALUES ('$sname','$saddress','$sgender','$sdob','$scontact','$smail','$simage','$sfather','$smother','$sparentcontact','$sclass','$ssection')";
+if(mysqli_query($con,$sql1)){
   // echo "data inserted successfully";
-}else{
-  // echo "error";
-}
-}
-}
-header("location: ../../admin.html");
+  $sql2= "INSERT INTO user_type(email,password_hash,role) VALUES('$smail','$secure_password','$role')";
+  if(mysqli_query($con,$sql2)){
+  header("location: ../../admin.html");
 exit();
+  }else{
+    echo "error: ".mysqli_error($con);
+  }
+}else{
+  echo "error: ".mysqli_error($con);
+}
+}
+}
+
 ?>
