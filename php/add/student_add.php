@@ -40,7 +40,7 @@ if(mysqli_query($con,$sql1)){
   // echo "data inserted successfully";
   $sql2= "INSERT INTO user_type(email,password_hash,role) VALUES('$smail','$secure_password','$role')";
   if(mysqli_query($con,$sql2)){
-  header("location: ../../admin.html");
+  header("location: ../admin/admin.html");
 exit();
   }else{
     echo "error: ".mysqli_error($con);
