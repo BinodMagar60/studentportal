@@ -21,11 +21,11 @@
 
 
 
-
+/* 
 
 /* upper search or select part */
 
-form{
+/* form{
     
     background-color: white;
     padding: 20px;
@@ -38,6 +38,7 @@ fieldset{
     padding: 30px;
     border-radius: 5px;
 }
+
 legend{
     font-size: 20px;
     font-weight: 500;
@@ -81,15 +82,24 @@ legend{
 }
 
 .go button:hover{
-    background-color: rgb(83, 180, 83);
-    border-color: rgb(83, 180, 83);
-   
-}
+    background-color: rgb(19, 131, 19);
+} */
 
-/* upper search or select end */
+
 
 
 /* bottom one start */
+
+fieldset{
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+legend{
+    font-size: 20px;
+    font-weight: 500;
+}
 
 .lower-content{
     margin: 20px 20px 0 20px;
@@ -124,13 +134,13 @@ legend{
 }
 
 
-.search-student-table{
+.search-teacher-table{
     display: flex;
     justify-content: center;
 }
 
 
-/* bottom one end */
+
 
 
 
