@@ -1,0 +1,32 @@
+-Fullname
+id,name,class = t-name
+
+-Address
+id,name,class = t-address
+
+-Gender
+male
+id,name,class = t-male
+
+female
+id,name,class = t-female
+
+-D.O.B
+id,name,class = t-dob
+
+-Contact No.
+id,name,class = t-contact
+
+-Email Address
+id,name,class = t-mail
+
+
+-Login password
+id,name,class = t-password
+
+-image
+id,name,class = t-photo
+
+-assigned subject
+id,name = t-subject
+
