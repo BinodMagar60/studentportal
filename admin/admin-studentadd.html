@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add new student</title>
     <link rel="stylesheet" href="../css/admin-studentadd-style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 </head>
 <body>
   <!-- error putting onsubmit -->
     <!-- onsubmit="adminStudentAdd(event)" -->
     <div class="studentadd">
-        <form action="../php/add/student_add.php" onsubmit="adminStudentAdd(event)" method="post" novalidate>
+        <form id="studentForm" novalidate autocomplete="off">
             <fieldset>
                 <legend>Add New Profile</legend>
                 <table>
@@ -58,7 +60,7 @@
                     </tr>
                     <tr>
                         <td>Image</td>
-                        <td><input type="file" accept="image/*" id="s-photo" name="s-image"></td>
+                        <td><input type="file" accept="image/*" id="s-photo" name="s-photo"></td>
                         <td class="error e-image"></td>
                     </tr>
                     <tr>
@@ -111,13 +113,13 @@
                     </tr>
 
                 </table>
-                <button type="submit" class="submit-btn" name="s_submit">submit</button>
+                <button type="submit" class="submit-btn" name="s_submit" onclick="submitForm(event);">submit</button>
             </fieldset>
         </form>
     </div>
     
 
-    <script src="../js/admin-studentadd-validation.js"></script>
+    <script src="../js/admin-studentadd-php.js"></script>
     
 </body>
 </html>

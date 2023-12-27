@@ -83,7 +83,7 @@ input:not(#s-mail,#s-password){
     outline: none;
     padding: 3px 10px;
     width: 90px;
-    text-align: center;
+    text-align: start !important;
 }
 
 
