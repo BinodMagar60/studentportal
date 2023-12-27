@@ -5,6 +5,7 @@ $name = $address = $gender = $date_of_birth = $contact = $email =$password = $fa
 $errors = [];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    //use ucwords
     // Validate Name
     if (empty($_POST['s-name'])) {
         $errors["name"] = "Name is required";
