@@ -6,6 +6,7 @@
     <title>Add new student</title>
     <link rel="stylesheet" href="../css/admin-studentadd-style.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css" integrity="sha512-ZH3KB6wI5ADHaLaez5ynrzxR6lAswuNfhlXdcdhxsvOUghvf02zU1dAsOC6JrBTWbkE1WNDNs5Dcfz493fDMhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
@@ -15,6 +16,12 @@
         <form id="studentForm" enctype="multipart/form-data" novalidate autocomplete="off">
             <fieldset>
                 <legend>Add New Profile</legend>
+                <div class="popupbox">
+                    <div class="popup" id="popup">
+                        <div class="word">Profile added sucessfully</div>
+                        <div class="sign"><button class="cross-mark" onclick="closePopup()"><i class="ri-close-fill"></i></button></div>
+                    </div>
+                </div>
                 <table>
                     <tr>
                         <td colspan="3" class="title title1">Student Details</td>
@@ -114,6 +121,7 @@
 
                 </table>
                 <button type="submit" class="submit-btn" name="s_submit" onclick="submitForm(event);">submit</button>
+                
             </fieldset>
         </form>
     </div>

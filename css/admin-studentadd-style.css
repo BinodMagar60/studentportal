@@ -24,7 +24,7 @@ form{
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    margin: 20px 20px 0 20px;
+    margin: 10px 20px 0 20px;
     font-size: 18px;
 }
 
@@ -32,6 +32,7 @@ fieldset{
     border: 1px solid black;
     padding: 30px;
     border-radius: 5px;
+    padding-top: 10px;
 }
 
 legend{
@@ -125,6 +126,38 @@ input[type="file"]{
     margin-top: 10px;
     margin-left: 5px;
 }
+.popupbox{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
 
+.popup{
+    margin-top: 10px;
+    display: flex;
+    box-shadow: 0 0 1px 1px black;
+    background-color: white;
+    width: 300px;
+    gap: 20px;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 5px;
+    transform: scale(0.1);
+    justify-content: space-between;
+    visibility: hidden;
+    transition: transform 0.4s;
+
+}
+
+.popup button{
+    font-size: 20px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.open-popup{
+    visibility: visible;
+    right: 10px;
+    transform:  scale(1);
+}
 
 
