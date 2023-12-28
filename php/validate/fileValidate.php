@@ -1,13 +1,13 @@
 <?php
 // Validate Image File
-if (!empty($_FILES["s-photo"])) {
-  if($_FILES['s-photo']['error']===0){
-  $imageFile = $_FILES["s-photo"];
-  $imageName= $_FILES['s-photo']['name'];
-  $imageTmp=$_FILES['s-photo']['tmp_name'];
-  $imageType=$_FILES['s-photo']['type'];
-  $imageSize=$_FILES['s-photo']['size'];
-  $imageError=$_FILES['s-photo']['error'];
+if (!empty($_FILES["photo"])) {
+  if($_FILES['photo']['error']===0){
+  $imageFile = $_FILES["photo"];
+  $imageName= $_FILES['photo']['name'];
+  $imageTmp=$_FILES['photo']['tmp_name'];
+  $imageType=$_FILES['photo']['type'];
+  $imageSize=$_FILES['photo']['size'];
+  $imageError=$_FILES['photo']['error'];
 
       $imageExt=explode('.',$imageName);
       $ActualImageExt=strtolower(end($imageExt));

@@ -20,13 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $saddress = ucwords(test_input($_POST["s-address"]));
     }
-
-    // Validate Gender
-    if (empty($_POST["gender"])) {
-        $errors["gender"] = "Gender is required";
-    } else {
+        //gender
         $sgender = test_input($_POST["gender"]);
-    }
 
     // Validate Date of Birth
     if (empty($_POST["s-dob"])) {
@@ -59,6 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $errors["password"] = "Password is required";
   } else {
       $spassword = $_POST["s-password"];
+      $secure_password=password_hash($spassword,PASSWORD_DEFAULT);
       $minLength = 5;
       // Check minimum length
       if (strlen($spassword) < $minLength) {

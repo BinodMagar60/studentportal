@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="teacheradd">
-        <form action="" onsubmit="adminTeacherAdd(event);" method="" novalidate>
+        <form action= "../php/add/teacher_add.php" enctype="multipart/form-data" onsubmit="adminTeacherAdd(event);" method="post" novalidate>
             <fieldset>
                 <legend>Add New Profile</legend>
                 <table>
@@ -56,7 +56,7 @@
                     </tr>
                     <tr>
                         <td>Image</td>
-                        <td><input type="file" accept="image/*" id="t-photo" name="a-image"></td>
+                        <td><input type="file" accept="image/*" id="t-photo" name="photo"></td>
                         <td class="error e-image"></td>
                     </tr>
                     <tr>

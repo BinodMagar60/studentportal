@@ -10,7 +10,7 @@ function submitForm(event) {
     
         setTimeout(function() {
             closePopup();
-        },2000);
+        },3000);
     }
     
     function closePopup() {
