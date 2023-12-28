@@ -1,6 +1,6 @@
 <?php
 $image_save= "StudentPortalFiles/images/";
-$filepath="../../../StudentPortalFiles";
+$filepath="../../StudentPortalFiles";
 $imageSavePath=$filepath."/images";
 if(!is_dir($filepath)){
   if(mkdir($filepath,0755,true)){
