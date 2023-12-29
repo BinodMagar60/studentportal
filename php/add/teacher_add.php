@@ -31,20 +31,20 @@ if(isset($sname,$saddress,$sgender,$sdob,$scontact,$smail,$simage,$subject)){
   }else{
     echo "error: ".mysqli_error($con);
   }
-$sql1= "INSERT INTO teacher_table(name,address, gender, date_of_birth, contact, email, image, subject) VALUES ('$sname','$saddress','$sgender','$sdob','$scontact','$smail','$simage','$subject')";
-if(mysqli_query($con,$sql1)){
+  $sql1= "INSERT INTO teacher_table(name,address, gender, date_of_birth, contact, email, image, subject) VALUES ('$sname','$saddress','$sgender','$sdob','$scontact','$smail','$simage','$subject')";
+  if(mysqli_query($con,$sql1)){
   // echo "data inserted successfully";.
 
-}else{
+  }else{
   echo "error: ".mysqli_error($con);
-}
-}else{
+  }
+  }else{
   echo "error already has this email";
-}
-}else{
+  }
+  }else{
     echo "not set";
-}
-}else{
+  }
+  }else{
   echo "error form";
 }
 }else{

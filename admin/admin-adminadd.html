@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add New Admin</title>
     <link rel="stylesheet" href="../css/admin-adminadd-style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css" integrity="sha512-ZH3KB6wI5ADHaLaez5ynrzxR6lAswuNfhlXdcdhxsvOUghvf02zU1dAsOC6JrBTWbkE1WNDNs5Dcfz493fDMhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="adminadd">
-        <form action="../php/add/admin_add.php" enctype="multipart/form-data" onsubmit="adminAdminAdd(event);" method="post" novalidate>
+        <form id="adminForm" enctype="multipart/form-data" novalidate>
             <fieldset>
                 <legend>Add New Profile</legend>
+                <div class="popupbox">
+                    <div class="popup" id="popup">
+                        <div class="word">Profile added sucessfully</div>
+                    </div>
+                </div>
                 <table>
                     <tr>
                         <td colspan="3" class="title title1">Admia Details</td>
@@ -63,13 +69,13 @@
                     
 
                 </table>
-                <button type="submit" class="submit-btn" name="t_submit">submit</button>
+                <button type="submit" class="submit-btn" name="a_submit" onclick="submitAdminForm(event);">submit</button>
                 
             </fieldset>
         </form>
     </div>
 
 
-    <script src="../js/admin-adminadd-validation.js"></script>
+    <script src="../js/admin-adminadd-php.js"></script>
 </body>
 </html>
