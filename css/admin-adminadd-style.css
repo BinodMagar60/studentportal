@@ -119,11 +119,6 @@ input[type="file"]{
 
 
 
-.popupbox{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-}
 
 /* .popup{
     margin-top: 10px;
@@ -152,6 +147,13 @@ input[type="file"]{
 
 
 
+.popupbox{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    /* position: relative; */
+}
+
 .popup{
     margin-top: 10px;
     display: flex;
@@ -165,11 +167,9 @@ input[type="file"]{
     /* transform: scale(0.1); */
    
     justify-content: space-between;
-    
-    
-    position: absolute;
+    position: fixed;
     right: -400px;
-    top: 10px;
+    top: 140px;
     visibility: hidden;
 }
 
@@ -180,7 +180,4 @@ input[type="file"]{
     transition: transform 0.5s;
     
 }
-
-
-
 
