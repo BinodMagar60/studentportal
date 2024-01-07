@@ -1,4 +1,14 @@
 
+*{
+    padding: none;
+    border: none;
+    box-sizing: border-box;
+    margin: none;
+}
+
+
+
+
 form{
     
     background-color: white;

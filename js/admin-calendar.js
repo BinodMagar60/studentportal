@@ -50,6 +50,7 @@ function renderCalendar() {
 function showPreviousMonth() {
   selectedDate.setMonth(selectedDate.getMonth() - 1);
   renderCalendar();
+  updateCurrentDate();
 }
 function showCurrentMonth() {
   selectedDate = new Date();
@@ -59,6 +60,7 @@ function showCurrentMonth() {
 function showNextMonth() {
   selectedDate.setMonth(selectedDate.getMonth() + 1);
   renderCalendar();
+  updateCurrentDate();
 }
 
 function updateCurrentDate() {
