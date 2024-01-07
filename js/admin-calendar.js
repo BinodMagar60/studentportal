@@ -54,8 +54,15 @@ function showPreviousMonth() {
 function showCurrentMonth() {
   selectedDate = new Date();
   renderCalendar();
+  updateCurrentDate();
 }
 function showNextMonth() {
   selectedDate.setMonth(selectedDate.getMonth() + 1);
   renderCalendar();
+}
+
+function updateCurrentDate() {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  const formattedCurrentDate = selectedDate.toLocaleDateString('en-US', options);
+  document.getElementById('currentDate').textContent = formattedCurrentDate;
 }
