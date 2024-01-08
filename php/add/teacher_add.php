@@ -26,7 +26,7 @@ if(isset($sname,$saddress,$sgender,$sdob,$scontact,$smail,$simage,$subject)){
   $crow=mysqli_query($con,"select * from user_type where email='$smail'");
   if(mysqli_num_rows($crow)==0){
 
-  $sql2= "INSERT INTO user_type(email,password_hash,role) VALUES('$smail','$secure_password','$role')";
+  $sql2= "INSERT INTO user_type(name,email,password_hash,role) VALUES('$sname','$smail','$secure_password','$role')";
   if(mysqli_query($con,$sql2)){
   }else{
     echo "error: ".mysqli_error($con);

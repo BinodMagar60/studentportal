@@ -1,5 +1,6 @@
 <?php
 require_once "../config/db.php";
+require "../config/sessionStart.php";
 if(isset($_POST['login-submit'])){
 $c_email=$_POST['email'];
 $c_password=$_POST['password'];
@@ -10,7 +11,28 @@ if(mysqli_num_rows($exesql)>0){
 $result=mysqli_fetch_assoc($exesql);
 if($c_email==$result['email']){
   if(password_verify($c_password, $result['password_hash'])){
-    echo "password correct";
+    $checkRole=$result['role'];
+    $_SESSION['loggedIn']=true;
+    if($checkRole==0){
+      $_SESSION['userType']="admin";
+      $_SESSION['userName']=$result['name'];
+      header("location: ../../admin/admin.php");
+      exit();
+    }else if($checkRole==1){
+      $_SESSION['userType']="teacher";
+      $_SESSION['userName']=$result['name'];
+
+      header("location: ../teacher.php");
+      exit();
+    }else if($checkRole==2){
+      $_SESSION['userType']="student";
+      $_SESSION['userName']=$result['name'];
+      header("location: ../student.php");
+  
+    }else{
+      echo "error";
+    }
+
   }else{
     echo "incorrect password";
   }
