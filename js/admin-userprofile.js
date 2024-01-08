@@ -1,5 +1,5 @@
 
-
+//for user profile detail
 //To add the bottom border in the input tag
 
 function addBottomBorder(inputnumber) {
@@ -9,13 +9,6 @@ function addBottomBorder(inputnumber) {
   function removeBottomBorder(inputnumber) {
     document.getElementById(`input-clicked${inputnumber}`).classList.remove("bottom-border");
   }
-
-
-
-
-
-
-
 // to see if there is any changes in the input values and if there is then to activate the update button
 
   let originalData = {};
@@ -23,10 +16,10 @@ function addBottomBorder(inputnumber) {
   // to store the original values when the page loads
   document.addEventListener('DOMContentLoaded', function() {
     originalData = {
-      name: document.getElementById('input-clicked1').value,
-      address: document.getElementById('input-clicked2').value,
-      contact: document.getElementById('input-clicked3').value,
-      photo: document.getElementById('uploadimage').value,
+      name: document.getElementById('input-clicked1'),
+      address: document.getElementById('input-clicked2'),
+      contact: document.getElementById('input-clicked3'),
+      photo: document.getElementById('uploadimage'),
     };
   });
 
@@ -41,10 +34,10 @@ function addBottomBorder(inputnumber) {
 
     //checking
     const changesDetected =
-      nameInput.value !== originalData.name ||
-      addressInput.value !== originalData.address ||
-      contactInput.value !== originalData.contact ||
-      photoInput.value !== originalData.photo;
+      nameInput !== originalData.name ||
+      addressInput !== originalData.address ||
+      contactInput !== originalData.contact ||
+      photoInput !== originalData.photo;
 
     updateButton.disabled = !changesDetected;
 
@@ -60,4 +53,8 @@ function addBottomBorder(inputnumber) {
     alert('Form Updated!');
     
   }
+
+
+
+  
 

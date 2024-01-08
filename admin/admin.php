@@ -59,9 +59,9 @@ require_once "../php/config/sessionStart.php";
     <!-- sidebar -->
     <div class="leftside-contents">
       <div class="side-bar-titles">
-        ><button class="active" id="button1" onclick="toggleButton(1)">
+        <button class="active" id="button1" onclick="toggleButton(1)">
           <span><i class="ri-dashboard-line"></i></span>Dashboard
-        </button></>
+        </button>
       </div>
       <div class="side-bar-titles">
         <button class="dropdown-1">

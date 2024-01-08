@@ -26,7 +26,7 @@ form{
 
 .topname {
     font-size: 35px;
-    font-weight: 600;
+    font-weight: 500;
     padding-bottom: 50px;
 }
 
@@ -97,7 +97,7 @@ form{
     margin-bottom: 10px;
 }
 
-.irregular-profile button{
+#updateButton{
     margin-top: 30px;
     font-size: 22px;
     padding: 5px 20px;
@@ -124,12 +124,16 @@ form{
 
 
 .info-me table td input{
-    font-size: 20px;
-    font-weight: 300;
+    font-size: 18px;
+    font-weight: 400;
     outline: none;
     position: relative;
     padding-bottom: 3px;
 }
+
+
+
+
 
 input.bottom-border {
     border-bottom: 2px solid #000; /* Set the color of the bottom border */
