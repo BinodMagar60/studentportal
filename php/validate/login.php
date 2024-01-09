@@ -22,12 +22,12 @@ if($c_email==$result['email']){
       $_SESSION['userType']="teacher";
       $_SESSION['userName']=$result['name'];
 
-      header("location: ../teacher.php");
+      header("location: ../../teacher/teacher.php");
       exit();
     }else if($checkRole==2){
       $_SESSION['userType']="student";
       $_SESSION['userName']=$result['name'];
-      header("location: ../student.php");
+      header("location: ../../student/student.php");
   
     }else{
       echo "error";
