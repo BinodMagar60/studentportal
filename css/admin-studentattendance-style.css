@@ -129,6 +129,9 @@ legend{
     justify-content: center;
 }
 
+.search button{
+    background-color: transparent;
+}
 
 /* bottom one end */
 
