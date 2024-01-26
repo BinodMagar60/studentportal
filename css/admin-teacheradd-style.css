@@ -1,0 +1,171 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --primary-color1: #092635;
+    --primary-color2: #1B4242;
+    --primary-color3: #5C8374;
+    --primary-color4: #9EC8B9;
+    --primary-text1: rgb(255, 255, 255); 
+}
+
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    user-select: none;
+}
+
+form{
+    
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 20px 0 20px;
+    font-size: 1.125rem;
+}
+
+fieldset{
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 5px;
+    
+}
+
+legend{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.irregular{
+    display: flex;
+    margin-right: 90px;
+    margin-top: 15px;
+
+}
+
+table, .submit-btn{
+    margin-left: 70px;
+}
+
+
+
+input{
+    border: 1px solid black;
+    outline: none;
+    font-size: 1.125rem;
+    padding: 10px;
+    font-weight: 400;
+    max-width: 340px;
+    width: 100%;
+}
+input:not(#t-mail,#t-password){
+    text-transform: capitalize;
+}
+
+
+.submit-btn{
+    margin-top: 30px;
+    font-size: 1.375rem;
+    padding: 5px 15px;
+    background-color: var(--primary-color2);
+    color: var(--primary-text1);
+    border: 1px solid black;
+    box-shadow: 0 0 1px 1px white inset;
+    cursor: pointer;
+}
+
+.submit-btn:hover{
+    background-color: rgb(83, 180, 83);
+    border-color: rgb(83, 180, 83);
+}
+
+#t-subject{
+    border: 1px solid black;
+    margin-right: 40px;
+    margin-left: 10px;
+    font-size: 1rem;
+    outline: none;
+    padding: 3px 10px;
+    width: 120px;
+    
+}
+
+
+.title{
+    font-size:  1.5rem;
+    font-weight: 500;
+    display: flex;
+    align-items: end;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.title1{
+    margin-top: 0;
+}
+.teacheradd tr{
+    height: 50px;
+}
+
+
+.last{
+    margin-left: 10px;
+}
+
+
+input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="file"]{
+    border: none;
+}
+
+.error{
+    color: red;
+    font-style: italic;
+    font-size: 1rem;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+
+.popupbox{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    /* position: relative; */
+}
+
+.popup{
+    margin-top: 10px;
+    display: flex;
+    box-shadow: 0 0 1px 1px rgb(194, 194, 194);
+    background-color: white;
+    width: 300px;
+    gap: 20px;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 5px;
+    /* transform: scale(0.1); */
+   
+    justify-content: space-between;
+    position: fixed;
+    right: -400px;
+    top: 140px;
+    visibility: hidden;
+}
+
+
+.open-popup{
+    visibility: visible;
+    right: 150px;
+    transition: right 0.5s;
+    
+}
+

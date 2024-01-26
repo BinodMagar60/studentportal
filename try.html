@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto-Click Button</title>
+</head>
+<body>
+
+  <button type="button" id="button1" onclick="displayMessage('button1')">Button 1</button>
+  <button type="button" id="button2" onclick="displayMessage('button2')">Button 2</button>
+  <button type="button" id="button3" onclick="displayMessage('button3')">Button 3</button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Auto-click the first button when the page is loaded
+      document.getElementById('button1').click();
+    });
+
+    function displayMessage(buttonName) {
+      alert(`${buttonName} is clicked`);
+    }
+  </script>
+
+</body>
+</html>

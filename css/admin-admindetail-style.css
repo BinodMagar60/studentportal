@@ -1,0 +1,165 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --primary-color1: #092635;
+    --primary-color2: #1B4242;
+    --primary-color3: #5C8374;
+    --primary-color4: #9EC8B9;
+    --primary-text1: rgb(255, 255, 255); 
+}
+
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    
+}
+
+
+
+
+
+/* upper search or select part */
+
+
+fieldset{
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+legend{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.search-student{
+    width: 100%;    
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+
+
+
+/* upper search or select end */
+
+
+/* bottom one start */
+
+.lower-content{
+    margin: 20px 20px 0 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.search{
+    border: 1px solid black;
+    font-size: 1rem;
+    max-width: 400px;
+    width: 100%;
+    
+}
+
+.search button{
+    background-color: transparent;
+}
+
+.search-here{
+    border-right: 1px solid black;
+    padding: 6px 10px;
+    font-size: 1.125rem;
+    
+    
+}
+.search input::placeholder{
+    font-size: 16px;
+}
+
+.search input{
+    font-size: 1rem;
+    outline: none;
+    padding: 6px 10px;
+    font-weight: 400;
+    max-width: 240px;
+    width: 100%;
+
+    
+}
+
+
+
+
+
+
+.searched-box{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+#myTable{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.125rem;
+    
+    
+}
+
+#myTable tr th{
+    text-align: left;
+    padding-left: 20px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 1.25rem;
+
+}
+
+#myTable tr:nth-child(odd){
+    background-color: #f7f7f7;
+}
+
+#myTable tr {
+    height: 35px;
+}
+
+#myTable tr td:nth-child(1),#myTable tr th:nth-child(1){
+    width: 80px;
+}
+
+
+#myTable tr td:nth-child(1){
+    padding-left: 25px;
+}
+
+#myTable tr td{
+    padding-left: 20px;
+}
+
+#myTable tr a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+#myTable tr a:hover{
+    color: rgb(236, 72, 72);
+}
+
+
+
+#myTable tr:nth-child(1){
+    background-color: #4591b8;
+}
+
+

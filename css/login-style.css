@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    user-select: none;
+}
+body{
+    background-color: #E3E3E3   ;
+}
+
+/* .login-box
+{
+    max-width: 600px;
+    width: 100%;
+    height: 600px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 100px !important;
+    border-radius: 10px;
+    padding: 50px 30px;
+} */
+
+.login-box
+{
+    max-width: 600px;
+    width: 100%;
+    
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 150px ;
+    border-radius: 10px;
+    padding: 50px 30px;
+    padding-bottom: 80px;
+    position: relative;
+}
+
+.title{
+    color: black;
+    font-size: 3.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+/* logo circle */
+
+.profile-logo{
+    margin: 0 auto;
+    border: 5px solid #E3E3E3;
+    box-shadow: 0 0 5px rgb(210, 210, 210);
+    background-color: white;
+    width: 7.7rem;
+    height: 7.7rem;
+    text-align: center;
+    padding: 0.625rem;
+    font-size: 5rem;
+    border-radius: 50%;
+    position: absolute; 
+    top: -3.5rem;
+    left: 40%;
+
+}
+
+
+
+
+
+/* 
+
+.choose{
+    border: 1px solid black;
+    height: 45px;
+    border-radius: 10px;
+    margin: auto;
+    max-width: 390px;
+    width: 100%;  
+    display: flex;
+    justify-content: center;  
+    margin-bottom: 45px;
+}
+.choose table{
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    border-collapse: collapse;
+}
+
+.choose table tr td{
+    height: 40px;
+}
+.btn-left{
+    border-radius: 8px 0 0 8px;
+}
+
+.btn-right{
+    border-radius: 0 8px 8px 0;
+}
+
+
+.choose table tr td button{
+    width: 100%;
+    height: 100%;
+    font-size: 1.125rem;
+    background-color: white;
+    font-style: normal;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+.choose table tr td button:hover{
+    color: white;
+    background-color: black;
+}
+
+#student{
+    background-color: black;
+    color: white;
+}  */
+
+.email,.password,.login,.show-part{
+    max-width: 390px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.email input,.password input{
+    border: 1px solid black;
+    width: 100%;
+    height: 40px;
+    padding: 0 5px 0 10px;
+    outline: none;
+    font-size: 1.125rem;
+    border-radius: 5px;
+}
+
+.email input::placeholder, .password input::placeholder{
+    font-style: italic;
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+.email{
+    margin-bottom: 30px;
+}
+
+.error{
+    color: red;
+    font-style: italic;
+    font-size: 0.75rem;
+    padding-left: 10px;
+}
+
+
+/* checkbutton */
+.show-part label{
+    font-size: 0.875rem;
+    position: relative;
+}
+
+input[type=chekbox] + label{
+    display: block;
+    margin: 1px;
+    cursor: pointer;
+
+}
+
+input[type=checkbox]{
+    display: none;
+}
+
+input[type=checkbox] + label:before {
+    content: "\2714";
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+    width: 11px;
+    height: 11px;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 0.2em;
+    display: inline-block;
+    vertical-align: bottom;
+    color: transparent;
+    transition: .1s;
+    
+}
+
+input[type=checkbox] + label:active:before{
+    transform: scale(0);
+}
+
+input[type=checkbox]:checked + label:before {
+    background-color: black;
+    border-color: black;
+    color: #fff;
+  }
+  
+label::before{
+    position: relative;
+    top: -2px;
+    margin-right: 10px;
+}
+.show-part{
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+input[type=password]::-ms-reveal {
+    display: none;
+}
+.login-btn{
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    font-size: 1.875rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 750px){
+    
+    .profile-logo{
+        display: none;
+    }
+    .login-box{
+        margin: 0;
+        width: 100%;
+        height: 100dvh;
+    }
+    
+
+
+}
+
+
+
+
+
+
+
+

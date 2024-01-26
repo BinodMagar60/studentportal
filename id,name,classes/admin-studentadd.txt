@@ -1,0 +1,55 @@
+-Full Name
+id,name,class = s-name
+
+-Address
+id,name,class = s-address
+
+-Gender
+male
+id,name,class = s-male
+
+female
+id,name,class = s-female
+
+D.O.B
+id,name,class = s-dob
+
+
+contact no.
+id,name,class = s-contact
+
+
+E-mail Address
+id,name,class = s-mail
+
+
+image upload
+id,name,class = s-photo
+
+Father's name
+id,name,class = s-father
+
+
+Mother's name
+id,name,class = s-mother
+
+
+Parent's contact
+id,name,class = s-parentcontact
+
+class(school class)
+-select(used tag)
+name,id = classes
+-option(used tag inside section)
+value =  one (in this formate for all 1 to 10)
+
+section(class ko different sections)
+-select(used tag)
+name,id = sections
+-option(used tag inside section)
+value=A, B ,C 
+
+
+Add button
+class,id = submit-btn
+

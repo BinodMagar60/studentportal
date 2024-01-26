@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --primary-color1: #092635;
+    --primary-color2: #1B4242;
+    --primary-color3: #5C8374;
+    --primary-color4: #9EC8B9;
+    --primary-text1: rgb(255, 255, 255); 
+}
+
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    user-select: none;
+}
+
+
+
+.upper-one{
+    display: flex;
+}
+
+.student-numbers,.teacher-numbers,.admin-numbers{
+    border: 1px solid black !important;
+    font-size: 5rem;
+    /* -webkit-text-stroke: 3px black; */
+    background: linear-gradient(to right , rgb(5, 5, 196), skyblue );
+    max-width: 250px;
+    width: 100%;
+    color: white;
+    
+
+}
+
+
