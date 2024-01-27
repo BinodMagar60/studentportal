@@ -39,14 +39,6 @@ legend{
     font-size: 1.25rem;
     font-weight: 500;
 }
-
-.irregular{
-    display: flex;
-    margin-right: 90px;
-    margin-top: 15px;
-
-}
-
 #tablebox, .submit-btn{
     margin-left: 70px;
 }
@@ -59,10 +51,10 @@ input{
     font-size: 1.125rem;
     padding: 10px;
     font-weight: 400;
-    max-width: 340px;
+    max-width: 400px;
     width: 100%;
 }
-input:not(#t-mail,#t-password){
+input:not(#a-mail,#a-password){
     text-transform: capitalize;
 }
 
@@ -76,6 +68,7 @@ input:not(#t-mail,#t-password){
     border: 1px solid black;
     box-shadow: 0 0 1px 1px white inset;
     cursor: pointer;
+    margin-bottom: 50px;
 }
 
 .submit-btn:hover{
@@ -83,20 +76,9 @@ input:not(#t-mail,#t-password){
     border-color: rgb(83, 180, 83);
 }
 
-#t-subject{
-    border: 1px solid black;
-    margin-right: 40px;
-    margin-left: 10px;
-    font-size: 1rem;
-    outline: none;
-    padding: 3px 10px;
-    width: 120px;
-    
-}
-
 
 .title{
-    font-size:  1.5rem;
+    font-size: 1.5rem;
     font-weight: 500;
     display: flex;
     align-items: end;
@@ -106,8 +88,9 @@ input:not(#t-mail,#t-password){
 
 .title1{
     margin-top: 0;
+    
 }
-.teacheradd tr{
+.adminadd tr{
     height: 50px;
 }
 
@@ -132,6 +115,53 @@ input[type="file"]{
     display: flex;
     margin-top: 10px;
     margin-left: 5px;
+}
+
+
+.title21, .eventlist{
+    margin-left: 70px;
+}
+
+
+/* table{
+    width: 80%;
+
+} */
+
+table td:nth-child(1){
+    width: 10%;
+
+}
+
+
+
+
+/* .popup{
+    margin-top: 10px;
+    display: flex;
+    box-shadow: 0 0 1px 1px black;
+    background-color: white;
+    width: 300px;
+    gap: 20px;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 5px;
+    transform: scale(0.1);
+    justify-content: space-between;
+    visibility: hidden;
+    transition: transform 0.4s;
+
+}
+
+
+.open-popup{
+    visibility: visible;
+    right: 10px;
+    transform:  scale(1);
+} */
+
+.eventlist{
+    margin-bottom: 20px;
 }
 
 

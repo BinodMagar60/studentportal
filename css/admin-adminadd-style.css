@@ -39,7 +39,7 @@ legend{
     font-size: 1.25rem;
     font-weight: 500;
 }
-table, .submit-btn{
+#tablebox, .submit-btn{
     margin-left: 70px;
 }
 

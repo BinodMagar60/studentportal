@@ -120,7 +120,7 @@ require_once "../php/config/AdminProfile.php";
         <div class="subclass">
           <a href="#" class="subclass-content"><button id="button11"
               onclick="toggleButton(11)">Announcement</button></a>
-          <a href="#" class="subclass-content"><button id="button12" onclick="toggleButton(12)">Events</button></a>
+          <a href="#" class="subclass-content"><button id="button12" onclick="toggleButton(12); events1();">Events</button></a>
         </div>
         <div class="side-bar-titles">
         <a class="side-panel-title"><button id="button13" onclick="logoutPopup();">
@@ -166,7 +166,16 @@ require_once "../php/config/AdminProfile.php";
           <tbody></tbody>
         </table>
       </div>
-      <div class="event-notif"></div>
+      <div class="event-notif">
+        <div class="event-show">
+
+
+        </div>
+        <div class="announcement-show">
+
+
+        </div>
+      </div>
     </div>
 
     <!-- notification section end -->

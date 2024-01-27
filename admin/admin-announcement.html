@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcement</title>
+    <link rel="stylesheet" href="../css/admin-announcement.css">
+</head>
+<body>
+    <div class="noticeadd">
+        <form >
+            <fieldset>
+                <legend>Announcement</legend>
+                <div class="popupbox">
+                    <div class="popup" id="popup">
+                        <div class="word">Announcement Added</div>
+                    </div>
+                </div>
+                <div class="title title1">Add Announcement</div>
+                <table id="tablebox">
+                    
+                    <tr>
+                        <td>Event Name:</td>
+                        <td><input type="text"></td>
+                        <td class="error e-name"></td>
+                    </tr>
+                    <tr>
+                        <td>Date:</td>
+                        <td><input type="date" ></td>
+                        <td class="error e-date"></td>
+                    </tr>
+                    
+                    
+
+                </table>
+                <button type="submit" class="submit-btn" name="e_submit">submit</button>
+                
+                <div class="title title1 title2">Event List</div>
+                <div class="eventlist"></div>
+            </fieldset>
+        </form>
+       
+    </div>
+</body>
+</html>
