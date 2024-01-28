@@ -168,8 +168,23 @@ require_once "../php/config/AdminProfile.php";
       </div>
       <div class="event-notif">
         <div class="event-show">
-
-
+<?php
+require_once "../php/config/db.php";
+$sql= "SELECT * FROM notice ORDER BY n_date ASC";
+$exesql= mysqli_query($con,$sql);
+if(mysqli_num_rows($exesql)!=0){
+  while($result_notice=mysqli_fetch_assoc($exesql)){
+  $dbDate = $result_notice['n_date'];
+  $dateObject = date_create($dbDate);
+  $formattedDate = date_format($dateObject, 'M d');
+  ?>
+  <span><?php if(isset($formattedDate)) echo $formattedDate;?></span> <span><?php if(isset($result_notice['notice'])) echo $result_notice['notice'];?></span><br>
+  <?php
+}
+}else{
+  echo "no data";
+}
+?>
         </div>
         <div class="announcement-show">
 

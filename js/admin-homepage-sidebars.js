@@ -148,6 +148,6 @@ function teacherDetail(){
         console.warn("Did not receive 200 OK from response!");
       }
     };
-    xhr.open('GET', 'admin-events.html');
+    xhr.open('GET', 'admin-events.php');
     xhr.send();
   }
