@@ -119,7 +119,7 @@ require_once "../php/config/AdminProfile.php";
         </button>
         <div class="subclass">
           <a href="#" class="subclass-content"><button id="button11"
-              onclick="toggleButton(11)">Announcement</button></a>
+              onclick="toggleButton(11);announcement1(); selectWhom();">Announcement</button></a>
           <a href="#" class="subclass-content"><button id="button12" onclick="toggleButton(12); events1();">Events</button></a>
         </div>
         <div class="side-bar-titles">
@@ -244,8 +244,7 @@ if(mysqli_num_rows($exesql)!=0){
   <script src="../js/admin-admindetail-php.js"></script>
   <script src="../js/admin-teacherdetail-php.js"></script>
   <script src="../js/admin-logout-btn.js"></script>
-
-
+  <script src="../js/admin-announcement-click.js"></script>
   
 </body>
 

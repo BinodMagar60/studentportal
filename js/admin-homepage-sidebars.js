@@ -151,3 +151,23 @@ function teacherDetail(){
     xhr.open('GET', 'admin-events.php');
     xhr.send();
   }
+
+
+
+
+
+
+  function announcement1(){
+    const xhr = new XMLHttpRequest();
+    const container = document.getElementById('container');
+    
+    xhr.onload = function() {
+      if (this.status === 200) {
+        container.innerHTML = xhr.responseText;
+      } else {
+        console.warn("Did not receive 200 OK from response!");
+      }
+    };
+    xhr.open('GET', 'admin-announcement.html');
+    xhr.send();
+  }
