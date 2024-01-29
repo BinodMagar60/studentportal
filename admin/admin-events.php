@@ -36,12 +36,12 @@
                 
                 <div class="title title1 title21">Event List</div>
                 <div class="eventlist">
-                  <?php 
-                  require_once "../php/config/db.php";
-                  $sql= "SELECT * FROM notice ORDER BY n_date ASC";
-                  $exesql= mysqli_query($con,$sql);
-                  if(mysqli_num_rows($exesql)!=0){
-                    $i=0;
+                  <!-- <?php 
+                //   require_once "../php/config/db.php";
+                //   $sql= "SELECT * FROM notice ORDER BY n_date ASC";
+                //   $exesql= mysqli_query($con,$sql);
+                //   if(mysqli_num_rows($exesql)!=0){
+                //     $i=0;
                     ?>
                     <table id="tableBox">
                     <tr>
@@ -52,29 +52,29 @@
                     </tr>
                     
                         <?php
-                  while($result_notice=mysqli_fetch_assoc($exesql)){
-                    $i+= 1;
-                  $dbDate = $result_notice['n_date'];
-                  $dateObject = date_create($dbDate);
-                  $formattedDate = date_format($dateObject, 'M d');
+                //   while($result_notice=mysqli_fetch_assoc($exesql)){
+                //     $i+= 1;
+                //   $dbDate = $result_notice['n_date'];
+                //   $dateObject = date_create($dbDate);
+                //   $formattedDate = date_format($dateObject, 'M d');
                     ?>
                     <tr>
-                    <td><?php if(isset($i)) echo $i;?></td>
-                    <td><?php if(isset($result_notice['notice'])) echo $result_notice['notice'];?></td>
-                    <td><?php if(isset($formattedDate)) echo $formattedDate;?></td>
+                    <td><?php //if(isset($i)) echo $i;?></td>
+                    <td><?php //if(isset($result_notice['notice'])) echo $result_notice['notice'];?></td>
+                    <td><?php //if(isset($formattedDate)) echo $formattedDate;?></td>
                     <td id="btn-style">
                      <button type="button" style="background-color: green;" onclick="updateEvents();">Update</button>
                      <button type="button" style="background-color: red;" onclick="deleteEvents();">Delete</button>
                     </td>
                       </tr>
                     <?php
-                  }
-                  }else{
-                    echo "no data";
-                  }
+                //   }
+                //   }else{
+                //     echo "no data";
+                //   }
                   ?>
                       
-                    </table>
+                    </table> -->
                 </div>
 
 
