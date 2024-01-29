@@ -1,0 +1,1 @@
+ <a href="#">update</a> <a href="../php/event/deleteEvent.php?uid=<?php if(isset($result_notice)) echo $result_notice['id']?>">delete</a>

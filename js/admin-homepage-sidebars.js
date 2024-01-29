@@ -19,26 +19,11 @@ function studentDetail(){
     xhr.send();
 
 
-
-    tableData();
+    setTimeout(tableData,30)
+    // tableData();
   }
 
 
-
-  function studentAttendance(){
-    const xhr = new XMLHttpRequest();
-    const container = document.getElementById('container');
-    
-    xhr.onload = function() {
-      if (this.status === 200) {
-        container.innerHTML = xhr.responseText;
-      } else {
-        console.warn("Did not receive 200 OK from response!");
-      }
-    };
-    xhr.open('GET', 'admin-studentattendance.html');
-    xhr.send();
-  }
 
 
 
@@ -78,7 +63,9 @@ function teacherDetail(){
     xhr.open('GET', 'admin-teacherdetail.php'); 
     xhr.send();
 
-    teacherList();
+
+    setTimeout(teacherList,30);
+    // teacherList();
   }
 
 
@@ -116,7 +103,8 @@ function teacherDetail(){
     xhr.open('GET', 'admin-admindetail.php'); 
     xhr.send();
 
-    adminList();
+    setTimeout(adminList,30);
+    // adminList();
   }
 
 

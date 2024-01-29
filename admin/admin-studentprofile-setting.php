@@ -33,7 +33,7 @@
             <i class="ri-error-warning-fill"></i>
             </div>
             <div class="error-txt">Are you sure you want to delete this account?</div>
-            <div class="buttons"><button type="type"><a style="color:white;" href="../php/delete/StudentListDelete.php">Delete</a></button><button type="button" onclick="cancelPopup();">Cancel</button></div>
+            <div class="buttons"><button type="type"><a style="color:white; text-decoration:none;" href="../php/delete/StudentListDelete.php">Delete</a></button><button type="button" onclick="cancelPopup();">Cancel</button></div>
         </div>
     </div>
   </form>

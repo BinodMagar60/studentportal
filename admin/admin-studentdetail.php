@@ -56,6 +56,7 @@ $search = isset($_GET['search']) ? $_GET['search'] : '';
                 </div>
                 <div class="searched-box" id="searched-box">
                     <!-- to display the table -->
+                    <div class="toSolve"></div>
                 </div>
             </fieldset>
         </form>
