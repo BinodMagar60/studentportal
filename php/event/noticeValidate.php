@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST['notice'])) {
         $errors["notice"] = "notice is required";
     } else {
-        $notice = ucwords(test_input($_POST["notice"]));
+        $notice = test_input($_POST["notice"]);
     }
 
     // Validate Date of Birth
