@@ -138,6 +138,11 @@ function teacherDetail(){
     };
     xhr.open('GET', 'admin-events.php');
     xhr.send();
+
+
+
+
+    setTimeout(eventLists,30);
   }
 
 

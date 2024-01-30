@@ -6,6 +6,7 @@
     <title>Events</title>
     <link rel="stylesheet" href="../css/admin-events.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <div class="overlay" id="overlay"></div>
@@ -35,46 +36,8 @@
                 <button type="submit" class="submit-btn">submit</button>
                 
                 <div class="title title1 title21">Event List</div>
-                <div class="eventlist">
-                  <!-- <?php 
-                //   require_once "../php/config/db.php";
-                //   $sql= "SELECT * FROM notice ORDER BY n_date ASC";
-                //   $exesql= mysqli_query($con,$sql);
-                //   if(mysqli_num_rows($exesql)!=0){
-                //     $i=0;
-                    ?>
-                    <table id="tableBox">
-                    <tr>
-                <td>S.N</td>
-                <td>Notice</td>
-                <td>Date</td>
-                <td>Action</td>
-                    </tr>
-                    
-                        <?php
-                //   while($result_notice=mysqli_fetch_assoc($exesql)){
-                //     $i+= 1;
-                //   $dbDate = $result_notice['n_date'];
-                //   $dateObject = date_create($dbDate);
-                //   $formattedDate = date_format($dateObject, 'M d');
-                    ?>
-                    <tr>
-                    <td><?php //if(isset($i)) echo $i;?></td>
-                    <td><?php //if(isset($result_notice['notice'])) echo $result_notice['notice'];?></td>
-                    <td><?php //if(isset($formattedDate)) echo $formattedDate;?></td>
-                    <td id="btn-style">
-                     <button type="button" style="background-color: green;" onclick="updateEvents();">Update</button>
-                     <button type="button" style="background-color: red;" onclick="deleteEvents();">Delete</button>
-                    </td>
-                      </tr>
-                    <?php
-                //   }
-                //   }else{
-                //     echo "no data";
-                //   }
-                  ?>
-                      
-                    </table> -->
+                <div class="eventlist" id="eventlist">
+                  
                 </div>
 
 
@@ -119,5 +82,8 @@
        
     </div>
     <script src="../js/admin-updateevents.js"></script>
+    <script>
+        eventLists();
+    </script>
 </body>
 </html>
