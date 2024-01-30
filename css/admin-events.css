@@ -43,6 +43,13 @@ legend{
     margin-left: 70px;
 }
 
+#tablebox tr td:nth-child(2){
+    width: 410px;
+}
+
+#tablebox tr td:nth-child(3){
+    text-align: left;
+}
 
 
 input{
@@ -292,10 +299,70 @@ table td:nth-child(1){
 }
 
 
+.error{
+    font-weight: 300;
+    display: none;
+}
+
+
+.successfull-updated{
+    display: flex;
+    box-shadow: 0 0 3px 1px rgb(218, 218, 218);
+    width: 250px;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 30px;
+    background-color: white;
+    z-index: 10000;
+    position: fixed;
+    left: 45%;
+    top: -500px;
+    transition: top 500ms;
+
+}
+
+.successfull-updated .logo-update{
+    font-size: 4rem;
+}
+
+.successfullyUpdated{
+    font-size: 1.25rem;
+}
+
+.successfull-updated-pop{
+    top: 130px !important;
+    transition: top 250ms !important;
+
+}
 
 
 
 
+.successfull-deleted{
+    display: flex;
+    box-shadow: 0 0 3px 1px rgb(218, 218, 218);
+    width: 250px;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 30px;
+    background-color: white;
+    z-index: 10001;
+    position: fixed;
+    left: 45%;
+    top: -500px;
+    transition: top 500ms;
+}
+
+.successfull-deleted .logo-update{
+    font-size: 4rem;
+}
+
+.successfull-deleted-pop{
+    top: 130px !important;
+    transition: top 250ms !important;
+
+}
 
 /* 
 .popupbox{

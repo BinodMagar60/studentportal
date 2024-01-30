@@ -12,7 +12,7 @@
 <body>
     <div class="overlay" id="overlay"></div>
     <div class="noticeadd">
-        <form action="../php/event/addEvent.php" method="post">
+        <form id="eventForm" enctype="multipart/form-data" novalidate autocomplete="off">
             <fieldset>
                 <legend>Events</legend>
                 
@@ -22,82 +22,44 @@
                     </tr>
                     <tr>
                         <td>Event Title:</td>
-                        <td><input type="text" name="notice"></td>
-                        <td class="error e-name"></td>
+                        <td><input type="text" name="notice" id="notice"></td>
+                        <td class="error e-name" id="error1">*Required</td>
                     </tr>
                     <tr>
                         <td>Date:</td>
-                        <td><input type="date" name="n_date"></td>
-                        <td class="error e-date"></td>
+                        <td><input type="date" name="n_date" id="n_date"></td>
+                        <td class="error e-date" id="error2">*Required</td>
                     </tr>
                     
                     
 
                 </table>
-                <button type="submit" class="submit-btn">submit</button>
+                <button type="submit" class="submit-btn" onclick="submitEvents(event);">submit</button>
                 <div class="title title1 title21">Event List</div>
                 <div class="eventlist" id="eventlist">
                   
                 </div>
                 </fieldset>
                 </form>
-                <div class="updatepopup" id="updatepopup">
-                    <div>
-                    <table>
-                       <tr>
-                        <td><label for="title">Event Title:</label></td>
-                       </tr>
-                       <tr>
-                        <td><input type="text" id="title"></td>
-                       </tr>
-                       <tr>
-                        <td><label for="date">Date</label></td>
-                       </tr>
-                       <tr>
-                        <td><input type="date" id="date"></td>
-                       </tr>
-                       
-                    </table>
-                    <div class="btn-updates-event">
-                        <a ><button style="background-color: green" type="button">Update</button></a>
-                        <a ><button style="background-color: red" type="button" onclick="updateCancel()">Cancel</button></a>
-                    </div>
-                    </div>
-                </div>
+               <div class="successfull-updated" id="successfull-updated">
+                <div class="logo-update"><i class="fa-regular fa-circle-check" style="color: #00ff40;"></i></div>
+                <div class="successfullyUpdated">Successfully Added</div>
+               </div>
 
-
-                <div class="deleteevent" id="deleteevent">
-                    <div>
-                        <div class="deletelogo"><i class="fa-regular fa-circle-question" style="color: #ff0000;"></i></div>
-                        <div class="confirmation">Are you sure you want to delete it?</div>
-                        <div class="btn-delete-event">
-                           <button style="background-color: red;">Yes</button></a>
-                            <button type="button" style="background-color: gray;" onclick="deleteCancel();">No</button>
-                        </div>
-                    </div>
+                <div class="successfull-deleted" id="successfull-deleted">
+                    <div class="logo-update"><i class="fa-regular fa-circle-check" style="color: #ff0000;"></i></div>
+                    <div class="successfullyDeleted">Successfully Deleted</div>
                 </div>
 
 
        
     </div>
     <script src="../js/admin-updateevents.js">
-                eventLists();
-                function deleteEvent(eventId) {
-            console.log(eventId);
-    var confirmDelete = confirm("Are you sure you want to delete this event?");
-    if (confirmDelete) {
-        // Send AJAX request to the server to delete the event
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "../php/event/deleteEvent.php?uid=" + eventId, true);
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                // Handle the response if needed
-                // Reload the page or update the event list
-            }
-        };
-        xhr.send();
-    }
-}
+   
     </script>
+    <script>
+ 
+    </script>
+    <script>eventLists();</script>
 </body>
 </html>

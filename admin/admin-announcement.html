@@ -40,7 +40,7 @@
                     </tr>
                     <tr>
                         <td></td>
-                        <td><select name="" id="Selectclass" >
+                        <td><select name="" id="Selectclass"  onchange="selectWhich()">
                             <option value="allclass">All Classes</option>
                             <option value="One">One</option>
                             <option value="Two">Two</option>
@@ -54,7 +54,17 @@
                             <option value="Ten">Ten</option>
                         </select></td>
                     </tr>
-                    
+                    <tr>
+                        <td></td>
+                        <td>
+                            <select name="" id="Selectsection">
+                                <option value="allsection">All Section</option>
+                                <option value="A">Section A</option>
+                                <option value="B">Section B</option>
+                                <option value="C">Section C</option>
+                            </select>
+                        </td>
+                    </tr>
 
                 </table>
                 <button type="submit" class="submit-btn" name="e_submit">submit</button>
