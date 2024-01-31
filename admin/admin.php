@@ -170,10 +170,10 @@ require_once "../php/config/AdminProfile.php";
         <div class="event-show">
 <?php
 require_once "../php/config/db.php";
-$sql= "SELECT * FROM notice ORDER BY n_date ASC";
-$exesql= mysqli_query($con,$sql);
-if(mysqli_num_rows($exesql)!=0){
-  while($result_notice=mysqli_fetch_assoc($exesql)){
+$sql_notice= "SELECT * FROM notice ORDER BY n_date ASC";
+$exesql_notice= mysqli_query($con,$sql_notice);
+if(mysqli_num_rows($exesql_notice)!=0){
+  while($result_notice=mysqli_fetch_assoc($exesql_notice)){
   $dbDate = $result_notice['n_date'];
   $dateObject = date_create($dbDate);
   $formattedDate = date_format($dateObject, 'M d');
@@ -186,8 +186,30 @@ if(mysqli_num_rows($exesql)!=0){
 }
 ?>
         </div>
-        <div class="announcement-show">
 
+        <div class="announcement-show">
+        <?php
+$sql_announcement= "SELECT * FROM announcements ORDER BY created_date ASC";
+$exesql_announcement= mysqli_query($con,$sql_announcement);
+if(mysqli_num_rows($exesql_announcement)!=0){
+  while($result_announcement=mysqli_fetch_assoc($exesql_announcement)){
+  $expDate = $result_announcement['exp_date'];
+  $a_exp_dateObject = date_create($expDate);
+  $a_exp_formattedDate = date_format($a_exp_dateObject, 'M d');
+
+  $createdDate=$result_announcement['created_date'];
+  $a_created_dateObject = date_create($createdDate);
+  $a_created_formattedDate = date_format($a_created_dateObject, 'M d');
+  ?>
+  <span><?php if(isset($a_created_formattedDate)) echo $a_created_formattedDate;?></span><br>
+  <span><?php if(isset($result_announcement['a_description'])) echo $result_announcement['a_description']; ?></span><br>
+   <br><span><?php if(isset($a_exp_formattedDate)) echo $a_exp_formattedDate;?></span>
+  <?php
+}
+}else{
+  echo "no data";
+}
+?>
 
         </div>
       </div>
