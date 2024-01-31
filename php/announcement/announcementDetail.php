@@ -5,15 +5,14 @@
                   if(mysqli_num_rows($exesql)!=0){
                     $i=0;
                     ?>
-                    <table id="tableBox">
-                    <tr>
+                    <table class="table22">
+                    <tr >
                 <td>S.N</td>
                 <td>Description</td>
+                <td>To</td>
+                <td>Class</td>
+                <td>Section</td>
                 <td>Exp.Date</td>
-                <td>user_whom</td>
-                <td>user_class</td>
-                <td>user_section</td>
-
                 <td>Action</td>
                     </tr>
                         <?php
@@ -25,14 +24,16 @@
                     ?>
                     <tr>
                     <td><?php if(isset($i)) echo $i;?></td>
-                    <td><?php if(isset($result_notice['a_description'])) echo $result_notice['a_description'];?></td>
+                    <td><span><?php if(isset($result_notice['a_description'])) echo $result_notice['a_description'];?></span></td>
                     <td><?php if(isset($result_notice['user_whom'])) echo $result_notice['user_whom'];?></td>
                     <td><?php if(isset($result_notice['user_class'])) echo $result_notice['user_class'];?></td>
                     <td><?php if(isset($result_notice['user_section'])) echo $result_notice['user_section'];?></td>
                     <td><?php if(isset($formattedDate)) echo $formattedDate;?></td>
-                    <td id="btn-style">
+                    <td id="btn-style-1">
                      <button type="button" style="background-color: green;" onclick="updateEvents();">Update</button>
                      <button type="button" style="background-color: red;" onclick="deleteEvents();">Delete</button>
+                    </td>
+                  </tr>
                      <?php
                   }
                   }else{

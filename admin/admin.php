@@ -246,6 +246,7 @@ if(mysqli_num_rows($exesql)!=0){
   <script src="../js/admin-logout-btn.js"></script>
   <script src="../js/admin-announcement-click.js"></script>
   <script src="../js/admin-updateevents.js"></script>
+  <script src="../js/admin-announcement.js"></script>
   
 </body>
 

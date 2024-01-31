@@ -93,6 +93,24 @@ function removedeletePopupEvent(){
   popup1.classList.remove("successfull-deleted-pop")
 }
 
+
+function addUpdatePopupEvent(){
+  var popup = document.getElementById("successfull-updated-update");
+  popup.classList.add("successfull-updated-pop")
+  setTimeout(function(){
+    removeUpdatePopupEvent();
+  } ,1100);
+}
+
+
+function removeUpdatePopupEvent(){
+  var popup = document.getElementById("successfull-updated-update");
+  popup.classList.remove("successfull-updated-pop")
+}
+
+
+
+
 function deleteEvent(eventId) {
   var xhr = new XMLHttpRequest();
   xhr.open("GET", "../php/event/deleteEvent.php?uid=" + eventId, true);
@@ -165,7 +183,36 @@ setTimeout(addPopupEvent,30);
 }
 
 
+function eventUpdateLists() {
+ 
 
+  var id = $("#updatepopup input[name='id']").val();
+  var notice = $("#updatepopup input[name='notice']").val();
+  var n_date = $("#updatepopup input[name='n_date']").val();
+
+    $.ajax({
+      type: "POST",
+      url: "../php/event/updateEvent.php",
+      data: {
+          id: id,
+          notice: notice,
+          n_date: n_date
+      },
+      success: function(response) {
+        console.log("successfully updated")
+      },
+      error: function(error) {
+          console.log(error);
+        
+      }
+  });
+
+  updateEventsPopupCancel();
+  setTimeout(eventLists,30);
+  setTimeout(function(){
+    addUpdatePopupEvent();
+  } ,100);
+}
 
 
 

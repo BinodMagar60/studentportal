@@ -161,11 +161,13 @@ function teacherDetail(){
         console.warn("Did not receive 200 OK from response!");
       }
     };
-    xhr.open('GET', 'admin-announcement.html');
+    xhr.open('GET', 'admin-announcement.php');
     xhr.send();
 
 
-    setTimeout(selectWhom,40);
+    setTimeout(selectWhom,30);
 
+    
+    setTimeout(announcementLists,30);
 
   }
