@@ -1,16 +1,36 @@
-function updateEvents() {
-  var popupBox = document.getElementById("updatepopup");
+
+function updateEventsPopup(noticeId){
+  var popupBox = document.getElementById("updatepopup-change");
   var overlay = document.getElementById("overlay");
-  popupBox.classList.add("open-popup-box");
-  overlay.style.display = "block";
+  popupBox.classList.add("updatepopup-change-down");
+  overlay.style.display = "block"
+  setTimeout(callData(noticeId),20);
 }
 
-function updateCancel() {
-  var popupBox = document.getElementById("updatepopup");
+
+function updateEventsPopupCancel(){
+  var popupBox = document.getElementById("updatepopup-change");
   var overlay = document.getElementById("overlay");
-  popupBox.classList.remove("open-popup-box");
-  overlay.style.display = "none";
+  popupBox.classList.remove("updatepopup-change-down");
+  overlay.style.display = "none"
 }
+
+
+function callData(noticeId){
+  const xhr = new XMLHttpRequest();
+    const container = document.getElementById('updatepopup-change');
+    
+    xhr.onload = function() {
+      if (this.status === 200) {
+        container.innerHTML = xhr.responseText;
+      } else {
+        console.warn("Did not receive 200 OK from response!");
+      }
+    };
+    xhr.open('GET', 'admin-eventupdate.php?id='+noticeId);
+    xhr.send();
+}
+
 
 function deleteEvents() {
   var popupBox = document.getElementById("deleteevent");

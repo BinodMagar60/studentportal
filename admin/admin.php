@@ -119,7 +119,7 @@ require_once "../php/config/AdminProfile.php";
         </button>
         <div class="subclass">
           <a href="#" class="subclass-content"><button id="button11"
-              onclick="toggleButton(11);announcement1(); selectWhom();">Announcement</button></a>
+              onclick="toggleButton(11);announcement1(); ">Announcement</button></a>
           <a href="#" class="subclass-content"><button id="button12" onclick="toggleButton(12); events1();">Events</button></a>
         </div>
         <div class="side-bar-titles">

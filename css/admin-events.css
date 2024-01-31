@@ -194,7 +194,7 @@ table td:nth-child(1){
 }
 
 
-.updatepopup{
+/* .updatepopup{
     box-shadow: 0 0 2px 2px rgb(190, 190, 190);
     padding: 40px 50px;
     max-width: 500px;
@@ -233,6 +233,26 @@ table td:nth-child(1){
     padding: 8px 15px;
     color: white;
     border-radius: 8px;
+} */
+
+.updatepopup-change{
+    width: 500px;
+    position: fixed;
+    background-color: white;
+    min-height: 200px;
+    /* border: 1px solid black; */
+    z-index: 902;
+    left: 40%;
+    /* top: 140px; */
+    top: -1000px;
+    transition: top 150ms;
+    
+}
+
+
+.updatepopup-change-down{
+    top: 140px !important;
+    transition: top 200ms;
 }
 
 .overlay{
@@ -242,7 +262,7 @@ table td:nth-child(1){
     background-color: rgba(0, 0, 0, 0.5);
     top: -800px;
     display: none;
-    z-index: 999;
+    z-index: 901;
    
 }
 
@@ -262,7 +282,7 @@ table td:nth-child(1){
     padding: 30px 50px;
     border-radius: 10px;
     position: fixed;
-    z-index: 10000;
+    z-index: 902;
     top: 200px;
     left: 42%;
     background-color: white;
@@ -292,7 +312,7 @@ table td:nth-child(1){
 
 .btn-delete-event button{
     font-size: 1.25rem;
-    padding: 8px 15px;
+    padding: 8px 30px;
     color: white;
     border-radius: 8px;
     cursor: pointer;
@@ -314,7 +334,7 @@ table td:nth-child(1){
     align-items: center;
     padding: 40px 30px;
     background-color: white;
-    z-index: 10000;
+    z-index: 800;
     position: fixed;
     left: 45%;
     top: -500px;
@@ -347,7 +367,7 @@ table td:nth-child(1){
     align-items: center;
     padding: 40px 30px;
     background-color: white;
-    z-index: 10001;
+    z-index: 800;
     position: fixed;
     left: 45%;
     top: -500px;

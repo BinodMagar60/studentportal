@@ -163,4 +163,9 @@ function teacherDetail(){
     };
     xhr.open('GET', 'admin-announcement.html');
     xhr.send();
+
+
+    setTimeout(selectWhom,40);
+
+
   }

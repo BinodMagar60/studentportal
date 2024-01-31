@@ -18,8 +18,8 @@ $sql .= implode(", ",$updateFields);
 $sql .= "WHERE id='$uid'";
   if(mysqli_query($con,$sql)){
     // echo "data inserted successfully";.
-        header("location:../../admin/admin.php");
-        exit();
+        // header("location:../../admin/admin.php");
+        // exit();
   }else{
     echo "error: ".mysqli_error($con);
   }

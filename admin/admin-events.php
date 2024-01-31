@@ -41,6 +41,8 @@
                 </div>
                 </fieldset>
                 </form>
+
+</div>
                <div class="successfull-updated" id="successfull-updated">
                 <div class="logo-update"><i class="fa-regular fa-circle-check" style="color: #00ff40;"></i></div>
                 <div class="successfullyUpdated">Successfully Added</div>
@@ -50,7 +52,9 @@
                     <div class="logo-update"><i class="fa-regular fa-circle-check" style="color: #ff0000;"></i></div>
                     <div class="successfullyDeleted">Successfully Deleted</div>
                 </div>
+    <div class="updatepopup-change" id="updatepopup-change">
 
+    </div>
 
        
     </div>

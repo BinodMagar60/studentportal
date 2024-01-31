@@ -2,7 +2,7 @@
 $notice =$n_date= "";
 $errors = [];
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
+$uid=$_POST['id'];
     //use ucwords
     // Validate Name
     if (empty($_POST['notice'])) {
