@@ -203,7 +203,7 @@ if(mysqli_num_rows($exesql_announcement)!=0){
   ?>
   <span><?php if(isset($a_created_formattedDate)) echo $a_created_formattedDate;?></span><br>
   <span><?php if(isset($result_announcement['a_description'])) echo $result_announcement['a_description']; ?></span><br>
-   <br><span><?php if(isset($a_exp_formattedDate)) echo $a_exp_formattedDate;?></span>
+  <span><?php if(isset($a_exp_formattedDate)) echo $a_exp_formattedDate;?></span><br>
   <?php
 }
 }else{
