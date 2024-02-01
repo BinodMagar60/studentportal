@@ -1,6 +1,6 @@
 <?php
 require_once "../config/db.php";
-require_once "updateAnnouncementEvent.php";
+require_once "updateValidateAnnouncement.php";
 if($_SERVER['REQUEST_METHOD']==='POST'){
   if (empty($errors)) {
   if(isset($description,$exp_date,$user_whom)){
@@ -24,7 +24,7 @@ if (isset($user_section) && $user_section !== "") {
 }
 
 
-$sql= "UPDATE notice SET ";
+$sql= "UPDATE announcements SET ";
 $sql .= implode(", ",$updateFields);
 $sql .= "WHERE id='$uid'";
   if(mysqli_query($con,$sql)){

@@ -2,7 +2,8 @@
 $description = $exp_date = $user_whom = $user_class = $user_section = "";
 $errors = [];
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
+if(isset($_POST['id'])){
+    $uid=$_POST['id'];
     //use ucwords
     // Validate Name
     if (empty($_POST['a_description'])) {
@@ -13,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validate Date of Birth
     if (empty($_POST["a_date"])) {
-        $errors["exp_date"] = "exp Date is required";
+        $errors["a_date"] = "exp Date is required";
     } else {
         $exp_date = test_input($_POST["a_date"]);
     }
@@ -31,6 +32,7 @@ if (empty($_POST['a_user_section'])) {
   // $errors["a_user_section"] = "user_section is required";
 } else {
   $user_section = test_input($_POST["a_user_section"]);
+}
 }
   }
 // Function to sanitize and validate input data
