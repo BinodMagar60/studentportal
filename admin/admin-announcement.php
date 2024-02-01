@@ -10,6 +10,7 @@
    
 </head>
 <body>
+    <div class="overlay" id="overlay"></div>
     <div class="announcementadd">
         <form id="announcementForm">
             <fieldset>
@@ -19,13 +20,13 @@
                     
                    
                     <tr>
-                        <td>Date:</td>
+                        <td>Expiration Date:</td>
                         <td><input type="date" name="a_date" id="a_date"></td>
                         <td class="error e-date" id="e-des">*Required</td>
                     </tr>
                     <tr>
                         <td >Description:</td>
-                        <td><textarea name="a_description" id="a_description" cols="30" rows="3"></textarea></td>
+                        <td><textarea name="a_description" id="a_description" cols="30" rows="3" ></textarea></td>
                         <td class="error e-des" id="e-date">*Required</td>
                     </tr>
                     <tr>
@@ -76,7 +77,18 @@
                 <div class="logo-update"><i class="fa-regular fa-circle-check" style="color: #00ff40;"></i></div>
                 <div class="successfullyUpdated">Successfully Added</div>
         </div>
+
+        <div class="successfull-deleted-announcement" id="successfull-deleted-announcement">
+                    <div class="logo-update"><i class="fa-regular fa-circle-check" style="color: #ff0000;"></i></div>
+                    <div class="successfullyDeleted">Successfully Deleted</div>
+        </div>
        
+
+        <div class="updatepopup-change-announcement" id="updatepopup-change-announcement">
+
+</div>
+
+
     </div>
     <script src="../js/admin-announcement-click.js"></script>
     <script src="../js/admin-announcement.js"></script>

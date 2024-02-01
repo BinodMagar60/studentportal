@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --primary-color1: #092635;
+    --primary-color2: #1B4242;
+    --primary-color3: #5C8374;
+    --primary-color4: #9EC8B9;
+    --primary-text1: rgb(255, 255, 255); 
+}
+
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    user-select: none;
+}
+
+
+.updatepopup-announcement{
+    max-width: 500px;
+    width: 100%;
+    font-size: 1.25rem;
+    padding: 70px 50px;
+    display: flex;
+    justify-self: center;
+    box-shadow: 0 0 3px 2px rgb(233, 233, 233);
+    border-radius: 8px;
+}
+
+.updatepopup-announcement div, .updatepopup-announcement div table{
+    width: 100%;
+}
+
+
+.updatepopup-announcement div table tr td input{
+    border: 1px solid black;
+    outline: none;
+    background-color: white;
+    /* max-width: 350px; */
+    width: 100%;
+    font-size: 1.125rem;
+    height: 40px;
+
+}
+
+
+.updatepopup-announcement div table tr td textarea{
+    width: 396px;
+    border: 1px solid black;
+    resize: none;
+    height: 222px;
+    outline: none;
+    overflow: auto;
+    font-size: 1.125rem;
+    padding: 5px;
+
+}
+
+
+
+.updatepopup-announcement div table{
+    margin-bottom: 40px;
+}
+
+.updatepopup-announcement div table tr td select{
+    border: 1px solid black;
+    outline: none;
+    width: 150px;
+    font-size: 1.125rem;
+    padding: 5px 10px;
+}
+
+
+
+.btn-announcementupdate{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.btn-announcementupdate button{
+    width: 100%;
+    font-size: 1.25rem;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+}

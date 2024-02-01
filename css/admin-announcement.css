@@ -143,8 +143,8 @@ input[type="file"]{
 
 textarea{
     border: 1px solid black;
-    max-width: 400px;
-    width: 100%;
+    width: 400px;
+    resize: vertical;
     outline: none;
     height: 100%;
     font-size: 1rem;
@@ -231,6 +231,100 @@ textarea{
 
 
 
+.successfull-deleted-announcement{
+    display: flex;
+    box-shadow: 0 0 3px 1px rgb(218, 218, 218);
+    width: 250px;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 30px;
+    background-color: white;
+    z-index: 800;
+    position: fixed;
+    left: 45%;
+    top: -500px;
+    transition: top 500ms;
+}
+
+.successfull-deleted-announcement .logo-update{
+    font-size: 4rem;
+}
+
+.successfull-deleted-announcement-pop{
+    top: 130px !important;
+    transition: top 250ms !important;
+
+}
+
+
+
+
+
+
+
+
+
+.deleteannouncement{
+    box-shadow: 0 0 2px 2px rgb(190, 190, 190);
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    padding: 30px 50px;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 902;
+    top: 200px;
+    left: 42%;
+    background-color: white;
+    visibility: none;
+    transform: scale(0);
+}
+
+.deletelogo{
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.confirmation{
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn-delete-announcement{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+
+
+.btn-delete-announcement button{
+    font-size: 1.25rem;
+    padding: 8px 30px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.overlay{
+    position: fixed;
+    width: 10000px;
+    height: 10000px;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: -800px;
+    display: none;
+    z-index: 901;
+   
+}
+
+
+.open-popup-box{
+    visibility: visible !important;
+    transform: scale(1) !important;
+    transition: transform 250ms;
+}
 
 
 
@@ -289,6 +383,32 @@ textarea{
     color: white;
     padding: 8px 15px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
+
+
+
+
+
+
+.updatepopup-change-announcement{
+    width: 500px;
+    position: fixed;
+    background-color: white;
+    min-height: 200px;
+    /* border: 1px solid black; */
+    z-index: 902;
+    left: 40%;
+    /* top: 140px; */
+    top: -1000px;
+    transition: top 150ms;
+    
+}
+
+
+.updatepopup-change-announcement-down{
+    top: 140px !important;
+    transition: top 200ms;
+}
 

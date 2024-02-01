@@ -91,6 +91,103 @@ setTimeout(addPopupEvent,30);
     popup.classList.remove("successfull-updated-pop")
   }
 
+  function deletePopupAnnouncement(){
+    var popup1 = document.getElementById("successfull-deleted-announcement");
+  popup1.classList.add("successfull-deleted-announcement-pop")
+  setTimeout(function(){
+    removedeletePopupAnnouncement();
+  } ,1100);
+  }
+
+  function removedeletePopupAnnouncement(){
+    var popup1 = document.getElementById("successfull-deleted-announcement");
+    popup1.classList.remove("successfull-deleted-announcement-pop")
+  }
+
+
+function deleteAnnouncement(announcementId){
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET","../php/announcement/deleteAnnouncement.php?uid="+announcementId, true);
+  xhr.onreadystatechange = function () {
+    if(xhr.readyState ===4 && xhr.status == 200){
+
+    }
+  };
+  xhr.send();
+  deleteAnnouncementCancel();
+  setTimeout(announcementLists,20);
+  setTimeout(deletePopupAnnouncement,20)
+
+}
+
+
+function deleteAnnouncements(){
+  var popupBox = document.getElementById("deleteannouncement");
+  var overlay = document.getElementById("overlay");
+  popupBox.classList.add("open-popup-box");
+  overlay.style.display = "block";
+}
+
+function deleteAnnouncementCancel(){
+  var popupBox = document.getElementById("deleteannouncement");
+  var overlay = document.getElementById("overlay");
+  popupBox.classList.remove("open-popup-box");
+  overlay.style.display = "none";
+}
+
+
+function updateAnnouncementPopup(announcementId){
+  var popupBox = document.getElementById("updatepopup-change-announcement");
+  var overlay = document.getElementById("overlay");
+  popupBox.classList.add("updatepopup-change-announcement-down");
+  overlay.style.display = "block"
+  setTimeout(callDataAnnouncement(announcementId),20);
+
+}
+
+function updateAnnouncementPopupCancel(){
+  var popupBox = document.getElementById("updatepopup-change-announcement");
+  var overlay = document.getElementById("overlay");
+  popupBox.classList.remove("updatepopup-change-announcement-down")
+  overlay.style.display = "none";
+}
+
+
+
+
+function callDataAnnouncement(announcementId){
+  const xhr = new XMLHttpRequest();
+    const container = document.getElementById('updatepopup-change-announcement');
+    
+    xhr.onload = function() {
+      if (this.status === 200) {
+        container.innerHTML = xhr.responseText;
+      } else {
+        console.warn("Did not receive 200 OK from response!");
+      }
+    };
+    xhr.open('GET', 'admin-announcementupdate.php?id='+announcementId);
+    xhr.send();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
