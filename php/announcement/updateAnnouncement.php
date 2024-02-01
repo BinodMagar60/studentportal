@@ -38,7 +38,7 @@ $sql .= "WHERE id='$uid'";
       echo "not set";
   }
   }else{
-    echo "error form";
+    echo "error form" ;
   }
   }else{
       echo "not submitted";

@@ -82,6 +82,11 @@
                     <div class="logo-update"><i class="fa-regular fa-circle-check" style="color: #ff0000;"></i></div>
                     <div class="successfullyDeleted">Successfully Deleted</div>
         </div>
+
+        <div class="successfull-updated-update-announcement" id="successfull-updated-update-announcement">
+                <div class="logo-update"><i class="fa-regular fa-circle-check" style="color: #00ff40;"></i></div>
+                <div class="successfullyUpdated"> Successfully Updated</div>
+        </div>
        
 
         <div class="updatepopup-change-announcement" id="updatepopup-change-announcement">

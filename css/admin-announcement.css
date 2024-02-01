@@ -408,7 +408,43 @@ textarea{
 
 
 .updatepopup-change-announcement-down{
-    top: 140px !important;
+    top: 90px !important;
     transition: top 200ms;
 }
 
+
+
+
+
+
+.successfull-updated-update-announcement{
+    display: flex;
+    box-shadow: 0 0 3px 1px rgb(218, 218, 218);
+    width: 250px;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 30px;
+    background-color: white;
+    z-index: 800;
+    position: fixed;
+    left: 45%;
+    top: -500px;
+    transition: top 500ms;
+
+}
+
+.successfull-updated-update-announcement .logo-update{
+    font-size: 4rem;
+}
+
+.successfullyUpdated{
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.successfull-updated-announcement-pop{
+    top: 130px !important;
+    transition: top 250ms !important;
+
+}
