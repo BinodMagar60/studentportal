@@ -172,7 +172,56 @@ function callDataAnnouncement(announcementId){
 
 
 
+function announcementUpdatePopupBox(){
+  var id = $("#updatepopup-announcement input[name='id']").val();
+  var a_date = $("#updatepopup-announcement input[name='a_date']").val();
+  var a_description = $("#updatepopup-announcement textarea").val();
+  var a_user_whom = $("#updatepopup-announcement select[name='a_user_whom']").val();
+  var a_user_class = $("#updatepopup-announcement select[name='a_user_class']").val();
+  var a_user_section = $("#updatepopup-announcement select[name='a_user_section']").val();
 
+  $.ajax({
+      type: "POST",
+      url: "../php/announcement/updateAnnouncement.php",
+      data: {
+          id: id,
+          a_date: a_date,
+          a_description: a_description,
+          a_user_whom: a_user_whom,
+          a_user_class: a_user_class,
+          a_user_section: a_user_section
+      },
+      success: function(response) {
+          console.log(response);
+      },
+      error: function(error) {
+          console.log(error);
+          
+      }
+  });
+
+  updateAnnouncementPopupCancel();
+  setTimeout(announcementLists,30);
+  setTimeout(function(){
+    addUpdatePopupAnnouncement();
+  },100)
+  
+}
+
+
+function addUpdatePopupAnnouncement(){
+  var popup = document.getElementById("successfull-updated-update-announcement");
+  popup.classList.add("successfull-updated-announcement-pop")
+  setTimeout(function(){
+    removeUpdatePopupAnnouncement();
+  } ,1100);
+}
+
+
+function removeUpdatePopupAnnouncement(){
+  var popup = document.getElementById("successfull-updated-update-announcement");
+  popup.classList.remove("successfull-updated-announcement-pop")
+}
 
 
 

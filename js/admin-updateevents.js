@@ -200,6 +200,9 @@ function eventUpdateLists() {
       },
       success: function(response) {
         console.log("successfully updated")
+        console.log(n_date);
+        console.log(notice);
+        console.log(id);
       },
       error: function(error) {
           console.log(error);
