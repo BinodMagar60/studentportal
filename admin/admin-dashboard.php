@@ -1,5 +1,7 @@
     <?php
     require_once "../php/config/db.php";
+    unset($_SESSION['target_s_email']);
+
     $countAdmin_sql="SELECT COUNT(*) as count from admin_table";
     $countTeacher_sql="SELECT COUNT(*) as count from teacher_table";
     $countStudent_sql="SELECT COUNT(*) as count from student_table";

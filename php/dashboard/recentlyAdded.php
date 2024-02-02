@@ -20,8 +20,16 @@ if($recentlyAdded_exe=mysqli_query($con,$recentlyAdded_sql)){
   <td><?php echo $i?></td>
   <td><?php echo $recentlyAdded_row['name'];?></td>
   <td><?php echo $recentlyAdded_row['email'];?></td>
-  <td></td>
-  <td><a href="#"><button>Show</button></a></td>
+  <td><?php 
+  if($recentlyAdded_row['role']==0){
+echo "admin";
+  }else if($recentlyAdded_row['role']==1){
+    echo "teacher";
+  }else if($recentlyAdded_row['role']==2){
+    echo "student";
+  }
+  ?></td>
+  <td><a href="../php/dashboard/checkUserType.php?target_email=<?php echo $recentlyAdded_row['email'];?>"><button>Show</button></a></td>
 </tr>
 
     <?php
