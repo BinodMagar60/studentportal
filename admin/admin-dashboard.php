@@ -69,16 +69,18 @@
         </div>
 
         <div class="lower-content-edit">
-            <div style="font-size: 1.75rem; font-weight: 600;padding-left: 25px; background-color: white; padding-top: 20px;">Recent</div>
+            <div style="font-size: 1.75rem; font-weight: 500;padding-left: 25px; background-color: white; padding-top: 20px;">Recently Added    </div>
         <div class="lower-one" id="lower-one">
             
             </div>
+            
         </div>
 
         <!-- lower one -->
-        
-
-
+ 
         <script src="../js/admin-dashboard.js"></script>
+        <script>
+            recentLists();
+        </script>
     </body>
     </html>

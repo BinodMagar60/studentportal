@@ -135,8 +135,21 @@
     font-size: 1.125rem;
     padding: 5px 10px;
     background-color: white;
-    border-radius: 10px;
     box-shadow: 0 0 1px 1px rgb(172, 172, 172);
+    cursor: pointer;
+}
+
+#tableRecent tr td a button:hover{
+    color: white;
+    background-color: black;
+    transition:  background-color 150ms ease-in-out;
 }
 
 
+#showMoreRows:hover{
+    color: white;
+    font-weight: 400;
+    background-color: black;
+    transition: background-color 150ms ease-in-out;
+    cursor: pointer;
+}

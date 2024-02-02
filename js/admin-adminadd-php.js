@@ -6,16 +6,18 @@ function submitAdminForm(event) {
 
 
     function openPopup(){
-        popup.classList.add("open-popup");
-    
-        setTimeout(function() {
-            closePopup();
-        },2000);
-    }
-    
-    function closePopup() {
-        popup.classList.remove("open-popup");
-    }
+        var popup = document.getElementById("popupbox2");
+          popup.classList.add("successfull-added-pop")
+             setTimeout(function(){
+          closePopup();
+        } ,1100);
+        }
+        
+        function closePopup() {
+            var popup = document.getElementById("popupbox2");
+            popup.classList.remove("successfull-added-pop");
+        }
+        
     
 
     var adminname = document.getElementById("a-name").value;

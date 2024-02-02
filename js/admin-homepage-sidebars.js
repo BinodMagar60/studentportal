@@ -13,7 +13,9 @@ function dashboardCall(){
     xhr.open('GET', 'admin-dashboard.php'); 
     xhr.send();
 
-    setTimeout(recentLists,30);
+   setTimeout(() => {
+    recentLists();
+   }, 70);
 }
 
 

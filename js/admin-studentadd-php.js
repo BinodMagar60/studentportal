@@ -6,15 +6,16 @@ function submitForm(event) {
 
 
     function openPopup(){
-        popup.classList.add("open-popup");
-    
-        setTimeout(function() {
-            closePopup();
-        },2000);
+    var popup = document.getElementById("popupbox");
+      popup.classList.add("successfull-added-pop")
+         setTimeout(function(){
+      closePopup();
+    } ,1100);
     }
     
     function closePopup() {
-        popup.classList.remove("open-popup");
+        var popup = document.getElementById("popupbox");
+        popup.classList.remove("successfull-added-pop");
     }
     
    

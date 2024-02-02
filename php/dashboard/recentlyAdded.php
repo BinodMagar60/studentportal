@@ -9,6 +9,7 @@
 <?php
 require_once "../config/db.php";
 $recentlyAdded_sql="SELECT * FROM user_type ORDER BY id DESC";
+
 $i=0;
 if($recentlyAdded_exe=mysqli_query($con,$recentlyAdded_sql)){
   if(mysqli_num_rows($recentlyAdded_exe)){

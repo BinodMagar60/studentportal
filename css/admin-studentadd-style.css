@@ -134,11 +134,11 @@ input[type="file"]{
 }
 
 
-.popupbox{
+/* .popupbox{
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    /* position: relative; */
+
 }
 
 .popup{
@@ -151,7 +151,7 @@ input[type="file"]{
     font-weight: 500;
     padding: 10px;
     border-radius: 5px;
-    /* transform: scale(0.1); */
+ 
    
     justify-content: space-between;
     position: fixed;
@@ -167,4 +167,38 @@ input[type="file"]{
     transition: right 0.5s;
     
 }
+ */
 
+
+
+ 
+.popupbox{
+    display: flex;
+    box-shadow: 0 0 3px 1px rgb(218, 218, 218);
+    width: 250px;
+
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 30px;
+    background-color: white;
+    z-index: 800;
+    position: fixed;
+    left: 45%;
+    top: -500px;
+    transition: top 500ms;
+
+}
+
+.popupbox .logo-update{
+    font-size: 4rem;
+}
+
+.successfullyUpdated{
+    font-size: 1.25rem;
+}
+
+.successfull-added-pop{
+    top: 130px !important;
+    transition: top 250ms !important;
+
+}

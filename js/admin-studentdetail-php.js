@@ -33,66 +33,6 @@ const tableData = () => {
 
 
 
-// const tableData = () => {
-    
-
-
-
-//       function updateStudentList() {
-//         var selectedClass = $('#classes').val();
-//         var selectedSection = $('#sections').val();
-//         var searchData = $('#search').val();
-
-//         $.ajax({
-//             type: 'GET',
-//             url: '../php/detail/ajax-student-list.php',
-//             data: {
-//                 'class': selectedClass,
-//                 'section': selectedSection,
-//                 'search': searchData
-//             },
-//             success: function (response) {
-//                 console.log(response);
-//                 document.querySelector('#searched-box').innerHTML = response;
-//             }
-//         });
-//     }
-
-//     updateStudentList();
-
-  
-    
-    
-// }
-
-
-// // Function to update the student list using AJAX
-    // function updateStudentList() {
-    //     var selectedClass = $('#classes').val();
-    //     var selectedSection = $('#sections').val();
-    //     var searchData = $('#search').val();
-
-    //     $.ajax({
-    //         type: 'GET',
-    //         url: '../php/detail/ajax-student-list.php',
-    //         data: {
-    //             'class': selectedClass,
-    //             'section': selectedSection,
-    //             'search': searchData
-    //         },
-    //         success: function (response) {
-    //             $('#searched-box').html(response);
-    //         }
-    //     });
-    // }
-
-    // // Initial loading of the student list
-    // updateStudentList();
-
-
-
-
-
 
 
 const searchFun = () => {
