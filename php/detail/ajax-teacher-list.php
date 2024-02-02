@@ -1,6 +1,6 @@
 <?php
 require_once "../config/db.php";
-
+unset($_SESSION['target_t_email']);
 $sql = "SELECT * FROM teacher_table ORDER BY name ASC";
 
 if ($exesql = mysqli_query($con, $sql)) {

@@ -1,6 +1,6 @@
 <?php
-require_once "../config/sessionStart.php";
 require_once "../config/db.php";
+unset($_SESSION['target_s_email']);
 $class = isset($_GET['class']) ? $_GET['class'] : 'one';
 $section = isset($_GET['section']) ? $_GET['section'] : 'A';
 $search = isset($_GET['search']) ? $_GET['search'] : '';
