@@ -57,7 +57,7 @@ require_once "../php/config/AdminProfile.php";
     <!-- sidebar -->
     <div class="leftside-contents">
       <div class="side-bar-titles">
-        <button class="active" id="button1" onclick="toggleButton(1)">
+        <button class="active" id="button1" onclick="toggleButton(1); dashboardCall();">
           <span><i class="ri-dashboard-line"></i></span>Dashboard
         </button>
       </div>
@@ -269,6 +269,12 @@ if(mysqli_num_rows($exesql_announcement)!=0){
   <script src="../js/admin-announcement-click.js"></script>
   <script src="../js/admin-updateevents.js"></script>
   <script src="../js/admin-announcement.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {  
+      document.getElementById('button1').click();
+    });
+  </script>
   
 </body>
 

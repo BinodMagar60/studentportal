@@ -18,22 +18,73 @@
     user-select: none;
 }
 
+.student-numbers, .teacher-numbers, .admin-numbers{
+    border: 1px solid black;
+    width: 31%;
+    padding: 20px;
+    background-color: white;
+}
+
+
+.top-title{
+    font-size: 1.75rem;
+    font-weight: 600;
+}
 
 
 .upper-one{
     display: flex;
+    justify-content: space-evenly;
+    padding: 40px 20px;
 }
 
-.student-numbers,.teacher-numbers,.admin-numbers{
-    border: 1px solid black !important;
+
+.student-numbers .logo-dash,.teacher-numbers .logo-dash,.admin-numbers .logo-dash{
     font-size: 5rem;
-    /* -webkit-text-stroke: 3px black; */
-    background: linear-gradient(to right , rgb(5, 5, 196), skyblue );
+    -webkit-text-stroke: 1px white;
     max-width: 250px;
     width: 100%;
-    color: white;
+    color: rgb(85, 85, 85);
     
 
 }
+
+.middle-section-dashboard{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+}
+
+
+.total-count-section{
+    padding-top: 15px;
+    padding-right: 40px;
+}
+
+
+.total-count-text,.total-count-number{
+    font-size: 1.4rem;
+    text-align: right;
+}
+
+.total-count-text{
+    font-weight: 600;
+}
+
+.total-count-number{
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
