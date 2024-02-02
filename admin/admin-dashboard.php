@@ -1,3 +1,21 @@
+<?php
+require_once "../php/config/db.php";
+$countAdmin_sql="SELECT COUNT(*) as count from admin_table";
+$countTeacher_sql="SELECT COUNT(*) as count from teacher_table";
+$countStudent_sql="SELECT COUNT(*) as count from student_table";
+
+if($countAdmin_exe=mysqli_query($con,$countAdmin_sql)){
+  $countAdmin_row=mysqli_fetch_assoc($countAdmin_exe);
+}
+
+
+if($countTeacher_exe=mysqli_query($con,$countTeacher_sql)){
+  $countTeacher_row=mysqli_fetch_assoc($countTeacher_exe);
+}
+if($countStudent_exe=mysqli_query($con,$countStudent_sql)){
+  $countStudent_row=mysqli_fetch_assoc($countStudent_exe);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +36,7 @@
                 </div>
                 <div class="total-count-section">
                     <div class="total-count-text">Total</div>
-                    <div class="total-count-number">10</div>
+                    <div class="total-count-number"><?php echo $countStudent_row['count'];?></div>
                 </div>
             </div>
         </div>
@@ -30,7 +48,8 @@
                 </div>
                 <div class="total-count-section">
                     <div class="total-count-text">Total</div>
-                    <div class="total-count-number">10</div>
+  
+                    <div class="total-count-number"><?php echo $countTeacher_row['count'];?></div>
                 </div>
             </div>
         </div>
@@ -42,7 +61,7 @@
                 </div>
                 <div class="total-count-section">
                     <div class="total-count-text">Total</div>
-                    <div class="total-count-number">10</div>
+                    <div class="total-count-number"><?php echo $countAdmin_row['count'];?></div>
                 </div>
             </div>
         </div>
