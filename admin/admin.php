@@ -269,6 +269,7 @@ if(mysqli_num_rows($exesql_announcement)!=0){
   <script src="../js/admin-announcement-click.js"></script>
   <script src="../js/admin-updateevents.js"></script>
   <script src="../js/admin-announcement.js"></script>
+  <script src="../js/admin-dashboard.js"></script>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {  

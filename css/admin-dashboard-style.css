@@ -19,10 +19,11 @@
 }
 
 .student-numbers, .teacher-numbers, .admin-numbers{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 31%;
     padding: 20px;
     background-color: white;
+    box-shadow: 0 0 3px 2px rgb(177, 177, 177);
 }
 
 
@@ -76,15 +77,66 @@
 }
 
 
+.lower-content-edit{
+    padding: 0 45px;
+   
+}
+
+.lower-one{
+    background-color: white;
+    padding: 20px 30px;
+}
+
+#tableRecent{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tableRecent tr:nth-child(1){
+    background-color: #4591b8 !important;
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
+}
+
+#tableRecent tr td{
+    padding: 10px 20px;
+    font-size: 1.125rem;
+}
 
 
+#tableRecent tr:nth-child(odd){
+    background-color: #f7f7f7;
+}
 
 
+#tableRecent tr td a{
+    text-decoration: none;
+    color: black;
+}
 
 
+#tableRecent tr td:nth-child(1){
+    width: 45px;
+    text-align: center;
+}
+
+#tableRecent tr td:nth-child(5){
+    width: 150px;
+    text-align: center;
+}
+
+#tableRecent tr td:nth-child(4){
+    width: 180px;
+    text-align: center;
+}
 
 
-
-
+#tableRecent tr td a button{
+    font-size: 1.125rem;
+    padding: 5px 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 1px 1px rgb(172, 172, 172);
+}
 
 
