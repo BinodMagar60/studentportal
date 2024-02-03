@@ -1,1 +1,0 @@
-<span><?php if(isset($result_announcement['poster_name'])) echo $result_announcement['poster_name']; ?></span><br>
