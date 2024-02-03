@@ -20,6 +20,27 @@ function dashboardCall(){
 
 
 
+function eventNotification(){
+  
+    const xhr = new XMLHttpRequest();
+      const container = document.getElementById('event-show');
+      
+      xhr.onload = function() {
+        if (this.status === 200) {
+          container.innerHTML = xhr.responseText;
+        } else {
+          console.warn("Did not receive 200 OK from response!");
+        }
+      };
+      xhr.open('GET', 'admin-sidenotifications.php'); 
+      xhr.send();
+  
+     
+  
+    }
+
+
+
 
 
 
