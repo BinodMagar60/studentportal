@@ -494,6 +494,61 @@ body.calender-announcement-notices-active {
 
 
 
+/* Events */
+
+.event-notif{
+    width: 360px;
+}
+
+
+
+.event-show{
+    margin-top: 15px;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1.125rem;
+    font-weight: 400;
+    background-color: #1a4155;
+
+}
+
+.event-show-1{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.event-show-2{
+    /* border: 1px solid black; */
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(207, 207, 207);
+}
+
+.event1{
+    width: 20px;
+    border-right: 1px solid black;
+    padding-right: 10px;
+}
+
+
+
+
+
+
+
+
+/* Events */
+
+
+
+
+
+
+
+
+
+
 
 
 
