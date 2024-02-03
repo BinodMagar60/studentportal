@@ -506,8 +506,6 @@ body.calender-announcement-notices-active {
     margin-top: 15px;
     border-radius: 5px;
     padding: 5px;
-    font-size: 1.125rem;
-    font-weight: 400;
     background-color: #1a4155;
 
 }
@@ -520,15 +518,28 @@ body.calender-announcement-notices-active {
 
 .event-show-2{
     /* border: 1px solid black; */
-    padding: 10px;
+    padding: 5px 10px;
     border-radius: 5px;
     background-color: rgb(207, 207, 207);
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 
 .event1{
-    width: 20px;
+    width: 40px;
     border-right: 1px solid black;
     padding-right: 10px;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.event2{
+    padding-left:  10px;
+    font-size: 1.125re;
+    font-weight: 500;
+    text-transform: capitalize;
 }
 
 
