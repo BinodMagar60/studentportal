@@ -1,1 +1,1 @@
- <a href="#">update</a> <a href="../php/event/deleteEvent.php?uid=<?php if(isset($result_notice)) echo $result_notice['id']?>">delete</a>
+<span><?php if(isset($result_announcement['poster_name'])) echo $result_announcement['poster_name']; ?></span><br>
