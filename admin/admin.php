@@ -172,7 +172,8 @@ unset($_SESSION['target_email']);
       </div>
       <div class="event-notif">
         <div class="event-show">
-<?php
+        <div class="event-show-1">
+        <?php
 require_once "../php/config/db.php";
 $sql_notice= "SELECT * FROM notice ORDER BY n_date ASC";
 $exesql_notice= mysqli_query($con,$sql_notice);
@@ -180,16 +181,19 @@ if(mysqli_num_rows($exesql_notice)!=0){
   while($result_notice=mysqli_fetch_assoc($exesql_notice)){
   $dbDate = $result_notice['n_date'];
   $dateObject = date_create($dbDate);
-  $formattedDate = date_format($dateObject, 'M d');
+  $formattedDateMonth = date_format($dateObject, 'M');
+  $formattedDate = date_format($dateObject, 'd');
   ?>
-  <span><?php if(isset($formattedDate)) echo $formattedDate;?></span> <span><?php if(isset($result_notice['notice'])) echo $result_notice['notice'];?></span><br>
+  <div class="event-show-2"><span class="event1"><div class="event1-month"><?php if(isset($formattedDateMonth)) echo $formattedDateMonth;?></div><div class="event1-date"><?php if(isset($formattedDate)) echo $formattedDate;?></div></span> <span class="event2"><?php if(isset($result_notice['notice'])) echo $result_notice['notice'];?></span></div>
   <?php
 }
 }else{
   echo "no data";
 }
 ?>
+    
         </div>
+      </div>
 
         <div class="announcement-show">
         <?php

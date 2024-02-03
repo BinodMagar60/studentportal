@@ -4,18 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* Set a fixed width for the input field */
-    input {
-      width: 200px; /* Set your initial width here */
-      min-width: 200px; /* Set your minimum width here */
-      box-sizing: border-box; /* Include padding and border in the total width */
-      overflow-wrap: break-word; /* Hide content that overflows the box */
+    .vertical-text-container {
+      white-space: pre-line; /* This allows for white space processing, including line breaks */
+      font-family: monospace; /* Optional: ensures consistent spacing between characters */
+      white-space: nowrap; /* Prevents line breaks within words */
+    }
+
+    .vertical-text-container::after {
+      content: '\A'; /* '\A' represents a line break */
+      white-space: pre; /* Ensures proper line break display */
     }
   </style>
-  <title>Expanding Input Field with Overflow</title>
 </head>
 <body>
-  <label for="expandingInput">Enter text:</label>
-  <input type="text" id="expandingInput" name="expandingInput">
+
+<div class="vertical-text-container">
+  this is vertical.
+</div>
+
 </body>
 </html>
