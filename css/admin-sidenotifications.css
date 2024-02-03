@@ -37,16 +37,20 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    height: 160px; 
+    overflow-y: auto; 
 }
 
 .event-show-2{
     /* border: 1px solid black; */
     padding: 5px 10px;
     border-radius: 5px;
-    background-color: rgb(207, 207, 207);
+    /* background-color: rgb(207, 207, 207); */
+    background-color: white;
     display: flex;
     justify-content: start;
     align-items: center;
+    box-shadow: 0 0 5px  rgb(43, 42, 42);
 }
 
 .event1{
@@ -64,4 +68,13 @@
     font-weight: 500;
     text-transform: capitalize;
 }
+
+
+.event-show-2{
+    
+}
+
+
+
+
 
