@@ -30,7 +30,7 @@ if ($exesql = mysqli_query($con, $sql)) {
                     <!-- <td><form id="<?php //if(isset($i)) echo $i; ?>" action="../admin/admin-studentprofile-main.php" method="post">
                     <button type="submit">Details</button>
                     </form></td> -->
-                    <td><a href="../admin/admin-studentprofile-main.php?s_email=<?php if(isset($searchResult['email'])) echo $searchResult['email'];?>">Details</a></td>
+                    <td><a href="../admin/admin-studentprofile-main.php?s_email=<?php if(isset($searchResult['email'])) echo $searchResult['email'];?>"><button class="show-student-btn" type="button">Show</button></a></td>
                 </tr>
                 <?php
             }

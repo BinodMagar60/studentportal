@@ -196,7 +196,29 @@ legend{
 
 
 
+#myTable tr td{
+    padding: 5px;
+}
 
+
+
+
+.show-student-btn{
+    font-size: 1rem;
+    padding: 5px 10px;
+    color: black;
+    font-weight: 300;
+    border: 1px solid;
+    background-color: white;
+    cursor: pointer;
+
+}
+
+.show-student-btn:hover{
+    background-color: black;
+    color: white;
+    transition: all 200ms ease-in-out;
+}
 
 
 

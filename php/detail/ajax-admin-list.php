@@ -22,7 +22,7 @@ if ($exesql = mysqli_query($con, $sql)) {
                     <td><?php echo $i; ?></td>
                     <td><?php echo $searchResult['name']; ?></td>
                     <td><?php echo $searchResult['email']; ?></td>
-                    <td><a href="../admin/admin-adminprofile-main.php?a_email=<?php if(isset($searchResult['email'])) echo $searchResult['email'];?>">Details ></a></td>
+                    <td><a href="../admin/admin-adminprofile-main.php?a_email=<?php if(isset($searchResult['email'])) echo $searchResult['email'];?>"><button class="show-admin-btn" type="button">Show</button></a></td>
                 </tr>
             <?php
             }

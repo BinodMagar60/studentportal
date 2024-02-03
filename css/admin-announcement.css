@@ -346,7 +346,7 @@ textarea{
 
 .table22 tr:nth-child(1){
     font-size: 1.25rem !important;
-    background-color: #4591b8;
+    background-color: #4591b8 !important;
     
 }
 
