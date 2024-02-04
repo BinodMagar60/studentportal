@@ -398,6 +398,42 @@ body.calender-announcement-notices-active {
 
 
 
+/* Events */
+
+.event-notif{
+    width: 360px;
+}
+
+
+
+.event-show{
+    margin-top: 15px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #1a4155;
+
+}
+
+
+.announcement-show{
+    margin-top: 15px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #1a4155;
+}
+
+
+
+
+
+
+
+/* Events */
+
+
+
+
+
 
 
 

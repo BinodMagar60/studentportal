@@ -50,7 +50,7 @@ if(isset($_GET['t_email'])){
           </div>
         </a>
         <div class="notification">
-          <a ><button class="notif-btn">
+          <a ><button class="notif-btn" onclick="eventNotification(); announcementNotification();">
               <ion-icon name="notifications-outline" class="notif"></ion-icon></button></a>
         </div>
       </div>
@@ -82,7 +82,8 @@ if(isset($_GET['t_email'])){
 
     <!-- Notification button -->
 
-    <div class="calender-announcement-notices">
+ 
+    <div class="calender-announcement-notices" style="overflow-y: scroll;">
       <div class="exit-calendar-announcement-notices">
         <div class="notif-title">Notifications</div>
         <div class="x-mark">
@@ -115,8 +116,18 @@ if(isset($_GET['t_email'])){
           <tbody></tbody>
         </table>
       </div>
-      <div class="event-notif"></div>
+      <div class="event-notif">
+        <div class="event-show" id="event-show">
+        
+      </div>
+
+        <div class="announcement-show" id="announcement-show">
+        
+
+        </div>
+      </div>
     </div>
+
 
     <!-- notification section end -->
     <div class="middle-content">
