@@ -46,7 +46,7 @@ function hideOldEvents() {
       const dateString = eventElement.querySelector('.event1-date').textContent;
       const monthString = eventElement.querySelector('.event1-month').textContent;
 
-      const eventDate = new Date(`${monthString} ${dateString}, ${today.getFullYear()}`);
+      const eventDate = new Date(`${monthString} =${dateString}, ${today.getFullYear()}`);
 
       if (eventDate < today) {
           eventElement.style.display = 'none';

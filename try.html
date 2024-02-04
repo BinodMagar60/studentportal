@@ -1,26 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    .vertical-text-container {
-      white-space: pre-line; /* This allows for white space processing, including line breaks */
-      font-family: monospace; /* Optional: ensures consistent spacing between characters */
-      white-space: nowrap; /* Prevents line breaks within words */
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #imageContainer {
+            width: 300px;
+            height: 300px;
+            border: 2px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
 
-    .vertical-text-container::after {
-      content: '\A'; /* '\A' represents a line break */
-      white-space: pre; /* Ensures proper line break display */
-    }
-  </style>
+        #uploadedImage {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #uploadInput {
+            display: none;
+        }
+
+        #uploadButton {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
-<div class="vertical-text-container">
-  this is vertical.
-</div>
+    <div id="imageContainer">
+        <img id="uploadedImage" src="#" alt="Uploaded Image">
+    </div>
+
+    <input type="file" id="uploadInput" accept="image/*" onchange="displayImage(this)">
+    <button id="uploadButton" onclick="document.getElementById('uploadInput').click()">Upload Image</button>
+
+    <script>
+        function displayImage(input) {
+            const imageContainer = document.getElementById('imageContainer');
+            const uploadedImage = document.getElementById('uploadedImage');
+
+            const file = input.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    uploadedImage.src = e.target.result;
+                };
+
+                reader.readAsDataURL(file);
+            } else {
+                // Clear the image if no file is selected
+                uploadedImage.src = '#';
+            }
+        }
+    </script>
 
 </body>
 </html>
