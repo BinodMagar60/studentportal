@@ -19,7 +19,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
-    user-select: none;
+   
     -ms-overflow-style: none;  
     scrollbar-width: none;
     
@@ -510,6 +510,13 @@ body.calender-announcement-notices-active {
 
 }
 
+
+.announcement-show{
+    margin-top: 15px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #1a4155;
+}
 
 
 

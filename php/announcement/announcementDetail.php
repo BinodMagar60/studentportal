@@ -51,7 +51,7 @@
                      <?php
                   }
                   }else{
-                    echo "no data";
+                    echo "No Announcement Added";
                   }
 ?>  
                   

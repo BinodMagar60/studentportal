@@ -46,7 +46,7 @@ unset($_SESSION['target_email']);
           </div>
         </a>
         <div class="notification">
-          <a href="#"><button class="notif-btn" onclick="eventNotification(); ">
+          <a href="#"><button class="notif-btn" onclick="eventNotification(); announcementNotification();">
               <ion-icon name="notifications-outline" class="notif"></ion-icon></button></a>
         </div>
       </div>
@@ -137,7 +137,7 @@ unset($_SESSION['target_email']);
 
     <!-- Notification button -->
 
-    <div class="calender-announcement-notices">
+    <div class="calender-announcement-notices" style="overflow-y: scroll;">
       <div class="exit-calendar-announcement-notices">
         <div class="notif-title">Notifications</div>
         <div class="x-mark">
@@ -175,26 +175,8 @@ unset($_SESSION['target_email']);
         
       </div>
 
-        <div class="announcement-show">
-        <?php
-$sql_announcement= "SELECT * FROM announcements ORDER BY created_date ASC";
-$exesql_announcement= mysqli_query($con,$sql_announcement);
-if(mysqli_num_rows($exesql_announcement)!=0){
-  while($result_announcement=mysqli_fetch_assoc($exesql_announcement)){
-
-  $createdDate=$result_announcement['created_date'];
-  $a_created_dateObject = date_create($createdDate);
-  $a_created_formattedDate = date_format($a_created_dateObject, 'M d');
-  ?>
-  <span><?php if(isset($a_created_formattedDate)) echo $a_created_formattedDate;?></span><br>
-  <span><?php if(isset($result_announcement['a_description'])) echo $result_announcement['a_description']; ?></span><br>
-  <span><?php if(isset($result_announcement['poster_name'])) echo $result_announcement['poster_name']; ?></span><br>
-  <?php
-}
-}else{
-  echo "no data";
-}
-?>
+        <div class="announcement-show" id="announcement-show">
+        
 
         </div>
       </div>

@@ -69,7 +69,7 @@
                     <?php
                   }
                   }else{
-                    echo "no data";
+                    echo "No events added";
                   }
                   ?>
                     </table>

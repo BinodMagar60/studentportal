@@ -23,7 +23,7 @@ if(mysqli_num_rows($exesql_notice)!=0){
   <?php
 }
 }else{
-  echo "no data";
+  echo '<div style="text-align: center; width:100%; margin-top: 50px; color: white; font-size: 1.375rem; font-weight: 500;">No Events For Now.</div>';
 }
 ?>
     

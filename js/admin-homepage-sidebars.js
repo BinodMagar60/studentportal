@@ -58,6 +58,27 @@ function hideOldEvents() {
 
 
 
+
+function announcementNotification() {
+  const xhr = new XMLHttpRequest();
+  const container = document.getElementById('announcement-show');
+
+  xhr.onload = function () {
+      if (this.status === 200) {
+          container.innerHTML = xhr.responseText;
+          hideOldEvents(); 
+      } else {
+          console.warn("Did not receive 200 OK from response!");
+      }
+  };
+  xhr.open('GET', 'admin-sideAnnouncements.php');
+  xhr.send();
+}
+
+
+
+
+
 //student
 function studentDetail(){
 
@@ -76,7 +97,7 @@ function studentDetail(){
     xhr.send();
 
 
-    setTimeout(tableData,30)
+    setTimeout(tableData,50)
     // tableData();
   }
 
