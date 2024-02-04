@@ -1,5 +1,6 @@
  <?php 
                   require_once "../config/db.php";
+                  require_once "expiry_announcement.php";
                   $sql= "SELECT * FROM announcements ORDER BY exp_date ASC";
                   $exesql= mysqli_query($con,$sql);
                   if(mysqli_num_rows($exesql)!=0){
