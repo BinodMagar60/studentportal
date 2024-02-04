@@ -53,8 +53,8 @@ if(isset($_SESSION['target_s_email'])){
                 <div class="info-photo">
                   <div class="intro">Profile Picture</div>
                     <div class="myimg">
-                        <div class="circleline">
-                          <img src="../<?php echo "$detail_s_imageSrc";?>" alt="Student photo">
+                        <div class="circleline" id="imageContainer">
+                          <img src="../<?php echo "$detail_s_imageSrc";?>" alt="Student photo" id="uploadedImage">
                           <!-- <span><?php //echo "$detail_s_imageSrc";?></span> -->
                         </div>
                         <div class="upload-file">
@@ -65,7 +65,7 @@ if(isset($_SESSION['target_s_email'])){
                               </div>
                             </div>
                           </label>
-                          <input type="file" id="uploadimage" name="photo" oninput="checkChanges()">
+                          <input type="file" id="uploadimage" accept="image/*" name="photo" oninput="checkChanges()" onchange="displayImage(this);">
                         </div>
                     </div>
                 </div>

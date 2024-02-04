@@ -20,8 +20,8 @@ require_once "../php/config/AdminProfile.php";
                 <div class="info-photo">
                   <div class="intro">Profile Picture</div>
                     <div class="myimg">
-                        <div class="circleline">
-                          <img src="../<?php echo "$adminImage";?>" alt="admin photo">
+                        <div class="circleline" id="imageContainer">
+                          <img src="../<?php echo "$adminImage";?>" alt="admin photo" id="uploadedImage">
                         </div>
                         <div class="upload-file">
                           <label for="uploadimage" class="label-uploadphoto">
@@ -31,7 +31,7 @@ require_once "../php/config/AdminProfile.php";
                               </div>
                             </div>
                           </label>
-                          <input type="file" id="uploadimage" name="photo" oninput="checkChanges()">
+                          <input type="file" accept="image/*" id="uploadimage" name="photo" oninput="checkChanges()" onchange="displayImage(this);">
                         </div>
                     </div>
                 </div>

@@ -59,3 +59,27 @@ function checkChanges() {
 function updateStudentForm() {
  alert("Student Information Up")
 }
+
+
+
+
+
+function displayImage(input) {
+  const imageContainer = document.getElementById('imageContainer');
+  const uploadedImage = document.getElementById('uploadedImage');
+
+  const file = input.files[0];
+
+  if (file) {
+      const reader = new FileReader();
+
+      reader.onload = function (e) {
+          uploadedImage.src = e.target.result;
+      };
+
+      reader.readAsDataURL(file);
+  } else {
+
+      uploadedImage.src = '#';
+  }
+}
