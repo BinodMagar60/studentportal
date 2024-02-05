@@ -112,8 +112,8 @@ unset($_SESSION['target_email']);
           <span class="last"><i class="ri-arrow-down-s-line"></i></span>
         </button>
         <div class="subclass">
-          <a class="subclass-content"><button id="button9" onclick="toggleButton(9)">Class Routine</button></a>
-          <a class="subclass-content"><button id="button10" onclick="toggleButton(10)">Exam Routine</button></a>
+          <a class="subclass-content"><button id="button9" onclick="toggleButton(9);classRoutine();">Class Routine</button></a>
+          <a class="subclass-content"><button id="button10" onclick="toggleButton(10);examRoutine();">Exam Routine</button></a>
         </div>
       </div>
       <div class="side-bar-titles">

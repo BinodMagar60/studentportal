@@ -1,0 +1,61 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --primary-color1: #092635;
+    --primary-color2: #1B4242;
+    --primary-color3: #5C8374;
+    --primary-color4: #9EC8B9;
+    --primary-text1: rgb(255, 255, 255); 
+}
+
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+
+}
+
+form{
+    
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 20px 0 20px;
+    font-size: 1.125rem;
+}
+
+fieldset{
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 5px;
+    
+}
+
+legend{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.examroutine-select{
+    display: flex;
+    justify-content: start;
+    gap: 40px;
+}
+
+.sel1,.sel2{
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+.sel1 select,.sel2 select{
+    border: 1px solid black;
+    padding: 5px 8px;
+    font-size: 1.125rem;
+    margin-left: 8px;
+    outline: none;
+}
+

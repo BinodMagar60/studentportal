@@ -249,3 +249,48 @@ function teacherDetail(){
     setTimeout(announcementLists,30);
 
   }
+
+
+  function classRoutine(){
+
+
+    const xhr = new XMLHttpRequest();
+    const container = document.getElementById('container');
+    
+    xhr.onload = function() {
+      if (this.status === 200) {
+        container.innerHTML = xhr.responseText;
+      } else {
+        console.warn("Did not receive 200 OK from response!");
+      }
+    };
+    xhr.open('GET', 'admin-classroutine.php'); 
+    xhr.send();
+
+  }
+
+  function examRoutine(){
+
+
+    const xhr = new XMLHttpRequest();
+    const container = document.getElementById('container');
+    
+    xhr.onload = function() {
+      if (this.status === 200) {
+        container.innerHTML = xhr.responseText;
+      } else {
+        console.warn("Did not receive 200 OK from response!");
+      }
+    };
+    xhr.open('GET', 'admin-examroutine.php'); 
+    xhr.send();
+
+  }
+
+
+
+
+
+
+
+
