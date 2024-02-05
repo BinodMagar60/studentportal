@@ -135,10 +135,21 @@ function submitTeacherForm(event) {
         processData: false,
         contentType: false,
         success: function (response) {
-            console.log('Response:', response);
-            // alert('Student added successfully!');
-            openPopup();
+            // console.log('Response:', response);
+            if(response)
+            {
+                var e5 = document.getElementsByClassName("e-email")[0];
+                e5.innerText = "*Email Already Exist";
+                event.preventDefault();
+            }
+            else
+            {
+                var e5 = document.getElementsByClassName("e-email")[0];
+                e5.innerText = "";
+                openPopup();
             document.getElementById('teacherForm').reset();
+            }
+            
         },
         error: function (xhr, status, error) {
             console.error('Error:', status, error);
@@ -149,13 +160,3 @@ function submitTeacherForm(event) {
     });
     event.preventDefault();
 }
-
-// Attach the submitForm function to the form's submit event using jQuery
-// $(document).ready(function () {
-//     var form = $('#teacherForm');
-//     if (form.length) {
-//         form.submit(submitForm);
-//     } else {
-//         console.error('Error: Form element not found');
-//     }
-// });

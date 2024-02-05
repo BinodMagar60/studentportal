@@ -65,7 +65,7 @@ if(isset($_SESSION['target_s_email'])){
                               </div>
                             </div>
                           </label>
-                          <input type="file" id="uploadimage" accept="image/*" name="photo" oninput="checkChanges()" onchange="displayImage(this);">
+                          <input type="file" id="uploadimage" accept="image/*" name="photo" oninput="checkChanges()" onchange="displayImage(this,'<?php echo $detail_s_imageSrc;?>');">
                         </div>
                     </div>
                 </div>

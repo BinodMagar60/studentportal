@@ -184,10 +184,19 @@ function submitForm(event) {
         processData: false,
         contentType: false,
         success: function (response) {
-            console.log('Response:', response);
-            // alert('Student added successfully!');
-            openPopup();
-            document.getElementById('studentForm').reset();
+            // console.log('Response:', response);
+            if(response){
+                var e5 = document.getElementsByClassName("e-email")[0];
+                e5.innerText = "*Email Already Exist";
+                event.preventDefault();
+            }
+            else{
+                var e5 = document.getElementsByClassName("e-email")[0];
+               e5.innerText = "";
+                openPopup();
+                document.getElementById('studentForm').reset();
+            }
+            
         },
         error: function (xhr, status, error) {
             console.error('Error:', status, error);

@@ -31,7 +31,7 @@ require_once "../php/config/AdminProfile.php";
                               </div>
                             </div>
                           </label>
-                          <input type="file" accept="image/*" id="uploadimage" name="photo" oninput="checkChanges()" onchange="displayImage(this);">
+                          <input type="file" accept="image/*" id="uploadimage" name="photo" oninput="checkChanges()" onchange="displayImage(this,'<?php echo $adminImage;?>');">
                         </div>
                     </div>
                 </div>

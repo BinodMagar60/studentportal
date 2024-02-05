@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
       $spassword = $_POST["a-password"];
       $secure_password=password_hash($spassword,PASSWORD_DEFAULT);
-      $minLength = 5;
+      $minLength = 1;
       // Check minimum length
       if (strlen($spassword) < $minLength) {
           $errors["password"] = "Password must be at least $minLength characters long";

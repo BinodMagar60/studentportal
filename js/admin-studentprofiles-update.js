@@ -64,7 +64,8 @@ function updateStudentForm() {
 
 
 
-function displayImage(input) {
+
+function displayImage(input, location) {
   const imageContainer = document.getElementById('imageContainer');
   const uploadedImage = document.getElementById('uploadedImage');
 
@@ -80,6 +81,6 @@ function displayImage(input) {
       reader.readAsDataURL(file);
   } else {
 
-      uploadedImage.src = '#';
+      uploadedImage.src = "../"+location;
   }
 }

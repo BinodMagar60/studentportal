@@ -90,6 +90,15 @@ function submitAdminForm(event) {
         e5.innerText = "";
     }
 
+
+
+   
+
+
+
+
+
+
     if(adminphoto === ""){
         var e6 = document.getElementsByClassName("e-image")[0];
         e6.innerText = "*Required";
@@ -136,10 +145,21 @@ function submitAdminForm(event) {
         processData: false,
         contentType: false,
         success: function (response) {
-            console.log('Response:', response);
-            // alert('Student added successfully!');
-            openPopup();
+            // console.log('Response:', response);
+            if(response){
+                var e5 = document.getElementsByClassName("e-email")[0];
+                e5.innerText = "*Email Already Exist";
+                event.preventDefault();
+                
+            }
+            else{
+                var e5 = document.getElementsByClassName("e-email")[0];
+               e5.innerText = "";
+                openPopup();
             document.getElementById('adminForm').reset();
+            }
+
+            
         },
         error: function (xhr, status, error) {
             console.error('Error:', status, error);
@@ -151,12 +171,4 @@ function submitAdminForm(event) {
     event.preventDefault();
 }
 
-// Attach the submitForm function to the form's submit event using jQuery
-// $(document).ready(function () {
-//     var form = $('#studentForm');
-//     if (form.length) {
-//         form.submit(submitForm);
-//     } else {
-//         console.error('Error: Form element not found');
-//     }
-// });
+
