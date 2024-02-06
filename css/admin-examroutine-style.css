@@ -40,22 +40,41 @@ legend{
     font-weight: 500;
 }
 
-.examroutine-select{
-    display: flex;
-    justify-content: start;
-    gap: 40px;
+.examtitles label{
+    font-size: 1.25rem;
 }
 
-.sel1,.sel2{
-    font-size: 1.125rem;
-    font-weight: 400;
-}
 
-.sel1 select,.sel2 select{
+.examtitles input{
     border: 1px solid black;
-    padding: 5px 8px;
-    font-size: 1.125rem;
-    margin-left: 8px;
     outline: none;
+    font-size: 1.125rem;
+    padding: 5px ;
+    max-width: 400px;
+    width: 100%;
+    margin-left: 20px;
+
 }
 
+.exam-table{
+    border-collapse: collapse;
+    margin-top: 20px;
+
+}
+.exam-table tr td{
+    border: 1px solid black;
+    font-size: 1.125rem;
+    text-align: center;
+}
+
+.exam-table tr td:nth-child(1){
+    padding: 5px;
+}
+
+.exam-table tr td:not(:nth-child(1)) input{
+    padding: 5px;
+    font-size: 1.125rem;
+    text-align: center;
+    outline: none;
+    width: 170px;
+}
