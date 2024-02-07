@@ -62,7 +62,7 @@ unset($_SESSION['target_email']);
     <div class="leftside-contents">
       <div class="side-bar-titles">
         <button class="active" id="button1" onclick="toggleButton(1); dashboardCall();">
-          <span><i class="ri-dashboard-line"></i></span>Dashboard
+          <span><i class="ri-dashboard-line"></i></span >Dashboard
         </button>
       </div>
       <div class="side-bar-titles">
