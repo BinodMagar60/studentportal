@@ -38,12 +38,14 @@
                     </div>
                 </div>
 
-                <div class="classroutine-container" id="classroutine-container"></div>
+                <div class="classroutine-container" id="classroutine-container">
+
+                </div>
                
             </fieldset>
         </form>
     </div>
-
+    <script src="../js/admin-classroutine.js"></script>
 
 </body>
 </html>
