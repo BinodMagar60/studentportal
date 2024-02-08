@@ -22,8 +22,8 @@ if($c_email==$result['email']){
     }else if($checkRole==1){
       $_SESSION['userType']="teacher";
       $_SESSION['userName']=$result['name'];
-      
-      header("location: ../../teacher/teacher.php");
+      $_SESSION['userEmail']=$result['email'];
+      header("location: ../../teacher/html/dashboard.php");
       exit();
     }else if($checkRole==2){
       $_SESSION['userType']="student";

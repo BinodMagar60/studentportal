@@ -1,38 +1,47 @@
 <?php
 require_once "../config/db.php";
-if(isset($_SERVER['REQUEST_METHOD']==='POST')){
+// if($_SERVER['REQUEST_METHOD']==='POST'){
 $class="One";
 $section="A";
 
-$name_1=test_input($_POST['s_name_1']);
-$name_2=test_input($_POST['s_name_2']);
-$name_3=test_input($_POST['s_name_3']);
-$name_4=test_input($_POST['s_name_4']);
-$name_5=test_input($_POST['s_name_5']);
-$name_6=test_input($_POST['s_name_6']);
-$name_7=test_input($_POST['s_name_7']);
-
-
-
 $i=1;
 while($i<7){
-$dataDay=test_input($_POST['s_day_'.$i]);
-$first=test_input($_POST['first_'.$i]);
-$second=test_input($_POST['second_'.$i]);
-$third=test_input($_POST['third_'.$i]);
-$fourth=test_input($_POST['fourth_'.$i]);
-$fifth=test_input($_POST['fifth_'.$i]);
-$sixth=test_input($_POST['sixth_'.$i]);
-$seventh=test_input($_POST['seventh_'.$i]);
 
-$updateRoutineSql = "UPDATE class_routine SET firstP='$first',secondP='$second',thirdP='$third',fourthP='$fourth',fifthP='$fifth',sixthP='$sixth',seventhP='$seventh' WHERE class='$class' AND section='$section' AND routine_day='$dataDay'";
-mysqli_query($con, $updateRoutineSql);
+  $dataDay=$_POST['s_day_'.$i];
+  $name_1=$_POST['s_name1_'.$i];
+  $name_2=$_POST['s_name2_'.$i];
+  $name_3=$_POST['s_name3_'.$i];
+  $name_4=$_POST['s_name4_'.$i];
+  $name_5=$_POST['s_name5_'.$i];
+  $name_6=$_POST['s_name6_'.$i];
+  $name_7=$_POST['s_name7_'.$i];
+  $updateSubjectRoutineSql = "UPDATE class_routine_subject SET name_1='$name_1',name_2='$name_2',name_3='$name_3',name_4='$name_4',name_5='$name_5',name_6='$name_6',name_7='$name_7' WHERE class='$class' AND section='$section' AND class_day='$dataDay'";
+mysqli_query($con, $updateSubjectRoutineSql);
   $i++;
 }
 
 
-$updateSubjectRoutineSql = "UPDATE class_routine_subject SET name_1='$name_1',name_2='$name_2',name_3='$name_3',name_4='$name_4',name_5='$name_5',name_6='$name_6',name_7='$name_7' WHERE class='$class' AND section='$section'";
-mysqli_query($con, $updateSubjectRoutineSql);
+
+
+
+
+
+$first=$_POST['firstP'];
+$second=$_POST['secondP'];
+$third=$_POST['thirdP'];
+$fourth=$_POST['fourthP'];
+$fifth=$_POST['fifthP'];
+$sixth=$_POST['sixthP'];
+$seventh=$_POST['seventhP'];
+
+$updateRoutineSql = "UPDATE class_routine SET firstP='$first',secondP='$second',thirdP='$third',fourthP='$fourth',fifthP='$fifth',sixthP='$sixth',seventhP='$seventh' where id=1";
+mysqli_query($con, $updateRoutineSql);
+
+
+
+
+
+
 
 function test_input($data) {
   $data = trim($data);
@@ -41,5 +50,5 @@ function test_input($data) {
   return $data;
 }
 mysqli_close($con);
-}
+// }
 ?>
