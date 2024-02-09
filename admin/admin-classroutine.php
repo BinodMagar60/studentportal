@@ -15,7 +15,7 @@
                 <div class="classroutine-select">
                     <div class="sel1">
                         <label for="classSel">Class</label>
-                        <select name="" id="classSel">
+                        <select name="" id="classSel" onchange="classRoutineTable();">
                             <option value="one">One</option>
                             <option value="two">Two</option>
                             <option value="three">Three</option>
