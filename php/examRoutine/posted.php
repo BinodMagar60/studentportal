@@ -1,7 +1,7 @@
 <?php
 require_once "../config/db.php";
 $status= "posted";
-$reStatus="unposted";
+// $reStatus="unposted";
 $updateStatus="update exam_routine_date set `examRoutineStatus`='$status'";
 if(mysqli_query($con,$updateStatus)){
   echo "sucess";

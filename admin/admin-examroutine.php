@@ -64,8 +64,9 @@ if(mysqli_num_rows($examSubjectExe)>0){
                     </table>
                     <div class="btn-examroutine">
                         <button>Update</button>
-                        <a href="../php/examRoutine/updateStatus.php"><button type="button">Post</button></a>
-                        <button>Reset</button>
+                        <a href="../php/examRoutine/posted.php"><button type="button">Post</button></a>
+                        <a href="../php/examRoutine/unposted.php"><button type="button">unPost</button></a>
+                        
                     </div>
                 </div>
                
