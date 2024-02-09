@@ -4,7 +4,12 @@ $status= "posted";
 // $reStatus="unposted";
 $updateStatus="update exam_routine_date set `examRoutineStatus`='$status'";
 if(mysqli_query($con,$updateStatus)){
-  echo "sucess";
+
+  ?>
+
+  <script>console.log('Post')</script>
+
+  <?php
 }
 // $reverseStatus="update exam_routine_date set `examRoutineStatus`='$reStatus'";
 // mysqli_query($con,$reverseStatus);

@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/admin-classroutine-style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
+<form id="classroutine-daily">
     <div class="classroutine">
-        <table border="1">
+        <table class="tableRoutine-class">
             <tr>
                 <td rowspan="2">Date/Subject</td>
                 <td>1st Period</td>
@@ -20,7 +23,7 @@
                 <td>7th Period</td>
             </tr>
             <tr>
-            <form action="../php/classRoutine/updateClassRoutine.php" method="post">
+           
 <?php 
 require_once "../php/config/db.php";
 $class= "One";
@@ -64,13 +67,16 @@ if($routine_subject_exe=mysqli_query($con,$routine_subject_Sql)){
   }
 }
 ?>
+<tr>
+  <td colspan="9" style="border: none;"><div class="btn-examRoutine-submit"><button type="button" onclick="updateClassroutine(event);">submit</button></div></td>
+</tr>
 
         </table>
-        <button type="submit">submit</button>
-            </form>
+        
+            
     </div>
+</form>
 
-
-
+<script src="../js/admin-classRoutine-php.js"></script>
 </body>
 </html>

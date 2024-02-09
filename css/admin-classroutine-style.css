@@ -59,3 +59,47 @@ legend{
     outline: none;
 }
 
+.tableRoutine-class{
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+.tableRoutine-class tr td{
+    border: 1px solid black;
+   padding: 5px;
+   
+   text-transform: capitalize;
+}
+
+.tableRoutine-class tr td:not(td:nth-child(1)){
+    text-align: center;
+}
+
+
+.tableRoutine-class tr td input{
+    outline: none;
+    width: 160px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+
+.btn-examRoutine-submit{
+    display: flex;
+    justify-content: right;
+}
+
+.btn-examRoutine-submit button{
+    padding: 8px 15px;
+    font-size: 1.125rem;
+    color: white;
+    background-color: green;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+
+
+

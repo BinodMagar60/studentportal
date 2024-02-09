@@ -238,6 +238,9 @@ unset($_SESSION['target_email']);
   <script src="../js/admin-announcement.js"></script>
   <script src="../js/admin-dashboard.js"></script>
   <script src="../js/admin-classroutine.js"></script>
+
+  <script src="../js/admin-examRoutine-php.js"></script>
+  <script src="../js/admin-classRoutine-php.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {  
       document.getElementById('button1').click();

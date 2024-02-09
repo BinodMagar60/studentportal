@@ -12,11 +12,12 @@ $examDateRow=mysqli_fetch_assoc($examDateExe);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class routine</title>
     <link rel="stylesheet" href="../css/admin-examroutine-style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     
     <div class="classroutine">
-        <form action="../php/examRoutine/updateExamRoutine.php" method="post" enctype="multipart/form-data" novalidate autocomplete="off">
+        <form  id="classroutine">
             <fieldset>
                 <legend>Exam Routine</legend>
                 <div class="examroutine-select">
@@ -60,21 +61,24 @@ if(mysqli_num_rows($examSubjectExe)>0){
     }
 }
                             ?>
+                        <tr>
+                            <td colspan="8" style="border:none; ">
+                            <div class="btn-examroutine" >
+                        <button style="background-color: gray;" type="button" onclick="updateExamroutine(event);">Update</button>
+                        <button type="button" id="postButton" style="background-color: green" onclick="postExamRoutine();">Post</button>
+                        <button type="button" id="unpostButton" style="background-color: red" onclick="unpostExamRoutine();">Unpost</button>
                         
+                    </div></td>
+                        </tr>
                     </table>
-                    <div class="btn-examroutine">
-                        <button>Update</button>
-                        <a href="../php/examRoutine/posted.php"><button type="button">Post</button></a>
-                        <a href="../php/examRoutine/unposted.php"><button type="button">unPost</button></a>
-                        
-                    </div>
+                    
                 </div>
                
             </fieldset>
         </form>
     </div>
 
-    <div class="examroutine-container" id="examroutine-container"></div>
-
+ 
+    <script src="../js/admin-examRoutine-php.js"></script>
 </body>
 </html>

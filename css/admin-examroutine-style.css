@@ -78,3 +78,19 @@ legend{
     outline: none;
     width: 170px;
 }
+
+.btn-examroutine{
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+}
+
+
+.btn-examroutine button, .btn-examroutine a button{
+    font-size: 1.125rem;
+    color: white;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+
