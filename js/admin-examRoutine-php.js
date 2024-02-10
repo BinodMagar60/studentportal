@@ -31,8 +31,7 @@
                 url: "../php/examRoutine/posted.php",
                 type: "POST",
                 success: function(response) {
-                    // console.log("Post successful");
-                    // console.log(response)
+                    
                 },
                 error: function(xhr, status, error) {
                     console.error("Error:", status, error);

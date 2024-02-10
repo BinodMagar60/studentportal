@@ -19,25 +19,25 @@
 
 }
 
-form{
-    
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 20px 0 20px;
-    font-size: 1.125rem;
-}
-
 fieldset{
     border: 1px solid black;
+    border-radius: 10px;
     padding: 30px;
-    border-radius: 5px;
-    
 }
+
+.inner-middle-content{
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
 
 legend{
     font-size: 1.25rem;
     font-weight: 500;
+    margin-left: 20px;
 }
 
 .classroutine-select{

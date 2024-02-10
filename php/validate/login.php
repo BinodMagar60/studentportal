@@ -4,6 +4,7 @@ require "../config/sessionStart.php";
 if(isset($_POST['login-submit'])){
 $c_email=$_POST['email'];
 $c_password=$_POST['password'];
+$passwordError = 0;
 }
 $sql="select * from user_type where email='$c_email'";
 $exesql=mysqli_query($con,$sql);
@@ -36,6 +37,8 @@ if($c_email==$result['email']){
 
   }else{
     echo "incorrect password";
+ 
+    
   }
 }else{
     echo "incorrect email";

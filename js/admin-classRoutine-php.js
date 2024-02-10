@@ -1,6 +1,8 @@
 function updateClassroutine(event){
+    event.preventDefault();
 
-    var formData = new FormData('#classroutine-daily');
+    var formData = new FormData(document.getElementById('classroutinedaily'));
+
     $.ajax({
         url: '../php/classRoutine/updateClassRoutine.php',
         type: 'POST',
@@ -8,7 +10,7 @@ function updateClassroutine(event){
         processData: false,
         contentType: false,
         success: function (response) {
-            console.log('Response:', response);
+            // console.log('Response:', response);
            
 
             
@@ -19,5 +21,8 @@ function updateClassroutine(event){
         }
         
     });
-    event.preventDefault();
+   
+
+
+  
 }

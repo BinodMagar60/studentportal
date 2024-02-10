@@ -7,6 +7,7 @@
   <title>Student Details</title>
   <link rel="stylesheet" href="../css/admin-studentprofile-setting-style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.css" integrity="sha512-dUOcWaHA4sUKJgO7lxAQ0ugZiWjiDraYNeNJeRKGOIpEq4vroj1DpKcS3jP0K4Js4v6bXk31AAxAxaYt3Oi9xw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
@@ -39,7 +40,7 @@
   </form>
 <script src="../js/admin-userprofile-setting.js"></script>
 <script src="../js/admin-studentprofiles.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 
 </body>
 

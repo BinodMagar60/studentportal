@@ -71,60 +71,6 @@ body{
 
 
 
-
-/* 
-
-.choose{
-    border: 1px solid black;
-    height: 45px;
-    border-radius: 10px;
-    margin: auto;
-    max-width: 390px;
-    width: 100%;  
-    display: flex;
-    justify-content: center;  
-    margin-bottom: 45px;
-}
-.choose table{
-    width: 100%;
-    text-align: center;
-    border-radius: 10px;
-    border-collapse: collapse;
-}
-
-.choose table tr td{
-    height: 40px;
-}
-.btn-left{
-    border-radius: 8px 0 0 8px;
-}
-
-.btn-right{
-    border-radius: 0 8px 8px 0;
-}
-
-
-.choose table tr td button{
-    width: 100%;
-    height: 100%;
-    font-size: 1.125rem;
-    background-color: white;
-    font-style: normal;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 250ms ease-in-out;
-}
-
-.choose table tr td button:hover{
-    color: white;
-    background-color: black;
-}
-
-#student{
-    background-color: black;
-    color: white;
-}  */
-
 .email,.password,.login,.show-part{
     max-width: 390px;
     width: 100%;
