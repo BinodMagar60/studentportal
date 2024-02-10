@@ -4,7 +4,6 @@ require "../config/sessionStart.php";
 if(isset($_POST['login-submit'])){
 $c_email=$_POST['email'];
 $c_password=$_POST['password'];
-$passwordError = 0;
 }
 $sql="select * from user_type where email='$c_email'";
 $exesql=mysqli_query($con,$sql);
@@ -32,18 +31,39 @@ if($c_email==$result['email']){
       header("location: ../../student/student.php");
   
     }else{
-      echo "error";
+      header("location: index.php");
     }
 
   }else{
-    echo "incorrect password";
- 
-    
+    // echo "incorrect password";
+    ?>
+
+    <script>alert("Incorrect password");window.location.href = "../../index.php"</script>
+
+<?php
+
+
+
   }
 }else{
-    echo "incorrect email";
+    // echo "incorrect email";
+
+    ?>
+
+    <script>alert("Incorrect Email");window.location.href = "../../index.php"</script>
+
+<?php
+
+
 }
 }else{
-  echo "invalid login";
+  // echo "invalid login";
+
+  ?>
+
+    <script>alert("Invalid Login");window.location.href = "../../index.php"</script>
+
+<?php
+
 }
 ?>
