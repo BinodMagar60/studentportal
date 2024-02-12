@@ -1,3 +1,6 @@
+<?php
+require_once "../../php/config/TeacherProfile.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +21,7 @@
                   <div class="intro">Profile Picture</div>
                     <div class="myimg">
                         <div class="circleline"  id="imageContainer">
-                          <img src="" alt="Teacher photo" id="uploadedImage">
+                          <img src="../../<?php if(isset($teacherImage)) echo $teacherImage; ?>" alt="Teacher photo" id="uploadedImage">
                         </div>
                     </div>
                 </div>
@@ -27,27 +30,27 @@
                     <table>
                         <tr>
                             <td>Name</td>
-                            <td>Thaman Gurung</td>
+                            <td><?php if(isset($teacherName)) echo $teacherName; ?></td>
                         </tr>
                         <tr>
                             <td>Address</td>
-                            <td>Thaman Gurung</td>
+                            <td><?php if(isset($address)) echo $address; ?></td>
                         </tr>
                         <tr>
                             <td>Gender</td>
-                            <td>Thaman Gurung</td>
+                            <td><?php if(isset($gender)) echo $gender; ?></td>
                         </tr>
                         <tr>
                             <td>Date of Birth</td>
-                            <td>Thaman Gurung A.D</td>
+                            <td><?php if(isset($dob)) echo $dob; ?></td>
                         </tr>
                         <tr>
                             <td>Contact</td>
-                            <td>Thaman Gurung</td>
+                            <td><?php if(isset($contact)) echo $contact; ?></td>
                         </tr>
                         <tr>
                             <td>Email</td>
-                            <td id="email">ThamanGurung@gmail.com</td>
+                            <td id="email"><?php if(isset($email)) echo $email; ?></td>
                         </tr>
                         <tr>
                           <td>User Type</td>
@@ -55,7 +58,7 @@
                         </tr>
                         <tr>
                             <td>Assigned Subject</td>
-                            <td>Thama Gurung</td>
+                            <td><?php if(isset($subject)) echo $subject; ?></td>
                         </tr>
                         
                     </table>

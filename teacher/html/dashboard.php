@@ -1,3 +1,6 @@
+<?php 
+require_once "../../php/config/TeacherProfile.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,15 +28,15 @@
             <!-- logo or school name -->
             <div class="logo"><a href="#">Teacher Portal</a></div>
             <div class="right-side">
-                <a href="">
+                <a href="Teacherprofile.php">
                     <div class="useraccount">
                         <div class="U-photo">
                             <!-- user photo in navbar at right side -->
-                            <div class="photo"><img src="" alt="admin photo"></div>
+                            <div class="photo"><img src="../../<?php if(isset($teacherImage)) echo $teacherImage; ?>" alt="admin photo"></div>
                         </div>
                         <div class="name-n-role">
                             <!-- name and roll -->
-                            <div class="u-name" name="a-id">Thaman Gurung</div>
+                            <div class="u-name" name="a-id"><?php if(isset($teacherName)) echo $teacherName; ?></div>
                             <div class="role" name="role">Teacher</div>
                         </div>
                     </div>
