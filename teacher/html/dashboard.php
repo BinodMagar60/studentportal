@@ -186,7 +186,7 @@
             Are you sure you want to Logout?
         </div>
         <div class="btn-logout">
-            <a href=""><button>Yes</button></a>
+            <a href="../../php/validate/logout.php"><button>Yes</button></a>
             <button onclick="cancelLogoutPopup();">No</button>
         </div>
     </div>
