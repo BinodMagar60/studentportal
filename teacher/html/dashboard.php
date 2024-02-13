@@ -57,7 +57,7 @@ require_once "../../php/config/TeacherProfile.php";
         <!-- sidebar -->
         <div class="leftside-contents">
             <div class="side-bar-titles">
-                <button class="active" id="button1" onclick="toggleButton(1); ">
+                <button class="active" id="button1" onclick="toggleButton(1);studentAttandence()">
                     <span style="margin-right: 10px;"><i class="ri-list-check-3"></i></span>Attendance
                 </button>
             </div>
@@ -216,11 +216,11 @@ require_once "../../php/config/TeacherProfile.php";
     <script src="../js/admin-announcement.js"></script> -->
 
 
-    <!-- <script>
+    <script>
     document.addEventListener('DOMContentLoaded', function() {  
       document.getElementById('button1').click();
     });
-  </script> -->
+  </script>
 
 </body>
 

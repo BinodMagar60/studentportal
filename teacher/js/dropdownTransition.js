@@ -93,6 +93,26 @@ function studentDetails(){
 }
 
 
+function studentAttandence(){
+  const xhr = new XMLHttpRequest();
+  const container = document.getElementById('container');
+
+  xhr.onload = function () {
+      if (this.status === 200) {
+          container.innerHTML = xhr.responseText;
+          hideOldEvents(); 
+      } else {
+          console.warn("Did not receive 200 OK from response!");
+      }
+  };
+  xhr.open('GET', 'attendance.php');
+  xhr.send();
+  setTimeout(tableData,50);
+}
+
+
+
+
 
 
 

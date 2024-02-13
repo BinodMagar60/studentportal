@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="../css/assignments.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.css"/>
+</head>
+<body>
+    <div class="assignment-container">
+        <fieldset>
+            <legend>Assignments</legend>
+            <form id="assignment-form">
+                <table id="assignment-table">
+                    <tr>
+                        <td>Expiration Date</td>
+                        <td><input id="exp" type="date" style="border: 1px solid black; outline: none; padding: 5px"></td>
+                        <td class="error1 error">
+                            
+                        </td>
+            
+                    </tr>
+                    
+                    <tr>
+                        <td>Title</td>
+                        <td><input id="title" type="text" style="border: 1px solid black; outline: none; padding: 5px"></td>
+                        <td>
+                            <div class="error2 error"></div></td>
+                        </td>
+                    </tr>
+                   
+                    <tr>
+                        <td>Description</td>
+                        <td><textarea id="description" name="description" id=""  rows="5" style="border: 1px solid black; outline: none; padding: 5px"></textarea></td>
+                        <td>
+                            <div class="error3 error"></div></td>
+                        </td>
+                    </tr>
+                   
+                    <tr>
+                        <td></td>
+                        <td><div class="assignment-btn-submit"><button type="button" class="assignment-btn" onclick="assignmentValidation(event);">Submit</button></div></td>
+                        <td></td>
+                        
+                    </tr>
+                </table>
+            </form>
+
+
+        </fieldset>
+    </div>
+
+
+    <div class="popup-assignment-submit" id="popup-assignment-submit">
+        <div class="title-logo"><i class="ri-checkbox-circle-line"></i></div>
+        <div class="title">Assignment Added Successfully</div>
+    </div>
+
+    <script src="../js/assignments.js"></script>
+</body>
+</html>
