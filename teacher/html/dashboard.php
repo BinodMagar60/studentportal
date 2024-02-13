@@ -68,7 +68,7 @@ require_once "../../php/config/TeacherProfile.php";
                 </a>
             </div>
             <div class="side-bar-titles">
-                <a class="side-panel-title"><button id="button3" onclick="toggleButton(3)">
+                <a class="side-panel-title"><button id="button3" onclick="toggleButton(3);studentAssignment()">
                         <span style="color: white;-webkit-text-stroke:1px #092635;"><i class="fa-solid fa-file-circle-exclamation"></i></span>Assignment
                     </button>
                 </a>
@@ -210,6 +210,7 @@ require_once "../../php/config/TeacherProfile.php";
     <script src="../js/dropdownTransition.js"></script>
     <script src="../js/notifications.js"></script>
     <script  src="../js/studentdetail-php.js"></script>
+    <script src="../js/assignments.js"></script>
 
     <!-- <script src="../js/admin-announcement-click.js"></script>
     <script src="../js/admin-updateevents.js"></script>

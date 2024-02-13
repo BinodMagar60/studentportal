@@ -136,8 +136,6 @@ function submitAdminForm(event) {
 
     var formData = new FormData(document.getElementById('adminForm'));
 
-
-    
     $.ajax({
         url: '../php/add/admin_add.php',
         type: 'POST',

@@ -25,9 +25,37 @@
     display: none;
   }
 
+
+
   .assignment-container{
     background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    margin-left: 20px;
   }
+
+
+
+fieldset{
+    border: 1px solid black;
+    padding: 40px 30px;
+    border-radius: 5px;
+    font-size: 1.125rem;
+    padding-bottom: 20px !important;
+    
+}
+legend{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
 
   fieldset{
     border: 1px solid black;
@@ -105,9 +133,69 @@
 }
 
 
+.error{
+  color: red;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 300;
+}
+
+
+.assignment-table-show{
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+
+.assignment-table-show tr td{
+  padding: 8px;
+  font-size: 1.125rem;
+}
  
 
+.assignment-table-show tr td:nth-child(1){
+  width: 45px;
+  text-align: center;
+}
 
+
+.assignment-table-show tr td:nth-child(2){
+  padding-left: 20px;
+  overflow-wrap: break-word;
+}
+
+.assignment-table-show tr td:nth-child(3){
+  width: 200px;
+text-align: center;
+}
+
+.btn-assignments{
+  display: flex;
+  gap: 10px;
+}
+
+
+
+.btn-assign{
+  font-size: 1.125rem;
+  padding: 4px 8px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.assignment-table-show tr:nth-child(1){
+  background-color: #4591b8 !important;
+  font-weight: 400;
+}
+
+
+.assignment-table-show tr:nth-child(odd)
+{
+  background-color: #f7f7f7;
+}
 
 
 
