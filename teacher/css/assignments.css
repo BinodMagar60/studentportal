@@ -53,10 +53,6 @@ legend{
 
 
 
-
-
-
-
   fieldset{
     border: 1px solid black;
     border-radius: 8px;
@@ -99,38 +95,7 @@ legend{
 
 
 
-.popup-assignment-submit{
-    box-shadow: 0 0 2px 2px rgb(173, 173, 173);
-    background-color: white;
-    width: 350px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: -10000px;
-    left: 43%;
-    transition: top 500ms;
-}
 
-
-.title-logo{
-    color: rgb(32, 231, 32);
-    font-size: 5rem;
-    margin-top: 20px;
-}
-
-.popup-assignment-submit .title{
-    font-size: 1.125rem;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-
-.popup-assignment-submit-clicked{
-    top: 120px !important;
-    transform: top 250ms !important;
-}
 
 
 .error{
@@ -196,6 +161,245 @@ text-align: center;
 {
   background-color: #f7f7f7;
 }
+
+
+
+
+/* popups */
+
+.popup-assignment-submit{
+  box-shadow: 0 0 2px 2px rgb(173, 173, 173);
+  background-color: white;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: -10000px;
+  left: 43%;
+  transition: top 500ms;
+}
+
+
+.title-logo{
+  color: rgb(32, 231, 32);
+  font-size: 5rem;
+  margin-top: 20px;
+}
+
+.popup-assignment-submit .title{
+  font-size: 1.125rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+.popup-assignment-submit-clicked{
+  top: 120px !important;
+  transform: top 250ms !important;
+}
+
+
+
+.popup-assignment-update-successfully{
+  box-shadow: 0 0 2px 2px rgb(173, 173, 173);
+  background-color: white;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: -10000px;
+  left: 43%;
+  transition: top 500ms;
+}
+
+
+.popup-assignment-update-successfully .title{
+  font-size: 1.125rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+.popup-assignment-delete-successfully{
+  box-shadow: 0 0 2px 2px rgb(173, 173, 173);
+  background-color: white;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: -10000px;
+  left: 43%;
+  transition: top 500ms;
+}
+
+.popup-assignment-delete-successfully .title-logo{
+  color: rgb(255, 22, 22);
+}
+
+
+.popup-assignment-delete-successfully .title{
+  font-size: 1.125rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+
+
+
+
+.assignment-delete{
+  box-shadow: 0 0 2px 2px rgb(173, 173, 173);
+  background-color: white;
+  width: 350px;
+  display: flex;
+  visibility: none;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 300px;
+  left: 43%;
+  z-index: 10001;
+  transform: scale(0);
+}
+
+
+
+.title-logo-delete{
+  color: red;
+  font-size: 5rem;
+  margin-top: 20px;
+}
+
+.assignment-delete .title{
+  font-size: 1.125rem;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.btn-delete-assignment{
+  display: flex;
+  gap: 50px;
+}
+
+
+.delete-btn-assignment{
+  font-size: 1.125rem;
+  padding: 5px 15px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.overlay{
+  position: fixed;
+  height: 10000px;
+  width: 10000px;
+  top: -500px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: none;
+}
+
+
+.assignment-delete-popup{
+  visibility: visible !important;
+  transform: scale(1) !important;
+  transition: transform 350ms;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.update-assignment{
+  box-shadow: 0 0 2px 2px rgb(173, 173, 173);
+  background-color: white;
+  width: 450px;
+  position: fixed;
+  top: -1000px;
+  left: 43%;
+  z-index: 10001;
+  transition: top 100ms;
+}
+
+.update-assignment form{
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  display: flex;
+  padding-left: 70px;
+}
+
+#update-assignment-table{
+  width: 100%;
+  font-size: 1.125rem;
+}
+
+#update-assignment-table tr td input, #description-textarea{
+  border: 1px solid black;
+  width: 300px;
+  padding: 8px;
+  font-size: 1.125rem;
+  resize: none;
+  overflow: auto;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+#description-textarea{
+  height: 222px;
+}
+
+.btn-update-assignments{
+  display: flex;
+  justify-content: space-evenly;
+  width: 300px;
+  margin-top: 10px;
+}
+
+.update-btn-assingments{
+  color: white;
+  padding: 8px 15px;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+
+.update-assignment-show{
+  top: 140px;
+  transition: top 350ms;
+}
+
+
+
+
+
+
+
+
+
 
 
 

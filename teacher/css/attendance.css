@@ -54,6 +54,7 @@ legend{
     border: 1px solid black;
     font-size: 1.125rem;
     padding: 5px 10px;
+    outline: none;
 }
 
 

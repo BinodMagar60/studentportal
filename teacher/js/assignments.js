@@ -72,13 +72,80 @@ function assignmentPopup(){
     setTimeout(() => {
         removeAssignmentPopup()
         document.getElementById("assignment-form").reset();
-    }, 1100);
+    }, 1500);
 }
 
 function removeAssignmentPopup(){
     var popupbox = document.getElementById("popup-assignment-submit");
     popupbox.classList.remove("popup-assignment-submit-clicked");
 }
+
+
+
+
+
+function assignmentDelete(){
+    var deleteBox = document.getElementById("assignment-delete");
+    var overlay = document.getElementById("overlay");
+    deleteBox.classList.add("assignment-delete-popup");
+    overlay.style.display = "block";
+}
+
+
+function assingmentDeleteRemove(){
+    var deleteBox = document.getElementById("assignment-delete");
+    var overlay = document.getElementById("overlay");
+    deleteBox.classList.remove("assignment-delete-popup");
+    overlay.style.display = "none";
+}
+
+
+
+
+function assignmentUpdate(){
+    var updateBox = document.getElementById("update-assignment");
+    var overlay = document.getElementById("overlay");
+    updateBox.classList.add("update-assignment-show");
+    overlay.style.display = "block";
+}
+
+
+function assignmentUpdateRemeove(){
+    var updateBox = document.getElementById("update-assignment");
+    var overlay = document.getElementById("overlay");
+    updateBox.classList.remove("update-assignment-show");
+    overlay.style.display = "none";
+}
+
+
+
+
+function assignmentUpdatePopup(){
+    assignmentUpdateRemeove();
+    var popup = document.getElementById("popup-assignment-update-successfully");
+    popup.classList.add("popup-assignment-submit-clicked");
+    setTimeout(() => {
+        popup.classList.remove("popup-assignment-submit-clicked")
+    }, 1500);
+}
+
+
+
+function assignmentDeletePopup(){
+    assingmentDeleteRemove();
+    var popup = document.getElementById("popup-assignment-delete-successfully");
+    popup.classList.add("popup-assignment-submit-clicked");
+    setTimeout(() => {
+        popup.classList.remove("popup-assignment-submit-clicked");
+    }, 1500);
+}
+
+
+
+
+
+
+
 
 
 
