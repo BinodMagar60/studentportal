@@ -86,7 +86,7 @@ require_once "../../php/config/TeacherProfile.php";
                 </a>
             </div>
             <div class="side-bar-titles">
-                <a class="side-panel-title"><button id="button6" onclick="toggleButton(6)">
+                <a class="side-panel-title"><button id="button6" onclick="toggleButton(6);studentNotify();">
                         <span><i class="fa-regular fa-envelope"></i></span>Notify
                     </button>
                 </a>
@@ -211,6 +211,7 @@ require_once "../../php/config/TeacherProfile.php";
     <script src="../js/notifications.js"></script>
     <script  src="../js/studentdetail-php.js"></script>
     <script src="../js/assignments.js"></script>
+    <script src="../js/notify.js"></script>
 
     <!-- <script src="../js/admin-announcement-click.js"></script>
     <script src="../js/admin-updateevents.js"></script>
