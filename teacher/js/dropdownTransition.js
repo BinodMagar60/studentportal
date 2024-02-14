@@ -124,7 +124,7 @@ function studentAssignment(){
           console.warn("Did not receive 200 OK from response!");
       }
   };
-  xhr.open('GET', 'assignments.html');
+  xhr.open('GET', 'assignments.php');
   xhr.send();
   
 }
