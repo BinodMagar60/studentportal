@@ -1,6 +1,4 @@
-<?php 
-require_once "../../php/config/TeacherProfile.php";
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,18 +24,18 @@ require_once "../../php/config/TeacherProfile.php";
         <!-- navbar -->
         <div class="navbar">
             <!-- logo or school name -->
-            <div class="logo"><a href="#">Teacher Portal</a></div>
+            <div class="logo"><a href="#">Student Portal</a></div>
             <div class="right-side">
-                <a href="Teacherprofile.php">
+                <a href="">
                     <div class="useraccount">
                         <div class="U-photo">
                             <!-- user photo in navbar at right side -->
-                            <div class="photo"><img src="../../<?php if(isset($teacherImage)) echo $teacherImage; ?>" alt="student photo"></div>
+                            <div class="photo"><img src="" alt="student photo"></div>
                         </div>
                         <div class="name-n-role">
                             <!-- name and roll -->
-                            <div class="u-name" name="a-id"><?php if(isset($teacherName)) echo $teacherName; ?></div>
-                            <div class="role" name="role">Teacher</div>
+                            <div class="u-name" name="a-id"></div>
+                            <div class="role" name="role">Student</div>
                         </div>
                     </div>
                 </a>
@@ -57,25 +55,25 @@ require_once "../../php/config/TeacherProfile.php";
         <!-- sidebar -->
         <div class="leftside-contents">
             <div class="side-bar-titles">
-                <button class="active" id="button1" onclick="toggleButton(1);studentAttandence()">
-                    <span style="margin-right: 10px;"><i class="ri-list-check-3"></i></span>Attendance
+                <button class="active" id="button1" onclick="toggleButton(1);">
+                    <span style="margin-right: 10px;color: white;-webkit-text-stroke:1px #092635;"><i class="fa-solid fa-file-circle-exclamation"></i></span>Assignments
                 </button>
             </div>
             <div class="side-bar-titles">
-                <a class="side-panel-title"><button id="button2" onclick="toggleButton(2);studentDetails();">
-                        <span><i class="ri-graduation-cap-line"></i></span>Student Details
+                <a class="side-panel-title"><button id="button2" onclick="toggleButton(2);">
+                        <span style="color: white;-webkit-text-stroke:1px #092635;"><i class="fa-solid fa-file-circle-check"></i></span>Homework
                     </button>
                 </a>
             </div>
             <div class="side-bar-titles">
-                <a class="side-panel-title"><button id="button3" onclick="toggleButton(3);studentAssignment()">
-                        <span style="color: white;-webkit-text-stroke:1px #092635;"><i class="fa-solid fa-file-circle-exclamation"></i></span>Assignment
+                <a class="side-panel-title"><button id="button3" onclick="toggleButton(3);">
+                        <span tyle="color: white;-webkit-text-stroke:1px #092635;"><i class="fa-solid fa-notes-medical"></i></span>Notes
                     </button>
                 </a>
             </div>
             <div class="side-bar-titles">
                 <a class="side-panel-title"><button id="button4" onclick="toggleButton(4)">
-                        <span style="color: white;-webkit-text-stroke:1px #092635;"><i class="fa-solid fa-file-circle-check"></i></span>Homework
+                        <span><i class="ri-file-list-line"></i></span>Result
                     </button>
                 </a>
             </div>
@@ -86,34 +84,20 @@ require_once "../../php/config/TeacherProfile.php";
                 </a>
             </div>
             <div class="side-bar-titles">
-                <a class="side-panel-title"><button id="button6" onclick="toggleButton(6);studentNotify();">
-                        <span><i class="fa-regular fa-envelope"></i></span>Notify
-                    </button>
-                </a>
-            </div>
-            <div class="side-bar-titles">
-                <a class="side-panel-title"><button id="button7" onclick="toggleButton(7)">
-                        <span><i class="ri-file-list-line"></i></span>Result
-                    </button>
-                </a>
-            </div>
-
-
-            <div class="side-bar-titles">
                 <button class="dropdown-1">
                     <span><i class="ri-calendar-schedule-line"></i></span>Routine
                     <span class="last"><i class="ri-arrow-down-s-line"></i></span>
                 </button>
                 <div class="subclass">
-                    <a class="subclass-content"><button id="button8" onclick="toggleButton(8);">Class
+                    <a class="subclass-content"><button id="button6" onclick="toggleButton(6);">Class
                             Routine</button></a>
-                    <a class="subclass-content"><button id="button9" onclick="toggleButton(9);">Exam
+                    <a class="subclass-content"><button id="button7" onclick="toggleButton(7);">Exam
                             Routine</button></a>
                 </div>
             </div>
 
             <div class="side-bar-titles">
-                <a class="side-panel-title"><button id="button13" onclick="logoutPopup();">
+                <a class="side-panel-title"><button id="button8" onclick="logoutPopup();">
                         <span><i class="ri-logout-box-r-line"></i></span>Logout
                     </button></a>
             </div>
@@ -209,19 +193,15 @@ require_once "../../php/config/TeacherProfile.php";
 
     <script src="../js/dropdownTransition.js"></script>
     <script src="../js/notifications.js"></script>
-    <script  src="../js/studentdetail-php.js"></script>
-    <script src="../js/assignments.js"></script>
-    <script src="../js/notify.js"></script>
+    
 
-    <!-- <script src="../js/admin-announcement-click.js"></script>
-    <script src="../js/admin-updateevents.js"></script>
-    <script src="../js/admin-announcement.js"></script> -->
+   
 
 
-    <script>
+    <!-- <script>
     document.addEventListener('DOMContentLoaded', function() {  
       document.getElementById('button1').click();
-    });
+    }); -->
   </script>
 
 </body>
