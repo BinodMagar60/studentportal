@@ -39,6 +39,8 @@
             </form>
 
             <form >
+                <div class="today-attendance"><span><input type="checkbox" id="today-atten"></span><label for="today-atten">Todays Attendance</label> </div>
+
                 <table id="attendanceTable">
                     <tr>
                         <td>S.N.</td>

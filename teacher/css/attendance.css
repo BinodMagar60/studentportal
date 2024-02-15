@@ -63,9 +63,25 @@ legend{
 }
 
 
+.today-attendance{
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-top: 40px;
+}
+
+.today-attendance span{
+    margin-right: 15px;
+}
+
+#today-atten{
+    outline: none;
+    height: 15px;
+    width: 15px;
+}
+
 #attendanceTable{
     border-collapse: collapse;
-    margin-top: 40px;
+    margin-top: 5px;
     width: 100%;
 }
 
