@@ -108,7 +108,7 @@
     </div>
 
     <div class="update-assignment" id="update-assignment">
-        <form>
+        <form action="../../php/teacherPHP/assignment/addAssignment.php">
             <table id="update-assignment-table">
                 <tr>
                     <td>Expiration Date</td>

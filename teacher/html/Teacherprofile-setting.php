@@ -11,7 +11,7 @@
 
 <body>
   
-  <form action="" method="post" enctype="multipart/form-data" novalidate autocomplete="off">
+  <form action="../../php/teacherPHP/teacherProfile/updateTeacherPassword.php" method="post" enctype="multipart/form-data" novalidate autocomplete="off">
     <div class="change-password">
       <div class="topname">
         Change Password

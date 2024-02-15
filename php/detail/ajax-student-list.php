@@ -1,5 +1,6 @@
 <?php
 require_once "../config/db.php";
+require_once "../config/sessionStart.php";
 unset($_SESSION['target_s_email']);
 $class = isset($_GET['class']) ? $_GET['class'] : 'one';
 $section = isset($_GET['section']) ? $_GET['section'] : 'A';
@@ -30,10 +31,21 @@ if ($exesql = mysqli_query($con, $sql)) {
                     <!-- <td><form id="<?php //if(isset($i)) echo $i; ?>" action="../admin/admin-studentprofile-main.php" method="post">
                     <button type="submit">Details</button>
                     </form></td> -->
+                    <?php
+                    if($_SESSION['userType']=="admin"){
+                        ?>
+
                     <td><a href="../admin/admin-studentprofile-main.php?s_email=<?php if(isset($searchResult['email'])) echo $searchResult['email'];?>"><button class="show-student-btn" type="button">Show</button></a></td>
+
+                    <?php
+                }else if($_SESSION['userType']=="teacher"){
+                    ?>
+
+                    <td><a href="../../admin/admin-studentprofile-main.php?s_email=<?php if(isset($searchResult['email'])) echo $searchResult['email'];?>"><button class="show-student-btn" type="button">Show</button></a></td> 
+
                 </tr>
                 <?php
-            }
+                }}
             ?>
         </table>
     <?php
@@ -43,4 +55,5 @@ if ($exesql = mysqli_query($con, $sql)) {
 } else {
     echo "query error";
 }
+
 ?>
