@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+require_once "../../php/config/db.php";
+$class = isset($_GET['classes']) ? $_GET['classes'] : 'one';
+$section = isset($_GET['sections']) ? $_GET['sections'] : 'A';
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,24 +22,24 @@
                 <span class="class-attendance">
                     <label for="classAttendance">Class</label>
                     <select name="classAttendance" id="classAttendance">
-                        <option value="one">One</option>
-                        <option value="two">Two</option>
-                        <option value="three">Three</option>
-                        <option value="four">Four</option>
-                        <option value="fiiv">Five</option>
-                        <option value="six">Six</option>
-                        <option value="seven">Seven</option>
-                        <option value="eight">Eight</option>
-                        <option value="nine">Nine</option>
-                        <option value="ten">Ten</option>
+                        <option value="one" <?php echo ($class == 'one' ? 'selected' : ''); ?>>One</option>
+                        <option value="two" <?php echo ($class == 'two' ? 'selected' : ''); ?>>Two</option>
+                        <option value="three" <?php echo ($class == 'three' ? 'selected' : ''); ?>>Three</option>
+                        <option value="four" <?php echo ($class == 'four' ? 'selected' : ''); ?>>Four</option>
+                        <option value="five" <?php echo ($class == 'five' ? 'selected' : ''); ?>>Five</option>
+                        <option value="six" <?php echo ($class == 'six' ? 'selected' : ''); ?>>Six</option>
+                        <option value="seven" <?php echo ($class == 'seven' ? 'selected' : ''); ?>>Seven</option>
+                        <option value="eight" <?php echo ($class == 'eight' ? 'selected' : ''); ?>>Eight</option>
+                        <option value="nine" <?php echo ($class == 'nine' ? 'selected' : ''); ?>>Nine</option>
+                        <option value="ten" <?php echo ($class == 'ten' ? 'selected' : ''); ?>>Ten</option>
                     </select>
                 </span>
                 <span class="section-attendance">
                     <label for="sectionAttendance">Section</label>
-                    <select name="sectionAttendance" id="sectoinAttendance">
-                        <option value="A">Section A</option>
-                        <option value="B">Section B</option>
-                        <option value="C">Section C</option>
+                    <select name="sectionAttendance" id="sectionAttendance">
+                        <option value="A" <?php echo ($section == 'A' ? 'selected' : ''); ?>>Section A</option>
+                        <option value="B" <?php echo ($section == 'B' ? 'selected' : ''); ?>>Section B</option>
+                        <option value="C" <?php echo ($section == 'C' ? 'selected' : ''); ?>>Section C</option>
                     </select>
                 </span>
                 </div>
@@ -52,18 +57,6 @@
                         <td>Name</td>
                         <td>E-mail</td>
                         <td>Attendance</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Binod</td>
-                        <td>binodkaucha88@gmail.com</td>
-                        <td><input type="checkbox"></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Thaman</td>
-                        <td>thamangurung88@gmail.com</td>
-                        <td><input type="checkbox"></td>
                     </tr>
                     <tr>
                         <td colspan="4" style="border: none;">
