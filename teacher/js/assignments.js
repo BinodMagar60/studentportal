@@ -40,15 +40,37 @@
             assignmentPopup();
             
         }
-       
-
-
     }
 
 
 
-    
 
+    
+    const tableDataAssignment = () => {
+
+        $(document).ready(function () {
+            function updateAssignmentLists() {
+                $.ajax({
+                    type: 'GET',
+                    url: '../php/assignment/assignment-list.php',
+                    data: {},
+                    success: function (response) {
+                        // console.log(response);
+                        var searchedBox = document.querySelector('#assignment-list-show-container');
+                        if (searchedBox) {
+                            searchedBox.innerHTML = response;
+                        } else {
+                            console.error("Element with ID 'searched-box' not found.");
+                        }
+                    }
+                });
+            }
+            updateAssignmentLists();
+        });
+
+        
+    
+    }
 
 
 

@@ -119,13 +119,14 @@ function studentAssignment(){
   xhr.onload = function () {
       if (this.status === 200) {
           container.innerHTML = xhr.responseText;
-          hideOldEvents(); 
       } else {
           console.warn("Did not receive 200 OK from response!");
       }
   };
   xhr.open('GET', 'assignments.php');
   xhr.send();
+
+  setTimeout(tableDataAssignment,50);
   
 }
 
@@ -137,7 +138,7 @@ function studentNotify(){
     xhr.onload = function () {
         if (this.status === 200) {
             container.innerHTML = xhr.responseText;
-            hideOldEvents(); 
+    
         } else {
             console.warn("Did not receive 200 OK from response!");
         }

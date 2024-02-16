@@ -1,4 +1,6 @@
-
+<?php
+require_once "../../php/config/TeacherProfile.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,19 +28,17 @@
             <!-- logo or school name -->
             <div class="logo"><a href="#">Student Portal</a></div>
             <div class="right-side">
-                <a href="">
                     <div class="useraccount">
                         <div class="U-photo">
                             <!-- user photo in navbar at right side -->
-                            <div class="photo"><img src="" alt="student photo"></div>
+                            <div class="photo"><img src="" alt="Student photo"></div>
                         </div>
-                        <div class="name-n-role">
+                        <div class="name-n-role" style="color: white;">
                             <!-- name and roll -->
                             <div class="u-name" name="a-id"></div>
                             <div class="role" name="role">Student</div>
                         </div>
                     </div>
-                </a>
                 <div class="notification">
                     <a href="#"><button class="notif-btn" onclick="eventNotification(); announcementNotification();">
                             <ion-icon name="notifications-outline" class="notif"></ion-icon></button></a>
@@ -54,48 +54,23 @@
         <!-- middle contents -->
         <!-- sidebar -->
         <div class="leftside-contents">
-            <div class="side-bar-titles">
-                <button class="active" id="button1" onclick="toggleButton(1);">
-                    <span style="margin-right: 10px;color: white;-webkit-text-stroke:1px #092635;"><i class="fa-solid fa-file-circle-exclamation"></i></span>Assignments
-                </button>
-            </div>
-            <div class="side-bar-titles">
-                <a class="side-panel-title"><button id="button2" onclick="toggleButton(2);">
-                        <span style="color: white;-webkit-text-stroke:1px #092635;"><i class="fa-solid fa-file-circle-check"></i></span>Homework
-                    </button>
-                </a>
-            </div>
-            <div class="side-bar-titles">
-                <a class="side-panel-title"><button id="button3" onclick="toggleButton(3);">
-                        <span tyle="color: white;-webkit-text-stroke:1px #092635;"><i class="fa-solid fa-notes-medical"></i></span>Notes
-                    </button>
-                </a>
-            </div>
-            <div class="side-bar-titles">
-                <a class="side-panel-title"><button id="button4" onclick="toggleButton(4)">
-                        <span><i class="ri-file-list-line"></i></span>Result
-                    </button>
-                </a>
-            </div>
-            <div class="side-bar-titles">
-                <button class="dropdown-1">
-                    <span><i class="ri-calendar-schedule-line"></i></span>Routine
-                    <span class="last"><i class="ri-arrow-down-s-line"></i></span>
-                </button>
-                <div class="subclass">
-                    <a class="subclass-content"><button id="button5" onclick="toggleButton(5);">Class
-                            Routine</button></a>
-                    <a class="subclass-content"><button id="button6" onclick="toggleButton(6);">Exam
-                            Routine</button></a>
-                </div>
-            </div>
-
-            <div class="side-bar-titles">
-                <a class="side-panel-title"><button id="button7" onclick="logoutPopup();">
-                        <span><i class="ri-logout-box-r-line"></i></span>Logout
-                    </button></a>
-            </div>
-        </div>
+      <div class="side-bar-titles">
+        <button class="active" id="button1" onclick="toggleButton(1);studentProfile();" >
+          <span><i class="ri-user-line" style="margin-right: 10px;"></i></span>User Profile
+        </button>
+      </div>
+      <div class="side-bar-titles">
+        <a class="side-panel-title"><button id="button2" onclick="toggleButton(2);">
+             <span><i class="ri-file-list-line"></i></span>Result
+          </button></a>
+      </div>
+      
+      <div class="side-bar-titles">
+        <a class="side-panel-title"><button id="button3" onclick="toggleButton(3);studentProfileSetting();">
+            <span><i class="ri-settings-2-line" style="margin-right: 10px;"></i></span>Setting
+          </button></a>
+      </div>
+     
     </div>
     <!-- sidebar end -->
 
@@ -157,22 +132,7 @@
 
 
     <!--logout popup-->
-    <div class="popup-log" id="popup-log">
-        <div class="popupbox-log">
-        </div>
-        <div class="question">
-            <i class="ri-question-line"></i>
-        </div>
-        <div class="text-message">
-            Are you sure you want to Logout?
-        </div>
-        <div class="btn-logout">
-            <a href="../../php/validate/logout.php"><button>Yes</button></a>
-            <button onclick="cancelLogoutPopup();">No</button>
-        </div>
-    </div>
-    </div>
-
+ 
 
 
     <!--end-->
@@ -187,15 +147,14 @@
 
     <script src="../js/dropdownTransition.js"></script>
     <script src="../js/notifications.js"></script>
-    
-
-   
+    <script src="../js/student-profile-ajax.js"></script>
 
 
-    <!-- <script>
+
+    <script>
     document.addEventListener('DOMContentLoaded', function() {  
       document.getElementById('button1').click();
-    }); -->
+    });
   </script>
 
 </body>

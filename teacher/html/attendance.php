@@ -12,7 +12,8 @@
         <fieldset>
             <legend>Student Attendance</legend>
 
-            <form>
+           
+                <div class="attendance-select-class">
                 <span class="class-attendance">
                     <label for="classAttendance">Class</label>
                     <select name="classAttendance" id="classAttendance">
@@ -36,7 +37,11 @@
                         <option value="C">Section C</option>
                     </select>
                 </span>
-            </form>
+                </div>
+            
+
+
+                <div class="attendance-list-container" id="attendance-list-container"></div>
 
             <form >
                 <div class="today-attendance"><span><input type="checkbox" id="today-atten"></span><label for="today-atten">Todays Attendance</label> </div>

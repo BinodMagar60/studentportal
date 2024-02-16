@@ -6,6 +6,7 @@
     <title>Assignment</title>
     <link rel="stylesheet" href="../css/assignments.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="overlay" id="overlay"></div>
@@ -38,6 +39,34 @@
                             <div class="error3 error"></div></td>
                         </td>
                     </tr>
+                    <tr>
+                        <td>Select Class</td>
+                        <td>
+                            <select name="" id="selectClassAssignment" >
+                                <option value="one">One</option>
+                                <option value="two">Two</option>
+                                <option value="three">Three</option>
+                                <option value="four">Four</option>
+                                <option value="five">Five</option>
+                                <option value="six">Six</option>
+                                <option value="seven">Seven</option>
+                                <option value="eight">Eight</option>
+                                <option value="nine">Nine</option>
+                                <option value="ten">Ten</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <select name="" id="selectSectionAssignment">
+                                <option value="everyone">Everyone</option>
+                                <option value="A">Section A</option>
+                                <option value="B">Section B</option>
+                                <option value="C">Section C</option>
+                            </select>
+                        </td>
+                    </tr>
                    
                     <tr>
                         <td></td>
@@ -49,30 +78,7 @@
             </form>
 
 
-            <div  id="assignment-table">
-                <table class="assignment-table-show">
-                    <tr>
-                        <td>S.N.</td>
-                        <td>Title</td>
-                        <td>Action</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Assignment 1</td>
-                        <td>
-                            <div class="btn-assignments">
-                                <button class="btn-assign" style="background-color: green;"  onclick="assignmentUpdate();">Update</button>
-                                <button class="btn-assign" style="background-color: red;" onclick="assignmentDelete();">Delete</button>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-
-
-
-
-
+            <div class="assignment-list-show-container" id="assignment-list-show-container"></div>
 
 
         </fieldset>
@@ -127,6 +133,35 @@
                 </tr>
                 <tr>
                     <td><textarea name="" id="description-textarea"  rows="5"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Select Class</td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="" id="selectClassAssignmentUpdate">
+                            <option value="one">One</option>
+                            <option value="two">Two</option>
+                            <option value="three">Three</option>
+                            <option value="four">Four</option>
+                            <option value="five">Five</option>
+                            <option value="six">Six</option>
+                            <option value="seven">Seven</option>
+                            <option value="eight">Eight</option>
+                            <option value="nine">Nine</option>
+                            <option value="ten">Ten</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="" id="selectSelectAssignmentUpdate">
+                            <option value="everyone">Everyone</option>
+                            <option value="A">Section A</option>
+                            <option value="B">Section B</option>
+                            <option value="C">Section C</option>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
                     <td>

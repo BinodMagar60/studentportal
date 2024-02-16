@@ -136,6 +136,33 @@ legend{
 text-align: center;
 }
 
+
+#selectSectionAssignment, #selectClassAssignment{
+  border: 1px solid black;
+  outline: none;
+  padding: 5px;
+  width: 130px;
+  margin-left: 20px;
+  font-size: 1.125rem;
+}
+
+#selectClassAssignment{
+  margin-bottom: 10px;
+}
+
+
+#selectClassAssignmentUpdate, #selectSelectAssignmentUpdate{
+  border: 1px solid black;
+  outline: none;
+  padding: 5px;
+  width: 130px;
+  font-size: 1.125rem;
+}
+#selectClassAssignmentUpdate{
+  margin-bottom: 5px;
+}
+
+
 .btn-assignments{
   display: flex;
   gap: 10px;
@@ -365,7 +392,7 @@ text-align: center;
   resize: none;
   overflow: auto;
   outline: none;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 #description-textarea{
@@ -376,7 +403,7 @@ text-align: center;
   display: flex;
   justify-content: space-evenly;
   width: 300px;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .update-btn-assingments{
