@@ -1,3 +1,13 @@
+<?php
+require_once "../../php/config/TeacherProfile.php";
+require_once "../../php/config/sessionStart.php";
+if(isset($_GET['s_email'])){
+  $target_s_email=$_GET['s_email'];
+  $_SESSION['target_s_email']= $target_s_email;
+  }else{
+    echo "not set";
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,17 +33,17 @@
         <!-- navbar -->
         <div class="navbar">
             <!-- logo or school name -->
-            <div class="logo"><a href="dashboard.html">Teacher Portal</a></div>
+            <div class="logo"><a href="dashboard.php">Teacher Portal</a></div>
             <div class="right-side">
                     <div class="useraccount">
                         <div class="U-photo">
                             <!-- user photo in navbar at right side -->
-                            <div class="photo"><img src="" alt="admin photo"></div>
+                            <div class="photo"><img src="../../<?php echo $teacherImage;?>" alt="admin photo"></div>
                         </div>
                         <div class="name-n-role" style="color: white;">
                             <!-- name and roll -->
-                            <div class="u-name" name="a-id">Thaman Gurung</div>
-                            <div class="role" name="role">Teacher</div>
+                            <div class="u-name" name="a-id"><?php if(isset($teacherName)) echo $teacherName;?></div>
+                            <div class="role" name="role"><?php if(isset($userType)) echo "$userType";?></div>
                         </div>
                     </div>
                 <div class="notification">

@@ -40,9 +40,7 @@ if ($exesql = mysqli_query($con, $sql)) {
                     <?php
                 }else if($_SESSION['userType']=="teacher"){
                     ?>
-
-                    <td><a href="../../admin/admin-studentprofile-main.php?s_email=<?php if(isset($searchResult['email'])) echo $searchResult['email'];?>"><button class="show-student-btn" type="button">Show</button></a></td> 
-
+                    <td><a href="../../teacher/html/Studentprofiles.php?s_email=<?php if(isset($searchResult['email'])) echo $searchResult['email'];?>"><button class="show-student-btn" type="button">Show</button></a></td> 
                 </tr>
                 <?php
                 }}

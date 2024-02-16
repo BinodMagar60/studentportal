@@ -1,5 +1,6 @@
 <?php 
 require_once "../../php/config/TeacherProfile.php";
+unset($_SESSION['target_s_email']);
 ?>
 <!DOCTYPE html>
 <html lang="en">

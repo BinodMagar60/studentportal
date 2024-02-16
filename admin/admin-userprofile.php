@@ -38,8 +38,8 @@ require_once "../php/config/AdminProfile.php";
             </div>
             <div class="name-n-role">
               <!-- name and roll -->
-              <div class="u-name" name="a-id"><?php echo "$adminName";?></div>
-              <div class="role" name="role"><?php echo "$userType";?></div>
+              <div class="u-name" name="a-id"><?php if(isset($adminName)) echo "$adminName";?></div>
+              <div class="role" name="role"><?php if(isset($userType)) echo "$userType";?></div>
             </div>
           </div>
         </a>
