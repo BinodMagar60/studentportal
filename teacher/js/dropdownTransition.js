@@ -100,7 +100,6 @@ function studentAttandence(){
   xhr.onload = function () {
       if (this.status === 200) {
           container.innerHTML = xhr.responseText;
-          hideOldEvents(); 
       } else {
           console.warn("Did not receive 200 OK from response!");
       }
@@ -108,6 +107,7 @@ function studentAttandence(){
   xhr.open('GET', 'attendance.php');
   xhr.send();
 
+  setTimeout(tableDataAttendance,50);
 }
 
 

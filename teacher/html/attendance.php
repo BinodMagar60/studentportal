@@ -10,6 +10,7 @@ $section = isset($_GET['sections']) ? $_GET['sections'] : 'A';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance</title>
     <link rel="stylesheet" href="../css/attendance.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -21,7 +22,7 @@ $section = isset($_GET['sections']) ? $_GET['sections'] : 'A';
                 <div class="attendance-select-class">
                 <span class="class-attendance">
                     <label for="classAttendance">Class</label>
-                    <select name="classAttendance" id="classAttendance">
+                    <select name="classAttendance" id="classAttendance" onchange="tableDataAttendance();">
                         <option value="one" <?php echo ($class == 'one' ? 'selected' : ''); ?>>One</option>
                         <option value="two" <?php echo ($class == 'two' ? 'selected' : ''); ?>>Two</option>
                         <option value="three" <?php echo ($class == 'three' ? 'selected' : ''); ?>>Three</option>
@@ -36,7 +37,7 @@ $section = isset($_GET['sections']) ? $_GET['sections'] : 'A';
                 </span>
                 <span class="section-attendance">
                     <label for="sectionAttendance">Section</label>
-                    <select name="sectionAttendance" id="sectionAttendance">
+                    <select name="sectionAttendance" id="sectionAttendance" onchange="tableDataAttendance()">
                         <option value="A" <?php echo ($section == 'A' ? 'selected' : ''); ?>>Section A</option>
                         <option value="B" <?php echo ($section == 'B' ? 'selected' : ''); ?>>Section B</option>
                         <option value="C" <?php echo ($section == 'C' ? 'selected' : ''); ?>>Section C</option>
@@ -48,30 +49,12 @@ $section = isset($_GET['sections']) ? $_GET['sections'] : 'A';
 
                 <div class="attendance-list-container" id="attendance-list-container"></div>
 
-            <form >
-                <div class="today-attendance"><span><input type="checkbox" id="today-atten"></span><label for="today-atten">Todays Attendance</label> </div>
-
-                <table id="attendanceTable">
-                    <tr>
-                        <td>S.N.</td>
-                        <td>Name</td>
-                        <td>E-mail</td>
-                        <td>Attendance</td>
-                    </tr>
-                    <tr>
-                        <td colspan="4" style="border: none;">
-                            <div class="attendance-btn-div">
-                                <button type="button" class="attendanceSubmit">Submit</button>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-                
-            </form>
+            
+                    
 
 
         </fieldset>
     </div>
-    
+    <script src="../js/attendance.js"></script>
 </body>
 </html>

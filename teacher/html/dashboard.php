@@ -213,7 +213,7 @@ unset($_SESSION['target_s_email']);
     <script  src="../js/studentdetail-php.js"></script>
     <script src="../js/assignments.js"></script>
     <script src="../js/notify.js"></script>
-
+    <script src="../js/attendance.js"></script>
     <!-- <script src="../js/admin-announcement-click.js"></script>
     <script src="../js/admin-updateevents.js"></script>
     <script src="../js/admin-announcement.js"></script> -->
