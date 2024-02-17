@@ -25,7 +25,6 @@ const tableDataAttendance = () => {
                         console.error("Element with ID 'searched-box' not found.");
                     }
 
-                    console.log("class "+selectedClass+" section "+selectedSection);
                 }
             });
         }

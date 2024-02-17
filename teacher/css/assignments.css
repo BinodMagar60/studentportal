@@ -131,7 +131,19 @@ legend{
   overflow-wrap: break-word;
 }
 
-.assignment-table-show tr td:nth-child(3){
+.assignment-table-show tr td:nth-child(5){
+  width: 180px;
+  text-align: center;
+}
+
+.assignment-table-show tr td:nth-child(3),.assignment-table-show tr td:nth-child(4){
+  width: 130px;
+  text-align: center;
+}
+
+
+
+.assignment-table-show tr td:nth-child(6){
   width: 200px;
 text-align: center;
 }

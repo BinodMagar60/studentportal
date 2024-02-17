@@ -1,69 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        #imageContainer {
-            width: 300px;
-            height: 300px;
-            border: 2px solid #ccc;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            margin-bottom: 20px;
-        }
-
-        #uploadedImage {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        #uploadInput {
-            display: none;
-        }
-
-        #uploadButton {
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Date Comparison</title>
 </head>
 <body>
 
-    <div id="imageContainer">
-        <img id="uploadedImage" src="#" alt="Uploaded Image">
-    </div>
+<h2>Check if a Date is Less Than Today's Date</h2>
 
-    <input type="file" id="uploadInput" accept="image/*" onchange="displayImage(this)">
-    <button id="uploadButton" onclick="document.getElementById('uploadInput').click()">Upload Image</button>
+<label for="dateInput">Enter a date:</label>
+<input type="date" id="dateInput">
+<button onclick="checkDate()">Check</button>
 
-    <script>
-        function displayImage(input) {
-            const imageContainer = document.getElementById('imageContainer');
-            const uploadedImage = document.getElementById('uploadedImage');
+<p id="result"></p>
 
-            const file = input.files[0];
-
-            if (file) {
-                const reader = new FileReader();
-
-                reader.onload = function (e) {
-                    uploadedImage.src = e.target.result;
-                };
-
-                reader.readAsDataURL(file);
-            } else {
-                // Clear the image if no file is selected
-                uploadedImage.src = '#';
-            }
-        }
-    </script>
+<script>
+function checkDate() {
+  // Get the input date value
+  var inputDate = new Date(document.getElementById("dateInput").value);
+  
+  // Get today's date
+  var today = new Date();
+  
+  // Compare the input date with today's date
+  if (inputDate < today) {
+    document.getElementById("result").innerText = "The input date is less than today's date.";
+  } else if (inputDate > today) {
+    document.getElementById("result").innerText = "The input date is greater than today's date.";
+  } else {
+    document.getElementById("result").innerText = "The input date is equal to today's date.";
+  }
+}
+</script>
 
 </body>
 </html>
