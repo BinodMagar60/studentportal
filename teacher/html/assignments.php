@@ -13,11 +13,11 @@
     <div class="assignment-container">
         <fieldset>
             <legend>Assignments</legend>
-            <form id="assignment-form">
+            <form action="../php/assignment/addAssignment.php" method="post" id="assignment-form">
                 <table id="assignment-table">
                     <tr>
                         <td>Expiration Date</td>
-                        <td><input id="exp" type="date" style="border: 1px solid black; outline: none; padding: 5px"></td>
+                        <td><input id="exp" type="date" name="a_date" style="border: 1px solid black; outline: none; padding: 5px"></td>
                         <td class="error1 error">
                             
                         </td>
@@ -26,7 +26,7 @@
                     
                     <tr>
                         <td>Title</td>
-                        <td><input id="title" type="text" style="border: 1px solid black; outline: none; padding: 5px"></td>
+                        <td><input id="title" type="text" name="a_title" style="border: 1px solid black; outline: none; padding: 5px"></td>
                         <td>
                             <div class="error2 error"></div></td>
                         </td>
@@ -34,7 +34,7 @@
                    
                     <tr>
                         <td>Description</td>
-                        <td><textarea id="description" name="description" id=""  rows="5" style="border: 1px solid black; outline: none; padding: 5px"></textarea></td>
+                        <td><textarea id="description" name="a_description" name="a_description" id=""  rows="5" style="border: 1px solid black; outline: none; padding: 5px"></textarea></td>
                         <td>
                             <div class="error3 error"></div></td>
                         </td>
@@ -42,7 +42,7 @@
                     <tr>
                         <td>Select Class</td>
                         <td>
-                            <select name="" id="selectClassAssignment" >
+                            <select name="a_user_class" id="selectClassAssignment" >
                                 <option value="one">One</option>
                                 <option value="two">Two</option>
                                 <option value="three">Three</option>
@@ -59,7 +59,7 @@
                     <tr>
                         <td></td>
                         <td>
-                            <select name="" id="selectSectionAssignment">
+                            <select name="a_user_section" id="selectSectionAssignment">
                                 <option value="everyone">Everyone</option>
                                 <option value="A">Section A</option>
                                 <option value="B">Section B</option>
@@ -70,7 +70,7 @@
                    
                     <tr>
                         <td></td>
-                        <td><div class="assignment-btn-submit"><button type="button" class="assignment-btn" onclick="assignmentValidation();">Submit</button></div></td>
+                        <td><div class="assignment-btn-submit"><button class="assignment-btn" onclick="assignmentValidation();">Submit</button></div></td>
                         <td></td>
                         
                     </tr>
@@ -114,7 +114,7 @@
     </div>
 
     <div class="update-assignment" id="update-assignment">
-        <form action="../../php/teacherPHP/assignment/addAssignment.php">
+        <form action="">
             <table id="update-assignment-table">
                 <tr>
                     <td>Expiration Date</td>
