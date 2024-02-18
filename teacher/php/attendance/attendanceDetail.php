@@ -7,7 +7,7 @@ if ($exesql = mysqli_query($con, $sql)) {
     if (mysqli_num_rows($exesql) > 0) {
         $i = 0;
         ?>
-        <form action="../php/attendance/addAttendance.php" method="post">
+        <form action="../php/attendance/addUpdateAttendance.php" method="post">
                 <div class="today-attendance"><span><input type="checkbox" id="today-atten"></span><label for="today-atten">Todays Attendance</label> </div>
 
                 <table id="attendanceTable">
