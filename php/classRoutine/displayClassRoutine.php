@@ -22,8 +22,8 @@
 
                 <?php
                 require_once "../config/db.php";
-                $class = "One";
-                $section = "A";
+                $class = isset($_GET['class']) ? $_GET['class'] : 'One';
+                $section = isset($_GET['section']) ? $_GET['section'] : 'A';
 
                 $routineSql = "select * from class_routine";
                 if ($routineExe = mysqli_query($con, $routineSql)) {

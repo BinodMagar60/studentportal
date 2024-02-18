@@ -1,3 +1,8 @@
+<?php
+require_once "../php/config/db.php";
+$class = isset($_GET['classes']) ? $_GET['classes'] : 'One';
+$section = isset($_GET['sections']) ? $_GET['sections'] : 'A';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,24 +28,24 @@
                     <div class="sel1">
                         <label for="classSel">Class</label>
                         <select name="" id="classSel" onchange="">
-                            <option value="one">One</option>
-                            <option value="two">Two</option>
-                            <option value="three">Three</option>
-                            <option value="four">Four</option>
-                            <option value="five">Five</option>
-                            <option value="six">Six</option>
-                            <option value="seven">Seven</option>
-                            <option value="eight">Eight</option>
-                            <option value="nine">Nine</option>
-                            <option value="ten">Ten</option>
+                        <option value="One" <?php echo ($class == 'One' ? 'selected' : ''); ?>>One</option>
+                        <option value="Two" <?php echo ($class == 'Two' ? 'selected' : ''); ?>>Two</option>
+                        <option value="Three" <?php echo ($class == 'Three' ? 'selected' : ''); ?>>Three</option>
+                        <option value="Four" <?php echo ($class == 'Four' ? 'selected' : ''); ?>>Four</option>
+                        <option value="Five" <?php echo ($class == 'Five' ? 'selected' : ''); ?>>Five</option>
+                        <option value="Six" <?php echo ($class == 'Six' ? 'selected' : ''); ?>>Six</option>
+                        <option value="Seven" <?php echo ($class == 'Seven' ? 'selected' : ''); ?>>Seven</option>
+                        <option value="Eight" <?php echo ($class == 'Eight' ? 'selected' : ''); ?>>Eight</option>
+                        <option value="Nine" <?php echo ($class == 'Nine' ? 'selected' : ''); ?>>Nine</option>
+                        <option value="Ten" <?php echo ($class == 'Ten' ? 'selected' : ''); ?>>Ten</option>
                         </select>
                     </div>
                     <div class="sel2">
                         <label for="sectionSel">Section</label>
                         <select name="" id="sectionSel">
-                            <option value="a">Section A</option>
-                            <option value="b">Section B</option>
-                            <option value="c">Section C</option>
+                        <option value="A" <?php echo ($section == 'A' ? 'selected' : ''); ?>>A</option>
+                                <option value="B" <?php echo ($section == 'B' ? 'selected' : ''); ?>>B</option>
+                                <option value="C" <?php echo ($section == 'C' ? 'selected' : ''); ?>>C</option>
                         </select>
                     </div>
                 </div>
