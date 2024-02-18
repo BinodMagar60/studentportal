@@ -21,13 +21,10 @@ $section = isset($_GET['sections']) ? $_GET['sections'] : 'A';
     <div class="classroutine">
         <fieldset>
         <legend>Class Routine</legend>
-            <form enctype="multipart/form-data" novalidate autocomplete="off">
-
-                
                 <div class="classroutine-select">
                     <div class="sel1">
                         <label for="classSel">Class</label>
-                        <select name="" id="classSel" onchange="">
+                        <select name="" id="classSel" onchange="tableDataClassRoutine();">
                         <option value="One" <?php echo ($class == 'One' ? 'selected' : ''); ?>>One</option>
                         <option value="Two" <?php echo ($class == 'Two' ? 'selected' : ''); ?>>Two</option>
                         <option value="Three" <?php echo ($class == 'Three' ? 'selected' : ''); ?>>Three</option>
@@ -42,20 +39,18 @@ $section = isset($_GET['sections']) ? $_GET['sections'] : 'A';
                     </div>
                     <div class="sel2">
                         <label for="sectionSel">Section</label>
-                        <select name="" id="sectionSel">
+                        <select name="" id="sectionSel" onchange="tableDataClassRoutine();">
                         <option value="A" <?php echo ($section == 'A' ? 'selected' : ''); ?>>A</option>
                                 <option value="B" <?php echo ($section == 'B' ? 'selected' : ''); ?>>B</option>
                                 <option value="C" <?php echo ($section == 'C' ? 'selected' : ''); ?>>C</option>
                         </select>
                     </div>
                 </div>
+      
 
-
-
-
-
-        
-        </form>
+        <div class="display-classroutine" id="display-classroutine">
+            <!-- Display the ClassRoutine here -->
+        </div>
 
         </fieldset>
     </div>

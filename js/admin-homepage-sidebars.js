@@ -266,6 +266,7 @@ function teacherDetail(){
     };
     xhr.open('GET', 'admin-classroutine.php'); 
     xhr.send();
+    setTimeout(tableDataClassRoutine,40)
 
   }
 
