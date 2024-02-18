@@ -23,7 +23,7 @@ $checkAttendanceResult=mysqli_fetch_assoc($checkAttendanceExe);
 
 $checkDate=date('Y-m-d',strtotime($checkAttendanceResult['attendance_date']));
 if($checkDate==$currentDate){
-  $updateAttendance= "UPDATE attendance SET attendance='$attendance' where email='$email' and class='$class' and section='$section'and date(attendance_date)='$currentDate'";
+  $updateAttendance= "UPDATE attendance SET s_attendance='$attendance' where email='$email' and class='$class' and section='$section'and date(attendance_date)='$currentDate'";
     if(mysqli_query($con,$updateAttendance)){
       echo "updated";
     }else{
@@ -33,7 +33,7 @@ if($checkDate==$currentDate){
 else{
   if(isset($id,$name,$email,$class,$section,$attendance)){
 
-    $addAttendance= "INSERT INTO attendance(name,email,class,section,attendance,student_id) VALUES ('$name','$email','$class','$section','$attendance','$id')";
+    $addAttendance= "INSERT INTO attendance(name,email,class,section,s_attendance,student_id) VALUES ('$name','$email','$class','$section','$attendance','$id')";
     if(mysqli_query($con,$addAttendance)){
       echo "new";
     }else{
@@ -46,7 +46,7 @@ else{
 }else{
   if(isset($id,$name,$email,$class,$section,$attendance)){
 
-    $addAttendance= "INSERT INTO attendance(name,email,class,section,attendance,student_id) VALUES ('$name','$email','$class','$section','$attendance','$id')";
+    $addAttendance= "INSERT INTO attendance(name,email,class,section,s_attendance,student_id) VALUES ('$name','$email','$class','$section','$attendance','$id')";
     if(mysqli_query($con,$addAttendance)){
       echo "created";
     }else{
