@@ -59,6 +59,8 @@ else{
 
 $i++;
 }
+header("location:../../html/dashboard.php");
+      exit();
 }else{
   echo "not submitted";
 }

@@ -1,4 +1,6 @@
-
+<?php
+require_once "../../php/config/StudentProfile.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,16 +28,16 @@
             <!-- logo or school name -->
             <div class="logo"><a href="#">Student Portal</a></div>
             <div class="right-side">
-                <a href="">
+                <a href="Studentprofile.php">
                     <div class="useraccount">
                         <div class="U-photo">
                             <!-- user photo in navbar at right side -->
-                            <div class="photo"><img src="" alt="student photo"></div>
+                            <div class="photo"><img src="../../<?php if(isset($imageSrc)) echo $imageSrc;?>" alt="student photo"></div>
                         </div>
                         <div class="name-n-role">
                             <!-- name and roll -->
-                            <div class="u-name" name="a-id"></div>
-                            <div class="role" name="role">Student</div>
+                            <div class="u-name" name="a-id"><?php if(isset($studentName)) echo $studentName;?></div>
+                            <div class="role" name="role"><?php if(isset($userType)) echo $userType;?></div>
                         </div>
                     </div>
                 </a>

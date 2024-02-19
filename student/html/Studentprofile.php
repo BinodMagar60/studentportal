@@ -1,5 +1,5 @@
 <?php
-require_once "../../php/config/TeacherProfile.php";
+require_once "../../php/config/StudentProfile.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,17 +26,17 @@ require_once "../../php/config/TeacherProfile.php";
         <!-- navbar -->
         <div class="navbar">
             <!-- logo or school name -->
-            <div class="logo"><a href="#">Student Portal</a></div>
+            <div class="logo"><a href="dashboard.php">Student Portal</a></div>
             <div class="right-side">
                     <div class="useraccount">
                         <div class="U-photo">
                             <!-- user photo in navbar at right side -->
-                            <div class="photo"><img src="" alt="Student photo"></div>
+                            <div class="photo"><img src="../../<?php if(isset($imageSrc)) echo $imageSrc;?>" alt="Student photo"></div>
                         </div>
                         <div class="name-n-role" style="color: white;">
                             <!-- name and roll -->
-                            <div class="u-name" name="a-id"></div>
-                            <div class="role" name="role">Student</div>
+                            <div class="u-name" name="a-id"><?php if(isset($studentName)) echo $studentName;?></div>
+                            <div class="role" name="role"><?php if(isset($userType)) echo $userType;?></div>
                         </div>
                     </div>
                 <div class="notification">
