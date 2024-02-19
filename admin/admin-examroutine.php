@@ -62,7 +62,7 @@ if(mysqli_num_rows($examSubjectExe)>0){
 }
                             ?>
                         <tr>
-                            <td colspan="8" style="border:none; ">
+                            <td colspan="8" style="border:none; background-color: white;; ">
                             <div class="btn-examroutine" >
                         <button style="background-color: gray;" type="button" onclick="updateExamroutine(event);">Update</button>
                         <button type="button" id="postButton" style="background-color: green" onclick="postExamRoutine();">Post</button>
@@ -73,7 +73,12 @@ if(mysqli_num_rows($examSubjectExe)>0){
                     </table>
                     
                 </div>
-               
+
+
+
+                <div class="examroutineList-container" id="examroutineList-container">
+
+                </div>
             </fieldset>
         </form>
     </div>

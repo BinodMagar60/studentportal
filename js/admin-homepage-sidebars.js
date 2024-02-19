@@ -286,6 +286,7 @@ function teacherDetail(){
     xhr.open('GET', 'admin-examroutine.php'); 
     xhr.send();
 
+    setTimeout(examRoutineListCall,50);
   }
 
 
