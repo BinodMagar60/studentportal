@@ -74,3 +74,16 @@ function examRoutineListCall(){
 
 
 
+
+
+function examroutineClick() {
+    var showBox = document.getElementById("ShowListsBox1");
+    var computedStyle = window.getComputedStyle(showBox);
+    var displayProperty = computedStyle.getPropertyValue("display");
+
+    if (displayProperty === "none") {
+        showBox.style.display = "block";
+    } else {
+        showBox.style.display = "none";
+    }
+}

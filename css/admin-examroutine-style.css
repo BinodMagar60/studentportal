@@ -72,15 +72,17 @@ legend{
     background-color: rgb(64, 156, 241);
 }
 
-.exam-table tr:nth-child(1){
-    background-color: rgb(64, 156, 241);
+.exam-table tr:nth-child(1) input{
+    background-color: rgb(64, 156, 241) !important;
 }
+
 .exam-table tr td:not(:nth-child(1)) input{
     padding: 5px;
     font-size: 1.125rem;
     text-align: center;
     outline: none;
     width: 170px;
+    
 }
 
 .btn-examroutine{
@@ -112,15 +114,18 @@ legend{
     margin-right: 55px;
     margin-top: 80px;
     font-size: 1.125rem;
+
 }
 
 .examroutineLists-title{
     font-size: 1.25rem;
     font-weight: 400;
+    margin-bottom: 20px;
 }
 
 .examroutine-sections{
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .examroutine-sections .primary-box{
     display: flex;
@@ -139,6 +144,8 @@ legend{
     box-shadow: 0 0 8px 2px rgba(207, 207, 207, 0.589);
     border-radius: 0 0 5px 5px;
     padding: 30px 10px 20px 10px;
+    display: none;
+  
 }
 
 .secondary-box #table-showExamRoutineList{
@@ -161,3 +168,20 @@ legend{
 .secondary-box #table-showExamRoutineList tr:nth-child(1){
     background-color: rgb(64, 156, 241); 
 }
+
+.btn-examroutineLists{
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+
+.btn-examroutineLists button{
+    font-size: 1.125rem;
+    padding: 8px 15px;
+    color: white;
+}
+
+
+
