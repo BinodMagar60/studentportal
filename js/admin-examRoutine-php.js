@@ -55,3 +55,35 @@
                 }
             });
         };
+
+
+function examRoutineListCall(){
+    const xhr = new XMLHttpRequest();
+    const container = document.getElementById('examroutineList-container');
+    
+    xhr.onload = function() {
+      if (this.status === 200) {
+        container.innerHTML = xhr.responseText;
+      } else {
+        console.warn("Did not receive 200 OK from response!");
+      }
+    };
+    xhr.open('GET', 'admin-examroutineList.php'); 
+    xhr.send();
+}
+
+
+
+
+
+function examroutineClick() {
+    var showBox = document.getElementById("ShowListsBox1");
+    var computedStyle = window.getComputedStyle(showBox);
+    var displayProperty = computedStyle.getPropertyValue("display");
+
+    if (displayProperty === "none") {
+        showBox.style.display = "block";
+    } else {
+        showBox.style.display = "none";
+    }
+}

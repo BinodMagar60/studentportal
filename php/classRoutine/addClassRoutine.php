@@ -1,6 +1,6 @@
 <?php
 require_once "../config/db.php";
-$class="Three";
+$class="Ten";
 $section="A";
 
 $checkDataSql= "select * from class_routine_subject where `class`='$class' and `section`='$section'";

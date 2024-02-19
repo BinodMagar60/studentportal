@@ -266,6 +266,7 @@ function teacherDetail(){
     };
     xhr.open('GET', 'admin-classroutine.php'); 
     xhr.send();
+    setTimeout(tableDataClassRoutine,40)
 
   }
 
@@ -285,6 +286,7 @@ function teacherDetail(){
     xhr.open('GET', 'admin-examroutine.php'); 
     xhr.send();
 
+    setTimeout(examRoutineListCall,50);
   }
 
 
