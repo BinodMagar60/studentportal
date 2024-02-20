@@ -16,11 +16,10 @@ $attendance=$_POST['attendance'.$i];
   $attendance="A";
 }
 // echo $id.$name.$email.$class.$section.$attendance;
-$checkAttendance="SELECT * from attendance where email='$email' and class='$class' and section='$section'";
+$checkAttendance="SELECT * from attendance where email='$email' and class='$class' and section='$section' and date(attendance_date)='$currentDate'";
 $checkAttendanceExe=mysqli_query($con,$checkAttendance);
 if(mysqli_num_rows($checkAttendanceExe)>0){
 $checkAttendanceResult=mysqli_fetch_assoc($checkAttendanceExe);
-
 $checkDate=date('Y-m-d',strtotime($checkAttendanceResult['attendance_date']));
 if($checkDate==$currentDate){
   $updateAttendance= "UPDATE attendance SET s_attendance='$attendance' where email='$email' and class='$class' and section='$section'and date(attendance_date)='$currentDate'";
