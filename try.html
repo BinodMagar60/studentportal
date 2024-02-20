@@ -1,38 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Date Comparison</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-
-<h2>Check if a Date is Less Than Today's Date</h2>
-
-<label for="dateInput">Enter a date:</label>
-<input type="date" id="dateInput">
-<button onclick="checkDate()">Check</button>
-
-<p id="result"></p>
-
-<script>
-function checkDate() {
-  // Get the input date value
-  var inputDate = new Date(document.getElementById("dateInput").value);
   
-  // Get today's date
-  var today = new Date();
-  
-  // Compare the input date with today's date
-  if (inputDate < today) {
-    document.getElementById("result").innerText = "The input date is less than today's date.";
-  } else if (inputDate > today) {
-    document.getElementById("result").innerText = "The input date is greater than today's date.";
-  } else {
-    document.getElementById("result").innerText = "The input date is equal to today's date.";
-  }
-}
-</script>
-
 </body>
 </html>
