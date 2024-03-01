@@ -3,7 +3,7 @@
 
         var formData = new FormData(document.getElementById('classroutine'));
         $.ajax({
-            url: '../php/examRoutine/updateExamRoutine.php',
+            url: '../php/examRoutine/addExamRoutine.php',
             type: 'POST',
             data: formData,
             processData: false,

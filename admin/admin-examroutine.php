@@ -1,9 +1,10 @@
 <?php
 require_once "../php/config/db.php";
-$examDateSql="SELECT * FROM exam_routine_date";
+$examDateSql="SELECT * FROM exam_routine_date where `exam_title`='ExamSampleId'";
 $examDateExe=mysqli_query($con,$examDateSql);
 if(mysqli_num_rows($examDateExe)>0){
 $examDateRow=mysqli_fetch_assoc($examDateExe);
+$examSampleId=$examDateRow['id'];
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +23,7 @@ $examDateRow=mysqli_fetch_assoc($examDateExe);
                 <legend>Exam Routine</legend>
                 <div class="examroutine-select">
                    <div class="examtitles"> <label for="exam-title">Title</label>
-                    <input type="text" id="exam-title" name="exam_title" value="<?php if(isset($examDateRow['exam_title'])) echo $examDateRow['exam_title']?>">
+                    <input type="text" id="exam-title" name="exam_title" value="<?php //if(isset($examDateRow['exam_title'])) echo $examDateRow['exam_title']?>">
                     </div>
                     <table class="exam-table">
                         <tr>
@@ -39,15 +40,19 @@ $examDateRow=mysqli_fetch_assoc($examDateExe);
 ?>
                         </tr>
                         <?php
-$examSubjectSql="SELECT * FROM exam_routine_subject";
+$examSubjectSql="SELECT * FROM exam_routine_subject where `exam_id`=$examSampleId";
 $examSubjectExe=mysqli_query($con,$examSubjectSql);
-$i=1;
+$i=0;
+// $class = array("One", "Two", "Three","Four","Five","Six","Seven","Eight","Nine","Ten");
 if(mysqli_num_rows($examSubjectExe)>0){
     while($examSubjectRow=mysqli_fetch_assoc($examSubjectExe)){
+        // for($i;$i<10;$i++){
         ?>
                         <tr>
-                            <td><?php if(isset($examSubjectRow['class'])) echo $examSubjectRow['class'];?></td>
-                            <input type="hidden" name="examSubjectClass_<?php echo $i;?>" value="<?php if(isset($examSubjectRow['class'])) echo $examSubjectRow['class'];?>">
+                            <td><?php if(isset($examSubjectRow['class'])) echo $examSubjectRow['class'];
+                            // if(isset($class[$i])) echo $class[$i];?></td>
+                            <input type="hidden" name="examSubjectClass_<?php echo $i;?>" value="<?php if(isset($examSubjectRow['class'])) echo $examSubjectRow['class'];
+                            // if(isset($class[$i])) echo $class[$i];?>">
                             <td><input type="text" name="examSubject1_<?php echo $i;?>" value="<?php if(isset($examSubjectRow['e_subject_1'])) echo $examSubjectRow['e_subject_1'];?>"></td>
                             <td><input type="text" name="examSubject2_<?php echo $i;?>" value="<?php if(isset($examSubjectRow['e_subject_2'])) echo $examSubjectRow['e_subject_2'];?>"></td>
                             <td><input type="text" name="examSubject3_<?php echo $i;?>" value="<?php if(isset($examSubjectRow['e_subject_3'])) echo $examSubjectRow['e_subject_3'];?>"></td>
@@ -58,15 +63,16 @@ if(mysqli_num_rows($examSubjectExe)>0){
                         </tr>
                         <?php
                         $i++;
+        }
     }
-}
+// }
                             ?>
                         <tr>
                             <td colspan="8" style="border:none; background-color: white; ">
                             <div class="btn-examroutine" >
-                        <button style="background-color: gray;" type="button" onclick="updateExamroutine(event);">Update</button>
-                        <button type="button" id="postButton" style="background-color: green" onclick="postExamRoutine();">Post</button>
-                        <button type="button" id="unpostButton" style="background-color: red" onclick="unpostExamRoutine();">Unpost</button>
+                        <button style="background-color: gray;" type="button" onclick="updateExamroutine(event);">Create</button>
+                        <!-- <button type="button" id="postButton" style="background-color: green" onclick="postExamRoutine();">Post</button>
+                        <button type="button" id="unpostButton" style="background-color: red" onclick="unpostExamRoutine();">Unpost</button> -->
                         
                     </div></td>
                         </tr>

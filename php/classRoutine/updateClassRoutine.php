@@ -1,8 +1,8 @@
 <?php
 require_once "../config/db.php";
-// if($_SERVER['REQUEST_METHOD']==='POST'){
-$class="One";
-$section="A";
+if($_SERVER['REQUEST_METHOD']==='POST'){
+$class=$_POST['class'];
+$section=$_POST['section'];
 
 $i=1;
 while($i<7){
@@ -50,5 +50,5 @@ function test_input($data) {
   return $data;
 }
 mysqli_close($con);
-// }
+}
 ?>

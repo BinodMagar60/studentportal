@@ -4,7 +4,7 @@ function updateClassroutine(event){
     var formData = new FormData(document.getElementById('classroutinedaily'));
 
     $.ajax({
-        url: '../php/classRoutine/addClassRoutine.php',
+        url: '../php/classRoutine/updateClassRoutine.php',
         type: 'POST',
         data: formData,
         processData: false,

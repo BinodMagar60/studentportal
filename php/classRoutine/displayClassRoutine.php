@@ -39,6 +39,9 @@
                 <td><input type="text" name="fifthP" value="<?php if (isset($routineRow['fifthP'])) echo $routineRow['fifthP']; ?>"></td>
                 <td><input type="text" name="sixthP" value="<?php if (isset($routineRow['sixthP'])) echo $routineRow['sixthP']; ?>"></td>
                 <td><input type="text" name="seventhP" value="<?php if (isset($routineRow['seventhP'])) echo $routineRow['seventhP']; ?>"></td>
+                <input type="hidden" name="class" value="<?php if(isset($class)) echo $class;?>">
+                <input type="hidden" name="section" value="<?php if(isset($section)) echo $section;?>">
+
             </tr>
             <?php
             $routine_subject_Sql = "select * from class_routine_subject where class='$class' and section='$section'";

@@ -15,8 +15,8 @@ if(mysqli_query($con,$updateExamRoutineDateSql)){
   // echo "successfull";
 }
 
-$i=1;
-while($i<=10){
+$i=0;
+while($i<10){
 $examRoutineClass=test_input($_POST['examSubjectClass_'.$i]);
 $examSubject1=test_input($_POST['examSubject1_'.$i]);
 $examSubject2=test_input($_POST['examSubject2_'.$i]);
