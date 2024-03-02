@@ -12,11 +12,11 @@
     <div class="notification-container">
         <fieldset>
             <legend>Notification</legend>
-            <form id="notification-form">
-                <table id="notification-table">
+            <form action="../php/notify/addNotify.php" id="notification-form" method="post">
+                <table id="notification-table"> 
                     <tr>
                         <td>Expiration Date</td>
-                        <td><input id="exp-notif" type="date" style="border: 1px solid black; outline: none; padding: 5px"></td>
+                        <td><input id="exp-notif" name="exp_date" type="date" style="border: 1px solid black; outline: none; padding: 5px"></td>
                         <td class="error1 error">
                             
                         </td>
@@ -35,7 +35,7 @@
                             Select Class
                         </td>
                         <td>
-                            <select name="" id="class-notify" onchange="sectionChange();">
+                            <select name="class" id="class-notify" onchange="sectionChange();">
                                 <option value="everyone">Everyone</option>
                                 <option value="one">One</option>
                                 <option value="two">Two</option>
@@ -55,7 +55,7 @@
                     <tr>
                         <td></td>
                         <td>
-                            <select name="" id="section-notify">
+                            <select name="section" id="section-notify">
                                 <option value="everyone">Everyone</option>
                                 <option value="A">Section A</option>
                                 <option value="B">Section B</option>
@@ -68,7 +68,7 @@
                    
                     <tr>
                         <td></td>
-                        <td><div class="notify-btn-submit"><button type="button" class="notify-btn" onclick="notifyVerification();">Submit</button></div></td>
+                        <td><div class="notify-btn-submit"><button type="submit" class="notify-btn" onclick="notifyVerification();">Submit</button></div></td>
                         <td></td>
                         
                     </tr>
@@ -83,9 +83,17 @@
                         <td>Title</td>
                         <td>Action</td>
                     </tr>
+                    <?php
+                    require_once "../../php/config/db.php";
+                    $notifyListSql="SELECT * FROM teacher_notify";
+                    if($notifyExe=mysqli_query($con,$notifyListSql)){
+                        if(mysqli_num_rows($notifyExe)>0){
+                            while($notifyResult=mysqli_fetch_assoc($notifyExe)){
+$i=1;
+                                ?>
                     <tr>
-                        <td>1</td>
-                        <td>Assignment 1</td>
+                        <td><?php if(isset($i)) echo $i?></td>
+                        <td><?php if(isset($notifyResult['description'])) echo $notifyResult['description']?></td>
                         <td>
                             <div class="btn-notify">
                                 <button class="btn-notify" style="background-color: green;"  onclick="notifyUpdate();">Update</button>
@@ -93,15 +101,13 @@
                             </div>
                         </td>
                     </tr>
+                    <?php
+                            }
+                        }
+                    }
+                    ?>
                 </table>
             </div>
-
-
-
-
-
-
-
         </fieldset>
     </div>
 

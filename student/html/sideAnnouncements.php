@@ -12,7 +12,11 @@
 <?php
 require_once "../../php/config/db.php";
 require_once "../../php/announcement/expiry_announcement.php";
-$sql_announcement= "SELECT * FROM announcements ORDER BY created_date ASC";
+require_once "../../php/config/sessionStart.php";
+$userType=$_SESSION['userType'];
+$userClass=$_SESSION['userClass'];
+$userSection=$_SESSION['userSection'];
+$sql_announcement= "SELECT * FROM announcements where (user_whom='everyone' or (user_whom='$userType' and (user_class='allclass' or (user_class='$userClass' and (user_section='allsection' or user_section='$userSection')))))";
 $exesql_announcement= mysqli_query($con,$sql_announcement);
 if(mysqli_num_rows($exesql_announcement)!=0){
   while($result_announcement=mysqli_fetch_assoc($exesql_announcement)){

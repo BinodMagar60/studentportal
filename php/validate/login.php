@@ -29,6 +29,15 @@ if($c_email==$result['email']){
       $_SESSION['userType']="student";
       $_SESSION['userName']=$result['name'];
       $_SESSION['userEmail']=$result['email'];
+      $studentSql="select * from student_table where email='$c_email'";
+      if($studentExe=mysqli_query($con,$studentSql)){
+        if(mysqli_num_rows($studentExe)>0){
+          if($studentResult=mysqli_fetch_assoc($studentExe)){
+            $_SESSION['userClass']=$studentResult['class'];
+            $_SESSION['userSection']=$studentResult['section'];
+          }
+        }
+      }
       header("location: ../../student/html/dashboard.php");
   
     }else{

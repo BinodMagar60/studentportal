@@ -11,8 +11,10 @@
 <div class="announcement-show-1">
 <?php
 require_once "../../php/config/db.php";
+require_once "../../php/config/sessionStart.php";
 require_once "../../php/announcement/expiry_announcement.php";
-$sql_announcement= "SELECT * FROM announcements ORDER BY created_date ASC";
+$userType=$_SESSION['userType'];
+$sql_announcement= "SELECT * FROM announcements where (user_whom='everyone' or user_whom='$userType')";
 $exesql_announcement= mysqli_query($con,$sql_announcement);
 if(mysqli_num_rows($exesql_announcement)!=0){
   while($result_announcement=mysqli_fetch_assoc($exesql_announcement)){
