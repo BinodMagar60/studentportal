@@ -50,6 +50,7 @@ function hideOldEvents() {
 
       if (eventDate < today) {
           eventElement.style.display = 'none';
+         
       }
   });
 }

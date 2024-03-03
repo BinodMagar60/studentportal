@@ -119,6 +119,7 @@ function eventNotification() {
   
         if (eventDate < today) {
             eventElement.style.display = 'none';
+            
         }
 
     

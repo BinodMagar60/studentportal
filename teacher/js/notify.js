@@ -16,7 +16,9 @@ function sectionChange(){
 
 
 
-function notifyVerification(){
+function notifyVerification(event){
+    event.preventDefault();
+    var  classSel = document.getElementById("class-notify");
     var exp = document.getElementById("exp-notif").value;
     var des = document.getElementById("description-notif").value;
 
@@ -27,6 +29,7 @@ function notifyVerification(){
 
     if(exp === ""){
         e1.innerText = "*Required"
+        event.preventDefault();
         valid = valid + 1;
     }
     else
@@ -36,6 +39,7 @@ function notifyVerification(){
 
     if(des === ""){
         e2.innerText = "*Required";
+        event.preventDefault();
         valid = valid + 1;
     }
     else{
@@ -43,7 +47,32 @@ function notifyVerification(){
     }
 
     if(valid === 0){
-        notificationPopupShow()
+
+        var formData = new FormData(document.getElementById("notification-form"));
+
+        $.ajax({
+            url: '../php/notify/addNotify.php',
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (response) {
+
+                setTimeout(notificationPopupShow,50);
+               setTimeout( document.getElementById('notification-form').reset(),100);
+               classSel.style.display = "none"
+               notifyList();
+
+            },
+            error: function (xhr, status, error) {
+                console.error('Error:', status, error);
+                console.log('Response Text:', xhr.responseText);
+                alert('Error adding student. Please try again.');
+            }
+            
+        });
+
+        
     }
 
 

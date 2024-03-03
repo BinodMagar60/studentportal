@@ -75,6 +75,22 @@ function logoutPopup() {
 //ajax calls
 
 
+function notifyList(){
+    const xhr = new XMLHttpRequest();
+    const container = document.getElementById('notify-table');
+    
+    xhr.onload = function() {
+      if (this.status === 200) {
+        container.innerHTML = xhr.responseText;
+      } else {
+        console.warn("Did not receive 200 OK from response!");
+      }
+    };
+    xhr.open('GET', 'notify-list.php'); 
+    xhr.send();
+  }
+
+
 function studentDetails(){
   const xhr = new XMLHttpRequest();
   const container = document.getElementById('container');
@@ -145,6 +161,7 @@ function studentNotify(){
     };
     xhr.open('GET', 'notify.php');
     xhr.send();
+    setTimeout(notifyList,50);
     
   }
 
