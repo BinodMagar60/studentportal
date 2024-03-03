@@ -18,7 +18,7 @@ function sectionChange(){
 
 function notifyVerification(event){
     event.preventDefault();
-    var  classSel = document.getElementById("class-notify");
+    var  classSel = document.getElementById("section-notify");
     var exp = document.getElementById("exp-notif").value;
     var des = document.getElementById("description-notif").value;
 
@@ -89,8 +89,8 @@ function notificationPopupShow(){
 
 
 
-function notifyDelete(){
-    var popup = document.getElementById("notify-delete");
+function notifyDelete(id){
+    var popup = document.getElementById("notify-delete-"+id);
     var overlay = document.getElementById("overlay");
     popup.classList.add("notify-delete-popup");
     overlay.style.display = "block";
@@ -99,8 +99,8 @@ function notifyDelete(){
 
 
 
-function notifyDeleteRemove(){
-    var popup = document.getElementById("notify-delete");
+function notifyDeleteRemove(id){
+    var popup = document.getElementById("notify-delete-"+id);
     var overlay = document.getElementById("overlay");
     popup.classList.remove("notify-delete-popup");
     overlay.style.display = "none";
@@ -109,7 +109,6 @@ function notifyDeleteRemove(){
 
 
 function notifyDeletePopup(){
-    notifyDeleteRemove();
     var popup = document.getElementById("popup-notice-delete-successfully");
     popup.classList.add("popup-Notice-submit-clicked")
     setTimeout(() => {
@@ -145,3 +144,26 @@ function notifyUpdatePopup(){
     }, 1500);
 }
 
+
+
+
+function confirmDelete(notifyId){
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET","../php/notify/deleteNotify.php?uid="+notifyId, true);
+    xhr.onreadystatechange = function () {
+      if(xhr.readyState ===4 && xhr.status == 200){
+  
+      }
+    };
+    xhr.send();
+   
+    setTimeout(() => {
+        notifyDeleteRemove(notifyId);
+    }, 30);
+    
+    setTimeout(() => {
+        notifyDeletePopup();
+    }, 30);
+
+
+  }
