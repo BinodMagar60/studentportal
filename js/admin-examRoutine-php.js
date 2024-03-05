@@ -10,8 +10,8 @@
             contentType: false,
             success: function (response) {
                 console.log('Response:', response);
-               
-    
+                document.getElementById('classroutine').reset();
+                
                 
             },
             error: function (xhr, status, error) {
@@ -76,14 +76,67 @@ function examRoutineListCall(){
 
 
 
-function examroutineClick() {
-    var showBox = document.getElementById("ShowListsBox1");
-    var computedStyle = window.getComputedStyle(showBox);
-    var displayProperty = computedStyle.getPropertyValue("display");
+// function examroutineClick() {
+//     var showBox = document.getElementById("ShowListsBox1");
+//     var computedStyle = window.getComputedStyle(showBox);
+//     var displayProperty = computedStyle.getPropertyValue("display");
 
-    if (displayProperty === "none") {
-        showBox.style.display = "block";
-    } else {
-        showBox.style.display = "none";
-    }
+//     if (displayProperty === "none") {
+//         showBox.style.display = "block";
+//     } else {
+//         showBox.style.display = "none";
+//     }
+// }
+
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     const dropdownExam = document.querySelectorAll(".primary-box");
+
+//     dropdownExam.forEach((button) => {
+//         button.addEventListener("click", function () {
+//             const currentSubclass = this.nextElementSibling;
+
+//             //to hide or display the submenues form box
+//             dropdownExam.forEach((otherButton) => {
+//                 const otherSubclass = otherButton.nextElementSibling;
+//                 if (otherSubclass !== currentSubclass) {
+//                     otherSubclass.classList.remove("listdropdown");
+//                 }
+//             });
+//             currentSubclass.classList.toggle("listdropdown");
+//         });
+//     });
+// });
+
+
+
+function examroutineClick() {
+    const primaryBoxes = document.querySelectorAll(".primary-box");
+    const secondaryBoxes = document.querySelectorAll(".secondary-box");
+
+    primaryBoxes.forEach((primaryBox, index) => {
+        primaryBox.addEventListener("click", function () {
+            const currentSecondaryBox = secondaryBoxes[index];
+
+            // Toggle display of the corresponding secondary box
+            if (currentSecondaryBox.style.display === "block") {
+                currentSecondaryBox.style.display = "none"; // If currently displayed, hide it
+            } else {
+                // Hide all secondary boxes
+                secondaryBoxes.forEach((secondaryBox) => {
+                    secondaryBox.style.display = "none";
+                });
+
+                // Display the corresponding secondary box
+                currentSecondaryBox.style.display = "block";
+            }
+        });
+    });
 }
+
+
+
+
+
+

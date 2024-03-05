@@ -245,6 +245,10 @@ unset($_SESSION['target_email']);
     document.addEventListener('DOMContentLoaded', function() {  
       document.getElementById('button1').click();
     });
+
+
+
+    
   </script>
   
 </body>
