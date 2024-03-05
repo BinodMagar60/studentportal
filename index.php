@@ -5,10 +5,10 @@ if($_SESSION['userType']==='admin'){
     header("location: admin/admin.php");
     exit();
 }else if($_SESSION['userType']==='student'){
-  header("location: student/student.php");
+  header("location: student/html/dashboard.php");
   exit();
 }else if($_SESSION['userType']==='teacher'){
-  header("location: teacher/teacher.php");
+  header("location: teacher/html/dashboard.php");
   exit();
 }else{
   echo "error";

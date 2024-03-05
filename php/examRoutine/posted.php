@@ -1,17 +1,15 @@
 <?php
 require_once "../config/db.php";
+if(isset($_GET['id'])){
+$targetId=$_GET['id'];
 $status= "posted";
 // $reStatus="unposted";
-$updateStatus="update exam_routine_date set `examRoutineStatus`='$status'";
+$updateStatus="update exam_routine_date set `examRoutineStatus`='$status' where id=$targetId";
 if(mysqli_query($con,$updateStatus)){
-
-  ?>
-
-  <script>console.log('Post')</script>
-
-  <?php
+  echo "success";
 }
 // $reverseStatus="update exam_routine_date set `examRoutineStatus`='$reStatus'";
 // mysqli_query($con,$reverseStatus);
 mysqli_close($con);
+}
 ?>

@@ -51,9 +51,9 @@ if(mysqli_num_rows($examSubjectExe)>0){
         ?>
                 <tr>
                     <td colspan="8" style="border: none; background-color:white;"><div class="btn-examroutineLists">
-                        <button style="background-color: green;">Post</button>
-                        <button style="background-color: gray;">Unpost</button>
-                        <button style="background-color: red;">Delete</button>
+                        <a href="../php/examRoutine/posted.php?id=<?php echo $examId?>"><button type="button" style="background-color: green;">Post</button></a>
+                        <a href="../php/examRoutine/unposted.php?id=<?php echo $examId?>"><button type="button" style="background-color: gray;">Unpost</button></a>
+                        <a href="../php/examRoutine/deleteExamRoutine.php?id=<?php echo $examId?>"><button type="button" style="background-color: red;">Delete</button></a>
                     </div></td>
                 </tr>
             </table>
