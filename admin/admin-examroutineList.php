@@ -1,3 +1,7 @@
+<?php
+    require_once "../php/config/sessionStart.php";
+    require_once "../php/loginCheck/adminCheck.php";
+?>
 <div class="examroutineLists" style="user-select: none;">
     <div class="examroutineLists-title">Exam Routine Lists</div>
     <div class="examroutine-sections">
