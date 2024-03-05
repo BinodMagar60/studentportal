@@ -119,7 +119,7 @@ function studentAdd(){
         console.warn("Did not receive 200 OK from response!");
       }
     };
-    xhr.open('GET', 'admin-studentadd.html'); 
+    xhr.open('GET', 'admin-studentadd.php'); 
     xhr.send();
   }
 
@@ -160,7 +160,7 @@ function teacherDetail(){
         console.warn("Did not receive 200 OK from response!");
       }
     };
-    xhr.open('GET', 'admin-teacheradd.html'); 
+    xhr.open('GET', 'admin-teacheradd.php'); 
     xhr.send();
   }
 
@@ -198,7 +198,7 @@ function teacherDetail(){
         console.warn("Did not receive 200 OK from response!");
       }
     };
-    xhr.open('GET', 'admin-adminadd.html'); 
+    xhr.open('GET', 'admin-adminadd.php'); 
     xhr.send();
   }
 
