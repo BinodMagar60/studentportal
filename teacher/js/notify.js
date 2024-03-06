@@ -120,11 +120,27 @@ function notifyDeletePopup(){
 
 
 
-function notifyUpdate(){
+function notifyUpdate(notifyId){
     var popup = document.getElementById("update-notice");
     var overlay = document.getElementById("overlay");
     popup.classList.add("update-notice-show");
     overlay.style.display = "block";
+    setTimeout(callDataNotify(notifyId),20);
+}
+
+function callDataNotify(notifyId){
+    const xhr = new XMLHttpRequest();
+    const container = document.getElementById('update-notice');
+    
+    xhr.onload = function() {
+      if (this.status === 200) {
+        container.innerHTML = xhr.responseText;
+      } else {
+        console.warn("Did not receive 200 OK from response!");
+      }
+    };
+    xhr.open('GET', 'notify-update.php');
+    xhr.send();
 }
 
 
