@@ -32,7 +32,7 @@ if ($exesql = mysqli_query($con, $sql)) {
                         <input type="hidden" name="s_email<?php if(isset($i)) echo $i;?>" value="<?php if(isset($searchResult['email'])) echo$searchResult['email'];?>">
                         <input type="hidden" name="s_class<?php if(isset($i)) echo $i;?>" value="<?php if(isset($searchResult['class'])) echo $searchResult['class'];?>">
                         <input type="hidden" name="s_section<?php if(isset($i)) echo $i;?>" value="<?php if(isset($searchResult['section'])) echo $searchResult['section'];?>">
-                        <td><input type="checkbox" name="attendance<?php if(isset($i)) echo $i;?>" value="P"></td>
+                        <td><input type="checkbox" name="attendance<?php if(isset($i)) echo $i;?>" value="P" style="margin-left: 50px"></td>
                     </tr>
                    <?php
             }
