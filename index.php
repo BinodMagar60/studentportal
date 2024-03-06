@@ -78,7 +78,7 @@ $result=mysqli_fetch_assoc($exesql);
           <div class="profile-logo">
             <i class="fa-solid fa-user" style="color: #000000"></i>
           </div>
-          <div class="title">Login Portal <?php echo $_COOKIE['session_id']?></div>
+          <div class="title">Login Portal</div>
           <div class="email">
               <!-- email filed -->
             <input type="email" spellcheck="false" placeholder="Email Address" id="email" name="email" />

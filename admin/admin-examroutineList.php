@@ -16,13 +16,13 @@ while($examDateRow=mysqli_fetch_assoc($examDateExe)){
    $createdDate= date('F j, Y',$date);
    $examId=$examDateRow['id'];
 ?> 
-    <div class="primary-box" id="ListBox1" onclick="examroutineClick();">
+    <div class="primary-box" id="ListBox<?php if(isset($i)) echo $i?>" onclick="examroutineClick();">
             <div class="title"><?php if(isset($examDateRow['exam_title'])) echo $examDateRow['exam_title']?></div>
             <div class="published-date"><?php if(isset($createdDate)) echo $createdDate?></div>
             <div class="dropdown-logo" ><i class="ri-arrow-down-s-fill" id="arrow-down"></i></div>
         </div>
 
-        <div class="secondary-box" id="ShowListsBox1" >
+        <div class="secondary-box" id="ShowListsBox<?php if(isset($i)) echo $i?>" >
             <table id="table-showExamRoutineList">
                 <tr>
                     <td>Date/Class</td>
