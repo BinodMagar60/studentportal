@@ -27,7 +27,7 @@ $result=mysqli_fetch_assoc($exesql);
   $c_email=$result['email'];
   $updateSessionId="UPDATE user_type set `sessionId`='$sessionId' where email='$c_email'";
   mysqli_query($con,$updateSessionId);
-  setcookie('session_id',$sessionId,time()+60*60*24*60);
+  setcookie("session_id",$sessionId,time()+60*60*24*60 , "/");
   if($checkRole==0){
     $_SESSION['userType']="admin";
     $_SESSION['userName']=$result['name'];
@@ -78,7 +78,7 @@ $result=mysqli_fetch_assoc($exesql);
           <div class="profile-logo">
             <i class="fa-solid fa-user" style="color: #000000"></i>
           </div>
-          <div class="title">Login Portal</div>
+          <div class="title">Login Portal <?php echo $_COOKIE['session_id']?></div>
           <div class="email">
               <!-- email filed -->
             <input type="email" spellcheck="false" placeholder="Email Address" id="email" name="email" />
