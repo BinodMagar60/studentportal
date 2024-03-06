@@ -7,7 +7,7 @@
     <div class="examroutine-sections">
         <?php
         require_once "../php/config/db.php";
-        $examDateSql = "SELECT * FROM exam_routine_date where not `exam_title`='ExamSampleId'";
+        $examDateSql = "SELECT * FROM exam_routine_date";
         $examDateExe = mysqli_query($con, $examDateSql);
         if (mysqli_num_rows($examDateExe) > 0) {
             $i = 1;
