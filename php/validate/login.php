@@ -13,6 +13,10 @@ if($c_email==$result['email']){
   if(password_verify($c_password, $result['password_hash'])){
     $checkRole=$result['role'];
     $_SESSION['loggedIn']=true;
+    $sessionId=uniqid();
+      $updateSessionId="UPDATE user_type set `sessionId`='$sessionId' where email='$c_email'";
+      mysqli_query($con,$updateSessionId);
+      setcookie("session_id",$sessionId,time()+60*60*24*60, "/");
     if($checkRole==0){
       $_SESSION['userType']="admin";
       $_SESSION['userName']=$result['name'];

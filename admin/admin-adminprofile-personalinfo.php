@@ -1,5 +1,7 @@
 <?php
-require_once "../php/config/sessionStart.php";
+    require_once "../php/config/sessionStart.php";
+    require_once "../php/loginCheck/adminCheck.php";
+// require_once "../php/config/sessionStart.php";
 require_once "../php/config/AdminProfile.php";
 if(isset($_SESSION['target_a_email'])){
     $target_a_email=$_SESSION['target_a_email'];

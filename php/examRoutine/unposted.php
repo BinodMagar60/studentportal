@@ -1,12 +1,12 @@
 <?php
 require_once "../config/db.php";
+if(isset($_GET['id'])){
+  $targetId=$_GET['id'];
 $reStatus="unposted";
-$reverseStatus="update exam_routine_date set `examRoutineStatus`='$reStatus'";
+$reverseStatus="update exam_routine_date set `examRoutineStatus`='$reStatus' where id=$targetId";
 if(mysqli_query($con,$reverseStatus)){
-
-  ?>
-  <script>console.log('Unpost')</script>"
-  <?php
+echo "success";
 }
 mysqli_close($con);
+}
 ?>

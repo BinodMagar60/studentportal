@@ -1,3 +1,7 @@
+<?php
+    require_once "../php/config/sessionStart.php";
+    require_once "../php/loginCheck/adminCheck.php";
+?>
 <div class="examroutineLists" style="user-select: none;">
     <div class="examroutineLists-title">Exam Routine Lists</div>
     <div class="examroutine-sections">
@@ -47,20 +51,17 @@
                                     <td><?php if (isset($examSubjectRow['e_subject_7'])) echo $examSubjectRow['e_subject_7']; ?></td>
                                 </tr>
                         <?php
-                            }
-                        }
-                        ?>
-                        <tr>
-                            <td colspan="8" style="border: none; background-color:white;">
-                                <div class="btn-examroutineLists">
-                                    <button style="background-color: green;">Post</button>
-                                    <button style="background-color: gray;">Unpost</button>
-                                    <button style="background-color: red;">Delete</button>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+}}
+        ?>
+                <tr>
+                    <td colspan="8" style="border: none; background-color:white;"><div class="btn-examroutineLists">
+                        <a href="../php/examRoutine/posted.php?id=<?php echo $examId?>"><button type="button" style="background-color: green;">Post</button></a>
+                        <a href="../php/examRoutine/unposted.php?id=<?php echo $examId?>"><button type="button" style="background-color: gray;">Unpost</button></a>
+                        <a href="../php/examRoutine/deleteExamRoutine.php?id=<?php echo $examId?>"><button type="button" style="background-color: red;">Delete</button></a>
+                    </div></td>
+                </tr>
+            </table>
+        </div>
         <?php
                 $i++;
             }
