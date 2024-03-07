@@ -1,5 +1,6 @@
 <?php
 require_once "../../php/config/StudentProfile.php";
+require_once "../../php/config/sessionStart.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,8 +71,18 @@ require_once "../../php/config/StudentProfile.php";
                             <td><?php if(isset($section)) echo $section;?></td>
                         </tr>
                         <tr>
+                        <?php
+if(isset($_SESSION['userEmail'])){
+    require_once "../../php/config/db.php";
+$current_time=date("Y");
+    $email=$_SESSION['userEmail'];
+    $sql1="SELECT count(s_attendance) as student_attendance from attendance where s_attendance='P' and email='$email' and Year(attendance_date)='$current_time'";
+    mysqli_query($con,$sql1);
+    $result=mysqli_fetch_assoc(mysqli_query($con,$sql1));
+}
+ ?>
                             <td>Attendance</td>
-                            <td>-</td>
+                            <td><?php if(isset($result['student_attendance'])) echo $result['student_attendance'] ?></td>
                         </tr>
                     </table>
                     <div class="intro">Parent Information</div>

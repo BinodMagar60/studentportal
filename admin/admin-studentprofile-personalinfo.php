@@ -115,8 +115,11 @@ if(isset($_SESSION['target_s_email'])){
                             <td><?php if(isset($detail_s_section)) echo "$detail_s_section";?></td>
                         </tr>
                         <tr>
+                            <?php 
+                            require_once "../teacher/php/attendance/countAttendance.php";
+                            ?>
                             <td>Attendance</td>
-                            <td>-</td>
+                            <td><?php if(isset($result['student_attendance'])) echo $result['student_attendance'] ?></td>
                         </tr>
                     </table>
 
