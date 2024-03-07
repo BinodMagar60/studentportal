@@ -17,7 +17,7 @@
                       <td><?php if (isset($notifyResult['description'])) echo $notifyResult['description'] ?></td>
                       <td>
                           <div class="btn-notify">
-                              <button class="btn-notify" style="background-color: green;" onclick="notifyUpdate(1);">Update</button>
+                              <button class="btn-notify" style="background-color: green;" onclick="notifyUpdate(<?php echo $notifyResult['id'] ?>);">Update</button>
                               <button class="btn-notify" style="background-color: red;" onclick="notifyDelete(<?php echo $notifyResult['id'] ?>);">Delete</button>
                           </div>
 

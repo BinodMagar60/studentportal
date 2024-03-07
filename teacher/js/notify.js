@@ -139,7 +139,7 @@ function callDataNotify(notifyId){
         console.warn("Did not receive 200 OK from response!");
       }
     };
-    xhr.open('GET', 'notify-update.php');
+    xhr.open('GET', 'notify-update.php?id='+notifyId);
     xhr.send();
 }
 
