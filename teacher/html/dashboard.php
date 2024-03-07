@@ -1,5 +1,7 @@
 <?php 
 require_once "../../php/config/TeacherProfile.php";
+require_once "../../php/config/db.php";
+require_once "../php/notify/expiry_notify.php";
 unset($_SESSION['target_s_email']);
 ?>
 <!DOCTYPE html>

@@ -6,6 +6,7 @@
       </tr>
       <?php
         require_once "../../php/config/db.php";
+        require_once "../php/notify/expiry_notify.php";
         $notifyListSql = "SELECT * FROM teacher_notify";
         if ($notifyExe = mysqli_query($con, $notifyListSql)) {
             if (mysqli_num_rows($notifyExe) > 0) {
@@ -26,7 +27,7 @@
       <div class="title-logo-delete"><i class="ri-question-line"></i></div>
       <div class="title" style="color: black;">Are you sure you want to delete it?</div>
       <div class="btn-delete-notify">
-          <button class="delete-btn-notify" style="background-color: red;" onclick="confirmDelete(<?php echo $notifyResult['id'] ?>)">Yes</button>
+          <a href="../php/notify/deleteNotify.php?uid=<?php if(isset($notifyResult['id'])) echo $notifyResult['id']?>"><button class="delete-btn-notify" style="background-color: red;" onclick="confirmDelete(<?php echo $notifyResult['id'] ?>)">Yes</button></a>
           <button class="delete-btn-notify" style="background-color: gray;" onclick="notifyDeleteRemove(<?php echo $notifyResult['id'] ?>);">No</button>
       </div>
   </div>
