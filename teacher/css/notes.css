@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+
+*::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .notes-container{
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    margin-left: 20px;
+  }
+
+
+
+  .container{
+    padding: 20px;
+  }
+
+
+  fieldset{
+    border: 1px solid black;
+    padding: 40px 30px;
+    border-radius: 5px;
+    font-size: 1.125rem;
+    padding-bottom: 20px !important;
+    
+}
+legend{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+
+.noteTable tr td{
+    font-size: 1.125rem;
+}
+
+.noteTable tr td:nth-child(1){
+    width: 120px;
+}
+
+.noteTable select{
+    border: 1px  solid black;
+    width: 130px;
+    font-size: 1.125rem;
+    padding: 5px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+
+.titles-notes{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+
+
+
+
+.file-uploads {
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 34.37em;
+  position: relative;
+  margin: 5px auto;
+  padding: 20px 0   ;
+  border-radius: 0.43em;
+  /* border: 1px solid black; */
+}
+
+input[type="file"] {
+  display: none;
+}
+label {
+  display: block;
+  position: relative;
+  background-color: rgb(12, 179, 12);
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-align: center;
+  width: 18.75em;
+  padding: 15px 0;
+  margin: 10px auto;
+  border-radius: 0.31em;
+  cursor: pointer;
+}
+#num-of-files {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 10px 0;
+}
+ul {
+  list-style-type: none;
+}
+.file-uploads li {
+font-size: 1rem;
+  font-weight: 400;
+  background-color: #eff5ff;
+  color: #025bee;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 0.3em;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.submit-btn{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.submit-btn button{
+    padding: 8px 15px;
+    font-size: 1.125rem;
+    background-color: rgb(12, 179, 12);
+    color: white;
+}

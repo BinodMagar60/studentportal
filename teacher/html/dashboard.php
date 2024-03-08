@@ -84,7 +84,7 @@ unset($_SESSION['target_s_email']);
                 </a>
             </div>
             <div class="side-bar-titles">
-                <a class="side-panel-title"><button id="button5" onclick="toggleButton(5)">
+                <a class="side-panel-title"><button id="button5" onclick="toggleButton(5);notes();">
                         <span tyle="color: white;-webkit-text-stroke:1px #092635;"><i class="fa-solid fa-notes-medical"></i></span>Notes
                     </button>
                 </a>
@@ -217,9 +217,12 @@ unset($_SESSION['target_s_email']);
     <script src="../js/assignments.js"></script>
     <script src="../js/notify.js"></script>
     <script src="../js/attendance.js"></script>
+    <script src="../js/notes.js"></script>
     <!-- <script src="../js/admin-announcement-click.js"></script>
     <script src="../js/admin-updateevents.js"></script>
     <script src="../js/admin-announcement.js"></script> -->
+    
+
 
 
     <script>

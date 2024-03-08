@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>File Upload Form</title>
 </head>
 <body>
-  <p>This is the changes that i did for calender</p>
-  <p>This is more changes for the calender</p>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <input type="file" name="files[]" id="fileInput" multiple accept="image/*,application/pdf,.xml,.doc,.docx,.txt">
+        <label for="fileInput">Choose files</label>
+        <input type="submit" value="Upload">
+    </form>
 </body>
 </html>
