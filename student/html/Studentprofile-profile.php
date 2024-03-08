@@ -72,9 +72,16 @@ require_once "../../php/config/sessionStart.php";
                         </tr>
                         <tr>
                         <?php
-if(isset($_SESSION['userEmail'])){
+if(isset($_SESSION['userEmail'],$_SESSION['userClass'],$_SESSION['userSection'])){
     require_once "../../php/config/db.php";
 $current_time=date("Y");
+$class= $_SESSION['userClass'];
+$section=$_SESSION['userSection'];
+$countAttendance="SELECT count(distinct date(attendance_date)) as totalNum from attendance where class='$class' and section='$section' and Year(attendance_date)=$current_time";
+mysqli_query($con,$countAttendance);
+
+$no=mysqli_fetch_assoc(mysqli_query($con,$countAttendance));
+
     $email=$_SESSION['userEmail'];
     $sql1="SELECT count(s_attendance) as student_attendance from attendance where s_attendance='P' and email='$email' and Year(attendance_date)='$current_time'";
     mysqli_query($con,$sql1);
@@ -82,7 +89,7 @@ $current_time=date("Y");
 }
  ?>
                             <td>Attendance</td>
-                            <td><?php if(isset($result['student_attendance'])) echo $result['student_attendance'] ?></td>
+                            <td><?php if(isset($result['student_attendance'],$no['totalNum'])) echo $result['student_attendance']."/".$no['totalNum']; ?></td>
                         </tr>
                     </table>
                     <div class="intro">Parent Information</div>

@@ -104,13 +104,18 @@ if(isset($_SESSION['target_s_email'])){
                         <?php
 require_once "../../php/config/db.php";
 $current_time=date("Y");
+$class= $detail_s_class;
+$section=$detail_s_section;
+$countAttendance="SELECT count(distinct date(attendance_date)) as totalNum from attendance where class='$class' and section='$section' and Year(attendance_date)=$current_time";
+mysqli_query($con,$countAttendance);
+$no=mysqli_fetch_assoc(mysqli_query($con,$countAttendance));
 $email=$detail_s_email;
 $sql1="SELECT count(s_attendance) as student_attendance from attendance where s_attendance='P' and email='$email' and Year(attendance_date)='$current_time'";
 mysqli_query($con,$sql1);
 $result=mysqli_fetch_assoc(mysqli_query($con,$sql1));
 ?>
                             <td>Attendance</td>
-                            <td><?php if(isset($result['student_attendance'])) echo $result['student_attendance'] ?></td>
+                            <td><?php if(isset($result['student_attendance'],$no['totalNum'])) echo $result['student_attendance']."/".$no['totalNum']; ?></td>
                         </tr>
                     </table>
 

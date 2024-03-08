@@ -119,7 +119,7 @@ if(isset($_SESSION['target_s_email'])){
                             require_once "../teacher/php/attendance/countAttendance.php";
                             ?>
                             <td>Attendance</td>
-                            <td><?php if(isset($result['student_attendance'])) echo $result['student_attendance'] ?></td>
+                            <td><?php if(isset($result['student_attendance'],$no['totalNum'])) echo $result['student_attendance']."/".$no['totalNum']; ?></td>
                         </tr>
                     </table>
 
