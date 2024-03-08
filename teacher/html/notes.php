@@ -36,6 +36,7 @@
                         <td>Section</td>
                         <td>
                             <select name="" id="Section-select">
+                                <option value="everyone">Everyone</option>
                                 <option value="A">Section A</option>
                                 <option value="B">Section B</option>
                                 <option value="C">Section C</option>

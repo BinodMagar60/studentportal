@@ -63,6 +63,4 @@ function studentProfile(){
     if(!event.defaultPrevented){
         alert('Your password has been updated successfully');
     }
-
-
   }

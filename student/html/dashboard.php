@@ -85,9 +85,9 @@ require_once "../../php/config/StudentProfile.php";
                     <span class="last"><i class="ri-arrow-down-s-line"></i></span>
                 </button>
                 <div class="subclass">
-                    <a class="subclass-content"><button id="button5" onclick="toggleButton(5);">Class
+                    <a class="subclass-content"><button id="button5" onclick="toggleButton(5);classRoutineShow();">Class
                             Routine</button></a>
-                    <a class="subclass-content"><button id="button6" onclick="toggleButton(6);">Exam
+                    <a class="subclass-content"><button id="button6" onclick="toggleButton(6);examRoutineShow()">Exam
                             Routine</button></a>
                 </div>
             </div>

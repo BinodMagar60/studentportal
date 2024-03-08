@@ -24,7 +24,7 @@ $sql= "UPDATE teacher_notify SET ";
 $sql .= implode(", ",$updateFields);
 $sql .= "WHERE id='$uid'";
   if(mysqli_query($con,$sql)){
-    echo "data inserted successfully";
+    // echo "data inserted successfully";
         // header("location:../../admin/admin.php");
         // exit();
   }else{
@@ -32,6 +32,7 @@ $sql .= "WHERE id='$uid'";
   }
   }else{
     echo "error form" ;
+    print_r($errors);
   }
   }else{
       echo "not submitted";

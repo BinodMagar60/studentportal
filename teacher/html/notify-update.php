@@ -13,7 +13,7 @@ if($exesql=mysqli_query($con,$sql)){
 }
 
 ?>
-<form action="../php/notify/updateNotify.php" method="POST">
+<form>
             <table id="update-notice-table">
                 <tr>
                     <td>Expiration Date</td>
@@ -62,7 +62,7 @@ if($exesql=mysqli_query($con,$sql)){
                 <tr>
                     <td>
                         <div class="btn-update-notice">
-                            <button type="submit" class="update-btn-notice" style="background-color: green" onclick="notifyUpdatePopup();">Update</button>
+                            <button type="button" class="update-btn-notice" style="background-color: green" onclick="notifyUpdatePopup();">Update</button>
                             <button type="button" class="update-btn-notice" style="background-color: red" onclick="notifyUpdateRemove();">Cancel</button>
                         </div>
                     </td>

@@ -109,9 +109,9 @@ unset($_SESSION['target_s_email']);
                     <span class="last"><i class="ri-arrow-down-s-line"></i></span>
                 </button>
                 <div class="subclass">
-                    <a class="subclass-content"><button id="button8" onclick="toggleButton(8);">Class
+                    <a class="subclass-content"><button id="button8" onclick="toggleButton(8);classRoutineShow()">Class
                             Routine</button></a>
-                    <a class="subclass-content"><button id="button9" onclick="toggleButton(9);">Exam
+                    <a class="subclass-content"><button id="button9" onclick="toggleButton(9);examRoutineShow()">Exam
                             Routine</button></a>
                 </div>
             </div>

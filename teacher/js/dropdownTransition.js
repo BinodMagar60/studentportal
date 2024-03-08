@@ -92,6 +92,38 @@ function notes(){
 
 
 
+function classRoutineShow(){
+  const xhr = new XMLHttpRequest();
+    const container = document.getElementById('container');
+    
+    xhr.onload = function() {
+      if (this.status === 200) {
+        container.innerHTML = xhr.responseText;
+      } else {
+        console.warn("Did not receive 200 OK from response!");
+      }
+    };
+    xhr.open('GET', 'classroutine.php'); 
+    xhr.send();
+   
+}
+
+function examRoutineShow(){
+  const xhr = new XMLHttpRequest();
+    const container = document.getElementById('container');
+    
+    xhr.onload = function() {
+      if (this.status === 200) {
+        container.innerHTML = xhr.responseText;
+      } else {
+        console.warn("Did not receive 200 OK from response!");
+      }
+    };
+    xhr.open('GET', 'examroutine.php'); 
+    xhr.send();
+   
+}
+
 
 function notifyList(){
     const xhr = new XMLHttpRequest();
