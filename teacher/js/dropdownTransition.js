@@ -106,6 +106,10 @@ function classRoutineShow(){
     xhr.open('GET', 'classroutine.php'); 
     xhr.send();
    
+
+    setTimeout(() => {
+      tableDataClassRoutine();
+    }, 100);
 }
 
 function examRoutineShow(){

@@ -34,9 +34,9 @@ $section = isset($_GET['sections']) ? $_GET['sections'] : 'A';
                     <div class="sel2">
                         <label for="sectionSel">Section</label>
                         <select name="" id="sectionSel" onchange="tableDataClassRoutine();">
-                        <option value="A" <?php echo ($section == 'A' ? 'selected' : ''); ?>>A</option>
-                                <option value="B" <?php echo ($section == 'B' ? 'selected' : ''); ?>>B</option>
-                                <option value="C" <?php echo ($section == 'C' ? 'selected' : ''); ?>>C</option>
+                        <option value="A" <?php echo ($section == 'A' ? 'selected' : ''); ?>>Section A</option>
+                                <option value="B" <?php echo ($section == 'B' ? 'selected' : ''); ?>>Section B</option>
+                                <option value="C" <?php echo ($section == 'C' ? 'selected' : ''); ?>>Section C</option>
                         </select>
                     </div>
                 </div>

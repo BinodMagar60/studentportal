@@ -30,20 +30,39 @@
   fieldset{
     border: 1px solid black;
     padding: 40px 30px;
-    border-radius: 5px;
+    border-radius: 8px;
     padding-bottom: 20px !important;
-    
+    font-size: 1.125rem;
 }
 
-
-
-  fieldset{
-    border: 1px solid black;
-    border-radius: 8px;
-    font-size: 1.125rem;
-  }
 
   legend{
     font-weight: 500;
     font-size: 1.25rem;
   }
+
+
+.exam-table{
+  border-collapse: collapse;
+}
+
+
+.exam-table tr td{
+  border: 1px solid black;
+  padding: 5px 20px;
+  font-size: 1.125rem;
+  text-transform: capitalize;
+}
+
+
+.exam-table tr td:not(td:nth-child(1)){
+  text-align: center;
+  width: 170px;
+}
+
+
+.examtitles{
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}

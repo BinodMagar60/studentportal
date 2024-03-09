@@ -1,6 +1,9 @@
 
     function updateExamroutine(event){
 
+
+   
+
         var formData = new FormData(document.getElementById('classroutine'));
         $.ajax({
             url: '../php/examRoutine/addExamRoutine.php',
@@ -21,14 +24,36 @@
             }
             
         });
-        event.preventDefault();
+        
+        setTimeout(() => {
+            examRoutineListCall();
+        }, 100);
     }
 
 
+    function deleteExamRoutine(id){
+        $.ajax({
+            url: "../php/examRoutine/deleteExamRoutine.php?id="+id,
+            type: "POST",
+            success: function(response) {
+                
+            },
+            error: function(xhr, status, error) {
+                console.error("Error:", status, error);
+                console.log("Response Text:", xhr.responseText);
+            }
+        });
+        setTimeout(() => {
+            examRoutineListCall();
+        }, 100);
+    }
+
+
+
     
-      function postExamRoutine() {
+      function postExamRoutine(Pid) {
             $.ajax({
-                url: "../php/examRoutine/posted.php",
+                url: "../php/examRoutine/posted.php?id="+Pid,
                 type: "POST",
                 success: function(response) {
                     
@@ -41,9 +66,9 @@
         };
     
 
-        function unpostExamRoutine() {
+        function unpostExamRoutine(Uid) {
             $.ajax({
-                url: "../php/examRoutine/unposted.php",
+                url: "../php/examRoutine/unposted.php?id="+Uid,
                 type: "POST",
                 success: function(response) {
                     // console.log("UnPost successful");
@@ -76,44 +101,12 @@ function examRoutineListCall(){
 
 
 
-// function examroutineClick() {
-//     var showBox = document.getElementById("ShowListsBox1");
-//     var computedStyle = window.getComputedStyle(showBox);
-//     var displayProperty = computedStyle.getPropertyValue("display");
-
-//     if (displayProperty === "none") {
-//         showBox.style.display = "block";
-//     } else {
-//         showBox.style.display = "none";
-//     }
-// }
-
-
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     const dropdownExam = document.querySelectorAll(".primary-box");
-
-//     dropdownExam.forEach((button) => {
-//         button.addEventListener("click", function () {
-//             const currentSubclass = this.nextElementSibling;
-
-//             //to hide or display the submenues form box
-//             dropdownExam.forEach((otherButton) => {
-//                 const otherSubclass = otherButton.nextElementSibling;
-//                 if (otherSubclass !== currentSubclass) {
-//                     otherSubclass.classList.remove("listdropdown");
-//                 }
-//             });
-//             currentSubclass.classList.toggle("listdropdown");
-//         });
-//     });
-// });
-
-
 
 function examroutineClick() {
     const primaryBoxes = document.querySelectorAll(".primary-box");
     const secondaryBoxes = document.querySelectorAll(".secondary-box");
+    var post = document.getElementById("postBtn");
+    var unpost = document.getElementById("UnpostBtn");
 
     primaryBoxes.forEach((primaryBox, index) => {
         primaryBox.addEventListener("click", function () {
@@ -130,6 +123,16 @@ function examroutineClick() {
 
                 // Display the corresponding secondary box
                 currentSecondaryBox.style.display = "block";
+            }
+
+
+            if(index === 0){
+                post.style.display = "block";
+                unpost.style.display = "block";
+            }
+            else{
+                post.style.display = "none";
+                unpost.style.display = "none";
             }
         });
     });

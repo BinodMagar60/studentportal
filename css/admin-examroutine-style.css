@@ -194,7 +194,10 @@ legend{
     font-size: 1.125rem;
     padding: 8px 15px;
     color: white;
+    cursor: pointer;
 }
 
 
-
+#postBtn,#UnpostBtn{
+    display: none;
+}

@@ -55,9 +55,9 @@
         ?>
                 <tr>
                     <td colspan="8" style="border: none; background-color:white;"><div class="btn-examroutineLists">
-                        <a href="../php/examRoutine/posted.php?id=<?php echo $examId?>"><button type="button" style="background-color: green;">Post</button></a>
-                        <a href="../php/examRoutine/unposted.php?id=<?php echo $examId?>"><button type="button" style="background-color: gray;">Unpost</button></a>
-                        <a href="../php/examRoutine/deleteExamRoutine.php?id=<?php echo $examId?>"><button type="button" style="background-color: red;">Delete</button></a>
+                        <button type="button" id="postBtn" style="background-color: green;" onclick="postExamRoutine(<?php echo $examId?>)">Post</button>
+                        <button type="button" id="UnpostBtn" style="background-color: gray;" onclick="unpostExamRoutine(<?php echo $examId?>)">Unpost</button>
+                       <button type="button" style="background-color: red;" onclick="deleteExamRoutine(<?php echo $examId?>)">Delete</button>
                     </div></td>
                 </tr>
             </table>

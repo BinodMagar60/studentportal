@@ -1,9 +1,9 @@
-<div class="classroutine-container" id="classroutine-container">
 
 
 
 
-<form id="classroutinedaily">
+
+
     <div class="classroutine">
         <table class="tableRoutine-class">
             <tr>
@@ -32,13 +32,13 @@
                     }
                 }
                 ?>
-                <td><input type="text" name="firstP" value="<?php if (isset($routineRow['firstP'])) echo $routineRow['firstP']; ?>"></td>
-                <td><input type="text" name="secondP" value="<?php if (isset($routineRow['secondP'])) echo $routineRow['secondP']; ?>"></td>
-                <td><input type="text" name="thirdP" value="<?php if (isset($routineRow['thirdP'])) echo $routineRow['thirdP']; ?>"></td>
-                <td><input type="text" name="fourthP" value="<?php if (isset($routineRow['fourthP'])) echo $routineRow['fourthP']; ?>"></td>
-                <td><input type="text" name="fifthP" value="<?php if (isset($routineRow['fifthP'])) echo $routineRow['fifthP']; ?>"></td>
-                <td><input type="text" name="sixthP" value="<?php if (isset($routineRow['sixthP'])) echo $routineRow['sixthP']; ?>"></td>
-                <td><input type="text" name="seventhP" value="<?php if (isset($routineRow['seventhP'])) echo $routineRow['seventhP']; ?>"></td>
+                <td style="text-align: center;"><?php if (isset($routineRow['firstP'])) echo $routineRow['firstP']; ?></td>
+                <td><?php if (isset($routineRow['secondP'])) echo $routineRow['secondP']; ?></td>
+                <td><?php if (isset($routineRow['thirdP'])) echo $routineRow['thirdP']; ?></td>
+                <td><?php if (isset($routineRow['fourthP'])) echo $routineRow['fourthP']; ?></td>
+                <td><?php if (isset($routineRow['fifthP'])) echo $routineRow['fifthP']; ?></td>
+                <td><?php if (isset($routineRow['sixthP'])) echo $routineRow['sixthP']; ?></td>
+                <td><?php if (isset($routineRow['seventhP'])) echo $routineRow['seventhP']; ?></td>
                 <input type="hidden" name="class" value="<?php if(isset($class)) echo $class;?>">
                 <input type="hidden" name="section" value="<?php if(isset($section)) echo $section;?>">
 
@@ -53,14 +53,14 @@
             ?>
                         <tr>
                             <td><?php if (isset($routine_subject_row['class_day'])) echo $routine_subject_row['class_day']; ?></td>
-                            <input type="hidden" name="s_day_<?php echo $i; ?>" value="<?php if (isset($routine_subject_row['class_day'])) echo $routine_subject_row['class_day']; ?>">
-                            <td><input type="text" name="s_name1_<?php echo $i; ?>" value="<?php if (isset($routine_subject_row['name_1'])) echo $routine_subject_row['name_1']; ?>"></td>
-                            <td><input type="text" name="s_name2_<?php echo $i; ?>" value="<?php if (isset($routine_subject_row['name_2'])) echo $routine_subject_row['name_2']; ?>"></td>
-                            <td><input type="text" name="s_name3_<?php echo $i; ?>" value="<?php if (isset($routine_subject_row['name_3'])) echo $routine_subject_row['name_3']; ?>"></td>
+                            <input disabled type="hidden" name="s_day_<?php echo $i; ?>" value="<?php if (isset($routine_subject_row['class_day'])) echo $routine_subject_row['class_day']; ?>">
+                            <td><input disabled type="text" name="s_name1_<?php echo $i; ?>" value="<?php if (isset($routine_subject_row['name_1'])) echo $routine_subject_row['name_1']; ?>"></td>
+                            <td><input disabled type="text" name="s_name2_<?php echo $i; ?>" value="<?php if (isset($routine_subject_row['name_2'])) echo $routine_subject_row['name_2']; ?>"></td>
+                            <td><input disabled type="text" name="s_name3_<?php echo $i; ?>" value="<?php if (isset($routine_subject_row['name_3'])) echo $routine_subject_row['name_3']; ?>"></td>
                             <td><input type="text" name="s_name4_<?php echo $i; ?>" value="<?php if (isset($routine_subject_row['name_4'])) echo $routine_subject_row['name_4']; ?>"></td>
-                            <td><input type="text" name="s_name5_<?php echo $i; ?>" value="<?php if (isset($routine_subject_row['name_5'])) echo $routine_subject_row['name_5']; ?>"></td>
-                            <td><input type="text" name="s_name6_<?php echo $i; ?>" value="<?php if (isset($routine_subject_row['name_6'])) echo $routine_subject_row['name_6']; ?>"></td>
-                            <td><input type="text" name="s_name7_<?php echo $i; ?>" value="<?php if (isset($routine_subject_row['name_7'])) echo $routine_subject_row['name_7']; ?>"></td>
+                            <td><input disabled type="text" name="s_name5_<?php echo $i; ?>" value="<?php if (isset($routine_subject_row['name_5'])) echo $routine_subject_row['name_5']; ?>"></td>
+                            <td><input disabled type="text" name="s_name6_<?php echo $i; ?>" value="<?php if (isset($routine_subject_row['name_6'])) echo $routine_subject_row['name_6']; ?>"></td>
+                            <td><input disabled type="text" name="s_name7_<?php echo $i; ?>" value="<?php if (isset($routine_subject_row['name_7'])) echo $routine_subject_row['name_7']; ?>"></td>
                         </tr>
             <?php
                     }
@@ -70,5 +70,4 @@
         </table>
 
     </div>
-</form>
-</div>
+

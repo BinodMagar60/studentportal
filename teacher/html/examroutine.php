@@ -18,7 +18,7 @@ $examSampleId=$examDateRow['id'];
     <div class="examroutine-container">
         <fieldset>
             <legend>Exam Routine</legend>
-            <div class="examtitles"> <label for="exam-title">Title</label>
+            <div class="examtitles"> 
             <?php if(isset($examDateRow['exam_title'])) echo $examDateRow['exam_title']?>
                     </div>
                     <table class="exam-table">
