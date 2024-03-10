@@ -47,3 +47,40 @@
     font-weight: 500;
     font-size: 1.25rem;
   }
+
+
+
+  .examtitles{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+
+
+  .exam-table{
+    border-collapse: collapse;
+    margin-top: 30px;
+  }
+
+  .exam-table tr td{
+    border: 1px solid black;
+    padding: 5px;
+    width: 170px;
+    text-transform: capitalize;
+  }
+
+  .exam-table tr td:not(:nth-child(1)){
+    text-align: center;
+  }
+
+
+  .exam-table tr:nth-child(1){
+    background-color: rgb(64, 156, 241);
+  }
+
+  .exam-table tr td:nth-child(1){
+    background-color: rgb(64, 156, 241);
+  }
+
+

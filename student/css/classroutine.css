@@ -47,3 +47,44 @@
     font-weight: 500;
     font-size: 1.25rem;
   }
+
+
+
+  .tableRoutine-class{
+    border-collapse: collapse;
+
+  }
+
+
+
+  .tableRoutine-class tr td{
+    border: 1px solid black;
+    padding: 7px;
+    text-transform: capitalize;
+  }
+
+
+  .tableRoutine-class tr td:not(td:nth-child(1)), .tableRoutine-class tr td input{
+    text-align: center;
+    font-size: 1.125rem;
+    color: black;
+    width: 150px;
+    text-transform: capitalize;
+  }
+
+
+  .tableRoutine-class tr:nth-child(1) td:nth-child(6){
+    width: 70px !important;
+    background-color: white !important;
+  }
+
+  .tableRoutine-class tr:nth-child(1), .tableRoutine-class tr td:nth-child(1):not(tr:nth-child(2) td:first-child){
+    background-color: rgb(64, 156, 241);
+
+  }
+
+
+
+
+
+
