@@ -1,3 +1,6 @@
+<?php
+require_once "../../php/config/sessionStart.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,12 +16,12 @@
     <div class="notes-container">
         <fieldset>
             <legend>Notes</legend>
-            <form>
+            <form action="../php/notes/addNotes.php" method="post" enctype="multipart/form-data">
                 <table id='noteTable' class="noteTable">
                     <tr>
                         <td>Class</td>
                         <td>
-                            <select name="" id="class-select">
+                            <select name="class_n" id="class-select">
                                 <option value="one">One</option>
                                 <option value="two">Two</option>
                                 <option value="three">Three</option>
@@ -35,7 +38,7 @@
                     <tr>
                         <td>Section</td>
                         <td>
-                            <select name="" id="Section-select">
+                            <select name="section_n" id="Section-select">
                                 <option value="everyone">Everyone</option>
                                 <option value="A">Section A</option>
                                 <option value="B">Section B</option>
@@ -46,7 +49,7 @@
                     <tr>
                         <td>Subject</td>
                         <td>
-                            <select name="Subject-select" id="Subject-select">
+                            <select name="subject_n" id="Subject-select">
                                 <option value="English">English</option>
                                 <option value="Nepali">Nepali</option>
                                 <option value="Maths">Maths</option>
@@ -62,7 +65,7 @@
                 <div class="titles-notes">Add notes</div>
     
                 <div class="file-uploads">
-                    <input type="file" id="file-input" accept="image/*,application/pdf,.xml,.doc,.docx,.txt,.xlsx,.pptx,.ppt" multiple onchange="uploadFiles()"/>
+                    <input type="file" name="note[]" id="file-input" multiple accept="image/*,application/pdf,.xml,.doc,.docx,.txt,.xlsx,.pptx,.ppt"  />
                     <label for="file-input">
                         <i class="fa-solid fa-arrow-up-from-bracket"></i>
                         &nbsp; Choose Files To Upload
@@ -70,13 +73,56 @@
                     <div id="num-of-files">No Files Choosen</div>
                     <ul id="files-list"></ul>
                     <div class="submit-btn" id="submit-btn">
-                        <button type="button" onclick="submitUploads();">Submit</button>
+                        <!-- <button type="submit" onclick="submitUploads();">Submit</button> -->
+                        <button type="submit">Submit</button>
                     </div>
                 </div>
             </form>
 
             <div class="show-notes" id="show-notes">
                 <div class="titles-notes">Uploaded Notes</div>
+                    <?php
+
+                    if(isset($_SESSION['userName'])){
+                        require_once "../../php/config/db.php";
+                        $userName=$_SESSION['userName'];
+                        $noteShowSql="SELECT * FROM teacher_upload_notes where uploader='$userName'";
+if($noteShowExe=mysqli_query($con,$noteShowSql)){
+    if(mysqli_num_rows($noteShowExe)>0){
+        $i=1;
+        ?>
+                <table>
+                    <tr>
+                        <td>S.N</td>
+                        <td>Name</td>
+                        <td>Class</td>
+                        <td>Section</td>
+                        <td>Subject</td>
+                        <td>Uploaded Date</td>
+                        <td colspan="2">Action</td>
+                    </tr>
+        <?php
+        while($noteShowResult=mysqli_fetch_assoc($noteShowExe)){
+            $uploadDate=date("Y-m-d",strtotime($noteShowResult['created_date']));
+                    ?>
+                    <tr>
+                        <td><?php echo $i?></td>
+                        <td><?php if(isset($noteShowResult['name'])) echo $noteShowResult['name'] ?></td>
+                        <td><?php if(isset($noteShowResult['class'])) echo $noteShowResult['class'] ?></td>
+                        <td><?php if(isset($noteShowResult['section'])) echo $noteShowResult['section'] ?></td>
+                        <td><?php if(isset($noteShowResult['subject'])) echo $noteShowResult['subject'] ?></td>
+                        <td><?php if(isset($uploadDate)) echo $uploadDate ?></td>
+                        <td><a href="../../<?php if(isset($noteShowResult['file_path'])) echo $noteShowResult['file_path'] ?>" download="<?php if(isset($noteShowResult['name'])) echo $noteShowResult['name'] ?>">download</a></td>
+                        <td><a href="../php/notes/deleteNotes.php?uid=<?php if(isset($noteShowResult['id'])) echo $noteShowResult['id']?> & path=<?php if(isset($noteShowResult['file_path'])) echo $noteShowResult['file_path'] ?>">delete</a></td>
+                    </tr>
+                    <?php
+                    $i++;
+                            }
+                        }
+                    }
+                    }
+                    ?>
+                </table>
             </div>
         </fieldset>
     </div>

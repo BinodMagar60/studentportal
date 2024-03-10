@@ -1,6 +1,6 @@
 <?php
-require_once "../php/config/db.php";
-$folderPath = "../StudentPortalFiles/images";
+require_once "php/config/db.php";
+$folderPath = "StudentPortalFiles/images";
 $sqlStudent = "SELECT * FROM student_table";
 $sqlAdmin = "SELECT * FROM admin_table";
 $sqlTeacher = "SELECT * FROM teacher_table";
@@ -21,7 +21,7 @@ while ($des1 = mysqli_fetch_assoc($exesql1)) {
     if (isset($imageName1)) {
         $validStudentFilenames[] = $imageName1;
     }else{
-      echo "imageName1 not set";
+    //   echo "imageName1 not set";
     }
 }
 
@@ -32,7 +32,7 @@ while ($des2 = mysqli_fetch_assoc($exesql2)) {
     if (isset($imageName2)) {
         $validAdminFilenames[] = $imageName2;
     }else{
-      echo "imageName2 not set";
+    //   echo "imageName2 not set";
     }
 }
 
@@ -43,7 +43,7 @@ while ($des3 = mysqli_fetch_assoc($exesql3)) {
     if (isset($imageName1)) {
         $validTeacherFilenames[] = $imageName3;
     }else{
-      echo "imageName3 not set";
+    //   echo "imageName3 not set";
     }
 }
 $files = scandir($folderPath);
@@ -56,13 +56,13 @@ if ($files !== false) {
                 $filePath = $folderPath . '/' . $file;
                 
                 if (unlink($filePath)) {
-                    echo "File '$file' deleted successfully.<br>";
+                    // echo "File '$file' deleted successfully.<br>";
                 } else {
-                    echo "Error deleting file '$file'.<br>";
+                    // echo "Error deleting file '$file'.<br>";
                 }
             }}
             }else{
-              echo "already done";
+            //   echo "already done";
             }
         }
     }
