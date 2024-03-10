@@ -71,7 +71,7 @@ $class = array("One", "Two", "Three","Four","Five","Six","Seven","Eight","Nine",
                         <tr>
                             <td colspan="8" style="border:none; background-color: white; ">
                             <div class="btn-examroutine" >
-                        <button style="background-color: gray;" type="button" onclick="updateExamroutine(event);">Create</button>
+                        <button style="background-color: green;" type="button" onclick="updateExamroutine(event);">Create</button>
                         <!-- <button type="button" id="postButton" style="background-color: green" onclick="postExamRoutine();">Post</button>
                         <button type="button" id="unpostButton" style="background-color: red" onclick="unpostExamRoutine();">Unpost</button> -->
                         
@@ -86,6 +86,31 @@ $class = array("One", "Two", "Three","Four","Five","Six","Seven","Eight","Nine",
                 <div class="examroutineList-container" id="examroutineList-container">
 
                 </div>
+
+
+
+                <div class="created-routine" id="created-routine">
+                    <div class="logo"><i class="fa-regular fa-circle-check" style="color: #00ff40;"></i></div>
+                    <div class="message">Exam routine created</div>
+                </div>
+
+
+
+                <div class="deleted-routine" id="deleted-routine">
+                    <div class="logo"><i class="fa-regular fa-circle-check" style="color: #ff0000;"></i></div>
+                    <div class="message">Exam routine Deleted</div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
             </fieldset>
         </form>
     </div>
