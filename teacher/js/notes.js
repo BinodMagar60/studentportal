@@ -26,15 +26,93 @@ function uploadFiles(){
 }
 
 
-function submitUploads(){
-    let fileInput = document.getElementById("file-input");
-    let fileList = document.getElementById("files-list");
-    let numOfFiles = document.getElementById("num-of-files");
-    let submitBtn = document.getElementById("submit-btn");
+// function submitUploads(){
+//     let fileInput = document.getElementById("file-input");
+//     let fileList = document.getElementById("files-list");
+//     let numOfFiles = document.getElementById("num-of-files");
+//     let submitBtn = document.getElementById("submit-btn");
 
-    fileInput.value = "";
-        fileList.innerHTML = "";
-        numOfFiles.textContent = "No Files Chosen";
+//     fileInput.value = "";
+//         fileList.innerHTML = "";
+//         numOfFiles.textContent = "No Files Chosen";
+// }
+
+
+function submitUploads(){
+    
+    var formData = new FormData(document.getElementById('uploadNotes'));
+    var filesList = document.getElementById('files-list');
+    var numOfFiles = document.getElementById('num-of-files');
+
+    $.ajax({
+        url: '../php/notes/addNotes.php',
+        type: 'POST',
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function (response) {
+            // console.log(response);
+
+            filesList.innerHTML = '';
+            numOfFiles.innerText = 'No Files Chosen';
+            setTimeout(() => {
+                showNotesBox();
+            }, 100);
+
+        },
+        error: function (xhr, status, error) {
+            console.error('Error:', status, error);
+            console.log('Response Text:', xhr.responseText);
+            alert('Error adding student. Please try again.');
+        }
+        
+    });
 }
+
+
+
+function showNotesBox(){
+    const xhr = new XMLHttpRequest();
+    const container = document.getElementById('show-notes');
+  
+    xhr.onload = function () {
+        if (this.status === 200) {
+            container.innerHTML = xhr.responseText;
+            // console.log(xhr.responseText);
+    
+        } else {
+            console.warn("Did not receive 200 OK from response!");
+        }
+    };
+    xhr.open('GET', 'notelist.php');
+    xhr.send();
+
+  }
+
+
+
+  function deleteNotes(id,file){
+
+    // console.log(id);
+    // console.log(file);
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "../php/notes/deleteNotes.php?uid=" + id+"&path="+file, true);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status == 200) {
+      }
+    };
+    xhr.send();
+
+    setTimeout(() => {
+        showNotesBox();
+    }, 150)
+  }
+
+
+
+
+
+
+
 
 

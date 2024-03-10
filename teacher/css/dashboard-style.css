@@ -373,8 +373,13 @@ body.calender-announcement-notices-active {
 }
 
 #calendar thead tr th:nth-child(7), #calendar tr td:nth-child(7){
-    color: #fd4747;
+    color: #fd4747 !important;
 }
+
+#calendar tr td,  #calendar thead tr th {
+    color: white;
+}
+
 
 
 .active:not(.notif-btn){

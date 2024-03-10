@@ -44,7 +44,7 @@
 
 
   .examtitles{
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
     font-weight: 500;
     text-align: center;
   }

@@ -140,3 +140,68 @@ font-size: 1rem;
     background-color: rgb(12, 179, 12);
     color: white;
 }
+
+
+.note-list-here{
+  border-collapse: collapse;
+  margin-top: 20px;
+  width: 100%;
+}
+
+
+.note-list-here tr td{
+  font-size: 1.125rem;
+  padding: 10px;
+}
+
+.note-list-here tr td:nth-child(1){
+  text-align: center;
+  width: 50px;
+}
+
+
+.note-list-here tr td button{
+  font-size: 1.7rem;
+  background-color: white;
+  cursor: pointer;
+}
+
+
+.note-list-here tr td:last-child{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+
+
+.note-list-here tr:nth-child(1){
+  background-color: #4591b8 !important;
+  font-size: 1.25rem !important;
+}
+
+
+.note-list-here tr td:nth-child(3){
+  width: 200px;
+}
+
+
+.note-list-here tr:nth-child(odd){
+  background-color: #f7f7f7;
+}
+
+.note-list-here tr td:nth-child(2){
+  width: 1000px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

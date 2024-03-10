@@ -87,6 +87,12 @@ function notes(){
     };
     xhr.open('GET', 'notes.php'); 
     xhr.send();
+
+
+    setTimeout(() => {
+      showNotesBox();
+  }, 100);
+
    
 }
 
