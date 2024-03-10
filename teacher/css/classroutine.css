@@ -87,3 +87,12 @@
   
 }
 
+.tableRoutine-class tr:nth-child(1), .tableRoutine-class tr td:nth-child(1){
+  background-color: rgb(64, 156, 241) ;
+}
+
+
+
+.tableRoutine-class tr:nth-child(2) td:nth-child(1), .tableRoutine-class tr:nth-child(1) td:nth-child(6){
+  background-color: white !important;
+}

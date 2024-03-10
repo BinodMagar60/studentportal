@@ -54,8 +54,74 @@ if(mysqli_num_rows($examSubjectExe)>0){
     }
     }
 }else{
-    echo "no exam right now";
+
+    ?>
+
+
+    <style>
+        *{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
 }
+
+
+*::-webkit-scrollbar {
+    display: none;
+  }
+
+
+
+  .examroutine-container{
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    margin-left: 20px;
+  }
+
+
+  fieldset{
+    border: 1px solid black;
+    padding: 40px 30px;
+    border-radius: 8px;
+    padding-bottom: 20px !important;
+    font-size: 1.125rem;
+}
+
+
+  legend{
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+    </style>
+
+
+
+<?php
+
+
+    echo '
+
+    <style>
+    
+    </style>
+
+    <div class="examroutine-container">
+    <fieldset>
+    <legend>Exam routine</legend>
+
+    <p style="font-size:1.25rem; text-align: center; font-weight: 500; margin-bottom: 20px">No Exam Right Now</p>
+
+    </fieldset>
+    </div>
+
+    ';
+}   
                             ?>
                     </table>
         </fieldset>
