@@ -1,16 +1,13 @@
 <?php
 require_once "../../php/config/sessionStart.php";
-?>
-
-
-
-
-                    <?php
-
+$class = isset($_GET['class']) ? $_GET['class'] : 'one';
+$section = isset($_GET['section']) ? $_GET['section'] : 'everyone';
+$subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
+if(isset($class,$section,$subject)){
                     if(isset($_SESSION['userName'])){
                         require_once "../../php/config/db.php";
                         $userName=$_SESSION['userName'];
-                        $noteShowSql="SELECT * FROM teacher_upload_notes where uploader='$userName'";
+                        $noteShowSql="SELECT * FROM teacher_upload_notes where uploader='$userName' and class='$class' and section='$section' and subject='$subject'";
 if($noteShowExe=mysqli_query($con,$noteShowSql)){
     if(mysqli_num_rows($noteShowExe)>0){
         $i=1;
@@ -42,5 +39,6 @@ if($noteShowExe=mysqli_query($con,$noteShowSql)){
                         }
                     }
                     }
+                }
                     ?>
                 </table>

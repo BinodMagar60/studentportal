@@ -36,6 +36,33 @@ if(mysqli_num_rows($exesql_announcement)!=0){
 ?>
 </div>
 
+<div class="teacher-notify">
+<?php
+        require_once "../php/notify/expiry_notify.php";
+$sql_notify="SELECT * from teacher_notify";
+if($exesql_notify=mysqli_query($con,$sql_notify)){
+if(mysqli_num_rows($exesql_notify)>0){
+  while($result_notify=mysqli_fetch_assoc($exesql_notify)){
+    $dbDate = $result_notify['created_date'];
+    $dateObject = date_create($dbDate);
+    $formattedDate = date_format($dateObject, 'M d');
+    ?>
+    
+    <div class="notify-show-2">
+  <div class="notify-date"><?php if(isset($formattedDate)) echo $formattedDate;?></div>
+  <div class="notify-detail"><?php if(isset($result_notify['description'])) echo $result_notify['description']; ?></div>
+  <div class="notify-who">- <?php if(isset($result_notify['poster_name'])) echo $result_notify['poster_name']; ?></div>
+  </div>
+ 
+ 
+ 
+ 
+ <?php
+  }
+}
+}
+?>
+</div>
 
 
 

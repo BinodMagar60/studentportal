@@ -2,6 +2,7 @@
       <tr>
           <td>S.N.</td>
           <td>Title</td>
+          <td>Expiry Date</td>
           <td>Action</td>
       </tr>
       <?php
@@ -12,10 +13,14 @@
             if (mysqli_num_rows($notifyExe) > 0) {
                 $i = 1;
                 while ($notifyResult = mysqli_fetch_assoc($notifyExe)) {
-        ?>
+                    $dbDate = $notifyResult['exp_date'];
+                    $dateObject = date_create($dbDate);
+                    $formattedDate = date_format($dateObject, 'M d');
+?>
                   <tr>
                       <td><?php if (isset($i)) echo $i ?></td>
                       <td><?php if (isset($notifyResult['description'])) echo $notifyResult['description'] ?></td>
+                      <td><?php  if(isset($formattedDate)) echo $formattedDate?></td>
                       <td>
                           <div class="btn-notify">
                               <button class="btn-notify" style="background-color: green;" onclick="notifyUpdate(<?php echo $notifyResult['id'] ?>);">Update</button>
