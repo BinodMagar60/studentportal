@@ -90,7 +90,7 @@ function notes(){
 
 
     setTimeout(() => {
-      showNotesBox();
+      notetableData();
   }, 100);
 
    

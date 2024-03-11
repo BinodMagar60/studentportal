@@ -56,7 +56,7 @@ function submitUploads(){
             filesList.innerHTML = '';
             numOfFiles.innerText = 'No Files Chosen';
             setTimeout(() => {
-                showNotesBox();
+                notetableData();
             }, 100);
 
         },
@@ -71,23 +71,23 @@ function submitUploads(){
 
 
 
-function showNotesBox(){
-    const xhr = new XMLHttpRequest();
-    const container = document.getElementById('show-notes');
+// function showNotesBox(){
+//     const xhr = new XMLHttpRequest();
+//     const container = document.getElementById('show-notes');
   
-    xhr.onload = function () {
-        if (this.status === 200) {
-            container.innerHTML = xhr.responseText;
-            // console.log(xhr.responseText);
+//     xhr.onload = function () {
+//         if (this.status === 200) {
+//             container.innerHTML = xhr.responseText;
+//             // console.log(xhr.responseText);
     
-        } else {
-            console.warn("Did not receive 200 OK from response!");
-        }
-    };
-    xhr.open('GET', 'notelist.php');
-    xhr.send();
+//         } else {
+//             console.warn("Did not receive 200 OK from response!");
+//         }
+//     };
+//     xhr.open('GET', 'notelist.php');
+//     xhr.send();
 
-  }
+//   }
 
 
 
@@ -104,10 +104,48 @@ function showNotesBox(){
     xhr.send();
 
     setTimeout(() => {
-        showNotesBox();
+        notetableData();
     }, 150)
   }
 
+
+
+
+
+
+  const notetableData = () => {
+
+    $(document).ready(function () {
+        function updateNoteList() {
+            var selectedClass = $('#class-select').val();
+            var selectedSection = $('#Section-select').val();
+            var selectedSubject = $('#Subject-select').val();
+
+            $.ajax({
+                type: 'GET',
+                url: 'notelist.php',
+                data: {
+                    'class': selectedClass,
+                    'section': selectedSection,
+                    'subject':selectedSubject
+                    
+                },
+                success: function (response) {
+                    // console.log(response);
+                    var searchedBox = document.querySelector('#show-notes');
+                    if (searchedBox) {
+                        searchedBox.innerHTML = response;
+                    } else {
+                        console.error("Element with ID 'searched-box' not found.");
+                    }
+                }
+            });
+        }
+
+        updateNoteList();
+    });
+
+}
 
 
 

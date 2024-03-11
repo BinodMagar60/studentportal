@@ -24,7 +24,7 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
                     <tr>
                         <td>Class</td>
                         <td>
-                            <select name="class_n" id="class-select">
+                            <select name="class_n" id="class-select" onchange="notetableData();">
                             <option value="one"  <?php echo ($class == 'one' ? 'selected' : ''); ?>>One</option>
                                 <option value="two" <?php echo ($class == 'two' ? 'selected' : ''); ?>>Two</option>
                                 <option value="three" <?php echo ($class == 'three' ? 'selected' : ''); ?>>Three</option>
@@ -41,7 +41,7 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
                     <tr>
                         <td>Section</td>
                         <td>
-                            <select name="section_n" id="Section-select">
+                            <select name="section_n" id="Section-select" onchange="notetableData()">
                                 <option value="everyone" <?php echo ($section == 'everyone' ? 'selected' : ''); ?>>Everyone</option>
                                 <option value="A" <?php echo ($section == 'A' ? 'selected' : ''); ?>>A</option>
                                 <option value="B" <?php echo ($section == 'B' ? 'selected' : ''); ?>>B</option>
@@ -52,7 +52,7 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
                     <tr>
                         <td>Subject</td>
                         <td>
-                            <select name="subject_n" id="Subject-select">
+                            <select name="subject_n" id="Subject-select" onchange="notetableData()">
                                 <option value="English">English</option>
                                 <option value="Nepali">Nepali</option>
                                 <option value="Maths">Maths</option>
