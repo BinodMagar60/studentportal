@@ -28,14 +28,30 @@
                                 <button class="btn-assign" style="background-color: green;" onclick="assignmentUpdate('<?php if (isset($search['id'])) echo $search['id'] ?>');">Update</button>
                                 <button class="btn-assign" style="background-color: red;" onclick="assignmentDelete('<?php if (isset($search['id'])) echo $search['id'] ?>');">Delete</button>
                             </div>
-                            <div class="assignment-delete" id="assignment-delete">
+
+
+
+
+
+
+
+
+
+
+                            <div class="assignment-delete" id="assignment-delete-<?php echo $search['id'];?>">
                                 <div class="title-logo-delete"><i class="ri-question-line"></i></div>
                                 <div class="title">Are you sure you want to delete it?</div>
                                 <div class="btn-delete-assignment">
-                                    <a href="../php/assignment/deleteAssignment.php?uid=<?php if (isset($search['id'])) echo $search['id'];?>"><button type="button" class="delete-btn-assignment" style="background-color: red;" onclick="assignmentDeletePopup();">Yes</button></a>
-                                    <button class="delete-btn-assignment" style="background-color: gray;" onclick="assingmentDeleteRemove();">No</button>
+                                    <button type="button" class="delete-btn-assignment" style="background-color: red;" onclick="confirmDeleteAssignment(<?php if (isset($search['id'])) echo $search['id']; ?>);">Yes</button>
+                                    <button class="delete-btn-assignment" style="background-color: gray;" onclick="assingmentDeleteRemove(<?php if (isset($search['id'])) echo $search['id']; ?>);">No</button>
                                 </div>
                             </div>
+
+
+
+
+
+
 
                         </td>
                     </tr>

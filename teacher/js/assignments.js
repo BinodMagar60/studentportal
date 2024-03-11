@@ -113,15 +113,21 @@ function removeAssignmentPopup() {
   popupbox.classList.remove("popup-assignment-submit-clicked");
 }
 
-function assignmentDelete() {
-  var deleteBox = document.getElementById("assignment-delete");
+
+
+
+
+
+function assignmentDelete(aid) {
+
+  var deleteBox = document.getElementById("assignment-delete-"+aid);
   var overlay = document.getElementById("overlay");
   deleteBox.classList.add("assignment-delete-popup");
   overlay.style.display = "block";
 }
 
-function assingmentDeleteRemove() {
-  var deleteBox = document.getElementById("assignment-delete");
+function assingmentDeleteRemove(aid) {
+  var deleteBox = document.getElementById("assignment-delete-"+aid);
   var overlay = document.getElementById("overlay");
   deleteBox.classList.remove("assignment-delete-popup");
   overlay.style.display = "none";
@@ -142,20 +148,114 @@ function assignmentUpdateRemeove() {
   overlay.style.display = "none";
 }
 
-function assignmentUpdatePopup() {
-  assignmentUpdateRemeove();
-  var popup = document.getElementById("popup-assignment-update-successfully");
-  popup.classList.add("popup-assignment-submit-clicked");
-  setTimeout(() => {
-    popup.classList.remove("popup-assignment-submit-clicked");
-  }, 1500);
-}
+// function assignmentUpdatePopup() {
+//   assignmentUpdateRemeove();
+//   var popup = document.getElementById("popup-assignment-update-successfully");
+//   popup.classList.add("popup-assignment-submit-clicked");
+//   setTimeout(() => {
+//     popup.classList.remove("popup-assignment-submit-clicked");
+//   }, 1500);
+// }
 
 function assignmentDeletePopup() {
-  assingmentDeleteRemove();
+  
   var popup = document.getElementById("popup-assignment-delete-successfully");
   popup.classList.add("popup-assignment-submit-clicked");
   setTimeout(() => {
     popup.classList.remove("popup-assignment-submit-clicked");
   }, 1500);
 }
+
+
+function confirmDeleteAssignment(aId){
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "../php/assignment/deleteAssignment.php?uid=" + aId, true);
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status == 200) {
+    }
+  };
+  xhr.send();
+
+  assingmentDeleteRemove(aId);
+  setTimeout(() => {
+    assignmentDeletePopup();
+    tableDataAssignment();
+  }, 100);
+  
+
+
+  
+}
+
+
+
+
+
+
+
+function assignmentUpdatePopup() {
+  var id = $("#assignmentDetails input[name='id']").val();
+  var exp_date = $("#assignmentDetails input[name='assign_date']").val();
+  var a_title = $("#assignmentDetails input[name='assign_title']").val();
+  var a_description = $("#assignmentDetails textarea[name='assign_description']").val();
+  var a_class = $("#assignmentDetails select[name='assign_class']").val();
+  var a_section = $("#assignmentDetails select[name='assign_section']").val();
+ 
+
+  $.ajax({
+    type: "POST",
+    url: "../php/assignment/updateAssignment.php",
+    data: {
+      id: id,
+      assign_date: exp_date,
+      assign_title: a_title,
+      assign_description: a_description,
+      assign_class: a_class,
+      assign_section: a_section,
+    },
+    success: function (response) {
+      // console.log(response);
+      // console.log(exp_date);
+      // console.log(a_title);
+      // console.log(a_description);
+      // console.log(a_class);
+      // console.log(a_section);
+
+
+
+
+
+      assignmentUpdateRemeove();
+  var popup = document.getElementById("popup-assignment-update-successfully");
+  popup.classList.add("popup-assignment-submit-clicked");
+  setTimeout(() => {
+    popup.classList.remove("popup-assignment-submit-clicked");
+  }, 1500);
+
+
+    },
+    error: function (error) {
+      console.log(error);
+    },
+  });
+
+
+
+  setTimeout(() => {
+    tableDataAssignment();
+  }, 100);
+  
+}
+
+
+
+
+
+
+
+
+
+
+// assignmentDeletePopup();
+
+

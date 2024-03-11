@@ -138,10 +138,11 @@ fieldset{
 .notify-table-show tr td:nth-child(2){
   padding-left: 20px;
   overflow-wrap: break-word;
+  width: 1000px;
 }
 
 .notify-table-show tr td:nth-child(3){
-  width: 200px;
+  width: 200px !important;
 text-align: center;
 }
 

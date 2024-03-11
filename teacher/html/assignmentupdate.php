@@ -10,7 +10,7 @@ $assignmentDetail=mysqli_fetch_assoc($assignmentExe);
     }
 }
 ?>
-<form action="../php/assignment/updateAssignment.php" method="post">
+<form id="assignmentDetails">
             <table id="update-assignment-table">
                 <tr>
                     <td>Submission Date</td>
@@ -63,7 +63,7 @@ $assignmentDetail=mysqli_fetch_assoc($assignmentExe);
                 <tr>
                     <td>
                         <div class="btn-update-assignments">
-                            <button class="update-btn-assingments" style="background-color: green" onclick="assignmentUpdatePopup();">Update</button>
+                            <button type="button" class="update-btn-assingments" style="background-color: green" onclick="assignmentUpdatePopup();">Update</button>
                             <button type="button" class="update-btn-assingments" style="background-color: red" onclick="assignmentUpdateRemeove();">Cancel</button>
                         </div>
                     </td>
