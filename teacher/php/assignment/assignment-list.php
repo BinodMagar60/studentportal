@@ -9,8 +9,11 @@
             <td>Action</td>
         </tr>
         <?php
+        require_once "../../../php/config/sessionStart.php";
+        if(isset($_SESSION['userName'])){
         require_once "../../../php/config/db.php";
-        $sql = "SELECT * FROM assignments";
+        $userName=$_SESSION['userName'];
+        $sql = "SELECT * FROM assignments where poster_name='$userName'";
         if ($exesql = mysqli_query($con, $sql)) {
             if (mysqli_num_rows($exesql) > 0) {
                 $i = 0;
@@ -63,6 +66,9 @@
         } else {
             echo "query error";
         }
+    }else{
+        echo "no session";
+    }
         ?>
 
     </table>

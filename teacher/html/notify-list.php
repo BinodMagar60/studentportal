@@ -6,9 +6,12 @@
           <td>Action</td>
       </tr>
       <?php
+        require_once "../../php/config/sessionStart.php";
+        if(isset($_SESSION['userName'])){
+            $userName=$_SESSION['userName'];
         require_once "../../php/config/db.php";
         require_once "../php/notify/expiry_notify.php";
-        $notifyListSql = "SELECT * FROM teacher_notify";
+        $notifyListSql = "SELECT * FROM teacher_notify where poster_name='$userName'";
         if ($notifyExe = mysqli_query($con, $notifyListSql)) {
             if (mysqli_num_rows($notifyExe) > 0) {
                 $i = 1;
@@ -55,5 +58,6 @@
                 }
             }
         }
+    }
         ?>
   </table>
