@@ -31,7 +31,23 @@ if(mysqli_num_rows($exesql_announcement)!=0){
   <div class="announcement-who">- <?php if(isset($result_announcement['poster_name'])) echo $result_announcement['poster_name']; ?></div>
   </div>
 
+ 
+
+
+
+
+
+
+
   <?php
+}
+  }
+?>
+
+
+
+
+<?php
         require_once "../../teacher/php/notify/expiry_notify.php";
 if(isset($_SESSION['userClass'],$_SESSION['userSection'])){
   $class=$_SESSION['userClass'];
@@ -53,21 +69,19 @@ if(isset($_SESSION['userClass'],$_SESSION['userSection'])){
   </div>
 
 
-
-
-
-
-
   <?php
-}
-  }
-}
-}
-  }
-}else{
-  echo '<div style="text-align: center; width:100%; margin-top: 50px; color: white; font-size: 1.375rem; font-weight: 500;">No Announcements For Now.</div>';
-}
+    }}}}
+
+
 ?>
+
+
+
+
+
+
+
+
 </div>
 
 

@@ -57,7 +57,7 @@ require_once "../../php/config/StudentProfile.php";
         <!-- sidebar -->
         <div class="leftside-contents">
             <div class="side-bar-titles">
-                <button class="active" id="button1" onclick="toggleButton(1);">
+                <button class="active" id="button1" onclick="toggleButton(1);assignmentShow();">
                     <span style="margin-right: 10px;color: white;-webkit-text-stroke:1px #092635;"><i class="fa-solid fa-file-circle-exclamation"></i></span>Assignments
                 </button>
             </div>
@@ -68,7 +68,7 @@ require_once "../../php/config/StudentProfile.php";
                 </a>
             </div>
             <div class="side-bar-titles">
-                <a class="side-panel-title"><button id="button3" onclick="toggleButton(3);">
+                <a class="side-panel-title"><button id="button3" onclick="toggleButton(3);notesShow();">
                         <span tyle="color: white;-webkit-text-stroke:1px #092635;"><i class="fa-solid fa-notes-medical"></i></span>Notes
                     </button>
                 </a>
@@ -194,10 +194,10 @@ require_once "../../php/config/StudentProfile.php";
    
 
 
-    <!-- <script>
+    <script>
     document.addEventListener('DOMContentLoaded', function() {  
       document.getElementById('button1').click();
-    }); -->
+    });
   </script>
 
 </body>
