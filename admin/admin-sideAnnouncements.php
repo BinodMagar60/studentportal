@@ -36,6 +36,29 @@ if(mysqli_num_rows($exesql_announcement)!=0){
   echo '<div style="text-align: center; width:100%; margin-top: 50px; color: white; font-size: 1.375rem; font-weight: 500;">No Announcements For Now.</div>';
 }
 ?>
+<?php
+        require_once "../teacher/php/notify/expiry_notify.php";
+$sql_notify="SELECT * from teacher_notify";
+if($exesql_notify=mysqli_query($con,$sql_notify)){
+if(mysqli_num_rows($exesql_notify)>0){
+  while($result_notify=mysqli_fetch_assoc($exesql_notify)){
+    $dbDate = $result_notify['created_date'];
+    $dateObject = date_create($dbDate);
+    $formattedDate = date_format($dateObject, 'M d');
+    ?>
+
+<div class="announcement-show-2">
+  <div class="announcement-date"><?php if(isset($formattedDate)) echo $formattedDate;?></div>
+  <div class="announcement-detail"><?php if(isset($result_notify['description'])) echo $result_notify['description']; ?></div>
+  <div class="announcement-who">- <?php if(isset($result_notify['poster_name'])) echo $result_notify['poster_name']; ?></div>
+  </div>
+
+
+
+  <?php
+  }}}
+
+?>
 </div>
 
 
