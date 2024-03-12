@@ -16,7 +16,7 @@ require_once "../php/assignment/expiry_assignment.php";
     <div class="overlay" id="overlay"></div>
     <div class="assignment-container">
         <fieldset>
-            <legend>Assignments</legend>
+            <legend>Assignments Add</legend>
             <form id="assignment-form">
                 <table id="assignment-table">
                     <tr>

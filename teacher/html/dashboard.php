@@ -82,7 +82,7 @@ unset($_SESSION['target_s_email']);
                 <div class="subclass">
                     <a class="subclass-content"><button id="button3" onclick="toggleButton(3);studentAssignment()">Add
                             </button></a>
-                    <a class="subclass-content"><button id="button4" onclick="toggleButton(4);">Check
+                    <a class="subclass-content"><button id="button4" onclick="toggleButton(4);studentAssignmentCheck()">Check
                             </button></a>
 </div>
             </div>
