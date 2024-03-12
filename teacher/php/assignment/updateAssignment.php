@@ -23,7 +23,9 @@ if (isset($user_class) && $user_class !== "") {
 if (isset($user_section) && $user_section !== "") {
   $updateFields[] = "a_section = '$user_section'";
 }
-
+if (isset($user_subject) && $user_subject !== "") {
+  $updateFields[] = "a_subject = '$user_subject'";
+}
 
 $sql= "UPDATE assignments SET ";
 $sql .= implode(", ",$updateFields);

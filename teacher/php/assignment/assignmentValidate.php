@@ -1,5 +1,5 @@
 <?php
-$description = $exp_date = $title = $user_class = $user_section = "";
+$description = $exp_date = $title = $user_class = $user_section = $user_subject = "";
 $errors = [];
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -32,6 +32,11 @@ if (empty($_POST['a_user_section'])) {
   // $errors["a_user_section"] = "user_section is required";
 } else {
   $user_section = test_input($_POST["a_user_section"]);
+}
+if (empty($_POST['a_user_subject'])) {
+  $errors["a_user_subject"] = "subject is required";
+} else {
+  $user_subject = test_input($_POST["a_user_subject"]);
 }
   }
 // Function to sanitize and validate input data

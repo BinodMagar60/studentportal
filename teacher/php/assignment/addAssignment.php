@@ -9,7 +9,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
   if (empty($errors)) {
     if(isset($description,$exp_date,$title,$user_class,$user_section)){
       echo $description.$exp_date.$title.$user_class.$user_section.$userName;
-    $sql= "INSERT INTO assignments(exp_date,a_title,a_description,a_class,a_section,poster_name) VALUES ('$exp_date','$title','$description','$user_class','$user_section','$userName')";
+    $sql= "INSERT INTO assignments(exp_date,a_title,a_description,a_class,a_section,a_subject,poster_name) VALUES ('$exp_date','$title','$description','$user_class','$user_section','$user_subject','$userName')";
 
     if(mysqli_query($con,$sql)){
       echo "data inserted successfully";

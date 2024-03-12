@@ -5,17 +5,6 @@ if(isset($_SESSION['userClass'],$_SESSION['userSection'])){
     $class=$_SESSION['userClass'];
     $section=$_SESSION['userSection'];
 $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
-?>
-
-
-
-
-
-
-
-
-
-            <?php
 if(isset($class,$section,$subject)){
                         require_once "../../php/config/db.php";
                         $noteShowSql="SELECT * FROM teacher_upload_notes where class='$class' and (section='everyone' or section='$section') and `subject`='$subject'";
@@ -27,6 +16,7 @@ if($noteShowExe=mysqli_query($con,$noteShowSql)){
                     <tr>
                         <td>S.N</td>
                         <td>Name</td>
+                        <td>Uploaded By</td>
                         <td>Uploaded Date</td>
                         <td>Action</td>
                     </tr>
@@ -37,6 +27,7 @@ if($noteShowExe=mysqli_query($con,$noteShowSql)){
                     <tr>
                         <td><?php echo $i?></td>
                         <td><?php if(isset($noteShowResult['name'])) echo $noteShowResult['name'] ?></td>
+                        <td><?php if(isset($noteShowResult['uploader'])) echo $noteShowResult['uploader'] ?></td>
                         <td><?php if(isset($uploadDate)) echo $uploadDate ?></td>
                         <td>
                         <a href="../../<?php if(isset($noteShowResult['file_path'])) echo $noteShowResult['file_path'] ?>" download="<?php if(isset($noteShowResult['name'])) echo $noteShowResult['name'] ?>"><button type="button" style="color: blue;"><i class="ri-download-2-fill"></i></button></a>

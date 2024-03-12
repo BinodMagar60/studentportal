@@ -5,6 +5,7 @@
             <td>Title</td>
             <td>Class</td>
             <td>Section</td>
+            <td>Subject</td>
             <td>Submission date</td>
             <td>Action</td>
         </tr>
@@ -25,6 +26,7 @@
                         <td><?php if (isset($search['a_title'])) echo $search['a_title'] ?></td>
                         <td><?php if (isset($search['a_class'])) echo $search['a_class'] ?></td>
                         <td><?php if (isset($search['a_section'])) echo $search['a_section'] ?></td>
+                        <td><?php if (isset($search['a_subject'])) echo $search['a_subject'] ?></td>
                         <td><?php if (isset($search['exp_date'])) echo $search['exp_date'] ?></td>
                         <td>
                             <div class="btn-assignments">

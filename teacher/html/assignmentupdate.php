@@ -66,13 +66,13 @@ $assignmentDetail=mysqli_fetch_assoc($assignmentExe);
                 <tr>
                     <td>
                     <select name="assign_subject" id="selectSubjectAssignmentUpdate">
-                        <option value="English">English</option>
-                                <option value="Nepali">Nepali</option>
-                                <option value="Maths">Maths</option>
-                                <option value="Science">Science</option>
-                                <option value="Social">Social</option>
-                                <option value="Computer">Computer</option>
-                                <option value="Account">Account</option>
+                        <option value="English" <?php if($assignmentDetail['a_subject'] == "English") echo "selected"; ?>>English</option>
+                                <option value="Nepali" <?php if($assignmentDetail['a_subject'] == "Nepali") echo "selected"; ?>>Nepali</option>
+                                <option value="Maths" <?php if($assignmentDetail['a_subject'] == "Maths") echo "selected"; ?>>Maths</option>
+                                <option value="Science" <?php if($assignmentDetail['a_subject'] == "Science") echo "selected"; ?>>Science</option>
+                                <option value="Social" <?php if($assignmentDetail['a_subject'] == "Social") echo "selected"; ?>>Social</option>
+                                <option value="Computer" <?php if($assignmentDetail['a_subject'] == "Computer") echo "selected"; ?>>Computer</option>
+                                <option value="Account" <?php if($assignmentDetail['a_subject'] == "Account") echo "selected"; ?>>Account</option>
                         </select>
                     </td>
                 </tr>

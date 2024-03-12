@@ -1,5 +1,5 @@
 <?php
-$title= $description = $exp_date = $user_class = $user_section = "";
+$title= $description = $exp_date = $user_class = $user_section = $user_subject = "";
 $errors = [];
 if(isset($_POST['id'])){
     $uid=$_POST['id'];
@@ -31,6 +31,11 @@ if (empty($_POST['assign_section'])) {
   // $errors["a_user_section"] = "user_section is required";
 } else {
   $user_section = test_input($_POST["assign_section"]);
+}
+if (empty($_POST['assign_subject'])) {
+  // $errors["a_user_subject"] = "user_subject is required";
+} else {
+  $user_subject = test_input($_POST["assign_subject"]);
 }
 }else{
   echo "no id";
