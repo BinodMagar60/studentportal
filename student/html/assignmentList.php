@@ -44,7 +44,7 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
                         <td>Pending</td>
                         <td>
                             <div class="btn-assignments">
-                                <button class="btn-assign" style="background-color: transparent;" ><i class="ri-upload-2-line"></i></button>
+                                <button class="btn-assign" style="background-color: transparent;" onclick="assignmentUploadShow();"><i class="ri-upload-2-line"></i></button>
                             </div>
                         </td>
                     </tr>

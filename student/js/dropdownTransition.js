@@ -92,6 +92,7 @@ function assignmentShow(){
 
     setTimeout(() => {
       assignmentstableData();
+      callAssignmentUploads();
     }, 100);
    
 }

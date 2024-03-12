@@ -58,6 +58,10 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
 
     </div>
 
+    <div class="assignment-student-upload" id="assignment-student-upload">
+        
+    </div>
+
 
     <script src="../js/assignment.js"></script>
 </body>
