@@ -189,7 +189,7 @@ require_once "../../php/config/StudentProfile.php";
 
     <script src="../js/dropdownTransition.js"></script>
     <script src="../js/notifications.js"></script>
-    
+    <script src="../js/notes.js"></script>
 
    
 

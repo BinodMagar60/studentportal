@@ -71,7 +71,20 @@ require_once "../php/assignment/expiry_assignment.php";
                             </select>
                         </td>
                     </tr>
-                   
+                   <tr>
+                    <td>Subject</td>
+                    <td>
+                        <select name="a_user_subject" id="selectSubjectAssignment">
+                        <option value="English">English</option>
+                                <option value="Nepali">Nepali</option>
+                                <option value="Maths">Maths</option>
+                                <option value="Science">Science</option>
+                                <option value="Social">Social</option>
+                                <option value="Computer">Computer</option>
+                                <option value="Account">Account</option>
+                        </select>
+                    </td>
+                   </tr>
                     <tr>
                         <td></td>
                         <td><div class="assignment-btn-submit"><button type="button" class="assignment-btn" onclick="assignmentValidation();">Submit</button></div></td>

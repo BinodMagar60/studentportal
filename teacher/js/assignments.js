@@ -148,14 +148,7 @@ function assignmentUpdateRemeove() {
   overlay.style.display = "none";
 }
 
-// function assignmentUpdatePopup() {
-//   assignmentUpdateRemeove();
-//   var popup = document.getElementById("popup-assignment-update-successfully");
-//   popup.classList.add("popup-assignment-submit-clicked");
-//   setTimeout(() => {
-//     popup.classList.remove("popup-assignment-submit-clicked");
-//   }, 1500);
-// }
+
 
 function assignmentDeletePopup() {
   
@@ -200,6 +193,7 @@ function assignmentUpdatePopup() {
   var a_description = $("#assignmentDetails textarea[name='assign_description']").val();
   var a_class = $("#assignmentDetails select[name='assign_class']").val();
   var a_section = $("#assignmentDetails select[name='assign_section']").val();
+  var a_subject = $("#assignmentDetails select[name='assign_subject']").val();
  
 
   $.ajax({
@@ -212,6 +206,7 @@ function assignmentUpdatePopup() {
       assign_description: a_description,
       assign_class: a_class,
       assign_section: a_section,
+      assign_subject: a_subject
     },
     success: function (response) {
       // console.log(response);

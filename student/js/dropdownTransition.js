@@ -111,7 +111,9 @@ function notesShow(){
     };
     xhr.open('GET', 'notes.php'); 
     xhr.send();
-   
+   setTimeout(() => {
+    notetableData();
+   }, 100);
 }
 
 

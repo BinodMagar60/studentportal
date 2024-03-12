@@ -149,7 +149,7 @@ text-align: center;
 }
 
 
-#selectSectionAssignment, #selectClassAssignment{
+#selectSectionAssignment, #selectClassAssignment, #selectSubjectAssignment{
   border: 1px solid black;
   outline: none;
   padding: 5px;
@@ -158,12 +158,12 @@ text-align: center;
   font-size: 1.125rem;
 }
 
-#selectClassAssignment{
+#selectClassAssignment,#selectSectionAssignment{
   margin-bottom: 10px;
 }
 
 
-#selectClassAssignmentUpdate, #selectSelectAssignmentUpdate{
+#selectClassAssignmentUpdate, #selectSelectAssignmentUpdate,#selectSubjectAssignmentUpdate{
   border: 1px solid black;
   outline: none;
   padding: 5px;

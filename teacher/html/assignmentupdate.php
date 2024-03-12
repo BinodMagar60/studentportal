@@ -61,6 +61,22 @@ $assignmentDetail=mysqli_fetch_assoc($assignmentExe);
                     </td>
                 </tr>
                 <tr>
+                    <td>Subject</td>
+                </tr>
+                <tr>
+                    <td>
+                    <select name="assign_subject" id="selectSubjectAssignmentUpdate">
+                        <option value="English">English</option>
+                                <option value="Nepali">Nepali</option>
+                                <option value="Maths">Maths</option>
+                                <option value="Science">Science</option>
+                                <option value="Social">Social</option>
+                                <option value="Computer">Computer</option>
+                                <option value="Account">Account</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
                     <td>
                         <div class="btn-update-assignments">
                             <button type="button" class="update-btn-assingments" style="background-color: green" onclick="assignmentUpdatePopup();">Update</button>
