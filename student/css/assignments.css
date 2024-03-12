@@ -75,3 +75,178 @@ legend{
 
 
 
+
+
+.note-list-here{
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 30px;
+}
+
+
+.note-list-here  tr:nth-child(1){
+    background-color: rgb(64, 156, 241) !important;
+}
+
+.note-list-here tr:nth-child(1) td{
+    font-weight: 400;
+}
+
+.note-list-here tr:nth-child(odd){
+    background-color: #f7f7f7;
+}
+
+.note-list-here tr td{
+    font-size: 1.125rem;
+    padding: 10px;
+}
+
+
+.note-list-here tr td:not(td:nth-child(2)){
+    text-align: center;
+}
+
+.note-list-here tr td:nth-child(1){
+    width: 40px;
+}
+
+.note-list-here tr td:nth-child(2){
+    width: 800px;
+}
+
+
+.note-list-here tr td:nth-child(6) button{
+    font-size: 1.5rem;
+    color: rgb(15, 15, 138);
+    cursor: pointer;
+    
+}
+
+
+
+.note-list-here tr:not(tr:nth-child(1)) td:nth-child(2):hover{
+    /* color:rgb(22, 22, 197); */
+    color: red;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+.assignment-details{
+    background-color: white;
+    min-height: 500px;
+    width: 1300px;
+    box-shadow: 0 0 2px 2px rgba(185, 185, 185, 0.466);
+    border-radius: 8px;
+    position: fixed;
+    left: 400px;
+    /* top: 140px; */
+    top: -10000px;
+    z-index: 10000;
+    transition: top 100ms ease-in-out;
+}
+
+
+
+.assignment-details-clicked{
+    top: 140px !important;
+    transition: top 250ms ease-in-out;
+}
+
+.overlays{
+    background-color: rgba(255, 255, 255, 0);
+    width: 10000px;
+    height: 10000px;
+    position: fixed;
+    top: -2000px;
+    left: -2000px;
+    z-index: 9999;
+    display: none;
+     
+}
+
+
+.assignment-details-container{
+    padding: 40px 50px;
+}
+
+
+
+.assignment-details-container .top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.top-title{
+    font-size: 1.45rem;
+    font-weight: 600;
+}
+
+.close-btn-assignment{
+    background-color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.close-btn-assignment:hover{
+    color: red;
+}
+
+
+.assignment-details-table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.assignment-details-table tr td{
+    padding: 5px;
+}
+
+
+.assignment-details-table tr:nth-child(odd) td{
+    font-size: 1.45rem;
+    font-weight: 500;
+}
+
+
+#titles-assignment-details{
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    width: 100%;
+    outline: none;
+    color: black;
+    background-color: transparent;
+}
+
+#textarea-assignment{
+    font-size: 1.25rem;
+    font-weight: 300;
+    width: 100%;
+    outline: none;
+    height: 400px;
+    resize: none;
+    overflow: scroll;
+    color: black;
+    background-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -61,20 +61,15 @@ require_once "../../php/config/StudentProfile.php";
                     <span style="margin-right: 10px;color: white;-webkit-text-stroke:1px #092635;"><i class="fa-solid fa-file-circle-exclamation"></i></span>Assignments
                 </button>
             </div>
+         
             <div class="side-bar-titles">
-                <a class="side-panel-title"><button id="button2" onclick="toggleButton(2);">
-                        <span style="color: white;-webkit-text-stroke:1px #092635;"><i class="fa-solid fa-file-circle-check"></i></span>Homework
-                    </button>
-                </a>
-            </div>
-            <div class="side-bar-titles">
-                <a class="side-panel-title"><button id="button3" onclick="toggleButton(3);notesShow();">
+                <a class="side-panel-title"><button id="button2" onclick="toggleButton(2);notesShow();">
                         <span tyle="color: white;-webkit-text-stroke:1px #092635;"><i class="fa-solid fa-notes-medical"></i></span>Notes
                     </button>
                 </a>
             </div>
             <div class="side-bar-titles">
-                <a class="side-panel-title"><button id="button4" onclick="toggleButton(4)">
+                <a class="side-panel-title"><button id="button3" onclick="toggleButton(3)">
                         <span><i class="ri-file-list-line"></i></span>Result
                     </button>
                 </a>
@@ -85,15 +80,15 @@ require_once "../../php/config/StudentProfile.php";
                     <span class="last"><i class="ri-arrow-down-s-line"></i></span>
                 </button>
                 <div class="subclass">
-                    <a class="subclass-content"><button id="button5" onclick="toggleButton(5);classRoutineShow();">Class
+                    <a class="subclass-content"><button id="button4" onclick="toggleButton(4);classRoutineShow();">Class
                             Routine</button></a>
-                    <a class="subclass-content"><button id="button6" onclick="toggleButton(6);examRoutineShow()">Exam
+                    <a class="subclass-content"><button id="button5" onclick="toggleButton(5);examRoutineShow()">Exam
                             Routine</button></a>
                 </div>
             </div>
 
             <div class="side-bar-titles">
-                <a class="side-panel-title"><button id="button7" onclick="logoutPopup();">
+                <a class="side-panel-title"><button id="button6" onclick="logoutPopup();">
                         <span><i class="ri-logout-box-r-line"></i></span>Logout
                     </button></a>
             </div>
@@ -190,6 +185,8 @@ require_once "../../php/config/StudentProfile.php";
     <script src="../js/dropdownTransition.js"></script>
     <script src="../js/notifications.js"></script>
     <script src="../js/notes.js"></script>
+    <script src="../js/assignment.js"></script>
+
 
    
 

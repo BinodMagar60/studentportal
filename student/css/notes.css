@@ -74,3 +74,53 @@ legend{
 }
 
 
+
+
+
+.note-list-here{
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 30px;
+}
+
+
+.note-list-here tr:nth-child(1){
+    background-color: rgb(64, 156, 241) !important;
+}
+
+.note-list-here tr:nth-child(odd){
+    background-color: #f7f7f7;
+}
+
+.note-list-here tr:nth-child(1) td{
+    font-weight: 400;
+}
+
+.note-list-here tr td{
+    padding: 10px;
+    font-size: 1.125rem;
+}
+
+
+.note-list-here tr td:not(td:nth-child(2)){
+    text-align: center;
+}
+
+.note-list-here tr td:nth-child(1){
+    width: 40px;
+}
+
+.note-list-here tr td:nth-child(2){
+    width: 700px;
+}
+
+
+.note-list-here tr td:nth-child(5) a button{
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.note-list-here tr td:nth-child(5) a button i{
+    font-size: 1.5rem;
+    background-color: transparent;
+}

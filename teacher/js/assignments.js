@@ -52,6 +52,8 @@ function assignmentValidation() {
           document.getElementById("assignment-form").reset();
         }, 800);
         tableDataAssignment();
+
+        console.log(description);
       },
       error: function (xhr, status, error) {
         console.error("Error:", status, error);

@@ -72,6 +72,10 @@ legend{
     margin: 5px 20px ;
     width: 300px;
     font-size: 1.125rem;
+    
+  }
+
+  #assignment-table tr td textarea{
     resize: vertical;
   }
 
@@ -126,9 +130,23 @@ legend{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 .assignment-table-show tr td:nth-child(2){
   padding-left: 20px;
   overflow-wrap: break-word;
+  width: 500px;
 }
 
 .assignment-table-show tr td:nth-child(5){

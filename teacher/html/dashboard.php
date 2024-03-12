@@ -72,32 +72,49 @@ unset($_SESSION['target_s_email']);
                     </button>
                 </a>
             </div>
+
+
             <div class="side-bar-titles">
-                <a class="side-panel-title"><button id="button3" onclick="toggleButton(3);studentAssignment()">
-                        <span style="color: white;-webkit-text-stroke:1px #092635;"><i class="fa-solid fa-file-circle-exclamation"></i></span>Assignment
+                <button class="dropdown-1">
+                    <span><i class="fa-solid fa-file-circle-exclamation" style="color: white;-webkit-text-stroke:1px #092635;"></i></span>Assignments
+                    <span class="last"><i class="ri-arrow-down-s-line"></i></span>
+                </button>
+                <div class="subclass">
+                    <a class="subclass-content"><button id="button3" onclick="toggleButton(3);studentAssignment()">Add
+                            </button></a>
+                    <a class="subclass-content"><button id="button4" onclick="toggleButton(4);">Check
+                            </button></a>
+</div>
+            </div>
+
+
+<!-- 
+            <div class="side-bar-titles">
+                <a class="side-panel-title"><button id="button3" onclick="toggleButton(3);">
+                        <span ><i class="fa-solid fa-file-circle-exclamation" style="color: white;-webkit-text-stroke:1px #092635;"></i></span>Assignment
                     </button>
                 </a>
-            </div>
-            <div class="side-bar-titles">
-                <a class="side-panel-title"><button id="button4" onclick="toggleButton(4)">
+            </div> -->
+            <!-- <div class="side-bar-titles">
+                <a class="side-panel-title"><button id="button5" onclick="toggleButton(5)">
                         <span style="color: white;-webkit-text-stroke:1px #092635;"><i class="fa-solid fa-file-circle-check"></i></span>Homework
                     </button>
                 </a>
-            </div>
+            </div> -->
             <div class="side-bar-titles">
-                <a class="side-panel-title"><button id="button5" onclick="toggleButton(5);notes();">
+                <a class="side-panel-title"><button id="button6" onclick="toggleButton(6);notes();">
                         <span tyle="color: white;-webkit-text-stroke:1px #092635;"><i class="fa-solid fa-notes-medical"></i></span>Notes
                     </button>
                 </a>
             </div>
             <div class="side-bar-titles">
-                <a class="side-panel-title"><button id="button6" onclick="toggleButton(6);studentNotify();">
+                <a class="side-panel-title"><button id="button7" onclick="toggleButton(7);studentNotify();">
                         <span><i class="fa-regular fa-envelope"></i></span>Notify
                     </button>
                 </a>
             </div>
             <div class="side-bar-titles">
-                <a class="side-panel-title"><button id="button7" onclick="toggleButton(7)">
+                <a class="side-panel-title"><button id="button8" onclick="toggleButton(8)">
                         <span><i class="ri-file-list-line"></i></span>Result
                     </button>
                 </a>
@@ -110,15 +127,15 @@ unset($_SESSION['target_s_email']);
                     <span class="last"><i class="ri-arrow-down-s-line"></i></span>
                 </button>
                 <div class="subclass">
-                    <a class="subclass-content"><button id="button8" onclick="toggleButton(8);classRoutineShow()">Class
+                    <a class="subclass-content"><button id="button9" onclick="toggleButton(9);classRoutineShow()">Class
                             Routine</button></a>
-                    <a class="subclass-content"><button id="button9" onclick="toggleButton(9);examRoutineShow()">Exam
+                    <a class="subclass-content"><button id="button10" onclick="toggleButton(10);examRoutineShow()">Exam
                             Routine</button></a>
                 </div>
             </div>
 
             <div class="side-bar-titles">
-                <a class="side-panel-title"><button id="button13" onclick="logoutPopup();">
+                <a class="side-panel-title"><button id="button11" onclick="logoutPopup();">
                         <span><i class="ri-logout-box-r-line"></i></span>Logout
                     </button></a>
             </div>

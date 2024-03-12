@@ -89,6 +89,10 @@ function assignmentShow(){
     };
     xhr.open('GET', 'assignments.php'); 
     xhr.send();
+
+    setTimeout(() => {
+      assignmentstableData();
+    }, 100);
    
 }
 
