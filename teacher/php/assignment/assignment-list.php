@@ -14,7 +14,8 @@
         if(isset($_SESSION['userEmail'])){
         require_once "../../../php/config/db.php";
         $userEmail=$_SESSION['userEmail'];
-        $sql = "SELECT * FROM assignments where poster_email='$userEmail'";
+        $current_date = date("Y-m-d");
+        $sql = "SELECT * FROM assignments where poster_email='$userEmail' and (exp_date > '$current_date')";
         if ($exesql = mysqli_query($con, $sql)) {
             if (mysqli_num_rows($exesql) > 0) {
                 $i = 0;

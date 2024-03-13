@@ -1,5 +1,6 @@
 <?php
 require_once "../../php/config/StudentProfile.php";
+require_once "../../php/config/folder.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">

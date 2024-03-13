@@ -3,7 +3,6 @@ require_once "../../php/config/TeacherProfile.php";
 require_once "../../php/config/db.php";
 require_once "../../php/config/folder.php";
 require_once "../php/notify/expiry_notify.php";
-require_once "../php/assignment/expiry_assignment.php";
 unset($_SESSION['target_s_email']);
 ?>
 <!DOCTYPE html>

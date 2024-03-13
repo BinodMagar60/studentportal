@@ -1,6 +1,5 @@
 <?php 
 require_once "../../php/config/db.php";
-require_once "../php/assignment/expiry_assignment.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
