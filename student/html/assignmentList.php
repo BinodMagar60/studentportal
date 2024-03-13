@@ -49,8 +49,17 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
                         <td><?php if(isset($posterName)) echo $posterName ?></td>
                         <td><?php if(isset($uploadDate)) echo $uploadDate ?></td>
 <!-- assignment CHeck query to check the status -->
-
-                        <td><?php echo isset($assignmentStatusRes['status']) ? $assignmentStatusRes['status']:'Pending'?></td>
+<?php
+if(isset($_SESSION['userEmail'])){
+    $student_email=$_SESSION['userEmail'];
+    $aId=$search['id'];
+$assignmentStatusSql="SELECT `status` FROM student_assignment_upload where email='$student_email' and assignment_id=$aId";
+if($assignmentStatusExe=mysqli_query($con,$assignmentStatusSql)){
+$assignmentStatusRes=mysqli_fetch_assoc($assignmentStatusExe);
+}
+?>
+                        <td><?php echo isset($assignmentStatusRes['status']) ? $assignmentStatusRes['status']:'-'?></td>
+                        
                         <td>
                             <div class="btn-assignments">
                                 <button class="btn-assign" style="background-color: transparent;" onclick="assignmentUploadShow('<?php echo $search['id'] ?>');"><i class="ri-upload-2-line"></i></button>
@@ -58,7 +67,7 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
                         </td>
                     </tr>
                     <?php
-         }
+ } }
         
         }
     }

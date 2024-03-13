@@ -34,7 +34,7 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
         ?>
                     <tr>
                         <td><?php if (isset($i)) echo $i ?></td>
-                        <td><a href=""><?php if (isset($search['a_title'])) echo $search['a_title'] ?></a></td>
+                        <td><a href="assignment-check-users.php?a_id=<?php if(isset($search['id'])) echo $search['id'] ?>"><?php if (isset($search['a_title'])) echo $search['a_title'] ?></a></td>
                         <td><?php if (isset($formattedDate)) echo $formattedDate ?></td>
                         <td><?php if (isset($formattedExpDate)) echo $formattedExpDate ?></td>
                     </tr>
