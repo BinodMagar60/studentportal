@@ -66,9 +66,12 @@ fieldset{
     margin: 5px 20px ;
     width: 300px;
     font-size: 1.125rem;
-    resize: vertical;
   }
 
+
+  #notification-table tr td textarea{
+    resize: vertical;
+  }
   #notification-table tr td select{
     border: 1px solid black;
     font-size: 1.125rem;

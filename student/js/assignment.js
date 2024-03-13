@@ -40,12 +40,12 @@ const assignmentstableData = () => {
 
 
 
-function assignmentDetailsShow() {
+function assignmentDetailsShow(id) {
     var popup = document.getElementById("assignment-details");
     var overlays = document.getElementById("overlays");
     popup.classList.add("assignment-details-clicked");
     overlays.style.display = "block";
-    setTimeout(callDataDescription(), 20);
+    setTimeout(callDataDescription(id), 20);
   }
   
 
@@ -59,7 +59,7 @@ function assignmentDetailsShow() {
 
 
 
-function callDataDescription() {
+function callDataDescription(id) {
     const xhr = new XMLHttpRequest();
     const container = document.getElementById("assignment-details");
   
@@ -70,7 +70,7 @@ function callDataDescription() {
         console.warn("Did not receive 200 OK from response!");
       }
     };
-    xhr.open("GET", "assignmentDetails.php");
+    xhr.open("GET", "assignmentDetails.php?id="+id);
     xhr.send();
   }
 
@@ -84,12 +84,13 @@ function callDataDescription() {
 
 
 
-  function assignmentUploadShow() {
+  function assignmentUploadShow(id) {
     var popup = document.getElementById("assignment-student-upload");
     var overlays = document.getElementById("overlays");
     popup.classList.add("assignment-student-upload-clicked");
     overlays.style.display = "block";
-    setTimeout(callAssignmentUploads(), 20);
+    
+    setTimeout(callAssignmentUploads(id), 20);
   }
   
 
@@ -106,7 +107,7 @@ function callDataDescription() {
 
 
 
-  function callAssignmentUploads() {
+  function callAssignmentUploads(id) {
     const xhr = new XMLHttpRequest();
     const container = document.getElementById("assignment-student-upload");
   
@@ -117,7 +118,7 @@ function callDataDescription() {
         console.warn("Did not receive 200 OK from response!");
       }
     };
-    xhr.open("GET", "assignmentSubmit.php");
+    xhr.open("GET", "assignmentSubmit.php?id="+id);
     xhr.send();
   }
 
@@ -148,3 +149,44 @@ function callDataDescription() {
         }
 
 }
+
+
+
+function submitUploadsStudent(){
+    
+  var formData = new FormData(document.getElementById('uploadFilesStudent'));
+  var filesList = document.getElementById('files-list');
+  var numOfFiles = document.getElementById('num-of-files');
+
+  $.ajax({
+      url: '../php/assignment/uploadAssignment.php',
+      type: 'POST',
+      data: formData,
+      processData: false,
+      contentType: false,
+      success: function (response) {
+          // console.log(response);
+
+          filesList.innerHTML = '';
+          numOfFiles.innerText = 'No Files Chosen';
+          setTimeout(() => {
+            assignmentUploadHide();
+            assignmentstableData();
+          }, 100);
+
+      },
+      error: function (xhr, status, error) {
+          console.error('Error:', status, error);
+          console.log('Response Text:', xhr.responseText);
+          alert('Error adding student. Please try again.');
+      }
+      
+  });
+}
+
+
+
+
+
+
+

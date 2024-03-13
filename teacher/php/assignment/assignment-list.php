@@ -64,9 +64,10 @@
                     </tr>
         <?php
                 }
-            } else {
-                echo "no data";
             }
+            // } else {
+            //     echo "no data";
+            // }
         } else {
             echo "query error";
         }

@@ -52,7 +52,7 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
                         <td><?php echo isset($assignmentStatusRes['status']) ? $assignmentStatusRes['status']:'Pending'?></td>
                         <td>
                             <div class="btn-assignments">
-                                <button class="btn-assign" style="background-color: transparent;" onclick="assignmentUploadShow();"><i class="ri-upload-2-line"></i></button>
+                                <button class="btn-assign" style="background-color: transparent;" onclick="assignmentUploadShow('<?php echo $search['id'] ?>');"><i class="ri-upload-2-line"></i></button>
                             </div>
                         </td>
                     </tr>
@@ -61,9 +61,10 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
         
         }
     }
-                        }else{
-                            echo "no assignments";
                         }
+                        // else{
+                        //     echo "no assignments";
+                        // }
                     }else{
                         echo "query error";
                     }
