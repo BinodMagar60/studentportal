@@ -21,6 +21,8 @@
                 $i = 0;
                 while ($search = mysqli_fetch_assoc($exesql)) {
                     $i += 1;
+                    $expDate=$search['exp_date'];
+                    $formattedExpDate = date("M d",strtotime($expDate));
                     
         ?>
                     <tr>
@@ -29,7 +31,7 @@
                         <td><?php if (isset($search['a_class'])) echo $search['a_class'] ?></td>
                         <td><?php if (isset($search['a_section'])) echo $search['a_section'] ?></td>
                         <td><?php if (isset($search['a_subject'])) echo $search['a_subject'] ?></td>
-                        <td><?php if (isset($search['exp_date'])) echo $search['exp_date'] ?></td>
+                        <td><?php if (isset($formattedExpDate)) echo $formattedExpDate ?></td>
                         <td>
                             <div class="btn-assignments">
                                 <button class="btn-assign" style="background-color: green;" onclick="assignmentUpdate('<?php if (isset($search['id'])) echo $search['id'] ?>');">Update</button>

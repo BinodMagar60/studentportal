@@ -4,10 +4,10 @@ const assignmentCheckData = () => {
 
     $(document).ready(function () {
         function updateAssignmentList() {
-            var selectedClass = $("selectClass_assignment").val();
-            var selectedSection = $("selectSection_assignment").val();
-            var selectedSubject = $('#selectClass_assignment').val();
-            
+            var selectedClass = $("#selectClass_assignment").val();
+            var selectedSection = $("#selectSection_assignment").val();
+            var selectedSubject = $('#selectSubject').val();
+            console.log(selectedSubject);
 
             $.ajax({
                 type: 'GET',

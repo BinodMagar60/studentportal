@@ -36,6 +36,7 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
                 while ($search = mysqli_fetch_assoc($exesql)) {
                     $i += 1;
                     $posterEmail=$search['poster_email'];
+                    $uploadDate=date("M d",strtotime($search['exp_date']));
     $nameSql= "SELECT * FROM teacher_table where email='$posterEmail'";
     if($nameExe=mysqli_query($con,$nameSql)){
       if(mysqli_num_rows($nameExe)>0){
@@ -46,7 +47,7 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
                         <td><?php if(isset($i)) echo $i ?></td>
                         <td onclick="assignmentDetailsShow(<?php if(isset($search['id'])) echo $search['id'] ?>);"><?php if(isset($search['a_title'])) echo $search['a_title'] ?></td>
                         <td><?php if(isset($posterName)) echo $posterName ?></td>
-                        <td><?php if(isset($search['exp_date'])) echo $search['exp_date'] ?></td>
+                        <td><?php if(isset($uploadDate)) echo $uploadDate ?></td>
 <!-- assignment CHeck query to check the status -->
 
                         <td><?php echo isset($assignmentStatusRes['status']) ? $assignmentStatusRes['status']:'Pending'?></td>
