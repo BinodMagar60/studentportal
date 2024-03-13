@@ -223,7 +223,9 @@ function studentAssignmentCheck(){
   xhr.open('GET', 'assignment-check.php');
   xhr.send();
 
-
+  setTimeout(() => {
+    assignmentCheckData();
+  }, 100);
   
 }
 

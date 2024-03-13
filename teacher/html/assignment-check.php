@@ -27,7 +27,7 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
                 <table class="assignment-check-table">
                     <tr>
                         <td>Class</td>
-                        <td><select name="ac_class" id="selectClass_assignment">
+                        <td><select name="ac_class" id="selectClass_assignment" onchange="assignmentCheckData()">
                         <option value="one"  <?php echo ($class == 'one' ? 'selected' : ''); ?>>One</option>
                                 <option value="two" <?php echo ($class == 'two' ? 'selected' : ''); ?>>Two</option>
                                 <option value="three" <?php echo ($class == 'three' ? 'selected' : ''); ?>>Three</option>
@@ -44,7 +44,7 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
                     <tr>
                         <td>Section</td>
                         <td>
-                            <select name="ac_section" id="selectSection_assignment">
+                            <select name="ac_section" id="selectSection_assignment" onchange="assignmentCheckData()">
                                 <option value="A" <?php echo ($section == 'A' ? 'selected' : ''); ?>>A</option>
                                 <option value="B" <?php echo ($section == 'B' ? 'selected' : ''); ?>>B</option>
                                 <option value="C" <?php echo ($section == 'C' ? 'selected' : ''); ?>>C</option>
@@ -54,7 +54,7 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
                     <tr>
                         <td>Subject</td>
                         <td>
-                            <select name="ac_subject" id="selectSubject">
+                            <select name="ac_subject" id="selectSubject" onchange="assignmentCheckData()">
                                 <option value="English">English</option>
                                 <option value="Nepali">Nepali</option>
                                 <option value="Maths">Maths</option>
@@ -69,43 +69,10 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
             </div>
 
             <div class="title-assignment-check">Assignment Lists</div>
-            <table class="assignment-table-show">
-        <tr>
-            <td>S.N.</td>
-            <td>Title</td>
-            <td>Submission date</td>
-        </tr>
-        <?php
-        if(isset($_SESSION['userEmail'])){
-        $userEmail=$_SESSION['userEmail'];
-        $current_date = date("Y-m-d");
-        $sql = "SELECT * FROM assignments where poster_email='$userEmail' and (exp_date > '$current_date') and a_class='$class' and (a_section='everyone' or a_section='$section') and `a_subject`='$subject'";
-        if ($exesql = mysqli_query($con, $sql)) {
-            if (mysqli_num_rows($exesql) > 0) {
-                $i = 0;
-                while ($search = mysqli_fetch_assoc($exesql)) {
-                    $i += 1;
-                    
-        ?>
-                    <tr>
-                        <td><?php if (isset($i)) echo $i ?></td>
-                        <td><?php if (isset($search['a_title'])) echo $search['a_title'] ?></td>
-                        <td><?php if (isset($search['exp_date'])) echo $search['exp_date'] ?></td>
-                    </tr>
-        <?php
-                }
-            } else {
-                echo "no data";
-            }
-        } else {
-            echo "query error";
-        }
-    }else{
-        echo "no session";
-    }
-        ?>
+           
+            <div class="assignment-check-container" id="assignment-check-container">
 
-    </table>
+            </div>
 
         </fieldset>
     </div>
@@ -113,7 +80,7 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
 
 
 
-
+    <script src="../js/assignment-check.js"></script>
 
 </body>
 

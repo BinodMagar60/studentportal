@@ -83,3 +83,50 @@ legend{
 
 
 
+
+.assignment-check-table-list{
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+.assignment-check-table-list tr:nth-child(1){
+    background-color: #4591b8 !important;
+}
+
+.assignment-check-table-list tr:nth-child(odd){
+    background-color: #f7f7f7;
+}
+
+.assignment-check-table-list tr td{
+    padding: 10px;
+    font-size: 1.125rem;
+    text-transform: capitalize;
+}
+
+
+.assignment-check-table-list tr td:nth-child(1){
+    width: 40px;
+    text-align: center;
+}
+
+.assignment-check-table-list tr td:nth-child(2){
+    width: 600px;
+}
+
+.assignment-check-table-list tr td:nth-child(3){
+    width: 80px;
+    text-align: center;
+}
+.assignment-check-table-list tr td:nth-child(4){
+    width: 80px;
+    text-align: center;
+}
+
+
+
+
+
+
+
