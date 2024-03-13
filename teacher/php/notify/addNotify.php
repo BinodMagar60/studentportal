@@ -7,8 +7,8 @@ if(!empty($_POST['exp_date'] && !empty($_POST['description'])&& !empty($_POST['c
   $description=sanitize($_POST['description']);
   $class=sanitize($_POST['class']);
   $section=sanitize($_POST['section']);
-  $poster_name=sanitize($_SESSION['userName']);
-  $addNotifySql="INSERT into teacher_notify (`description`,`exp_date`,`class`,`section`,`poster_name`) values ('$description','$exp_date','$class','$section','$poster_name')";
+  $poster_email=sanitize($_SESSION['userEmail']);
+  $addNotifySql="INSERT into teacher_notify (`description`,`exp_date`,`class`,`section`,`poster_email`) values ('$description','$exp_date','$class','$section','$poster_email')";
 if(mysqli_query($con,$addNotifySql)){
   echo "successfull";
 }else{

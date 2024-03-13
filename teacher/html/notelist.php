@@ -6,8 +6,8 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
 if(isset($class,$section,$subject)){
                     if(isset($_SESSION['userName'])){
                         require_once "../../php/config/db.php";
-                        $userName=$_SESSION['userName'];
-                        $noteShowSql="SELECT * FROM teacher_upload_notes where uploader='$userName' and class='$class' and section='$section' and subject='$subject'";
+                        $userEmail=$_SESSION['userEmail'];
+                        $noteShowSql="SELECT * FROM teacher_upload_notes where uploader='$userEmail' and class='$class' and section='$section' and subject='$subject'";
 if($noteShowExe=mysqli_query($con,$noteShowSql)){
     if(mysqli_num_rows($noteShowExe)>0){
         $i=1;

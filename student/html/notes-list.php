@@ -23,17 +23,24 @@ if($noteShowExe=mysqli_query($con,$noteShowSql)){
         <?php
         while($noteShowResult=mysqli_fetch_assoc($noteShowExe)){
             $uploadDate=date("Y-m-d",strtotime($noteShowResult['created_date']));
+            $posterEmail=$noteShowResult['uploader'];
+    $sql= "SELECT * FROM teacher_table where email='$posterEmail'";
+    if($exesql=mysqli_query($con,$sql)){
+      if(mysqli_num_rows($exesql)>0){
+        if($result=mysqli_fetch_assoc($exesql)){
+          $posterName=$result['name'];
                     ?>
                     <tr>
                         <td><?php echo $i?></td>
                         <td><?php if(isset($noteShowResult['name'])) echo $noteShowResult['name'] ?></td>
-                        <td><?php if(isset($noteShowResult['uploader'])) echo $noteShowResult['uploader'] ?></td>
+                        <td><?php if(isset($posterName)) echo $posterName ?></td>
                         <td><?php if(isset($uploadDate)) echo $uploadDate ?></td>
                         <td>
                         <a href="../../<?php if(isset($noteShowResult['file_path'])) echo $noteShowResult['file_path'] ?>" download="<?php if(isset($noteShowResult['name'])) echo $noteShowResult['name'] ?>"><button type="button" style="color: blue;"><i class="ri-download-2-fill"></i></button></a>
                         </td>
                     </tr>
                     <?php
+        }}}
                     $i++;
                             }
                         }else{

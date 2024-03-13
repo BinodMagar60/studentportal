@@ -35,13 +35,21 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
                 <?php
                 while ($search = mysqli_fetch_assoc($exesql)) {
                     $i += 1;
+                    $posterEmail=$search['poster_email'];
+    $nameSql= "SELECT * FROM teacher_table where email='$posterEmail'";
+    if($nameExe=mysqli_query($con,$nameSql)){
+      if(mysqli_num_rows($nameExe)>0){
+        $nameResult=mysqli_fetch_assoc($nameExe);
+          $posterName=$nameResult['name'];
                     ?>
                    <tr>
                         <td><?php if(isset($i)) echo $i ?></td>
-                        <td onclick="assignmentDetailsShow();"><?php if(isset($search['a_title'])) echo $search['a_title'] ?></td>
-                        <td><?php if(isset($search['poster_name'])) echo $search['poster_name'] ?></td>
+                        <td onclick="assignmentDetailsShow(<?php if(isset($search['id'])) echo $search['id'] ?>);"><?php if(isset($search['a_title'])) echo $search['a_title'] ?></td>
+                        <td><?php if(isset($posterName)) echo $posterName ?></td>
                         <td><?php if(isset($search['exp_date'])) echo $search['exp_date'] ?></td>
-                        <td>Pending</td>
+<!-- assignment CHeck query to check the status -->
+
+                        <td><?php echo isset($assignmentStatusRes['status']) ? $assignmentStatusRes['status']:'Pending'?></td>
                         <td>
                             <div class="btn-assignments">
                                 <button class="btn-assign" style="background-color: transparent;" onclick="assignmentUploadShow();"><i class="ri-upload-2-line"></i></button>
@@ -49,7 +57,10 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
                         </td>
                     </tr>
                     <?php
-                            }
+         }
+        
+        }
+    }
                         }else{
                             echo "no assignments";
                         }

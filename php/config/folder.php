@@ -23,19 +23,19 @@ if(!is_dir($imageSavePath)){
 if(!is_dir($assignmentSavePath)){
   if(mkdir($assignmentSavePath,0755,true)){
   }else{
-    echo "error";
+    // echo "error";
   }
 }
 if(!is_dir($assignmentSavePath)){
   if(mkdir($assignmentSavePath,0755,true)){
   }else{
-    echo "error";
+    // echo "error";
   }
 }
 if(!is_dir($uploadNotesSavePath)){
   if(mkdir($uploadNotesSavePath,0755,true)){
     }
   }else{
-    echo "error";
+    // echo "error";
   }
 ?>

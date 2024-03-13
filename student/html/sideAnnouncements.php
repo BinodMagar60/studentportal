@@ -59,18 +59,24 @@ if(isset($_SESSION['userClass'],$_SESSION['userSection'])){
       $dbDate = $result_notify['created_date'];
       $dateObject = date_create($dbDate);
       $formattedDate = date_format($dateObject, 'M d');
+      $posterEmail=$result_notify['poster_email'];
+    $sql= "SELECT * FROM teacher_table where email='$posterEmail'";
+    if($exesql=mysqli_query($con,$sql)){
+      if(mysqli_num_rows($exesql)>0){
+        if($result=mysqli_fetch_assoc($exesql)){
+          $posterName=$result['name'];
     ?>
 
 
 <div class="announcement-show-2">
   <div class="announcement-date"><?php if(isset($formattedDate)) echo $formattedDate;?></div>
   <div class="announcement-detail"><?php if(isset($result_notify['description'])) echo $result_notify['description']; ?></div>
-  <div class="announcement-who">- <?php if(isset($result_notify['poster_name'])) echo $result_notify['poster_name']; ?></div>
+  <div class="announcement-who">- <?php if(isset($posterName)) echo $posterName; ?></div>
   </div>
 
 
   <?php
-    }}}}
+    }}}}}}}
 
 
 ?>

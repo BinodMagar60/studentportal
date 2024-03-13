@@ -2,9 +2,9 @@
 if($_SERVER['REQUEST_METHOD']=="POST"){
   if(isset($_POST['class_n'],$_POST['section_n'],$_POST['subject_n'],$_FILES['note'])){
     require_once "../../../php/config/sessionStart.php";
-    if(isset($_SESSION['userName'])){
+    if(isset($_SESSION['userEmail'])){
       require_once "../../../php/config/db.php";
-      $uploader=$_SESSION['userName'];
+      $uploader=$_SESSION['userEmail'];
       $class=$_POST['class_n'];
       $section=$_POST['section_n'];
       $subject=$_POST['subject_n'];

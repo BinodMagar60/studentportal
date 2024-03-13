@@ -11,15 +11,16 @@
         </tr>
         <?php
         require_once "../../../php/config/sessionStart.php";
-        if(isset($_SESSION['userName'])){
+        if(isset($_SESSION['userEmail'])){
         require_once "../../../php/config/db.php";
-        $userName=$_SESSION['userName'];
-        $sql = "SELECT * FROM assignments where poster_name='$userName'";
+        $userEmail=$_SESSION['userEmail'];
+        $sql = "SELECT * FROM assignments where poster_email='$userEmail'";
         if ($exesql = mysqli_query($con, $sql)) {
             if (mysqli_num_rows($exesql) > 0) {
                 $i = 0;
                 while ($search = mysqli_fetch_assoc($exesql)) {
                     $i += 1;
+                    
         ?>
                     <tr>
                         <td><?php if (isset($i)) echo $i ?></td>
