@@ -1,4 +1,24 @@
-<table border="1">
+
+
+<div class="userWholeContainerForAssignments">
+  <div class="top-assignments-part">
+    <div></div>
+    <div class="top-assignments-part-title">Assignments</div>
+    <div class="top-assignments-part-btn"><button onclick=" userCheckPopupRemove()"><i class="ri-close-circle-line"></i></button></div>
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+<div class="userContainerForAssignments">
+<table class="assignmentTableForUsers">
   <tr>
       <td>S.N</td>
       <td>Name</td>
@@ -55,17 +75,31 @@ if(!isset($status)){
   $downloadAssignmentSql="SELECT * FROM student_assignment_upload where email='$student_email' and assignment_id=$aId";
   if($downloadAssignmentExe=mysqli_query($con,$downloadAssignmentSql)){
     while($downloadAssignmentResult=mysqli_fetch_assoc($downloadAssignmentExe)){?>
-      <a href="../../<?php if(isset($downloadAssignmentResult['file_path'])) echo $downloadAssignmentResult['file_path'] ?>" download="<?php if(isset($downloadAssignmentResult['file_name'])) echo $name."_".$downloadAssignmentResult['file_name'] ?>">download</a><br>
+      <a href="../../<?php if(isset($downloadAssignmentResult['file_path'])) echo $downloadAssignmentResult['file_path'] ?>" download="<?php if(isset($downloadAssignmentResult['file_name'])) echo $student_name."_".$downloadAssignmentResult['file_name'] ?>" id="download<?php echo $aId ?>"></a>
+      
       <?php
-     } }
+     }
+    ?>
+
+<button onclick="downloadAll(<?php echo $aId ?>)" style="color: blue; font-size:1.5rem; background-color: transparent;"><i class="ri-download-2-fill"></i></button>
+     <?php
+    
+    }
   }else{
      echo $status;
   }
   ?>
+
+  
 </td>
 <td>
   <?php if(!isset($status)){
-  echo "<a href='../php/assignmentCheck/assignmentApproved.php?student_email=".$student_email."&assignmentId=".$aId."'>approve</a> <a href='../php/assignmentCheck/assignmentReject.php?student_email=".$student_email."&assignmentId=".$aId."'>reject</a>";
+    ?>
+    <button onclick='acceptAssignment("<?php echo $student_email ?>",<?php echo $aId ?>)' style='color: white; font-size:1.125rem; padding: 5px 10px; background-color: green;'>Approve</button>
+    <button onclick='RejectAssignment("<?php echo $student_email ?>",<?php echo $aId ?>)' style='color: white; font-size:1.125rem; padding: 5px 10px; background-color: red;'>Reject</button>
+
+    <?php
+  
   }else{
      echo $status;
   }
@@ -79,3 +113,12 @@ if(!isset($status)){
 }}}}
 ?>
 </table>
+</div>
+
+
+
+
+</div>
+
+
+

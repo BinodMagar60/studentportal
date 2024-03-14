@@ -19,6 +19,9 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
 
 <body>
 
+
+    <div class="overlay1" id="overlay1"></div>
+
     <div class="assignment-container">
         <fieldset>
             <legend>Assignments Check</legend>
@@ -75,6 +78,11 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
             </div>
 
         </fieldset>
+    </div>
+
+
+    <div class="checkAssignmentsOfUsers" id="checkAssignmentsOfUsers">
+
     </div>
 
 

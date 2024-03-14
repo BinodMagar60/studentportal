@@ -43,9 +43,10 @@ if($noteShowExe=mysqli_query($con,$noteShowSql)){
         }}}
                     $i++;
                             }
-                        }else{
-                            echo "no notes";
                         }
+                        // else{
+                        //     echo "no notes";
+                        // }
                     }else{
                         echo "query error";
                     }
