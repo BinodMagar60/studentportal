@@ -1,9 +1,6 @@
 <?php
 if(isset($_GET['id'])){
     $uid=$_GET['id'];
-}else{
-    $uid=33;
-}
 ?>
 <form enctype="multipart/form-data" id="uploadFilesStudent">
 <div class="assignment-container-uploads" id="assignment-container-uploads">
@@ -33,3 +30,6 @@ if(isset($_GET['id'])){
 
 </div>
 </form>
+<?php
+}
+?>

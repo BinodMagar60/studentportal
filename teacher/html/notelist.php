@@ -21,7 +21,7 @@ if($noteShowExe=mysqli_query($con,$noteShowSql)){
                     </tr>
         <?php
         while($noteShowResult=mysqli_fetch_assoc($noteShowExe)){
-            $uploadDate=date("Y-m-d",strtotime($noteShowResult['created_date']));
+            $uploadDate=date("M d",strtotime($noteShowResult['created_date']));
                     ?>
                     <tr>
                         <td><?php echo $i?></td>

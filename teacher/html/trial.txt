@@ -1,0 +1,45 @@
+<?php
+if(isset($_GET['a_id'])){
+// echo $_GET['a_id'];
+require_once "../../php/config/db.php";
+$aId=$_GET['a_id'];
+$assignment_check_sql= "SELECT distinct `email` from student_assignment_upload where assignment_id=$aId";
+if($assignment_check_exe=mysqli_query($con,$assignment_check_sql)){
+  if(mysqli_num_rows($assignment_check_exe)>0){ 
+    $i=1;
+    while($assignment_check_result=mysqli_fetch_assoc($assignment_check_exe)){
+      $student_email=$assignment_check_result['email'];
+      //for name
+      $sql= "SELECT * FROM student_table where email='$student_email'";
+      if($exesql=mysqli_query($con,$sql)){
+        if(mysqli_num_rows($exesql)>0){
+          if($result=mysqli_fetch_assoc($exesql)){
+            $name=$result['name'];}}}
+?>
+<tr>
+<td><?php if(isset($i)) echo $i ?></td>
+<td><?php if(isset($name)) echo $name ?></td>
+<td>
+<?php
+//for downloadable link
+$downloadAssignmentSql="SELECT * FROM student_assignment_upload where email='$student_email' and assignment_id=$aId";
+if($downloadAssignmentExe=mysqli_query($con,$downloadAssignmentSql)){
+  while($downloadAssignmentResult=mysqli_fetch_assoc($downloadAssignmentExe)){?>
+    <a href="../../<?php if(isset($downloadAssignmentResult['file_path'])) echo $downloadAssignmentResult['file_path'] ?>" download="<?php if(isset($downloadAssignmentResult['file_name'])) echo $name."_".$downloadAssignmentResult['file_name'] ?>">download</a><br>
+    <?php
+  }
+}?>
+</td>
+<td>
+  <a href="">approve</a> <a href="">reject</a>
+</td>
+</tr>
+<?php
+$i++;
+  }
+  }
+}
+}else{
+  echo "not set";
+}
+?>
