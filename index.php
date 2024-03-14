@@ -1,7 +1,6 @@
 <?php
 require_once "php/config/sessionStart.php";
 require_once "php/config/db.php";
-require_once "Warning/unnecessaryImageDelete.php";
 if($_SESSION['loggedIn']=== true){
   if($_SESSION['userType']==='admin'){
       header("location: admin/admin.php");

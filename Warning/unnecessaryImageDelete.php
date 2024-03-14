@@ -1,6 +1,6 @@
 <?php
-require_once "php/config/db.php";
-$folderPath = "StudentPortalFiles/images";
+require_once "../php/config/db.php";
+$folderPath = "../StudentPortalFiles/images";
 $sqlStudent = "SELECT * FROM student_table";
 $sqlAdmin = "SELECT * FROM admin_table";
 $sqlTeacher = "SELECT * FROM teacher_table";

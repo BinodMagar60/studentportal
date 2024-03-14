@@ -2,6 +2,10 @@
 require_once "../php/config/sessionStart.php";
 require_once "../php/loginCheck/adminCheck.php";
 require_once "../php/config/AdminProfile.php";
+require_once "../Warning/unnecessaryImageDelete.php";
+require_once "../php/announcement/expiry_announcement.php";
+require_once "../php/event/expiryEvent.php";
+
 unset($_SESSION['target_t_email']);
 unset($_SESSION['target_a_email']);
 unset($_SESSION['target_s_email']);

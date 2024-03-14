@@ -7,7 +7,7 @@
     <div class="examroutine-sections">
         <?php
         require_once "../php/config/db.php";
-        $examDateSql = "SELECT * FROM exam_routine_date";
+        $examDateSql = "SELECT * FROM exam_routine_date order by `exam_title` desc";
         $examDateExe = mysqli_query($con, $examDateSql);
         if (mysqli_num_rows($examDateExe) > 0) {
             $i = 1;

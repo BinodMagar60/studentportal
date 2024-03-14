@@ -16,9 +16,10 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
 
 
 <?php
+$current_date=date("Y-m-d");
             if(isset($class,$section,$subject)){
                         require_once "../../php/config/db.php";
-                        $sql = "SELECT * FROM assignments where a_class='$class' and (a_section='everyone' or a_section='$section') and `a_subject`='$subject'";
+                        $sql = "SELECT * FROM assignments where a_class='$class' and (a_section='everyone' or a_section='$section') and `a_subject`='$subject' and `exp_date`>'$current_date'";
         if ($exesql = mysqli_query($con, $sql)) {
             if (mysqli_num_rows($exesql) > 0) {
                 $i = 0;
