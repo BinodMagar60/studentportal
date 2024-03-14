@@ -46,13 +46,12 @@ if($exesql=mysqli_query($con,$sql)){
 <td><?php if(isset($i)) echo $i ?></td>
 <td><?php if(isset($student_name)) echo $student_name ?></td>
 <?php
-$assignment_check_sql= "SELECT distinct *,`status` from student_assignment_upload where assignment_id=$aId and `email`='$student_email'";
+$assignment_check_sql= "SELECT distinct *,`status` from student_assignment_upload where assignment_id=$aId and `email`='$student_email' and `status` != 'Rejected'";
 if($assignment_check_exe=mysqli_query($con,$assignment_check_sql)){
   if(mysqli_num_rows($assignment_check_exe)>0){
 $assignment_check_result=mysqli_fetch_assoc($assignment_check_exe);
   }else{
     $status= "-";
-    echo $status;
   }
 ?>
 <td>
@@ -79,7 +78,7 @@ if(!isset($status)){
 
 <td>
 <?php if(!isset($status)){
-  $downloadAssignmentSql="SELECT * FROM student_assignment_upload where email='$student_email' and assignment_id=$aId";
+  $downloadAssignmentSql="SELECT * FROM student_assignment_upload where email='$student_email' and assignment_id=$aId and (`status`='Pending' or `status`= 'Approved')";
   if($downloadAssignmentExe=mysqli_query($con,$downloadAssignmentSql)){
     while($downloadAssignmentResult=mysqli_fetch_assoc($downloadAssignmentExe)){?>
       <a href="../../<?php if(isset($downloadAssignmentResult['file_path'])) echo $downloadAssignmentResult['file_path'] ?>" download="<?php if(isset($downloadAssignmentResult['file_name'])) echo $student_name."_".$downloadAssignmentResult['file_name'] ?>" id="download<?php echo $aId ?>"></a>
