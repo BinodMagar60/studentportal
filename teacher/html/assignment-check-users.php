@@ -22,8 +22,8 @@
   <tr>
       <td>S.N</td>
       <td>Name</td>
-      <td>Status</td>
       <td>Uploaded Date</td>
+      <td>Status</td>
       <td>Download</td>
       <td>Action</td>
       </tr>
@@ -45,20 +45,16 @@ if($exesql=mysqli_query($con,$sql)){
 <tr>
 <td><?php if(isset($i)) echo $i ?></td>
 <td><?php if(isset($student_name)) echo $student_name ?></td>
-<td>
 <?php
 $assignment_check_sql= "SELECT distinct *,`status` from student_assignment_upload where assignment_id=$aId and `email`='$student_email'";
 if($assignment_check_exe=mysqli_query($con,$assignment_check_sql)){
   if(mysqli_num_rows($assignment_check_exe)>0){
 $assignment_check_result=mysqli_fetch_assoc($assignment_check_exe);
-echo $assignment_check_result['status'];
   }else{
     $status= "-";
     echo $status;
   }
-   ?>
-    
-</td>
+?>
 <td>
   <?php
 if(!isset($status)){
@@ -70,6 +66,17 @@ if(!isset($status)){
 }
   ?>
 </td>
+<td>
+<?php
+if(!isset($status)){
+  echo $assignment_check_result['status'];
+}else{
+  echo $status;
+}
+   ?>
+    
+</td>
+
 <td>
 <?php if(!isset($status)){
   $downloadAssignmentSql="SELECT * FROM student_assignment_upload where email='$student_email' and assignment_id=$aId";

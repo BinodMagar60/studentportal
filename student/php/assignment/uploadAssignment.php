@@ -6,42 +6,22 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
   require_once "../../../php/config/db.php";
       $uid=$_POST['uid'];
       $userEmail=$_SESSION['userEmail'];
-      $savePathAssignment="StudentPortalFiles/Assignments/";
-      $countFiles=count($_FILES['assignment']['name']);
-      $allowed_types = array(
-                'image/jpeg',
-                'image/jpg',
-                'image/png',
-                'image/gif',
-                'application/pdf',
-                'text/xml',
-                'application/msword',
-                'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-                'text/plain',
-                'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-                'application/vnd.openxmlformats-officedocument.presentationml.presentation',
-                'application/vnd.ms-powerpoint'
-            );
-      for($i=0;$i<$countFiles;$i++){
-        $filetype=$_FILES['assignment']['type'][$i];
-        // echo $filetype."<br>";
-        if(in_array($filetype,$allowed_types)){
-          $tempName=$_FILES['assignment']['tmp_name'][$i];
-          $fileName=basename($_FILES['assignment']['name'][$i]);
-          $ext=pathinfo($fileName,PATHINFO_EXTENSION);
-        $dest=$savePathAssignment.uniqid().".".$ext;
-        if(move_uploaded_file($tempName,"../../../".$dest)){
-$insertFile="INSERT into student_assignment_upload (`email`,`assignment_id`,`file_name`,`file_path`,`status`) values ('$userEmail',$uid,'$fileName','$dest','Pending')";
-          if(mysqli_query($con,$insertFile)){
-            echo "success";
+      $checkSql="SELECT * FROM student_assignment_upload where assignment_id=$uid and email='$userEmail'";
+      $checkExe=mysqli_query($con,$checkSql);
+      if(mysqli_num_rows($checkExe) >0){
+        $checkResult=mysqli_fetch_assoc($checkExe);
+          if($checkResult['status']=="Rejected"){
+            $uploadAssignmentId=$checkResult['id'];
+            $deleteSql="DELETE from student_assignment_upload where `id`=$uploadAssignmentId";
+            if(mysqli_query($con,$deleteSql)){
+            require_once "uploadAssignmentQuery.php";
+            }
+          }else if($checkResult['status']!="Approved"){
+            require_once "uploadAssignmentQuery.php";
           }
-        }else{
-          echo "upload error";
-        }
-        }else{
-          echo "invalid format";
-        }
-      }
+      }else{
+        require_once "uploadAssignmentQuery.php";
+         }
     }else{
       echo "no session";
     }
