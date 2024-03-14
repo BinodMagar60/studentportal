@@ -29,10 +29,20 @@ if ($exesql = mysqli_query($con, $sql)) {
                         <!-- <input type="hidden" name="i<?php //if(isset($i)) echo $i;?>" value="<?php //if(isset($i)) echo $i;?>"> -->
                         <input type="hidden" name="s_id<?php if(isset($i)) echo $i;?>" value="<?php if(isset($searchResult['id'])) echo $searchResult['id'];?>">
                         <input type="hidden" name="s_name<?php if(isset($i)) echo $i;?>" value="<?php if(isset($searchResult['name'])) echo $searchResult['name'];?>">
-                        <input type="hidden" name="s_email<?php if(isset($i)) echo $i;?>" value="<?php if(isset($searchResult['email'])) echo$searchResult['email'];?>">
+                        <input type="hidden" name="s_email<?php if(isset($i)) echo $i;?>" value="<?php if(isset($searchResult['email'])) echo $searchResult['email'];?>">
                         <input type="hidden" name="s_class<?php if(isset($i)) echo $i;?>" value="<?php if(isset($searchResult['class'])) echo $searchResult['class'];?>">
                         <input type="hidden" name="s_section<?php if(isset($i)) echo $i;?>" value="<?php if(isset($searchResult['section'])) echo $searchResult['section'];?>">
-                        <td><input type="checkbox" name="attendance<?php if(isset($i)) echo $i;?>" value="P" style="margin-left: 50px"></td>
+                        <?php
+                    $email=$searchResult['email'];
+                    $class=$searchResult['class'];
+                    $section=$searchResult['section'];
+  $currentDate=date('Y-m-d');
+$checkAttendance="SELECT * from attendance where email='$email' and class='$class' and section='$section' and date(attendance_date)='$currentDate'";
+if($checkAttendanceExe=mysqli_query($con,$checkAttendance)){
+$checkAttendanceResult=mysqli_fetch_assoc($checkAttendanceExe);
+  }
+                        ?>
+                        <td><input type="checkbox" name="attendance<?php if(isset($i)) echo $i;?>" value="P" <?php if(isset($checkAttendanceResult['s_attendance'])){echo $checkAttendanceResult['s_attendance']=="P" ? "checked" : "";}else{echo "";} ?> style="margin-left: 50px"></td>
                     </tr>
                    <?php
             }
