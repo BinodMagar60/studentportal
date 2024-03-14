@@ -41,6 +41,7 @@ if($exesql=mysqli_query($con,$sql)){
     while($result=mysqli_fetch_assoc($exesql)){
       $student_name=$result['name'];
       $student_email=$result['email'];
+      $status='';
 ?>
 <tr>
 <td><?php if(isset($i)) echo $i ?></td>
@@ -56,7 +57,7 @@ $assignment_check_result=mysqli_fetch_assoc($assignment_check_exe);
 ?>
 <td>
   <?php
-if(!isset($status)){
+if(empty($status)){
   $uploadDate=$assignment_check_result['created_date'];
   $formatUploadDate=date("M d",strtotime($uploadDate));
   echo $formatUploadDate;
@@ -67,7 +68,7 @@ if(!isset($status)){
 </td>
 <td>
 <?php
-if(!isset($status)){
+if(empty($status)){
   echo $assignment_check_result['status'];
 }else{
   echo $status;
@@ -77,7 +78,7 @@ if(!isset($status)){
 </td>
 
 <td>
-<?php if(!isset($status)){
+<?php if(empty($status)){
   $downloadAssignmentSql="SELECT * FROM student_assignment_upload where email='$student_email' and assignment_id=$aId and (`status`='Pending' or `status`= 'Approved')";
   if($downloadAssignmentExe=mysqli_query($con,$downloadAssignmentSql)){
     while($downloadAssignmentResult=mysqli_fetch_assoc($downloadAssignmentExe)){?>
@@ -99,7 +100,7 @@ if(!isset($status)){
   
 </td>
 <td>
-  <?php if(!isset($status)){
+  <?php if(empty($status)){
     ?>
     <button onclick='acceptAssignment("<?php echo $student_email ?>",<?php echo $aId ?>)' style='color: white; font-size:1.125rem; padding: 5px 10px; background-color: green;'>Approve</button>
     <button onclick='RejectAssignment("<?php echo $student_email ?>",<?php echo $aId ?>)' style='color: white; font-size:1.125rem; padding: 5px 10px; background-color: red;'>Reject</button>
