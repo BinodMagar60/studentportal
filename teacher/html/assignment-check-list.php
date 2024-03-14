@@ -34,9 +34,9 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
         <?php
                 }
             } 
-            // else {
-            //     echo "no data";
-            // }
+            else {
+                echo "no data";
+            }
         } else {
             echo "query error";
         }
