@@ -174,6 +174,10 @@ function submitUploadsStudent(){
             assignmentstableData();
           }, 100);
 
+          setTimeout(() => {
+            checkStudentAssignmentStatus();
+          }, 250);
+
       },
       error: function (xhr, status, error) {
           console.error('Error:', status, error);
@@ -186,6 +190,36 @@ function submitUploadsStudent(){
 
 
 
+
+function checkStudentAssignmentStatus(){
+
+  let myTable = document.getElementById("note-list-here");
+  let tr = myTable.getElementsByTagName('tr');
+
+  for (var i=1 ; i< tr.length; i++){
+      var status = document.getElementById("status"+i).innerText;
+      var upload = document.getElementById("upload"+i);
+      var checked = document.getElementById("checked"+i);
+     
+      if(status=="Approved"){
+          upload.style.display = "none";
+          checked.style.display ="block";
+          checked.innerText="Checked"
+      }
+      else if(status == "Pending"){
+        upload.style.display = "none";
+          checked.style.display ="block";
+          checked.innerText="In Progress"
+      }
+      else{
+        upload.style.display = "block";
+          checked.style.display ="none";
+          checked.innerText="Checked"
+      }
+      
+  }
+
+}
 
 
 

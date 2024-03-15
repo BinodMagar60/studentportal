@@ -94,6 +94,9 @@ function assignmentShow(){
       assignmentstableData();
       callAssignmentUploads();
     }, 100);
+    setTimeout(() => {
+      checkStudentAssignmentStatus()
+    }, 250);
    
 }
 

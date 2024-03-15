@@ -58,22 +58,6 @@ function userCheckPopupRemove(){
 }
 
 
-// function callUsersAssignmentsData(id) {
-//     const xhr = new XMLHttpRequest();
-//     const container = document.getElementById("checkAssignmentsOfUsers");
-  
-//     xhr.onload = function () {
-//       if (this.status === 200) {
-//         container.innerHTML = xhr.responseText;
-//       } else {
-//         console.warn("Did not receive 200 OK from response!");
-//       }
-//     };
-//     xhr.open("GET", "assignment-check-users.php?a_id="+id);
-//     xhr.send();
-//   }
-
-
 
   function callUsersAssignmentsData(id){
 

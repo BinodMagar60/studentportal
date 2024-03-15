@@ -24,7 +24,7 @@ $current_date=date("Y-m-d");
             if (mysqli_num_rows($exesql) > 0) {
                 $i = 0;
                 ?>
-                <table class="note-list-here">
+                <table class="note-list-here" id="note-list-here">
                     <tr>
                         <td>S.N</td>
                         <td>Title</td>
@@ -59,12 +59,13 @@ if($assignmentStatusExe=mysqli_query($con,$assignmentStatusSql)){
 $assignmentStatusRes=mysqli_fetch_assoc($assignmentStatusExe);
 }
 ?>
-                        <td><?php echo isset($assignmentStatusRes['status']) ? $assignmentStatusRes['status']:'-'?></td>
+                        <td id="status<?php echo $i ?>"><?php echo isset($assignmentStatusRes['status']) ? $assignmentStatusRes['status']:'-'?></td>
                         
-                        <td>
+                        <td style="display: flex; justify-content: center;">
                             <div class="btn-assignments">
-                                <button class="btn-assign" style="background-color: transparent;" onclick="assignmentUploadShow('<?php echo $search['id'] ?>');"><i class="ri-upload-2-line"></i></button>
+                                <button class="btn-assign" id="upload<?php echo $i ?>" style="background-color: transparent;" onclick="assignmentUploadShow('<?php echo $search['id'] ?>');"><i class="ri-upload-2-line"></i></button>
                             </div>
+                            <button id="checked<?php echo $i ?>" disabled class="checkedBtn">Checked</button>
                         </td>
                     </tr>
                     <?php

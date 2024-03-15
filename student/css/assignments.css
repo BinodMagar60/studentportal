@@ -356,3 +356,35 @@ legend{
 
 
 
+  .checkedBtn{
+    padding: 5px 10px;
+    font-size: 1.125rem !important;
+    background-color: rgb(7, 179, 7);
+    color: white !important;
+    cursor: default !important;
+    display: none;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
