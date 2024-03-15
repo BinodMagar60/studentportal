@@ -254,3 +254,10 @@ legend{
     cursor: pointer;
 }
 
+
+
+
+.approved{
+    display: none   ;
+    cursor: default !important;
+}

@@ -44,6 +44,9 @@ function userCheckPopup(id){
     popup.classList.add("checkAssignmentsOfUsers-clicked");
     overlay.style.display= "block";
     setTimeout(callUsersAssignmentsData(id),50);
+   setTimeout(() => {
+    checkAssignmentStatus()
+   }, 100);
 }
 
 function userCheckPopupRemove(){
@@ -74,7 +77,6 @@ function userCheckPopupRemove(){
 
   function callUsersAssignmentsData(id){
 
-  
         function updateAssignmentList(id) {
             var selectedClass = $("#selectClass_assignment").val();
             var selectedSection = $("#selectSection_assignment").val();
@@ -101,7 +103,7 @@ function userCheckPopupRemove(){
         }
 
         updateAssignmentList(id);
-
+        
 
 }
 
@@ -127,6 +129,10 @@ function userCheckPopupRemove(){
  
    
     setTimeout(callUsersAssignmentsData(aid),40)
+    setTimeout(() => {
+        checkAssignmentStatus()
+       }, 100);
+   
 
   }
 
@@ -145,3 +151,37 @@ function userCheckPopupRemove(){
     setTimeout(callUsersAssignmentsData(aid),40)
     
   }
+
+function checkAssignmentStatus(){
+
+    let myTable = document.getElementById("assignmentTableForUsers");
+    let tr = myTable.getElementsByTagName('tr');
+
+    for (var i=1 ; i< tr.length; i++){
+        var status = document.getElementById("status"+i).innerText;
+        var approve = document.getElementById( "approve" + i);
+        var reject = document.getElementById("reject" + i);
+        var approved = document.getElementById("approved"+i);
+       
+        if(status=="Approved"){
+            approve.style.display = "none";
+            reject.style.display = "none";
+            approved.style.display="block";
+        }
+        
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

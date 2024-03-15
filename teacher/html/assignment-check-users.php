@@ -18,7 +18,7 @@
 
 
 <div class="userContainerForAssignments">
-<table class="assignmentTableForUsers">
+<table class="assignmentTableForUsers" id="assignmentTableForUsers">
   <tr>
       <td>S.N</td>
       <td>Name</td>
@@ -66,7 +66,7 @@ if(empty($status)){
 }
   ?>
 </td>
-<td>
+<td id="status<?php echo $i ?>">
 <?php
 if(empty($status)){
   echo $assignment_check_result['status'];
@@ -88,7 +88,7 @@ if(empty($status)){
      }
     ?>
 
-<button onclick="downloadAll(<?php echo $aId ?>)" style="color: blue; font-size:1.5rem; background-color: transparent;"><i class="ri-download-2-fill"></i></button>
+<button  onclick="downloadAll(<?php echo $aId ?>)" style="color: blue; font-size:1.5rem; background-color: transparent;"><i class="ri-download-2-fill"></i></button>
      <?php
     
     }
@@ -102,9 +102,9 @@ if(empty($status)){
 <td>
   <?php if(empty($status)){
     ?>
-    <button onclick='acceptAssignment("<?php echo $student_email ?>",<?php echo $aId ?>)' style='color: white; font-size:1.125rem; padding: 5px 10px; background-color: green;'>Approve</button>
-    <button onclick='RejectAssignment("<?php echo $student_email ?>",<?php echo $aId ?>)' style='color: white; font-size:1.125rem; padding: 5px 10px; background-color: red;'>Reject</button>
-
+    <button id="approve<?php echo $i ?>" onclick='acceptAssignment("<?php echo $student_email ?>",<?php echo $aId ?>)' style='color: white; font-size:1.125rem; padding: 5px 10px; background-color: green;'>Approve</button>
+    <button id="reject<?php echo $i ?>" onclick='RejectAssignment("<?php echo $student_email ?>",<?php echo $aId ?>)' style='color: white; font-size:1.125rem; padding: 5px 10px; background-color: red;'>Reject</button>
+    <button class="approved" id="approved<?php echo $i ?>" style='color: white; font-size:1.125rem; padding: 5px 10px; background-color: green; margin-left: 60px;' disabled>Approved</button>
     <?php
   
   }else{
