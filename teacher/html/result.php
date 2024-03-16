@@ -1,4 +1,8 @@
-
+<?php
+require_once "../../php/config/sessionStart.php";
+if(isset($_SESSION['userEmail'])){
+$userEmail=$_SESSION['userEmail'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,6 +27,29 @@
                     <td>Class</td>
                     <td>Section</td>
                 </tr>
+                <?php
+require_once "../../php/config/db.php";
+$check_teacher_sql= "SELECT * FROM result_teacher_assigned where assigned_teacher='$userEmail'";
+if($check_teacher_exe=mysqli_query($con,$check_teacher_sql)){
+    if(mysqli_num_rows($check_teacher_exe)>0){
+        $i=1;
+        while($check_teacher_result=mysqli_fetch_assoc($check_teacher_exe)){
+?>
+<tr>
+<td><?php if(isset($i)) echo $i?></td>
+<td><?php if(isset($check_teacher_result['exam_title'])) echo $check_teacher_result['exam_title']?></td>
+<td><?php if(isset($check_teacher_result['class'])) echo $check_teacher_result['class']?></td>
+<td><?php if(isset($check_teacher_result['section'])) echo $check_teacher_result['section']?></td>
+        </tr>
+<?php
+$i++;
+        }
+    }else{
+        echo "<p>not assigned</p>";
+    }
+}
+
+?>
             </table>
 
 
@@ -36,3 +63,6 @@
 </html>
 
 
+<?php
+}
+?>

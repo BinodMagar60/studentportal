@@ -1,4 +1,8 @@
-
+<?php
+require_once "../php/config/db.php";
+$class = array("One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten");
+$section= array("A","B","C");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,13 +16,14 @@
 
 <body>
     <div class="Result-container">
+        <form action="../php/result/addAssignedTeacher.php" method="post">
         <fieldset>
             <legend>Result</legend>
             
             <div class="title-result">Assign Teachers</div>
 
             <div class="input-assign-title" id="input-assign-title">
-                Title: <input type="text">
+                Title: <input type="text" name="exam_title">
             </div>
 
 
@@ -30,13 +35,21 @@
                     <td>Section B</td>
                     <td>Section C</td>
                 </tr>
+                <?php 
+                $i=0;
+                for($i;$i<10;$i++){
+                ?>
                 <tr>
-                    <td>One</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td><?php if(isset($class[$i])) echo $class[$i]?></td>
+                    <?php
+                $j=0;
+                    for($j;$j<3;$j++){
+                    ?>
+                    <td><?php include "../php/result/resultTeacherSelect.php"; ?></td>
+                    <?php }?>
                 </tr>
-                <tr>
+<?php }?>
+                <!-- <tr>
                     <td>Two</td>
                     <td></td>
                     <td></td>
@@ -89,7 +102,7 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                </tr>
+                </tr> -->
                 <tr>
                     <td colspan="4" style="border: none">
                         <div class="assign-btn-result">
@@ -101,6 +114,7 @@
             </div>
             
         </fieldset>
+                    </form>
     </div>
 
 
