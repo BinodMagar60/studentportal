@@ -16,7 +16,7 @@ $section= array("A","B","C");
 
 <body>
     <div class="Result-container">
-        <form action="../php/result/addAssignedTeacher.php" method="post">
+        <form id="resultForm">
         <fieldset>
             <legend>Result</legend>
             
@@ -49,64 +49,10 @@ $section= array("A","B","C");
                     <?php }?>
                 </tr>
 <?php }?>
-                <!-- <tr>
-                    <td>Two</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Three</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Four</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Five</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Six</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Seven</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Eight</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Nine</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Ten</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr> -->
                 <tr>
                     <td colspan="4" style="border: none">
                         <div class="assign-btn-result">
-                        <button>Assign</button>
+                        <button type="button" onclick="submitResultForm()">Assign</button>
                         </div>
                     </td>
                 </tr>
@@ -118,6 +64,10 @@ $section= array("A","B","C");
     </div>
 
 
+
+
+
+    <script src="../js/admin-result.js"></script>
 </body>
 
 </html>

@@ -92,9 +92,31 @@ legend{
 
 
 
+.container-resultInsert{
+    /* border: 1px solid black; */
+    box-shadow: 0 0 2px 2px rgba(175, 175, 175, 0.603);
+    width: 1300px;
+    height: 800px;
+    position: fixed;
+    top: 80px;
+    left: 450px;
+    background-color: white;
+    z-index: 10000;
+    display: none;
+}
 
 
 
+.overlay2{
+    height: 10000px;
+    width: 10000px;
+    position: fixed;
+    top: -1000px;
+    left: -1000px;
+    background-color: transparent;
+    z-index: 9999;
+    display: none;
+}
 
 
 

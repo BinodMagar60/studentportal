@@ -88,8 +88,14 @@ legend{
 
 .assign-teacher tr td{
     border: 1px solid black;
+}
+
+
+.assign-teacher tr:nth-child(1) td, .assign-teacher tr td:nth-child(1){
     padding: 10px;
 }
+
+
 
 .assign-teacher tr:not(td:nth-child(12)) td:not(td:nth-child(1)){
     min-width: 300px;
@@ -109,6 +115,22 @@ legend{
     background-color: green;
 }
 
+
+.assign-teacher tr td select{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.125rem;
+    outline: none;
+    appearance: none; 
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+}
+
+
+/* .assign-teacher tr td select::-ms-expand { 
+    display: none; 
+}  */
 
 
 

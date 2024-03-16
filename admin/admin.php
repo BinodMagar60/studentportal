@@ -247,6 +247,7 @@ unset($_SESSION['target_email']);
 
   <script src="../js/admin-examRoutine-php.js"></script>
   <script src="../js/admin-classRoutine-php.js"></script>
+  <script src="../js/admin-result.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {  
       document.getElementById('button1').click();

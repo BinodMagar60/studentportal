@@ -15,6 +15,8 @@ $userEmail=$_SESSION['userEmail'];
 </head>
 
 <body>
+
+    <div class="overlay2" id="overlay2"></div>
     <div class="Result-container">
         <fieldset>
             <legend>Result</legend>
@@ -56,6 +58,14 @@ $i++;
             
         </fieldset>
     </div>
+
+
+    <div class="container-resultInsert" id="container-resultInsert">
+
+    </div>
+
+
+
 
 
 </body>
