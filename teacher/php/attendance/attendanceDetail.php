@@ -7,7 +7,7 @@ if ($exesql = mysqli_query($con, $sql)) {
     if (mysqli_num_rows($exesql) > 0) {
         $i = 0;
         ?>
-        <form action="../php/attendance/addUpdateAttendance.php" method="post">
+        <form id="attendanceForm">
 
                 <table id="attendanceTable">
                     <tr>
@@ -51,7 +51,7 @@ $checkAttendanceResult=mysqli_fetch_assoc($checkAttendanceExe);
         <tr>
             <td colspan="4" style="border: none; background-color:white;">
                 <div class="attendance-btn-div">
-                    <button class="attendanceSubmit">Submit</button>
+                    <button type="button" onclick="addAttendance()" class="attendanceSubmit">Submit</button>
                 </div>
             </td>
         </tr>

@@ -33,3 +33,33 @@ const tableDataAttendance = () => {
     });
 
 }
+
+
+
+
+
+
+function addAttendance(){
+
+    
+    var formData = new FormData(document.getElementById('attendanceForm'));
+
+    $.ajax({
+        url: '../php/attendance/addUpdateAttendance.php',
+        type: 'POST',
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function (response) {
+            console.log('Response:', response);  
+        },
+        error: function (xhr, status, error) {
+            console.error('Error:', status, error);
+            console.log('Response Text:', xhr.responseText);
+            alert('Error adding student. Please try again.');
+        }
+        
+    });
+
+
+}

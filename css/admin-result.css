@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+
+*::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .Result-container{
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    margin-left: 20px;
+  }
+
+
+
+  .container{
+    padding: 20px;
+  }
+
+
+  fieldset{
+    border: 1px solid black;
+    padding: 40px 30px;
+    border-radius: 5px;
+    font-size: 1.125rem;
+    padding-bottom: 20px !important;
+    
+}
+legend{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+
+
+
+.title-result{
+    font-size: 1.5rem;
+    font-weight: 500;
+    
+}
+
+
+
+
+
+
+.result-text-result-table{
+    width: 100%;
+    margin-left: 30px;
+}
+
+.assign-teacher{
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.assign-teacher tr td{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.assign-teacher tr:not(td:nth-child(12)) td:not(td:nth-child(1)){
+    min-width: 300px;
+    text-align: center;
+}
+
+.assign-btn-result{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.assign-btn-result button{
+    padding: 10px 15px;
+    font-size: 1.125rem;
+    color: white;
+    background-color: green;
+}
+
+
+
+
+
+
+
+
+
+
+

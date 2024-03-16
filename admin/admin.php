@@ -108,7 +108,7 @@ unset($_SESSION['target_email']);
         </div>
       </div>
       <div class="side-bar-titles">
-        <a class="side-panel-title"><button id="button8" onclick="toggleButton(8)">
+        <a class="side-panel-title"><button id="button8" onclick="toggleButton(8);resultAdmin();">
             <span><i class="ri-file-list-line"></i></span>Result
           </button></a>
       </div>
