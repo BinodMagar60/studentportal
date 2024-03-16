@@ -54,10 +54,24 @@ legend{
 .title-result{
     font-size: 1.5rem;
     font-weight: 500;
-    
+    margin-bottom: 30px;
+
 }
 
+.input-assign-title{
+    margin-left: 40px;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
 
+.input-assign-title input{
+    border: 1px solid black ;
+    font-size: 1.125rem;
+    font-weight: 400;
+    padding: 5px;
+    min-width: 400px;
+    outline: none;
+}
 
 
 

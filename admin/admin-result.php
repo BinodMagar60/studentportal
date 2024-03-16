@@ -16,6 +16,12 @@
             <legend>Result</legend>
             
             <div class="title-result">Assign Teachers</div>
+
+            <div class="input-assign-title" id="input-assign-title">
+                Title: <input type="text">
+            </div>
+
+
             <div class="result-text-result-table">
             <table  class="assign-teacher" id="assign-teacher" >
                 <tr>
