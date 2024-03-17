@@ -2,6 +2,13 @@
 require_once "../php/config/db.php";
 $class = array("One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten");
 $section= array("A","B","C");
+$resultTitle="SELECT distinct exam_title from result_teacher_assigned";
+if($resultTitleExe=mysqli_query($con,$resultTitle)){
+if(mysqli_num_rows($resultTitleExe)>0){
+    $resultTitleResult=mysqli_fetch_assoc($resultTitleExe);
+    $resultTitleName=$resultTitleResult['exam_title'];
+}
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +30,7 @@ $section= array("A","B","C");
             <div class="title-result">Assign Teachers</div>
 
             <div class="input-assign-title" id="input-assign-title">
-                Title: <input type="text" name="exam_title">
+                Title: <input type="text" name="exam_title" value="<?php if(isset($resultTitleName)) echo $resultTitleName?>">
             </div>
 
 
@@ -58,7 +65,45 @@ $section= array("A","B","C");
                 </tr>
             </table>
             </div>
-            
+<?php if(isset($resultTitleName)){ ?>
+            <div class="assigned-list">
+                <p>Marks status</p>
+                <span>Exam Title: </span><span><?php if(isset($resultTitleName)) echo $resultTitleName ?></span>
+            <table>
+                <tr>
+                <td>Class/Section</td>
+                    <td>Section A</td>
+                    <td>Section B</td>
+                    <td>Section C</td>
+                </tr>
+                <?php 
+                $a=0;
+                for($a;$a<10;$a++){
+                ?>
+                <tr>
+                    <td><?php if(isset($class[$a])) echo $class[$a]?></td>
+                    <?php
+                $b=0;
+                    for($b;$b<3;$b++){
+                        $checkTeacherSql="SELECT * from result_teacher_assigned where `class`='$class[$a]' and section='$section[$b]'";
+                if($checkTeacherExe=mysqli_query($con,$checkTeacherSql)){
+                    ?>
+                    <td>
+                    <?php
+                    if(mysqli_num_rows($checkTeacherExe)>0){
+                        $checkTeacherResult=mysqli_fetch_assoc($checkTeacherExe);
+                        echo $checkTeacherResult['status'];
+                    }else{
+                        echo "-";
+                    }
+                    ?>
+                    </td>
+                    <?php }}?>
+                </tr>
+<?php }?>
+            </table>
+            </div>
+            <?php }?>
         </fieldset>
                     </form>
     </div>
