@@ -68,13 +68,18 @@ legend{
 
 
 .result-teacher-table tr td{
-    padding: 8px;
+    padding: 10px;
     text-transform: capitalize;
+    font-size: 1.25rem;
 }
 
 
 .result-teacher-table tr td:nth-child(1){
     width: 50px;
+}
+
+.result-teacher-table tr td:nth-child(2){
+    cursor: pointer;
 }
 
 
@@ -95,17 +100,21 @@ legend{
 .container-resultInsert{
     /* border: 1px solid black; */
     box-shadow: 0 0 2px 2px rgba(175, 175, 175, 0.603);
+    padding: 40px 30px;
     width: 1300px;
     height: 800px;
     position: fixed;
-    top: 80px;
+    top: -10000px;
     left: 450px;
     background-color: white;
     z-index: 10000;
-    display: none;
+    transition: top 100ms ease-in-out;
 }
 
-
+.container-resultInsert-clicked{
+    top: 80px !important;
+    transition: top 250ms ease-in-out;
+}
 
 .overlay2{
     height: 10000px;
@@ -117,6 +126,89 @@ legend{
     z-index: 9999;
     display: none;
 }
+
+
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+.top-result{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+
+.result-title{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.close-result{
+    background-color: transparent;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.close-result:hover{
+    cursor: pointer;
+    color: red;
+}
+
+.container-result-insertmarks{
+    width: 100%;
+}
+
+#ResultForm{
+    overflow: scroll;
+}
+
+
+.resultTableUser{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.resultTableUser tr td{
+    border: 1px solid black;
+}
+
+
+.resultTableUser tr:nth-child(1), .resultTableUser tr td:nth-child(1){
+    background-color: #4591b8 ;
+}
+
+
+
+.resultTableUser tr:nth-child(1) td,.resultTableUser tr td:nth-child(1){
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.resultTableUser tr td:not(td:nth-child(1)){
+    text-align: center;
+}
+
+
+
+.resultTableUser tr td:nth-child(1){
+    width: 300px;
+}
+
+.resultTableUser tr td input{
+    font-size: 1rem;
+    width: 80px;
+    outline: none;
+    text-align: center;
+}
+
+
 
 
 

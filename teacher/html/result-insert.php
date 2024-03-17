@@ -12,7 +12,17 @@ $assignedTeacher=$check_teacher_result['assigned_teacher'];
       }
     }
         ?>
-        <table>
+       
+
+       <div class="top-result">
+        <div></div>
+        <div class="result-title">Marks Entry</div>
+        <div class="close-result" onclick="resultStudentListPoupupRemove();"><i class="ri-close-circle-line"></i></div>
+       </div>
+
+
+       <div class="container-result-insertmarks">
+       <table  class="resultTableUser">
 <tr>
   <td>Name</td>
   <td>Science</td>
@@ -23,8 +33,7 @@ $assignedTeacher=$check_teacher_result['assigned_teacher'];
   <td>Computer</td>
   <td>Account</td>
 </tr>
-<form action="../php/result/addMarks.php" method="post">
-<h1>Marks</h1>
+<form id="ResultForm">
 <?php
 $studentSelectSql= "SELECT * FROM student_table where class='$class' and section='$section' order by name asc";
 if($studentSelectExe=mysqli_query($con,$studentSelectSql)){
@@ -66,6 +75,13 @@ $checkMarksResult=mysqli_fetch_assoc($checkMarksExe);
       $i++;
     }
     ?>
+    <tr>
+      <td colspan="8" style="border: none; background-color:white;">
+        <div class="result-tablebtn"  style=" display: flex; justify-content: right;">
+        <button type="button" onclick="submitResult()" style="background-color:green;color:white;padding: 10px 15px; cursor: pointer; font-size: 1.125rem">Submit</button>
+        </div>
+      </td>
+    </tr>
     <input type="hidden" name="count" value="<?php if(isset($i)) echo $i?>">
  <?php }
 }
@@ -73,8 +89,9 @@ $checkMarksResult=mysqli_fetch_assoc($checkMarksExe);
 
 
 </table>
+       </div>
 
-<button type="submit">Submit</button>
+
 </form>
 <?php
 }

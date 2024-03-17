@@ -42,7 +42,7 @@ if($check_teacher_exe=mysqli_query($con,$check_teacher_sql)){
 ?>
 <tr>
 <td><?php if(isset($i)) echo $i?></td>
-<td><a href="result-insert.php?id=<?php if(isset($check_teacher_result['id'])) echo $check_teacher_result['id'] ?>"><?php if(isset($check_teacher_result['exam_title'])) echo $check_teacher_result['exam_title']?></a></td>
+<td onclick="resultStudentListPoupup(<?php echo $check_teacher_result['id'] ?>)"><?php if(isset($check_teacher_result['exam_title'])) echo $check_teacher_result['exam_title']?></td>
 <td><?php if(isset($check_teacher_result['class'])) echo $check_teacher_result['class']?></td>
 <td><?php if(isset($check_teacher_result['section'])) echo $check_teacher_result['section']?></td>
         </tr>
@@ -70,7 +70,7 @@ $i++;
 
 
 
-
+    <script src="../js/result.js"></script>
 </body>
 
 </html>
