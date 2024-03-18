@@ -1,6 +1,6 @@
 <?php
-if(isset($_GET['title'])){
-  $examTitle=$_GET['title'];
+if(isset($_POST['title'])){
+  $examTitle=$_POST['title'];
   require_once "../config/db.php";
   $checkStatusSql="SELECT * FROM result_teacher_assigned where `status`='Recieved' and `exam_title`='$examTitle'";
   if($checkStatusExe=mysqli_query($con,$checkStatusSql)){
@@ -20,12 +20,18 @@ if($checkAssignedExe=mysqli_query($con,$checkAssignedSql)){
         echo "successfull";
       }
     }
+  }else{
+    echo "no data";
   }
 }
 }else{
 }
 }
+    }else{
+      echo "no data";
     }
   }
+}else{
+  echo "not set";
 }
 ?>

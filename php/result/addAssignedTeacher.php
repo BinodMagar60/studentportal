@@ -25,7 +25,7 @@ if($check_teacher_exe=mysqli_query($con,$check_teacher_sql)){
   }else{
     $check_teacher_result=mysqli_fetch_assoc($check_teacher_exe);
     $uid=$check_teacher_result['id'];
-    $updateAssignedTeacherSql="UPDATE result_teacher_assigned set `exam_title`='$examTitle',`assigned_teacher`='$assignedTeacher',`class`='$class[$i]',`section`='$section[$j]',`status`='Pending' where id=$uid";
+    $updateAssignedTeacherSql="UPDATE result_teacher_assigned set `exam_title`='$examTitle',`assigned_teacher`='$assignedTeacher',`class`='$class[$i]',`section`='$section[$j]',`status`='Pending' where id=$uid and `status`='Pending'";
     if(mysqli_query($con,$updateAssignedTeacherSql)){
       echo "updated";
     }

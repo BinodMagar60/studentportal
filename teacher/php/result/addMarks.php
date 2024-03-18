@@ -8,10 +8,10 @@ require_once "../../../php/config/db.php";
     $userEmail=$_SESSION['userEmail'];
     $checkEmpty=0;
     for ($j = 0; $j < $count; $j++) {
-      if(!empty($_POST['s_email_'.$j]) && !empty($_POST['r_id_'.$j]) && !empty($_POST['science_'.$j]) && !empty($_POST['maths_'.$j]) && !empty($_POST['english_'.$j]) && !empty($_POST['nepali_'.$j]) && !empty($_POST['social_'.$j]) && !empty($_POST['computer_'.$j]) && !empty($_POST['account_'.$j])) {
-          $checkEmpty++;
-          // echo $j." hello";
-      }else{
+      if ((!empty($_POST['s_email_'.$j]) || $_POST['s_email_'.$j] === '0') && (!empty($_POST['science_'.$j]) || $_POST['science_'.$j] === '0') && (!empty($_POST['maths_'.$j]) || $_POST['maths_'.$j] === '0') && (!empty($_POST['english_'.$j]) || $_POST['english_'.$j] === '0') && (!empty($_POST['nepali_'.$j]) || $_POST['nepali_'.$j] === '0') && (!empty($_POST['social_'.$j]) || $_POST['social_'.$j] === '0') && (!empty($_POST['computer_'.$j]) || $_POST['computer_'.$j] === '0') && (!empty($_POST['account_'.$j]) || $_POST['account_'.$j] === '0') &&(!empty($_POST['r_id_'.$j]) || $_POST['r_id_'.$j] === '0')) {
+      $checkEmpty++;
+      // echo $j." hello";
+  }else{
         echo "checkEmpty not fullfilled";
       }
   }
