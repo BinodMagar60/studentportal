@@ -22,7 +22,13 @@ $examTitle=$check_teacher_result['exam_title'];
        </div>
 
 
+       <div class="middle-section-result">
+        <div>Class: <?php echo $class ?></div>
+        <div>Section: <?php echo $section ?> </div>
+       </div>
+
        <div class="container-result-insertmarks">
+       <form id="ResultForm">
        <table  class="resultTableUser">
 <tr>
   <td>Name</td>
@@ -34,7 +40,7 @@ $examTitle=$check_teacher_result['exam_title'];
   <td>Computer</td>
   <td>Account</td>
 </tr>
-<form id="ResultForm">
+
   
 <?php
 $studentSelectSql= "SELECT * FROM student_table where class='$class' and section='$section' order by name asc";
@@ -92,10 +98,11 @@ $checkMarksResult=mysqli_fetch_assoc($checkMarksExe);
 
 
 </table>
+       </form>
        </div>
 
 
-</form>
+
 <?php
 }
 ?>

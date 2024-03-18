@@ -89,13 +89,16 @@ function resultAdmin() {
   xhr.onload = function () {
       if (this.status === 200) {
           container.innerHTML = xhr.responseText;
-          hideOldEvents(); 
+          
       } else {
           console.warn("Did not receive 200 OK from response!");
       }
   };
   xhr.open('GET', 'admin-result.php');
   xhr.send();
+  setTimeout(() => {
+    resultStatusTeacher();
+  }, 100);
 }
 
 
