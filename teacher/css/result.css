@@ -210,7 +210,15 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 
+.middle-section-result{
+    margin-bottom: 10px;
+}
 
+
+.middle-section-result div{
+    font-size: 1.25rem;
+    font-weight: 400;
+}
 
 
 

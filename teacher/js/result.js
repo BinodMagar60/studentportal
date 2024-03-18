@@ -59,10 +59,10 @@ function resultStudentsClass(id){
         processData: false,
         contentType: false,
         success: function (response) {
-            console.log('Response:', response);
+            // console.log('Response:', response);
             setTimeout(() => {
                 resultStudentListPoupupRemove();
-            }, 500);
+            }, 200);
         },
         error: function (xhr, status, error) {
             console.error('Error:', status, error);

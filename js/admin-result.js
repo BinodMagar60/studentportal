@@ -14,7 +14,7 @@ $.ajax({
     contentType: false,
     success: function (response) {
         console.log('Response:', response);
-
+        
         
     },
     error: function (xhr, status, error) {
@@ -24,7 +24,59 @@ $.ajax({
     }
     
 });
+
+setTimeout(() => {
+
+    checkStatusResult();
+}, 100);
+
+
 }
+
+
+
+
+
+
+function resultStatusTeacher() {
+    const xhr = new XMLHttpRequest();
+    const container = document.getElementById('status-resultTeachers');
+  
+    xhr.onload = function () {
+        if (this.status === 200) {
+            container.innerHTML = xhr.responseText;
+            // console.log("displayed");
+        } else {
+            console.warn("Did not receive 200 OK from response!");
+        }
+    };
+    xhr.open('GET', 'admin-result-status.php');
+    xhr.send();
+  }
+
+  
+
+  function submitPublishResult(id) {
+    $.ajax({
+      url: "../php/result/publish.php?title=" + id,
+      type: "POST",
+      success: function (response) {
+        console.log(response);
+      },
+      error: function (xhr, status, error) {
+        console.error("Error:", status, error);
+        console.log("Response Text:", xhr.responseText);
+      },
+    });
+    setTimeout(() => {
+        resultStatusTeacher();
+    }, 100);
+  }
+
+
+
+
+
 
 
 
