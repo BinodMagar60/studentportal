@@ -2,14 +2,17 @@
 require_once "../../../php/config/sessionStart.php";
 if(isset($_SESSION['userEmail'])){
 require_once "../../../php/config/db.php";
-  if(isset($_POST['count'])){
+  if(isset($_POST['count'],$_POST['examTitle'])){
     $count=$_POST['count'];
+    $examTitle=$_POST['examTitle'];
     $userEmail=$_SESSION['userEmail'];
     $checkEmpty=0;
     for ($j = 0; $j < $count; $j++) {
       if(!empty($_POST['s_email_'.$j]) && !empty($_POST['r_id_'.$j]) && !empty($_POST['science_'.$j]) && !empty($_POST['maths_'.$j]) && !empty($_POST['english_'.$j]) && !empty($_POST['nepali_'.$j]) && !empty($_POST['social_'.$j]) && !empty($_POST['computer_'.$j]) && !empty($_POST['account_'.$j])) {
           $checkEmpty++;
           // echo $j." hello";
+      }else{
+        echo "checkEmpty not fullfilled";
       }
   }
 if($count == $checkEmpty){
@@ -30,7 +33,7 @@ if($count == $checkEmpty){
           $checkMarksResult=mysqli_fetch_assoc($checkMarksExe);
           
           if(mysqli_num_rows($checkMarksExe)==0){
-          $addMarksSql="INSERT into result_marks (`result_assigned_id`,`s_email`,`science`,`math`,`english`,`nepali`,`social`,`computer`,`account`,`status`,`assigned_by`) values ('$result_assigned_id','$student_email',$science,'$maths','$english','$nepali','$social','$computer','$account','unPublished','$userEmail')";
+          $addMarksSql="INSERT into result_marks (`result_assigned_id`,`exam_title`,`s_email`,`science`,`math`,`english`,`nepali`,`social`,`computer`,`account`,`status`,`assigned_by`) values ('$result_assigned_id','$examTitle','$student_email',$science,'$maths','$english','$nepali','$social','$computer','$account','unPublished','$userEmail')";
           if(mysqli_query($con,$addMarksSql)){
             // echo "success for ".$student_email."<br>";
             $updateStatus="UPDATE result_teacher_assigned set `status`='Received' where id=$result_assigned_id";
@@ -41,7 +44,7 @@ if($count == $checkEmpty){
           }else{
             // echo "update";
             $marks_id=$checkMarksResult['id'];
-            $updateMarksSql="UPDATE result_marks set `result_assigned_id`='$result_assigned_id',`s_email`='$student_email',`science`='$science',`math`='$maths',`english`='$english',`nepali`='$nepali',`social`='$social',`computer`='$computer',`account`='$account',`status`='unPublished',`assigned_by`='$userEmail' where id=$marks_id";
+            $updateMarksSql="UPDATE result_marks set `result_assigned_id`='$result_assigned_id',`exam_title`='$examTitle',`s_email`='$student_email',`science`='$science',`math`='$maths',`english`='$english',`nepali`='$nepali',`social`='$social',`computer`='$computer',`account`='$account',`status`='unPublished',`assigned_by`='$userEmail' where id=$marks_id";
             if(mysqli_query($con,$updateMarksSql)){
               echo "success for ".$student_email."<br>";
             }
@@ -52,6 +55,8 @@ if($count == $checkEmpty){
   }else{
     echo " input all data";
   }
+  }else{
+    echo "not set count";
   }
   
   }

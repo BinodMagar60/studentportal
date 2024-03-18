@@ -9,6 +9,7 @@ $check_teacher_result=mysqli_fetch_assoc($check_teacher_exe);
 $class=$check_teacher_result['class'];
 $section=$check_teacher_result['section'];
 $assignedTeacher=$check_teacher_result['assigned_teacher'];
+$examTitle=$check_teacher_result['exam_title'];
       }
     }
         ?>
@@ -34,6 +35,7 @@ $assignedTeacher=$check_teacher_result['assigned_teacher'];
   <td>Account</td>
 </tr>
 <form id="ResultForm">
+  
 <?php
 $studentSelectSql= "SELECT * FROM student_table where class='$class' and section='$section' order by name asc";
 if($studentSelectExe=mysqli_query($con,$studentSelectSql)){
@@ -82,6 +84,7 @@ $checkMarksResult=mysqli_fetch_assoc($checkMarksExe);
         </div>
       </td>
     </tr>
+    <input type="hidden" name="examTitle" value="<?php if(isset($examTitle)) echo $examTitle ?>">
     <input type="hidden" name="count" value="<?php if(isset($i)) echo $i?>">
  <?php }
 }

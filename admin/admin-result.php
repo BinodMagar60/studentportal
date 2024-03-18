@@ -104,6 +104,8 @@ if(mysqli_num_rows($resultTitleExe)>0){
             </table>
             </div>
             <?php }?>
+            <a href="../php/result/publish.php?title=<?php if(isset($resultTitleName)) echo $resultTitleName?>"><button type="button">Publish</button></a> 
+             <a href=""><button type="button">Delete</button></a>
         </fieldset>
                     </form>
     </div>
