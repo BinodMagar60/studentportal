@@ -52,9 +52,14 @@ function resultStatusTeacher() {
     };
     xhr.open('GET', 'admin-result-status.php');
     xhr.send();
+
+    setTimeout(() => {
+        checkStatusResultAdmin();
+    }, 100);
   }
 
-  
+
+
 
   function submitPublishResult(id) {
     $.ajax({
@@ -73,6 +78,29 @@ function resultStatusTeacher() {
     }, 100);
   }
 
+
+
+
+  function checkStatusResultAdmin(){
+   
+        var allReceived = true;
+        var statusCells = document.querySelectorAll('#status-checker');
+        
+        statusCells.forEach(function(cell) {
+            if (cell.textContent.trim() !== 'Received') {
+                allReceived = false;
+            }
+        });
+        
+        console.log(allReceived);
+        var submitButton = document.getElementById('status-submitBtn-result');
+        if (allReceived) {
+            submitButton.style.display = 'block';
+        } else {
+            submitButton.style.display = 'none';
+        }
+    }
+  
 
 
 
