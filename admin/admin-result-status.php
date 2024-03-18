@@ -61,7 +61,7 @@ if(mysqli_num_rows($resultTitleExe)>0){
 <tr>
                     <td colspan="4" style="border: none;">
                     <div class="btn-statusResult">
-            <button onclick="submitPublishResult('<?php echo $resultTitleName ?>')" id="status-submitBtn-result" type="button" style="background-color: green;">Publish</button>             <a href=""><button type="button" style="background-color: red;">Delete</button></a>
+            <button onclick="submitPublishResult('<?php echo $resultTitleName ?>')" id="status-submitBtn-result" type="button" style="background-color: green;">Publish</button>             <a href="../php/result/delete.php"><button type="button" style="background-color: red;">Delete</button></a>
                     </div>
                     </td>
                 </tr>
