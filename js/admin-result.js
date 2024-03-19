@@ -125,9 +125,9 @@ function resultStatusTeacher() {
 
 
     function showResultOfStudents(classes,sections,title,number){
-        console.log(number);
+        // console.log(number);
         var tags = document.getElementById("tds"+number).innerHTML;
-        console.log(tags.trim());
+        // console.log(tags.trim());
 
         if(tags.trim() === "Received"){
             var popup = document.getElementById("displayMarksInAdmin");
@@ -188,9 +188,10 @@ function resultStatusTeacher() {
         contentType: false,
         success: function (response) {
             console.log('Response:', response);
-            setTimeout(() => {
-                showResultOfStudentsRemove();
-            }, 100);
+            // setTimeout(() => {
+            //     showResultOfStudentsRemove();
+                
+            // }, 100);
         },
         error: function (xhr, status, error) {
             console.error('Error:', status, error);
@@ -199,11 +200,30 @@ function resultStatusTeacher() {
         }
         
     });
+    setTimeout(() => {
+        resultAdmin();
+    }, 100);
   }
 
 
 
 
+
+
+  function deletePublishResult(id){
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET","../php/result/delete.php?title="+id, true);
+    xhr.onreadystatechange = function () {
+      if(xhr.readyState ===4 && xhr.status == 200){
+  
+      }
+    };
+    xhr.send();
+    
+    setTimeout(() => {
+        resultAdmin();
+    }, 100);
+  }
 
 
 
