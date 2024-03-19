@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+
+*::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .Result-container-listStudent{
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    margin-left: 20px;
+  }
+
+
+
+  .container{
+    padding: 20px;
+  }
+
+
+  fieldset{
+    border: 1px solid black;
+    padding: 40px 30px;
+    border-radius: 5px;
+    font-size: 1.125rem;
+    padding-bottom: 20px !important;
+    
+}
+legend{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
