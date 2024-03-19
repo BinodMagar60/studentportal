@@ -18,11 +18,12 @@ if(mysqli_num_rows($resultTitleExe)>0){
 
 
 
-<form>
+<form id="statusResultAdmin">
 
 
 <?php if(isset($resultTitleName)){ ?>
             <div class="assigned-list">
+            <input type="hidden" name="examTitle" value="<?php if(isset($examTitle)) echo $examTitle ?>">
                 <p>Status</p>
                 <span>Exam Title: </span><span><?php if(isset($resultTitleName)) echo $resultTitleName ?></span>
             <table class="status-result" id="status-result">
@@ -44,8 +45,8 @@ if(mysqli_num_rows($resultTitleExe)>0){
                         $checkTeacherSql="SELECT * from result_teacher_assigned where `class`='$class[$a]' and section='$section[$b]'";
                 if($checkTeacherExe=mysqli_query($con,$checkTeacherSql)){
                     ?>
-                    <td id="status-checker"><a href="admin-resultShowStudents.php?class=<?php if(isset($class[$a],$section[$b],$resultTitleName)) 
-                    echo $class[$a]."&section=".$section[$b]."&title=".$resultTitleName;?>">
+                    <td id="status-checker"  onclick="showResultOfStudents('<?php echo $class[$a] ?>','<?php echo $section[$b] ?>','<?php echo $resultTitleName ?>','<?php echo $a.''.$b; ?>');">
+                    <div id="tds<?php echo $a.''.$b?>">
                     <?php
                     if(mysqli_num_rows($checkTeacherExe)>0){
                         $checkTeacherResult=mysqli_fetch_assoc($checkTeacherExe);
@@ -54,7 +55,8 @@ if(mysqli_num_rows($resultTitleExe)>0){
                         echo "-";
                     }
                     ?>
-                    </a>
+                    </div>
+                   
                     </td>
                     <?php }}?>
                 </tr>
@@ -63,12 +65,14 @@ if(mysqli_num_rows($resultTitleExe)>0){
 <tr>
                     <td colspan="4" style="border: none;">
                     <div class="btn-statusResult">
-            <button onclick="submitPublishResult('<?php echo $resultTitleName ?>')" id="status-submitBtn-result" type="button" style="background-color: green;">Publish</button>             <a href="../php/result/delete.php?title=<?php echo $resultTitleName ?>"><button type="button" style="background-color: red;">Delete</button></a>
+            <button onclick="submitPublishResult()" id="status-submitBtn-result" type="button" style="background-color: green;">Publish</button>             <a href="../php/result/delete.php?title=<?php echo $resultTitleName ?>"><button type="button" style="background-color: red;">Delete</button></a>
                     </div>
                     </td>
                 </tr>
             </table>
             </div>
             <?php }?>
+
+            
 
 </form>

@@ -1,3 +1,10 @@
+<div class="wholeContainer-resultAdmin">
+
+  <div class="top-adminResult">
+    <div></div>
+    <div class="top-adminResult-middle">Marks Ledger</div>
+    <div class="top-adminResult-close"><i class="ri-close-circle-line" onclick="showResultOfStudentsRemove();"></i></div>
+  </div>
 
 <?php
 if(isset($_GET['class'],$_GET['section'],$_GET['title'])){
@@ -15,11 +22,13 @@ if(mysqli_num_rows($checkExe)>0){
     if(mysqli_num_rows($markShowExe)>0){
       $i=0;
       ?>
+      <div class="middle-part-resultbox">
       <p>Title: <?php if(isset($examTitle)) echo $examTitle ?></p>
       <p>Class: <?php if(isset($class)) echo $class ?></p>
       <p>Section: <?php if(isset($section)) echo $section ?></p>
-<form action="../php/result/updateMarks.php" method="post">
-      <table>
+      </div>
+<form id="resultbox" >
+      <table id="resultbox-table" class="resultbox-table">
   <tr>
     <td>Name</td>
     <td>Science</td>
@@ -66,10 +75,13 @@ $studentName=$studentShowResult['name'];
         }
       }
       ?>
+      <tr>
+        <td colspan="8" style="border: none;"><div class="btn-submit-resultStudents"><button type="button" onclick="submitResultStudentAdmin()">Update</button></div></td>
+      </tr>
       </table>
       <input type="hidden" name="examTitle" value="<?php if(isset($examTitle)) echo $examTitle ?>">
     <input type="hidden" name="count" value="<?php if(isset($i)) echo $i?>">
-<button type="submit">update</button>
+
 </form>
       <?php
     }
@@ -80,3 +92,12 @@ $studentName=$studentShowResult['name'];
   echo "not set";
 }
 ?>
+
+
+
+</div>
+
+
+
+
+

@@ -1,6 +1,6 @@
 <?php
-if(isset($_POST['title'])){
-  $examTitle=$_POST['title'];
+if(isset($_POST['examTitle'])){
+  $examTitle=$_POST['examTitle'];
   require_once "../config/db.php";
   $checkStatusSql="SELECT * FROM result_teacher_assigned where `status`='Recieved' and `exam_title`='$examTitle'";
   if($checkStatusExe=mysqli_query($con,$checkStatusSql)){
@@ -16,7 +16,7 @@ if($checkAssignedExe=mysqli_query($con,$checkAssignedSql)){
     while($checkAssignedResult=mysqli_fetch_assoc($checkAssignedExe)){
       $targetId=$checkAssignedResult['id'];
       $deleteAssignedSql="DELETE FROM result_teacher_assigned where id=$targetId";
-      if(mysqli($con,$deleteAssignedSql)){
+      if(mysqli_query($con,$deleteAssignedSql)){
         echo "successfull";
       }
     }
@@ -35,3 +35,5 @@ if($checkAssignedExe=mysqli_query($con,$checkAssignedSql)){
   echo "not set";
 }
 ?>
+
+

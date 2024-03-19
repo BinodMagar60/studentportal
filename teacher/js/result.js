@@ -62,6 +62,7 @@ function resultStudentsClass(id){
             // console.log('Response:', response);
             setTimeout(() => {
                 resultStudentListPoupupRemove();
+                resultTeacher();
             }, 200);
         },
         error: function (xhr, status, error) {

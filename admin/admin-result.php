@@ -22,6 +22,7 @@ if(mysqli_num_rows($resultTitleExe)>0){
 </head>
 
 <body>
+    <div class="overlay55" id="overlay55"></div>
     <div class="Result-container">
         
         <fieldset>
@@ -88,7 +89,9 @@ if(mysqli_num_rows($resultTitleExe)>0){
     </div>
 
 
+<div class="displayMarksInAdmin" id="displayMarksInAdmin">
 
+</div>
 
 
     <script src="../js/admin-result.js"></script>
