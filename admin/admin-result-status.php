@@ -23,7 +23,7 @@ if(mysqli_num_rows($resultTitleExe)>0){
 
 <?php if(isset($resultTitleName)){ ?>
             <div class="assigned-list">
-            <input type="hidden" name="examTitle" value="<?php if(isset($examTitle)) echo $examTitle ?>">
+            <input type="hidden" name="examTitle" value="<?php if(isset($resultTitleName)) echo $resultTitleName ?>">
                 <p>Status</p>
                 <span>Exam Title: </span><span><?php if(isset($resultTitleName)) echo $resultTitleName ?></span>
             <table class="status-result" id="status-result">

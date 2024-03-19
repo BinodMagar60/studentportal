@@ -2,12 +2,13 @@
 if(isset($_POST['examTitle'])){
   $examTitle=$_POST['examTitle'];
   require_once "../config/db.php";
-  $checkStatusSql="SELECT * FROM result_teacher_assigned where `status`='Recieved' and `exam_title`='$examTitle'";
+  echo $examTitle;
+  $checkStatusSql="SELECT * FROM result_teacher_assigned where `status`='Received' and `exam_title`='$examTitle'";
   if($checkStatusExe=mysqli_query($con,$checkStatusSql)){
     if(mysqli_num_rows($checkStatusExe)>0){
 while($checkStatusResult=mysqli_fetch_assoc($checkStatusExe)){
 $assignedId=$checkStatusResult['id'];
-$updateMarksStatusSql="UPDATE result_marks set `status`='Published' where assigned_teacher_id='$assignedId'";
+$updateMarksStatusSql="UPDATE result_marks set `status`='Published' where result_assigned_id='$assignedId'";
 if(mysqli_query($con,$updateMarksStatusSql)){
 //delete result_teacher_assigned
 $checkAssignedSql="SELECT * FROM result_teacher_assigned where exam_title='$examTitle'";
@@ -28,7 +29,7 @@ if($checkAssignedExe=mysqli_query($con,$checkAssignedSql)){
 }
 }
     }else{
-      echo "no data";
+      echo "no data 1st";
     }
   }
 }else{
