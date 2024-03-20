@@ -43,18 +43,30 @@ if(isset($_SESSION['target_s_email'])){
             if (mysqli_num_rows($result_inner) > 0) {
                 while ($row_inner = mysqli_fetch_assoc($result_inner)) {
                     $publishDate=date("d M Y",strtotime($row_inner['published_date']));
+                    $error="";
                     ?>
                     <tr>
 <td><?php if(isset($i)) echo $i ?></td>
-<td><?php if(isset($row_inner['exam_title'])) echo $row_inner['exam_title'] ?></td>
+<td><a href="admin-studentResultDownload.php?r_id=<?php if(isset($row_inner['id'])) 
+echo $row_inner['id'];
+
+
+
+?>">
+
+<?php if(isset($row_inner['exam_title'])) echo $row_inner['exam_title'] ?></a></td>
 <td><?php if(isset($publishDate)) echo $publishDate." A.D" ?></td>
                     </tr>
                     <?php
                 }
+            }else{
+                $error="no results";
             }
-            
-        }
         $i++;
+        }
+    }
+    if(!empty($error)){
+        echo "<tr><td colspan='3'>no results</td></tr>";
     }
     mysqli_close($con);
 }
