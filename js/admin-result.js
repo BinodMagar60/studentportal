@@ -202,7 +202,7 @@ function resultStatusTeacher() {
     });
     setTimeout(() => {
         resultAdmin();
-    }, 100);
+    }, 150);
   }
 
 

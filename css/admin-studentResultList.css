@@ -48,12 +48,281 @@ legend{
     font-weight: 500;
 }
 
+.studentResultListTable{
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.studentResultListTable tr:nth-child(1){
+  background-color: #4591b8 !important;
+}
+
+
+.studentResultListTable tr:nth-child(odd){
+  background-color: #f7f7f7;
+}
+
+.studentResultListTable tr td{
+  padding: 10px;
+  font-size: 1.125rem;
+}
+
+.studentResultListTable tr td:not(:nth-child(2)){
+  text-align: center;
+}
+
+.studentResultListTable tr td:nth-child(1){
+  width: 80px;
+}
+
+.studentResultListTable tr td:nth-child(3){
+  width: 300px;
+}
 
 
 
 
 
 
+
+
+
+.result-show-download{
+  width: 1000px;
+  height: 890px;
+  background-color: white;
+  box-shadow: 0 0 2px 2px rgba(190, 190, 190, 0.418);
+  position: fixed;
+  top: 10px;
+  left: 450px;
+  z-index: 100000;
+  display: none;
+}
+
+
+
+
+.overlay99{
+  width: 10000px;
+  height: 10000px;
+  position: fixed;
+  top: -1000px;
+  left:-1000px;
+  background-color: rgba(85, 85, 85, 0.178);
+  z-index: 99999;
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.resultContainer-Download{
+  padding: 10px 20px;
+}
+
+
+.top-part-result,.inner-resultContainer-Downlaod{
+  width: 100%;
+}
+
+
+.inner-resultContainer-Downlaod{
+  padding: 30px 100px;
+  max-width: 960px;
+}
+
+.top-part-result{
+  margin-bottom: 30px;
+}
+.schoolname{
+  width: 100%;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+
+.schooladdress,.contactinfo{
+  width: 100%;
+  text-align: center;
+  font-size: 1.125rem;
+  font-size: 500;
+}
+
+.whichResult{
+  width: 100%;
+  text-align: center;
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.marksheet{
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+.middle-part-download-table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.middle-part-download-table tr td{
+  padding: 5px;
+  font: 14px;
+}
+
+.middle-part-download-table tr td:nth-child(1){
+  width: 150px;
+}
+
+
+.img-container-student{
+  width: 170px;
+  height: 170px;
+}
+
+.img-container-student img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.result-marks{
+  margin-top: 30px;
+}
+
+.marks-box{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.marks-box tr td{
+  font-size: 1.125rem;
+  padding: 4px 8px;
+}
+
+.marks-box tr td:not(:nth-child(2)){
+  text-align: center;
+}
+
+.marks-box tr:last-child td{
+  font-size: 1.125rem;
+  font-weight: 400;
+  padding-top: 10px;
+}
+
+
+
+.marks-box tr:nth-child(1) td,.marks-box tr:last-child td{
+  border: 1px solid black;
+}
+
+
+.marks-box tr:not(:nth-child(1)) td,.marks-box tr:not(:last-child) td{
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+
+.marks-box tr td:nth-child(1){
+  width: 50px;
+}
+
+
+.marks-box tr td:nth-child(2){
+  width: 300px;
+}
+
+
+
+
+
+
+.bottom-part{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.download-btn-result{
+  width: 100%;
+  height: 80px;
+  
+}
+
+
+.btn-downloadResult{
+  font-size: 1.3rem;
+  color: white;
+  background-color: green;
+  padding: 8px 15px;
+ margin-left: 400px;
+  
+}
 
 
 

@@ -10,15 +10,18 @@ require_once "../php/config/sessionStart.php";
     <title>Result</title>
     <link rel="stylesheet" href="../css/admin-studentResultList.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js" integrity="sha512-w3u9q/DeneCSwUDjhiMNibTRh/1i/gScBVp2imNVAMCt6cUHIw6xzhzcPFIaL3Q1EbI2l+nu17q2aLJJLo4ZYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    
 </head>
 
 <body>
-
+    <div class="overlay99" id="overlay"></div>
 
     <div class="Result-container-listStudent">
         <fieldset>
             <legend>Result</legend>
-            <table>
+            <table id="studentResultListTable" class="studentResultListTable">
                 <tr>
                     <td>S.N</td>
                     <td>Result</td>
@@ -49,8 +52,9 @@ if(isset($_SESSION['target_s_email'])){
                     <?php
                 }
             }
-            $i++;
+            
         }
+        $i++;
     }
     mysqli_close($con);
 }
@@ -59,6 +63,12 @@ if(isset($_SESSION['target_s_email'])){
         </fieldset>
     </div>
 
+    <div class="result-show-download" id="result-show-download">
+
+    </div>
+
+
+<script src="../js/admin-downloadresult.js"></script>
 </body>
 
 </html>
