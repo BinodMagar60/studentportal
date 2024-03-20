@@ -16,7 +16,7 @@ require_once "../php/config/sessionStart.php";
 </head>
 
 <body>
-    <div class="overlay99" id="overlay"></div>
+    <div class="overlay99" id="overlay99"></div>
 
     <div class="Result-container-listStudent">
         <fieldset>
@@ -47,14 +47,9 @@ if(isset($_SESSION['target_s_email'])){
                     ?>
                     <tr>
 <td><?php if(isset($i)) echo $i ?></td>
-<td><a href="admin-studentResultDownload.php?r_id=<?php if(isset($row_inner['id'])) 
-echo $row_inner['id'];
+<td onclick="showStudentDownloadPage('<?php if(isset($row_inner['id'])) echo $row_inner['id'];?>')" style="cursor: pointer;">
 
-
-
-?>">
-
-<?php if(isset($row_inner['exam_title'])) echo $row_inner['exam_title'] ?></a></td>
+<?php if(isset($row_inner['exam_title'])) echo $row_inner['exam_title'] ?></td>
 <td><?php if(isset($publishDate)) echo $publishDate." A.D" ?></td>
                     </tr>
                     <?php
@@ -65,9 +60,9 @@ echo $row_inner['id'];
         $i++;
         }
     }
-    if(!empty($error)){
-        echo "<tr><td colspan='3'>no results</td></tr>";
-    }
+    // if(!empty($error)){
+    //     echo "<tr><td colspan='3'>no results</td></tr>";
+    // }
     mysqli_close($con);
 }
 ?>

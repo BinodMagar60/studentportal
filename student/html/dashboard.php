@@ -70,7 +70,7 @@ require_once "../../php/config/folder.php";
                 </a>
             </div>
             <div class="side-bar-titles">
-                <a class="side-panel-title"><button id="button3" onclick="toggleButton(3)">
+                <a class="side-panel-title"><button id="button3" onclick="toggleButton(3);ResultStudents();">
                         <span><i class="ri-file-list-line"></i></span>Result
                     </button>
                 </a>

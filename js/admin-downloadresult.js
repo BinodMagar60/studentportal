@@ -1,20 +1,61 @@
-// window.onload = function(){
-//     document.getElementById("btn-downloadResult").addEventListener("click", ()=>{
-//         const result = this.document.getElementById("inner-resultContainer-Downlaod");
-//         console.log(result);
-//         console.log(window);
-//         html2pdf().form(result).save();
-//     });
-// }
 
 
-function downloadTheResult() {
-    const result = document.getElementById("inner-resultContainer-Downlaod");
-    if (result) {
-        const htmlContent = result.innerHTML;
-        html2pdf().from(htmlContent).save();
-    } else {
-        console.error("Element with ID 'inner-resultContainer-Downlaod' not found in the DOM.");
-    }
+
+
+
+function downloadResult(){
+    const element = document.getElementById('inner-resultContainer-Downlaod');
+    html2pdf(element, {
+        margin: 1,
+        filename: 'result.pdf',
+        image: { type: 'png', quality: 1 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    });
 }
+
+
+
+
+
+function showStudentDownloadPage(id){
+    var popup = document.getElementById("result-show-download")
+    var overlay = document.getElementById("overlay99")
+    console.log(id);
+
+    popup.classList.add("result-show-download-click");
+    overlay.style.display="block";
+    setTimeout(() => {
+        StudentResultDownloadPage(id);
+    }, 200);
+}
+
+
+function removeStudentDownloadPage(){
+    var popup = document.getElementById("result-show-download")
+    var overlay = document.getElementById("overlay99")
+    popup.classList.remove("result-show-download-click");
+    overlay.style.display="none";
+}
+
+
+
+
+
+function StudentResultDownloadPage(id){
+    const xhr = new XMLHttpRequest();
+    const container = document.getElementById('result-show-download');
+    
+    xhr.onload = function() {
+      if (this.status === 200) {
+        container.innerHTML = xhr.responseText;
+      } else {
+        console.warn("Did not receive 200 OK from response!");
+      }
+    };
+    xhr.open('GET', 'admin-studentResultDownload.php?r_id='+id); 
+    xhr.send();
+  }
+
+
 

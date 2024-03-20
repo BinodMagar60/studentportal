@@ -27,6 +27,8 @@ $newPublishDate= date("Y/m/d",strtotime($studentResult['published_date']));
 
 <body>
     <div class="resultContainer-Download">
+        
+            <button class="btn-closeDaDownloadBtn" onclick="removeStudentDownloadPage()"><i class="ri-close-circle-line"></i></button>
         <div class="inner-resultContainer-Downlaod" id="inner-resultContainer-Downlaod">
             <div class="top-part-result">
                 <div class="schoolname">Chitwan Higher Secondary School</div>
@@ -172,12 +174,10 @@ if(mysqli_num_rows($studentShowExe)>0){
     </div>
 
     <div class="download-btn-result">
-        <button class="btn-downloadResult" id="btn-downloadResult">Downlaod</button>
+        <button class="btn-downloadResult" id="btn-downloadResult" onclick="downloadResult()">Downlaod</button>
     </div>
     </div>
 
-
-   
    <script src="../js/admin-downloadresult.js"></script>
    
 </body>
@@ -188,5 +188,8 @@ if(mysqli_num_rows($studentShowExe)>0){
 <?php
     }
 }
+}
+else{
+    echo "hello world";
 }
 ?>

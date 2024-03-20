@@ -59,14 +59,9 @@ require_once "../../php/config/StudentProfile.php";
           <span><i class="ri-user-line" style="margin-right: 10px;"></i></span>User Profile
         </button>
       </div>
+    
       <div class="side-bar-titles">
-        <a class="side-panel-title"><button id="button2" onclick="toggleButton(2);">
-             <span><i class="ri-file-list-line"></i></span>Result
-          </button></a>
-      </div>
-      
-      <div class="side-bar-titles">
-        <a class="side-panel-title"><button id="button3" onclick="toggleButton(3);studentProfileSetting();">
+        <a class="side-panel-title"><button id="button2" onclick="toggleButton(2);studentProfileSetting();">
             <span><i class="ri-settings-2-line" style="margin-right: 10px;"></i></span>Setting
           </button></a>
       </div>

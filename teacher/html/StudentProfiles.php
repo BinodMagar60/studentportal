@@ -69,7 +69,7 @@ if(isset($_GET['s_email'])){
       
       
       <div class="side-bar-titles">
-        <a class="side-panel-title"><button id="button2" onclick="toggleButton(2);">
+        <a class="side-panel-title"><button id="button2" onclick="toggleButton(2);ResultStudents()">
             <span><i class="ri-file-list-line" style="margin-right: 10px;"></i></span>Result
           </button></a>
       </div>
