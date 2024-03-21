@@ -174,7 +174,7 @@ if(mysqli_num_rows($studentShowExe)>0){
     </div>
 
     <div class="download-btn-result">
-        <button class="btn-downloadResult" id="btn-downloadResult" onclick="downloadResult()">Downlaod</button>
+        <button class="btn-downloadResult" id="btn-downloadResult" onclick="downloadResult('<?php if(isset($studentShowResult['name'])) echo $studentShowResult['name'] ?>')">Downlaod</button>
     </div>
     </div>
 

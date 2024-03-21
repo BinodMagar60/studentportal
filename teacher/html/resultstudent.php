@@ -46,9 +46,9 @@ if(isset($_SESSION['target_s_email'])){
                     ?>
                     <tr>
 <td><?php if(isset($i)) echo $i ?></td>
-<td onclick="showStudentDownloadPage('<?php if(isset($row_inner['id'])) echo $row_inner['id'];?>')" style="cursor: pointer;"><a href="teacher-studentResultDownload.php?r_id=<?php if(isset($row_inner['id'])) echo $row_inner['id'];?>">
+<td onclick="showStudentDownloadPage('<?php if(isset($row_inner['id'])) echo $row_inner['id'];?>')" style="cursor: pointer;">
 
-<?php if(isset($row_inner['exam_title'])) echo $row_inner['exam_title'] ?></a></td>
+<?php if(isset($row_inner['exam_title'])) echo $row_inner['exam_title'] ?></td>
 <td><?php if(isset($publishDate)) echo $publishDate." A.D" ?></td>
                     </tr>
                     <?php
@@ -77,7 +77,7 @@ if(isset($_SESSION['target_s_email'])){
     </div>
 
 
-
+    <script src="../js/resultshow.js"></script>
 </body>
 
 </html>

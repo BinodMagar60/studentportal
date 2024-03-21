@@ -8,6 +8,8 @@ require_once "../../php/config/sessionStart.php";
     <link rel="stylesheet" href="../css/resultstudent.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js" integrity="sha512-w3u9q/DeneCSwUDjhiMNibTRh/1i/gScBVp2imNVAMCt6cUHIw6xzhzcPFIaL3Q1EbI2l+nu17q2aLJJLo4ZYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js" integrity="sha512-w3u9q/DeneCSwUDjhiMNibTRh/1i/gScBVp2imNVAMCt6cUHIw6xzhzcPFIaL3Q1EbI2l+nu17q2aLJJLo4ZYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     
     
 </head>
@@ -45,9 +47,9 @@ if(isset($_SESSION['userEmail'])){
                     ?>
                     <tr>
 <td><?php if(isset($i)) echo $i ?></td>
-<td onclick="showStudentDownloadPage('<?php if(isset($row_inner['id'])) echo $row_inner['id'];?>')" style="cursor: pointer;"><a href="studentResultDownload.php?r_id=<?php if(isset($row_inner['id'])) echo $row_inner['id'];?>">
+<td onclick="showStudentDownloadPage('<?php if(isset($row_inner['id'])) echo $row_inner['id'];?>')" style="cursor: pointer;">
 
-<?php if(isset($row_inner['exam_title'])) echo $row_inner['exam_title'] ?></a></td>
+<?php if(isset($row_inner['exam_title'])) echo $row_inner['exam_title'] ?></td>
 <td><?php if(isset($publishDate)) echo $publishDate." A.D" ?></td>
                     </tr>
                     <?php
@@ -76,7 +78,7 @@ if(isset($_SESSION['userEmail'])){
     </div>
 
 
-
+<script src="../js/resultshow.js"></script>
 </body>
 
 </html>

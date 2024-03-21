@@ -52,7 +52,7 @@ function downloadResult(name){
           console.warn("Did not receive 200 OK from response!");
         }
       };
-      xhr.open('GET', 'resultstudentDownload.php?r_id='+id); 
+      xhr.open('GET', 'studentResultDownload.php?r_id='+id); 
       xhr.send();
     }
   

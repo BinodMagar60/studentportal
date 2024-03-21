@@ -17,7 +17,7 @@ $newPublishDate= date("Y/m/d",strtotime($studentResult['published_date']));
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Result</title>
-    <link rel="stylesheet" href="../css/admin-studentResultList.css">
+    <link rel="stylesheet" href="../css/resultstudent.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js" integrity="sha512-w3u9q/DeneCSwUDjhiMNibTRh/1i/gScBVp2imNVAMCt6cUHIw6xzhzcPFIaL3Q1EbI2l+nu17q2aLJJLo4ZYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
@@ -174,11 +174,11 @@ if(mysqli_num_rows($studentShowExe)>0){
     </div>
 
     <div class="download-btn-result">
-        <button class="btn-downloadResult" id="btn-downloadResult" onclick="downloadResult()">Downlaod</button>
+        <button class="btn-downloadResult" id="btn-downloadResult" onclick="downloadResult('<?php if(isset($studentShowResult['name'])) echo $studentShowResult['name'] ?>')">Downlaod</button>
     </div>
     </div>
 
-   <script src="../js/admin-downloadresult.js"></script>
+   <script src="../js/resultshow.js"></script>
    
 </body>
 
