@@ -1,67 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-:root{
-    
-    
-    --primary-color1: #092635;
-    --primary-color2: #1B4242;
-    --primary-color3: #5C8374;
-    --primary-color4: #9EC8B9;
-    --primary-text1: rgb(255, 255, 255); 
+:root {
+  --primary-color1: #092635;
+  --primary-color2: #1b4242;
+  --primary-color3: #5c8374;
+  --primary-color4: #9ec8b9;
+  --primary-text1: rgb(255, 255, 255);
 }
-    
 
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 
-
-*{
-    margin: 0;
-    border: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-    
-    -ms-overflow-style: none;  
-    scrollbar-width: none;
-    
-      
-    
-    
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 *::-webkit-scrollbar {
-    display: none;
-  }
-
-.announcement-show-1{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    height: 160px;
-    overflow-y: auto;
-    height: 270px;
+  display: none;
 }
 
-
-.announcement-show-2{
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: white;
-    user-select: auto;
+.announcement-show-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: 160px;
+  overflow-y: auto;
+  height: 270px;
 }
 
-
-.announcement-date{
-    font-size: 0.8rem;
-    font-weight: 500;
-    margin-bottom: 4px;
+.announcement-show-2 {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: white;
+  user-select: auto;
 }
 
-.announcement-detail{
-    font-size: 1.1rem;
-    margin-bottom: 3px;
+.announcement-date {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 4px;
 }
 
-.announcement-who{
-    text-align: right;
-    font-size: 0.9rem;
-    font-weight: 500;
+.announcement-detail {
+  font-size: 1.1rem;
+  margin-bottom: 3px;
+}
+
+.announcement-who {
+  text-align: right;
+  font-size: 0.9rem;
+  font-weight: 500;
 }

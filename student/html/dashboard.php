@@ -13,12 +13,8 @@ require_once "../../php/config/folder.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
     <link rel="stylesheet" href="../css/dashboard-style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css"
-        integrity="sha512-ZH3KB6wI5ADHaLaez5ynrzxR6lAswuNfhlXdcdhxsvOUghvf02zU1dAsOC6JrBTWbkE1WNDNs5Dcfz493fDMhA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css" integrity="sha512-ZH3KB6wI5ADHaLaez5ynrzxR6lAswuNfhlXdcdhxsvOUghvf02zU1dAsOC6JrBTWbkE1WNDNs5Dcfz493fDMhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js" integrity="sha512-w3u9q/DeneCSwUDjhiMNibTRh/1i/gScBVp2imNVAMCt6cUHIw6xzhzcPFIaL3Q1EbI2l+nu17q2aLJJLo4ZYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -37,12 +33,12 @@ require_once "../../php/config/folder.php";
                     <div class="useraccount">
                         <div class="U-photo">
                             <!-- user photo in navbar at right side -->
-                            <div class="photo"><img src="../../<?php if(isset($imageSrc)) echo $imageSrc;?>" alt="student photo"></div>
+                            <div class="photo"><img src="../../<?php if (isset($imageSrc)) echo $imageSrc; ?>" alt="student photo"></div>
                         </div>
                         <div class="name-n-role">
                             <!-- name and roll -->
-                            <div class="u-name" name="a-id"><?php if(isset($studentName)) echo $studentName;?></div>
-                            <div class="role" name="role"><?php if(isset($userType)) echo $userType;?></div>
+                            <div class="u-name" name="a-id"><?php if (isset($studentName)) echo $studentName; ?></div>
+                            <div class="role" name="role"><?php if (isset($userType)) echo $userType; ?></div>
                         </div>
                     </div>
                 </a>
@@ -66,7 +62,7 @@ require_once "../../php/config/folder.php";
                     <span style="margin-right: 10px;color: white;-webkit-text-stroke:1px #092635;"><i class="fa-solid fa-file-circle-exclamation"></i></span>Assignments
                 </button>
             </div>
-         
+
             <div class="side-bar-titles">
                 <a class="side-panel-title"><button id="button2" onclick="toggleButton(2);notesShow();">
                         <span tyle="color: white;-webkit-text-stroke:1px #092635;"><i class="fa-solid fa-notes-medical"></i></span>Notes
@@ -194,14 +190,14 @@ require_once "../../php/config/folder.php";
     <script src="../js/resultshow.js"></script>
 
 
-   
+
 
 
     <script>
-    document.addEventListener('DOMContentLoaded', function() {  
-      document.getElementById('button1').click();
-    });
-  </script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('button1').click();
+        });
+    </script>
 
 </body>
 

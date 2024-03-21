@@ -1,93 +1,82 @@
-
-
 //User profile
-function adminUserProfile(){
-    const xhr = new XMLHttpRequest();
-    const container = document.getElementById('container');
-    
-    xhr.onload = function() {
-      if (this.status === 200) {
-        container.innerHTML = xhr.responseText;
-      } else {
-        console.warn("Did not receive 200 OK from response!");
-      }
-    };
-    xhr.open('GET', 'admin-userprofile-profile.php'); 
-    xhr.send();
-  }
-
-
-  //Change password
-  function adminUserSetting(){
-    const xhr = new XMLHttpRequest();
-    const container = document.getElementById('container');
-    
-    xhr.onload = function() {
-      if (this.status === 200) {
-        container.innerHTML = xhr.responseText;
-      } else {
-        console.warn("Did not receive 200 OK from response!");
-      }
-    };
-    xhr.open('GET', 'admin-userprofile-setting.php'); 
-    xhr.send();
-  }
-
-
-
-  
-function eventNotification() {
+function adminUserProfile() {
   const xhr = new XMLHttpRequest();
-  const container = document.getElementById('event-show');
+  const container = document.getElementById("container");
 
   xhr.onload = function () {
-      if (this.status === 200) {
-          container.innerHTML = xhr.responseText;
-          hideOldEvents(); 
-      } else {
-          console.warn("Did not receive 200 OK from response!");
-      }
+    if (this.status === 200) {
+      container.innerHTML = xhr.responseText;
+    } else {
+      console.warn("Did not receive 200 OK from response!");
+    }
   };
-  xhr.open('GET', 'admin-sidenotifications.php');
+  xhr.open("GET", "admin-userprofile-profile.php");
+  xhr.send();
+}
+
+//Change password
+function adminUserSetting() {
+  const xhr = new XMLHttpRequest();
+  const container = document.getElementById("container");
+
+  xhr.onload = function () {
+    if (this.status === 200) {
+      container.innerHTML = xhr.responseText;
+    } else {
+      console.warn("Did not receive 200 OK from response!");
+    }
+  };
+  xhr.open("GET", "admin-userprofile-setting.php");
+  xhr.send();
+}
+
+function eventNotification() {
+  const xhr = new XMLHttpRequest();
+  const container = document.getElementById("event-show");
+
+  xhr.onload = function () {
+    if (this.status === 200) {
+      container.innerHTML = xhr.responseText;
+      hideOldEvents();
+    } else {
+      console.warn("Did not receive 200 OK from response!");
+    }
+  };
+  xhr.open("GET", "admin-sidenotifications.php");
   xhr.send();
 }
 
 function hideOldEvents() {
-  const eventElements = document.querySelectorAll('.event-show-2');
+  const eventElements = document.querySelectorAll(".event-show-2");
 
   const today = new Date();
-  today.setHours(0, 0, 0, 0); 
+  today.setHours(0, 0, 0, 0);
   eventElements.forEach((eventElement) => {
-      const dateString = eventElement.querySelector('.event1-date').textContent;
-      const monthString = eventElement.querySelector('.event1-month').textContent;
+    const dateString = eventElement.querySelector(".event1-date").textContent;
+    const monthString = eventElement.querySelector(".event1-month").textContent;
 
-      const eventDate = new Date(`${monthString} ${dateString}, ${today.getFullYear()}`);
+    const eventDate = new Date(
+      `${monthString} ${dateString}, ${today.getFullYear()}`
+    );
 
-      if (eventDate < today) {
-          eventElement.style.display = 'none';
-      }
+    if (eventDate < today) {
+      eventElement.style.display = "none";
+    }
   });
 }
 
-
-
-
-
-
 function announcementNotification() {
   const xhr = new XMLHttpRequest();
-  const container = document.getElementById('announcement-show');
+  const container = document.getElementById("announcement-show");
 
   xhr.onload = function () {
-      if (this.status === 200) {
-          container.innerHTML = xhr.responseText;
-          hideOldEvents(); 
-      } else {
-          console.warn("Did not receive 200 OK from response!");
-      }
+    if (this.status === 200) {
+      container.innerHTML = xhr.responseText;
+      hideOldEvents();
+    } else {
+      console.warn("Did not receive 200 OK from response!");
+    }
   };
-  xhr.open('GET', 'admin-sideAnnouncements.php');
+  xhr.open("GET", "admin-sideAnnouncements.php");
   xhr.send();
 }
-
-

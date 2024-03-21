@@ -1,6 +1,6 @@
 <?php
-    require_once "../php/config/sessionStart.php";
-    require_once "../php/loginCheck/adminCheck.php";
+require_once "../php/config/sessionStart.php";
+require_once "../php/loginCheck/adminCheck.php";
 require_once "../php/config/db.php";
 $class = isset($_GET['classes']) ? $_GET['classes'] : 'one';
 $section = isset($_GET['sections']) ? $_GET['sections'] : 'A';
@@ -27,7 +27,7 @@ $search = isset($_GET['search']) ? $_GET['search'] : '';
                     <div class="search-student-table">
                         <div class="search">
                             <button><span class="search-here"><i class="ri-search-line"></i></span></button>
-                            <input type="text" id="search" autocomplete="off" placeholder="Search here..." name="search" onkeyup="searchFun2();" >
+                            <input type="text" id="search" autocomplete="off" placeholder="Search here..." name="search" onkeyup="searchFun2();">
                         </div>
                     </div>
                 </div>
@@ -40,7 +40,7 @@ $search = isset($_GET['search']) ? $_GET['search'] : '';
 
     <script src="../js/admin-admindetail-php.js"></script>
     <script>
-       
+
     </script>
 </body>
 

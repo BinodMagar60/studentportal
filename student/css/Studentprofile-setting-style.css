@@ -1,73 +1,64 @@
-*{
-    border: none;
-    margin: none;
-    padding: none;
-    box-sizing: border-box;
+* {
+  border: none;
+  margin: none;
+  padding: none;
+  box-sizing: border-box;
 }
 
-form{
-    
-    background-color: white;
-    padding: 40px;
-    margin: 20px 20px 0 20px;
-    font-size: 1.125rem;
-    height: 100%;
-    position: relative;
+form {
+  background-color: white;
+  padding: 40px;
+  margin: 20px 20px 0 20px;
+  font-size: 1.125rem;
+  height: 100%;
+  position: relative;
 }
-
 
 .topname {
-    font-size: 2.188rem;
-    font-weight: 500;
-    padding-bottom: 50px;
+  font-size: 2.188rem;
+  font-weight: 500;
+  padding-bottom: 50px;
 }
 
-.password-contents{
-    width: 100%;
+.password-contents {
+  width: 100%;
 }
 
-.label-password{
-    font-size: 1.375rem;
-    font-weight: 400;
+.label-password {
+  font-size: 1.375rem;
+  font-weight: 400;
 }
 
-.label-password2{
-    margin-top: 30px;
+.label-password2 {
+  margin-top: 30px;
 }
 
-.changepassword input{
-    font-size: 18px;
-    font-weight: 400;
-    outline: none;
-    border: 1px solid black;
-    max-width: 300px;
-    width: 100%;
-    padding: 5px 3px;
-    margin-top: 10px;
+.changepassword input {
+  font-size: 18px;
+  font-weight: 400;
+  outline: none;
+  border: 1px solid black;
+  max-width: 300px;
+  width: 100%;
+  padding: 5px 3px;
+  margin-top: 10px;
 }
 
-#updateButton{
-    margin-top: 30px;
-    font-size: 1.375rem;
-    padding: 5px 20px;
-    background-color: var(--primary-color2);
-    color: var(--primary-text1);
-    border: 1px solid black;
-    box-shadow: 0 0 1px 1px white inset;
-    cursor: pointer;
-    
+#updateButton {
+  margin-top: 30px;
+  font-size: 1.375rem;
+  padding: 5px 20px;
+  background-color: var(--primary-color2);
+  color: var(--primary-text1);
+  border: 1px solid black;
+  box-shadow: 0 0 1px 1px white inset;
+  cursor: pointer;
 }
 
-.error,.error2{
-    color: red;
-    font-weight: 300;
+.error,
+.error2 {
+  color: red;
+  font-weight: 300;
 }
-
-
-
-
 
 /* for deleting  */
-
-
-

@@ -1,40 +1,52 @@
 let currentDate = new Date();
 let selectedDate = currentDate;
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   renderCalendar();
 });
 function renderCalendar() {
-  const calendarBody = document.querySelector('#calendar tbody');
+  const calendarBody = document.querySelector("#calendar tbody");
   const today = new Date();
-  const firstDay = new Date(selectedDate.getFullYear(), selectedDate.getMonth(), 1);
-  const lastDay = new Date(selectedDate.getFullYear(), selectedDate.getMonth() + 1, 0);
+  const firstDay = new Date(
+    selectedDate.getFullYear(),
+    selectedDate.getMonth(),
+    1
+  );
+  const lastDay = new Date(
+    selectedDate.getFullYear(),
+    selectedDate.getMonth() + 1,
+    0
+  );
   const daysInMonth = lastDay.getDate();
   const startDay = firstDay.getDay();
   let dayCounter = 1;
-  const options = {year: 'numeric', month: 'long', day: 'numeric' };
-  const formattedCurrentDate = currentDate.toLocaleDateString('en-US', options);
-  document.getElementById('currentDate').textContent = formattedCurrentDate;
-  calendarBody.innerHTML = '';
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  const formattedCurrentDate = currentDate.toLocaleDateString("en-US", options);
+  document.getElementById("currentDate").textContent = formattedCurrentDate;
+  calendarBody.innerHTML = "";
   for (let i = 0; i < 6; i++) {
-    const row = document.createElement('tr');
+    const row = document.createElement("tr");
     let rowHasDates = false;
     for (let j = 0; j < 7; j++) {
-      const cell = document.createElement('td');
+      const cell = document.createElement("td");
       if ((i === 0 && j < startDay) || dayCounter > daysInMonth) {
-        cell.textContent = '';
+        cell.textContent = "";
       } else {
         cell.textContent = dayCounter;
         rowHasDates = true;
-        const cellDate = new Date(selectedDate.getFullYear(), selectedDate.getMonth(), dayCounter);
+        const cellDate = new Date(
+          selectedDate.getFullYear(),
+          selectedDate.getMonth(),
+          dayCounter
+        );
         if (cellDate.toDateString() === today.toDateString()) {
-          cell.classList.add('today');
+          cell.classList.add("today");
         }
 
         if (cellDate.toDateString() === currentDate.toDateString()) {
-          cell.classList.add('selected');
+          cell.classList.add("selected");
         }
-        cell.addEventListener('click', function () {
+        cell.addEventListener("click", function () {
           selectedDate = cellDate;
           renderCalendar();
         });
@@ -64,7 +76,10 @@ function showNextMonth() {
 }
 
 function updateCurrentDate() {
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
-  const formattedCurrentDate = selectedDate.toLocaleDateString('en-US', options);
-  document.getElementById('currentDate').textContent = formattedCurrentDate;
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  const formattedCurrentDate = selectedDate.toLocaleDateString(
+    "en-US",
+    options
+  );
+  document.getElementById("currentDate").textContent = formattedCurrentDate;
 }

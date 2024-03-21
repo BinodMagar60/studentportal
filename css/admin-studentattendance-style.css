@@ -1,143 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-:root{
-    --primary-color1: #092635;
-    --primary-color2: #1B4242;
-    --primary-color3: #5C8374;
-    --primary-color4: #9EC8B9;
-    --primary-text1: rgb(255, 255, 255); 
+:root {
+  --primary-color1: #092635;
+  --primary-color2: #1b4242;
+  --primary-color3: #5c8374;
+  --primary-color4: #9ec8b9;
+  --primary-text1: rgb(255, 255, 255);
 }
 
-
-*{
-    margin: 0;
-    border: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
- 
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
-
-
-
-
 
 /* upper search or select part */
 
-form{
-    
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 20px 0 20px;
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 20px 0 20px;
 }
 
-fieldset{
-    border: 1px solid black;
-    padding: 30px;
-    border-radius: 5px;
+fieldset {
+  border: 1px solid black;
+  padding: 30px;
+  border-radius: 5px;
 }
-legend{
-    font-size: 1.25rem;
-    font-weight: 500;
-}
-
-.search-student{
-    display: flex;
-    justify-content: space-between;
-    
+legend {
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
-
-.select-opt{
-    display: flex;
+.search-student {
+  display: flex;
+  justify-content: space-between;
 }
 
-
-.class,.section{
-    font-size: 1.125rem;
-    font-weight: 500;
+.select-opt {
+  display: flex;
 }
 
-#classes, #sections{
-    border: 1px solid black;
-    margin-right: 40px;
-    margin-left: 10px;
-    font-size: 1rem;
-    outline: none;
-    padding: 3px 10px;
+.class,
+.section {
+  font-size: 1.125rem;
+  font-weight: 500;
 }
 
-.go button{
-    font-size: 18px;
-    padding: 5px 15px;
-    background-color: var(--primary-color2);
-    color: var(--primary-text1);
-    border: 1px solid black;
-    box-shadow: 0 0 1px 1px white inset;
-    cursor: pointer;
-    
+#classes,
+#sections {
+  border: 1px solid black;
+  margin-right: 40px;
+  margin-left: 10px;
+  font-size: 1rem;
+  outline: none;
+  padding: 3px 10px;
 }
 
-.go button:hover{
-    background-color: rgb(83, 180, 83);
-    border-color: rgb(83, 180, 83);
-   
+.go button {
+  font-size: 18px;
+  padding: 5px 15px;
+  background-color: var(--primary-color2);
+  color: var(--primary-text1);
+  border: 1px solid black;
+  box-shadow: 0 0 1px 1px white inset;
+  cursor: pointer;
+}
+
+.go button:hover {
+  background-color: rgb(83, 180, 83);
+  border-color: rgb(83, 180, 83);
 }
 
 /* upper search or select end */
 
-
 /* bottom one start */
 
-.lower-content{
-    margin: 20px 20px 0 20px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
+.lower-content {
+  margin: 20px 20px 0 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
 }
 
-.search{
-    border: 1px solid black;
-    font-size: 1rem;
-    max-width: 400px;
-    width: 100%;
-    
+.search {
+  border: 1px solid black;
+  font-size: 1rem;
+  max-width: 400px;
+  width: 100%;
 }
-.search-here{
-    border-right: 1px solid black;
-    padding: 10px;
-    font-size: 1.125rem;
-    
-    
+.search-here {
+  border-right: 1px solid black;
+  padding: 10px;
+  font-size: 1.125rem;
 }
-.search input{
-    font-size: 1.125rem;
-    outline: none;
-    padding: 10px;
-    font-weight: 400;
-    max-width: 340px;
-    width: 100%;
-    text-transform: capitalize;
-    
+.search input {
+  font-size: 1.125rem;
+  outline: none;
+  padding: 10px;
+  font-weight: 400;
+  max-width: 340px;
+  width: 100%;
+  text-transform: capitalize;
 }
 
-
-.search-student-table{
-    display: flex;
-    justify-content: center;
+.search-student-table {
+  display: flex;
+  justify-content: center;
 }
 
-.search button{
-    background-color: transparent;
+.search button {
+  background-color: transparent;
 }
 
 /* bottom one end */
-
-
-
-
-
-
-

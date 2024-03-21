@@ -57,30 +57,24 @@ function checkChanges() {
 
 // Handle the update button click
 function updateStudentForm() {
- alert("Student Information Up")
+  alert("Student Information Up");
 }
 
-
-
-
-
-
 function displayImage(input, location) {
-  const imageContainer = document.getElementById('imageContainer');
-  const uploadedImage = document.getElementById('uploadedImage');
+  const imageContainer = document.getElementById("imageContainer");
+  const uploadedImage = document.getElementById("uploadedImage");
 
   const file = input.files[0];
 
   if (file) {
-      const reader = new FileReader();
+    const reader = new FileReader();
 
-      reader.onload = function (e) {
-          uploadedImage.src = e.target.result;
-      };
+    reader.onload = function (e) {
+      uploadedImage.src = e.target.result;
+    };
 
-      reader.readAsDataURL(file);
+    reader.readAsDataURL(file);
   } else {
-
-      uploadedImage.src = "../"+location;
+    uploadedImage.src = "../" + location;
   }
 }

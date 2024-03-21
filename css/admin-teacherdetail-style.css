@@ -1,201 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-:root{
-    --primary-color1: #092635;
-    --primary-color2: #1B4242;
-    --primary-color3: #5C8374;
-    --primary-color4: #9EC8B9;
-    --primary-text1: rgb(255, 255, 255); 
+:root {
+  --primary-color1: #092635;
+  --primary-color2: #1b4242;
+  --primary-color3: #5c8374;
+  --primary-color4: #9ec8b9;
+  --primary-text1: rgb(255, 255, 255);
 }
 
-
-*{
-    margin: 0;
-    border: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-    
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
-
-
-
-
 
 /* upper search or select part */
 
-
-fieldset{
-    border: 1px solid black;
-    padding: 30px;
-    border-radius: 5px;
+fieldset {
+  border: 1px solid black;
+  padding: 30px;
+  border-radius: 5px;
 }
 
-legend{
-    font-size: 1.125rem;
-    font-weight: 500;
+legend {
+  font-size: 1.125rem;
+  font-weight: 500;
 }
 
-.search-student{
-    width: 100%;    
-    display: flex;
-    justify-content: center;
-    
+.search-student {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-
-
-
-
 
 /* upper search or select end */
 
-
 /* bottom one start */
 
-.lower-content{
-    margin: 20px 20px 0 20px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
+.lower-content {
+  margin: 20px 20px 0 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
 }
 
-.search{
-    border: 1px solid black;
-    font-size: 1rem;
-    max-width: 400px;
-    width: 100%;
-    
+.search {
+  border: 1px solid black;
+  font-size: 1rem;
+  max-width: 400px;
+  width: 100%;
 }
 
-.search button{
-    background-color: transparent;
+.search button {
+  background-color: transparent;
 }
 
-.search-here{
-    border-right: 1px solid black;
-    padding: 6px 10px;
-    font-size: 1.125rem;
-    
-    
+.search-here {
+  border-right: 1px solid black;
+  padding: 6px 10px;
+  font-size: 1.125rem;
 }
-.search input::placeholder{
-    font-size: 1rem;
+.search input::placeholder {
+  font-size: 1rem;
 }
 
-.search input{
-    font-size: 1rem;
-    outline: none;
-    padding: 6px 10px;
-    font-weight: 400;
-    max-width: 240px;
-    width: 100%;
-    
-    
+.search input {
+  font-size: 1rem;
+  outline: none;
+  padding: 6px 10px;
+  font-weight: 400;
+  max-width: 240px;
+  width: 100%;
 }
 
-
-
-
-
-
-.searched-box{
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+.searched-box {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-
-#myTable{
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 18px;
-    
-    
+#myTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 18px;
 }
 
-#myTable tr th{
-    text-align: left;
-    padding-left: 20px;
-    height: 40px;
-    font-weight: 500;
-    font-size: 1.25;
-
+#myTable tr th {
+  text-align: left;
+  padding-left: 20px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 1.25;
 }
 
-#myTable tr:nth-child(odd){
-    background-color: #f7f7f7;
+#myTable tr:nth-child(odd) {
+  background-color: #f7f7f7;
 }
 
 #myTable tr {
-    height: 35px;
+  height: 35px;
 }
 
-#myTable tr td:nth-child(1),#myTable tr th:nth-child(1){
-    width: 80px;
+#myTable tr td:nth-child(1),
+#myTable tr th:nth-child(1) {
+  width: 80px;
 }
 
-
-#myTable tr td:nth-child(1){
-    padding-left: 25px;
+#myTable tr td:nth-child(1) {
+  padding-left: 25px;
 }
 
-#myTable tr td{
-    padding-left: 20px;
+#myTable tr td {
+  padding-left: 20px;
 }
 
-#myTable tr a{
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
+#myTable tr a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
 }
 
-#myTable tr a:hover{
-    color: rgb(236, 72, 72);
+#myTable tr a:hover {
+  color: rgb(236, 72, 72);
 }
 
-
-
-#myTable tr:nth-child(1){
-    background-color: #4591b8;
+#myTable tr:nth-child(1) {
+  background-color: #4591b8;
 }
 
-
-
-
-
-
-
-
-
-#myTable tr td{
-    padding: 5px;
+#myTable tr td {
+  padding: 5px;
 }
 
-
-
-
-.show-teacher-btn{
-    font-size: 1rem;
-    padding: 5px 10px;
-    color: black;
-    font-weight: 300;
-    border: 1px solid;
-    background-color: white;
-    cursor: pointer;
-
+.show-teacher-btn {
+  font-size: 1rem;
+  padding: 5px 10px;
+  color: black;
+  font-weight: 300;
+  border: 1px solid;
+  background-color: white;
+  cursor: pointer;
 }
 
-.show-teacher-btn:hover{
-    background-color: black;
-    color: white;
-    transition: all 200ms ease-in-out;
+.show-teacher-btn:hover {
+  background-color: black;
+  color: white;
+  transition: all 200ms ease-in-out;
 }
-
-
-
-
-
-

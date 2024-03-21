@@ -1,9 +1,10 @@
 <?php
-    require_once "../php/config/sessionStart.php";
-    require_once "../php/loginCheck/adminCheck.php";
+require_once "../php/config/sessionStart.php";
+require_once "../php/loginCheck/adminCheck.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,12 +13,13 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css" integrity="sha512-ZH3KB6wI5ADHaLaez5ynrzxR6lAswuNfhlXdcdhxsvOUghvf02zU1dAsOC6JrBTWbkE1WNDNs5Dcfz493fDMhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <div class="teacheradd">
         <form id="teacherForm" enctype="multipart/form-data" novalidate>
             <fieldset>
                 <legend>Add New Profile</legend>
-                
+
                 <table id="tablebox">
                     <tr>
                         <td colspan="3" class="title title1">Teacher Details</td>
@@ -46,7 +48,7 @@
                     </tr>
                     <tr>
                         <td>Contact No.</td>
-                        <td><input type="number" id="t-contact" name="t-contact" class="t-contact" placeholder="Contact" ></td>
+                        <td><input type="number" id="t-contact" name="t-contact" class="t-contact" placeholder="Contact"></td>
                         <td class="error e-contact"></td>
                     </tr>
                     <tr>
@@ -82,15 +84,16 @@
                     </tr>
 
                 </table>
-                <button type="submit" class="submit-btn" name="t_submit"  onclick="submitTeacherForm(event);">submit</button>
+                <button type="submit" class="submit-btn" name="t_submit" onclick="submitTeacherForm(event);">submit</button>
             </fieldset>
         </form>
     </div>
 
     <div class="popupbox1" id="popupbox1">
         <div class="logo-update"><i class="fa-regular fa-circle-check" style="color: #00ff40;"></i></div>
-                <div class="successfullyUpdated">Successfully Added</div>
+        <div class="successfullyUpdated">Successfully Added</div>
     </div>
     <script src="../js/admin-teacheradd-php.js"></script>
 </body>
+
 </html>

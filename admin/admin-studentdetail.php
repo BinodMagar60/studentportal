@@ -1,6 +1,6 @@
 <?php
-    require_once "../php/config/sessionStart.php";
-    require_once "../php/loginCheck/adminCheck.php";
+require_once "../php/config/sessionStart.php";
+require_once "../php/loginCheck/adminCheck.php";
 require_once "../php/config/db.php";
 $class = isset($_GET['classes']) ? $_GET['classes'] : 'one';
 $section = isset($_GET['sections']) ? $_GET['sections'] : 'A';
@@ -28,7 +28,7 @@ $search = isset($_GET['search']) ? $_GET['search'] : '';
                         <div class="class">
                             <label for="classes">Class:</label>
                             <select name="classes" id="classes" onchange="tableData();">
-                                <option value="one"  <?php echo ($class == 'one' ? 'selected' : ''); ?>>One</option>
+                                <option value="one" <?php echo ($class == 'one' ? 'selected' : ''); ?>>One</option>
                                 <option value="two" <?php echo ($class == 'two' ? 'selected' : ''); ?>>Two</option>
                                 <option value="three" <?php echo ($class == 'three' ? 'selected' : ''); ?>>Three</option>
                                 <option value="four" <?php echo ($class == 'four' ? 'selected' : ''); ?>>Four</option>
@@ -64,17 +64,13 @@ $search = isset($_GET['search']) ? $_GET['search'] : '';
         </form>
     </div>
 
-    <script  src="../js/admin-studentdetail-php.js"></script>
+    <script src="../js/admin-studentdetail-php.js"></script>
     <script>
-
-       
-
-
         document.getElementById('classes').value = '<?php echo $class; ?>';
         tableData(); // Initial call to tableData
 
         // Set up event listeners for class and section change outside of tableData
-        document.getElementById('classes','sections').addEventListener('change', function () {
+        document.getElementById('classes', 'sections').addEventListener('change', function() {
             tableData();
         });
     </script>

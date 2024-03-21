@@ -4,7 +4,7 @@ require_once "../../php/loginCheck/teacherCheck.php";
 require_once "../../php/config/db.php";
 $class = isset($_GET['class']) ? $_GET['class'] : 'one';
 $section = isset($_GET['section']) ? $_GET['section'] : 'everyone';
-$subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
+$subject = isset($_GET['subject']) ? $_GET['subject'] : 'English';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +32,7 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
                     <tr>
                         <td>Class</td>
                         <td><select name="ac_class" id="selectClass_assignment" onchange="assignmentCheckData()">
-                        <option value="one"  <?php echo ($class == 'one' ? 'selected' : ''); ?>>One</option>
+                                <option value="one" <?php echo ($class == 'one' ? 'selected' : ''); ?>>One</option>
                                 <option value="two" <?php echo ($class == 'two' ? 'selected' : ''); ?>>Two</option>
                                 <option value="three" <?php echo ($class == 'three' ? 'selected' : ''); ?>>Three</option>
                                 <option value="four" <?php echo ($class == 'four' ? 'selected' : ''); ?>>Four</option>
@@ -73,7 +73,7 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
             </div>
 
             <div class="title-assignment-check">Assignment Lists</div>
-           
+
             <div class="assignment-check-container" id="assignment-check-container">
 
             </div>

@@ -1,226 +1,187 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-
-
-
-
-*{
-    margin: 0;
-    border: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-    -ms-overflow-style: none;  
-    scrollbar-width: none;  
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-
 
 *::-webkit-scrollbar {
-    display: none;
-  }
-
-
-  .Result-container{
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    margin-left: 20px;
-  }
-
-
-
-  .container{
-    padding: 20px;
-  }
-
-
-  fieldset{
-    border: 1px solid black;
-    padding: 40px 30px;
-    border-radius: 5px;
-    font-size: 1.125rem;
-    padding-bottom: 20px !important;
-    
-}
-legend{
-    font-size: 1.25rem;
-    font-weight: 500;
+  display: none;
 }
 
-
-
-.result-teacher-table{
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 40px;
+.Result-container {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  margin-left: 20px;
 }
 
-.result-teacher-table tr:nth-child(1){
-    background-color: #4591b8 !important;
+.container {
+  padding: 20px;
 }
 
-
-.result-teacher-table tr:nth-child(odd){
-    background-color: #f7f7f7;
+fieldset {
+  border: 1px solid black;
+  padding: 40px 30px;
+  border-radius: 5px;
+  font-size: 1.125rem;
+  padding-bottom: 20px !important;
+}
+legend {
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
-
-.result-teacher-table tr td{
-    padding: 10px;
-    text-transform: capitalize;
-    font-size: 1.25rem;
+.result-teacher-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
 
-
-.result-teacher-table tr td:nth-child(1){
-    width: 50px;
+.result-teacher-table tr:nth-child(1) {
+  background-color: #4591b8 !important;
 }
 
-.result-teacher-table tr td:nth-child(2){
-    cursor: pointer;
+.result-teacher-table tr:nth-child(odd) {
+  background-color: #f7f7f7;
 }
 
-
-.result-teacher-table tr td:nth-child(3),.result-teacher-table tr td:nth-child(4){
-    width: 200px;
+.result-teacher-table tr td {
+  padding: 10px;
+  text-transform: capitalize;
+  font-size: 1.25rem;
 }
 
-
-.result-teacher-table tr td:not(td:nth-child(2)){
-    text-align: center;
+.result-teacher-table tr td:nth-child(1) {
+  width: 50px;
 }
 
-
-
-
-
-
-.container-resultInsert{
-    /* border: 1px solid black; */
-    box-shadow: 0 0 2px 2px rgba(175, 175, 175, 0.603);
-    padding: 40px 30px;
-    width: 1300px;
-    height: 800px;
-    position: fixed;
-    top: -10000px;
-    left: 450px;
-    background-color: white;
-    z-index: 10000;
-    transition: top 100ms ease-in-out;
+.result-teacher-table tr td:nth-child(2) {
+  cursor: pointer;
 }
 
-.container-resultInsert-clicked{
-    top: 80px !important;
-    transition: top 250ms ease-in-out;
+.result-teacher-table tr td:nth-child(3),
+.result-teacher-table tr td:nth-child(4) {
+  width: 200px;
 }
 
-.overlay2{
-    height: 10000px;
-    width: 10000px;
-    position: fixed;
-    top: -1000px;
-    left: -1000px;
-    background-color: transparent;
-    z-index: 9999;
-    display: none;
+.result-teacher-table tr td:not(td:nth-child(2)) {
+  text-align: center;
 }
 
-
-
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+.container-resultInsert {
+  /* border: 1px solid black; */
+  box-shadow: 0 0 2px 2px rgba(175, 175, 175, 0.603);
+  padding: 40px 30px;
+  width: 1300px;
+  height: 800px;
+  position: fixed;
+  top: -10000px;
+  left: 450px;
+  background-color: white;
+  z-index: 10000;
+  transition: top 100ms ease-in-out;
 }
 
-
-
-.top-result{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
+.container-resultInsert-clicked {
+  top: 80px !important;
+  transition: top 250ms ease-in-out;
 }
 
-
-.result-title{
-    font-size: 1.5rem;
-    font-weight: 500;
+.overlay2 {
+  height: 10000px;
+  width: 10000px;
+  position: fixed;
+  top: -1000px;
+  left: -1000px;
+  background-color: transparent;
+  z-index: 9999;
+  display: none;
 }
 
-.close-result{
-    background-color: transparent;
-    font-size: 1.7rem;
-    font-weight: 500;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.close-result:hover{
-    cursor: pointer;
-    color: red;
+.top-result {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
 }
 
-.container-result-insertmarks{
-    width: 100%;
+.result-title {
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
-#ResultForm{
-    overflow: scroll;
+.close-result {
+  background-color: transparent;
+  font-size: 1.7rem;
+  font-weight: 500;
 }
 
-
-.resultTableUser{
-    border-collapse: collapse;
-    width: 100%;
+.close-result:hover {
+  cursor: pointer;
+  color: red;
 }
 
-.resultTableUser tr td{
-    border: 1px solid black;
+.container-result-insertmarks {
+  width: 100%;
 }
 
-
-.resultTableUser tr:nth-child(1), .resultTableUser tr td:nth-child(1){
-    background-color: #4591b8 ;
+#ResultForm {
+  overflow: scroll;
 }
 
-
-
-.resultTableUser tr:nth-child(1) td,.resultTableUser tr td:nth-child(1){
-    font-size: 1rem;
-    padding: 10px;
+.resultTableUser {
+  border-collapse: collapse;
+  width: 100%;
 }
 
-.resultTableUser tr td:not(td:nth-child(1)){
-    text-align: center;
+.resultTableUser tr td {
+  border: 1px solid black;
 }
 
-
-
-.resultTableUser tr td:nth-child(1){
-    width: 300px;
+.resultTableUser tr:nth-child(1),
+.resultTableUser tr td:nth-child(1) {
+  background-color: #4591b8;
 }
 
-.resultTableUser tr td input{
-    font-size: 1rem;
-    width: 80px;
-    outline: none;
-    text-align: center;
+.resultTableUser tr:nth-child(1) td,
+.resultTableUser tr td:nth-child(1) {
+  font-size: 1rem;
+  padding: 10px;
 }
 
-
-
-.middle-section-result{
-    margin-bottom: 10px;
+.resultTableUser tr td:not(td:nth-child(1)) {
+  text-align: center;
 }
 
-
-.middle-section-result div{
-    font-size: 1.25rem;
-    font-weight: 400;
+.resultTableUser tr td:nth-child(1) {
+  width: 300px;
 }
 
+.resultTableUser tr td input {
+  font-size: 1rem;
+  width: 80px;
+  outline: none;
+  text-align: center;
+}
 
+.middle-section-result {
+  margin-bottom: 10px;
+}
 
-
-
+.middle-section-result div {
+  font-size: 1.25rem;
+  font-weight: 400;
+}

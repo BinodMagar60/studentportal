@@ -7,8 +7,6 @@ function assignmentValidation() {
   var title = titleInput.value;
   var description = descriptionInput.value;
 
-
-
   var e1 = document.querySelector(".error1");
   var e2 = document.querySelector(".error2");
   var e3 = document.querySelector(".error3");
@@ -21,7 +19,6 @@ function assignmentValidation() {
     e1.innerText = "";
   }
 
- 
   if (title === "") {
     e2.innerText = "*Title is required";
     valid = valid + 1;
@@ -73,7 +70,9 @@ const tableDataAssignment = () => {
         data: {},
         success: function (response) {
           // console.log(response);
-          var searchedBox = document.querySelector("#assignment-list-show-container");
+          var searchedBox = document.querySelector(
+            "#assignment-list-show-container"
+          );
           if (searchedBox) {
             searchedBox.innerHTML = response;
           } else {
@@ -115,21 +114,15 @@ function removeAssignmentPopup() {
   popupbox.classList.remove("popup-assignment-submit-clicked");
 }
 
-
-
-
-
-
 function assignmentDelete(aid) {
-
-  var deleteBox = document.getElementById("assignment-delete-"+aid);
+  var deleteBox = document.getElementById("assignment-delete-" + aid);
   var overlay = document.getElementById("overlay");
   deleteBox.classList.add("assignment-delete-popup");
   overlay.style.display = "block";
 }
 
 function assingmentDeleteRemove(aid) {
-  var deleteBox = document.getElementById("assignment-delete-"+aid);
+  var deleteBox = document.getElementById("assignment-delete-" + aid);
   var overlay = document.getElementById("overlay");
   deleteBox.classList.remove("assignment-delete-popup");
   overlay.style.display = "none";
@@ -150,10 +143,7 @@ function assignmentUpdateRemeove() {
   overlay.style.display = "none";
 }
 
-
-
 function assignmentDeletePopup() {
-  
   var popup = document.getElementById("popup-assignment-delete-successfully");
   popup.classList.add("popup-assignment-submit-clicked");
   setTimeout(() => {
@@ -161,8 +151,7 @@ function assignmentDeletePopup() {
   }, 1500);
 }
 
-
-function confirmDeleteAssignment(aId){
+function confirmDeleteAssignment(aId) {
   var xhr = new XMLHttpRequest();
   xhr.open("GET", "../php/assignment/deleteAssignment.php?uid=" + aId, true);
   xhr.onreadystatechange = function () {
@@ -176,27 +165,18 @@ function confirmDeleteAssignment(aId){
     assignmentDeletePopup();
     tableDataAssignment();
   }, 100);
-  
-
-
-  
 }
-
-
-
-
-
-
 
 function assignmentUpdatePopup() {
   var id = $("#assignmentDetails input[name='id']").val();
   var exp_date = $("#assignmentDetails input[name='assign_date']").val();
   var a_title = $("#assignmentDetails input[name='assign_title']").val();
-  var a_description = $("#assignmentDetails textarea[name='assign_description']").val();
+  var a_description = $(
+    "#assignmentDetails textarea[name='assign_description']"
+  ).val();
   var a_class = $("#assignmentDetails select[name='assign_class']").val();
   var a_section = $("#assignmentDetails select[name='assign_section']").val();
   var a_subject = $("#assignmentDetails select[name='assign_subject']").val();
- 
 
   $.ajax({
     type: "POST",
@@ -208,7 +188,7 @@ function assignmentUpdatePopup() {
       assign_description: a_description,
       assign_class: a_class,
       assign_section: a_section,
-      assign_subject: a_subject
+      assign_subject: a_subject,
     },
     success: function (response) {
       // console.log(response);
@@ -218,41 +198,23 @@ function assignmentUpdatePopup() {
       // console.log(a_class);
       // console.log(a_section);
 
-
-
-
-
       assignmentUpdateRemeove();
-  var popup = document.getElementById("popup-assignment-update-successfully");
-  popup.classList.add("popup-assignment-submit-clicked");
-  setTimeout(() => {
-    popup.classList.remove("popup-assignment-submit-clicked");
-  }, 1500);
-
-
+      var popup = document.getElementById(
+        "popup-assignment-update-successfully"
+      );
+      popup.classList.add("popup-assignment-submit-clicked");
+      setTimeout(() => {
+        popup.classList.remove("popup-assignment-submit-clicked");
+      }, 1500);
     },
     error: function (error) {
       console.log(error);
     },
   });
 
-
-
   setTimeout(() => {
     tableDataAssignment();
   }, 100);
-  
 }
 
-
-
-
-
-
-
-
-
-
 // assignmentDeletePopup();
-
-

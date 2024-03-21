@@ -1,94 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-
-
-
-
-*{
-    margin: 0;
-    border: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-    -ms-overflow-style: none;  
-    scrollbar-width: none;  
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-
 
 *::-webkit-scrollbar {
-    display: none;
-  }
-
-
-  .Result-container-listStudent{
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    margin-left: 20px;
-  }
-
-
-
-  .container{
-    padding: 20px;
-  }
-
-
-  fieldset{
-    border: 1px solid black;
-    padding: 40px 30px;
-    border-radius: 5px;
-    font-size: 1.125rem;
-    padding-bottom: 20px !important;
-    
-}
-legend{
-    font-size: 1.25rem;
-    font-weight: 500;
+  display: none;
 }
 
-.studentResultListTable{
+.Result-container-listStudent {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  margin-left: 20px;
+}
+
+.container {
+  padding: 20px;
+}
+
+fieldset {
+  border: 1px solid black;
+  padding: 40px 30px;
+  border-radius: 5px;
+  font-size: 1.125rem;
+  padding-bottom: 20px !important;
+}
+legend {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.studentResultListTable {
   border-collapse: collapse;
   width: 100%;
   margin: 20px 0;
 }
 
-.studentResultListTable tr:nth-child(1){
+.studentResultListTable tr:nth-child(1) {
   background-color: #4591b8 !important;
 }
 
-
-.studentResultListTable tr:nth-child(odd){
+.studentResultListTable tr:nth-child(odd) {
   background-color: #f7f7f7;
 }
 
-.studentResultListTable tr td{
+.studentResultListTable tr td {
   padding: 10px;
   font-size: 1.125rem;
 }
 
-.studentResultListTable tr td:not(:nth-child(2)){
+.studentResultListTable tr td:not(:nth-child(2)) {
   text-align: center;
 }
 
-.studentResultListTable tr td:nth-child(1){
+.studentResultListTable tr td:nth-child(1) {
   width: 80px;
 }
 
-.studentResultListTable tr td:nth-child(3){
+.studentResultListTable tr td:nth-child(3) {
   width: 300px;
 }
 
-
-
-
-
-
-
-
-
-.result-show-download{
+.result-show-download {
   width: 1000px;
   height: 890px;
   background-color: white;
@@ -101,82 +82,55 @@ legend{
   transition: top 100ms ease-in-out;
 }
 
-.result-show-download-click{
+.result-show-download-click {
   top: 10px !important;
   transition: top 250px ease-in-out;
 }
 
-
-
-
-.overlay99{
+.overlay99 {
   width: 10000px;
   height: 10000px;
   position: fixed;
   top: -1000px;
-  left:-1000px;
+  left: -1000px;
   background-color: rgba(85, 85, 85, 0.178);
   z-index: 99999;
   display: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.resultContainer-Download{
+.resultContainer-Download {
   padding: 10px 20px;
 }
 
-
-.top-part-result,.inner-resultContainer-Downlaod{
+.top-part-result,
+.inner-resultContainer-Downlaod {
   width: 100%;
 }
 
-
-.inner-resultContainer-Downlaod{
+.inner-resultContainer-Downlaod {
   padding: 30px;
   max-width: 960px;
 }
 
-.top-part-result{
+.top-part-result {
   margin-bottom: 30px 0;
 }
-.schoolname{
+.schoolname {
   width: 100%;
   text-align: center;
   font-size: 1.25rem;
   font-weight: 500;
 }
 
-
-.schooladdress,.contactinfo{
+.schooladdress,
+.contactinfo {
   width: 100%;
   text-align: center;
   font-size: 1.125rem;
   font-size: 500;
 }
 
-.whichResult{
+.whichResult {
   width: 100%;
   text-align: center;
   font-size: 1.35rem;
@@ -184,7 +138,7 @@ legend{
   margin-top: 30px;
 }
 
-.marksheet{
+.marksheet {
   font-size: 1.3rem;
   font-weight: 400;
   text-align: center;
@@ -192,148 +146,95 @@ legend{
   margin-bottom: 10px;
 }
 
-
-
-
-
-
-
-
-
-
-.middle-part-download-table{
+.middle-part-download-table {
   border-collapse: collapse;
   width: 100%;
 }
 
-.middle-part-download-table tr td{
+.middle-part-download-table tr td {
   padding: 5px;
   font: 14px;
 }
 
-.middle-part-download-table tr td:nth-child(1){
+.middle-part-download-table tr td:nth-child(1) {
   width: 150px;
 }
 
-
-.img-container-student{
+.img-container-student {
   width: 150px;
   height: 150px;
 }
 
-.img-container-student img{
+.img-container-student img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-.result-marks{
+.result-marks {
   margin-top: 30px;
 }
 
-.marks-box{
+.marks-box {
   width: 100%;
   border-collapse: collapse;
 }
 
-.marks-box tr td{
+.marks-box tr td {
   font-size: 1.125rem;
   padding: 4px 8px;
 }
 
-.marks-box tr td:not(:nth-child(2)){
+.marks-box tr td:not(:nth-child(2)) {
   text-align: center;
 }
 
-.marks-box tr:last-child td{
+.marks-box tr:last-child td {
   font-size: 1.125rem;
   font-weight: 400;
   padding-top: 10px;
 }
 
-
-
-.marks-box tr:nth-child(1) td,.marks-box tr:last-child td{
+.marks-box tr:nth-child(1) td,
+.marks-box tr:last-child td {
   border: 1px solid black;
 }
 
-
-.marks-box tr:not(:nth-child(1)) td,.marks-box tr:not(:last-child) td{
+.marks-box tr:not(:nth-child(1)) td,
+.marks-box tr:not(:last-child) td {
   border-right: 1px solid black;
   border-left: 1px solid black;
 }
 
-
-.marks-box tr td:nth-child(1){
+.marks-box tr td:nth-child(1) {
   width: 50px;
 }
 
-
-.marks-box tr td:nth-child(2){
+.marks-box tr td:nth-child(2) {
   width: 300px;
 }
 
-
-
-
-
-
-.bottom-part{
+.bottom-part {
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.download-btn-result{
+.download-btn-result {
   width: 100%;
   height: 80px;
-  
 }
 
-
-.btn-downloadResult{
+.btn-downloadResult {
   font-size: 1.3rem;
   color: white;
   background-color: green;
   padding: 8px 15px;
- margin-left: 400px;
- outline: none;
-  
+  margin-left: 400px;
+  outline: none;
 }
 
-
-
-.btn-closeDaDownloadBtn{
+.btn-closeDaDownloadBtn {
   font-size: 2rem;
   font-weight: 500;
   position: fixed;
@@ -343,15 +244,6 @@ legend{
   cursor: pointer;
 }
 
-.btn-closeDaDownloadBtn:hover{
+.btn-closeDaDownloadBtn:hover {
   color: red;
 }
-
-
-
-
-
-
-
-
-

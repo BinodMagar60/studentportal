@@ -3,7 +3,7 @@ require_once "../../php/config/sessionStart.php";
 require_once "../../php/loginCheck/teacherCheck.php";
 $class = isset($_GET['class']) ? $_GET['class'] : 'one';
 $section = isset($_GET['section']) ? $_GET['section'] : 'everyone';
-$subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
+$subject = isset($_GET['subject']) ? $_GET['subject'] : 'English';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,13 +20,13 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
     <div class="notes-container">
         <fieldset>
             <legend>Notes</legend>
-            <form id="uploadNotes"  enctype="multipart/form-data">
+            <form id="uploadNotes" enctype="multipart/form-data">
                 <table id='noteTable' class="noteTable">
                     <tr>
                         <td>Class</td>
                         <td>
                             <select name="class_n" id="class-select" onchange="notetableData();">
-                            <option value="one"  <?php echo ($class == 'one' ? 'selected' : ''); ?>>One</option>
+                                <option value="one" <?php echo ($class == 'one' ? 'selected' : ''); ?>>One</option>
                                 <option value="two" <?php echo ($class == 'two' ? 'selected' : ''); ?>>Two</option>
                                 <option value="three" <?php echo ($class == 'three' ? 'selected' : ''); ?>>Three</option>
                                 <option value="four" <?php echo ($class == 'four' ? 'selected' : ''); ?>>Four</option>
@@ -65,9 +65,9 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
                         </td>
                     </tr>
                 </table>
-    
+
                 <div class="titles-notes">Add notes</div>
-    
+
                 <div class="file-uploads">
                     <input type="file" name="note[]" id="file-input" multiple accept="image/*,application/pdf,.xml,.doc,.docx,.txt,.xlsx,.pptx,.ppt" onchange="uploadFiles();" />
                     <label for="file-input">
@@ -83,11 +83,11 @@ $subject= isset($_GET['subject']) ? $_GET['subject'] : 'English';
             </form>
             <div class="titles-notes">Uploaded Notes</div>
             <div class="show-notes" id="show-notes">
-                
+
             </div>
         </fieldset>
     </div>
-    
+
     <script src="../js/notes.js"></script>
 </body>
 

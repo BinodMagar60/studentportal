@@ -133,14 +133,11 @@ function showSuccessfulPopup() {
   }, 1100);
 }
 
-
-
 function showDeletedPopup() {
-    var popup = document.getElementById("deleted-routine");
-    popup.classList.add("deleted-routine-show");
-  
-    setTimeout(() => {
-      popup.classList.remove("deleted-routine-show");
-    }, 1100);
-  }
-  
+  var popup = document.getElementById("deleted-routine");
+  popup.classList.add("deleted-routine-show");
+
+  setTimeout(() => {
+    popup.classList.remove("deleted-routine-show");
+  }, 1100);
+}

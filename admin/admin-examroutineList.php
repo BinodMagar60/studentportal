@@ -1,6 +1,6 @@
 <?php
-    require_once "../php/config/sessionStart.php";
-    require_once "../php/loginCheck/adminCheck.php";
+require_once "../php/config/sessionStart.php";
+require_once "../php/loginCheck/adminCheck.php";
 ?>
 <div class="examroutineLists" style="user-select: none;">
     <div class="examroutineLists-title">Exam Routine Lists</div>
@@ -51,17 +51,20 @@
                                     <td><?php if (isset($examSubjectRow['e_subject_7'])) echo $examSubjectRow['e_subject_7']; ?></td>
                                 </tr>
                         <?php
-}}
-        ?>
-                <tr>
-                    <td colspan="8" style="border: none; background-color:white;"><div class="btn-examroutineLists">
-                        <button type="button" id="postBtn" style="background-color: green;" onclick="postExamRoutine(<?php echo $examId?>)">Post</button>
-                        <button type="button" id="UnpostBtn" style="background-color: gray;" onclick="unpostExamRoutine(<?php echo $examId?>)">Unpost</button>
-                       <button type="button" style="background-color: red;" onclick="deleteExamRoutine(<?php echo $examId?>)">Delete</button>
-                    </div></td>
-                </tr>
-            </table>
-        </div>
+                            }
+                        }
+                        ?>
+                        <tr>
+                            <td colspan="8" style="border: none; background-color:white;">
+                                <div class="btn-examroutineLists">
+                                    <button type="button" id="postBtn" style="background-color: green;" onclick="postExamRoutine(<?php echo $examId ?>)">Post</button>
+                                    <button type="button" id="UnpostBtn" style="background-color: gray;" onclick="unpostExamRoutine(<?php echo $examId ?>)">Unpost</button>
+                                    <button type="button" style="background-color: red;" onclick="deleteExamRoutine(<?php echo $examId ?>)">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
         <?php
                 $i++;
             }

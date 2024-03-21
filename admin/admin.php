@@ -20,14 +20,10 @@ unset($_SESSION['target_email']);
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard</title>
   <link rel="stylesheet" href="../css/admin-style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css"
-    integrity="sha512-ZH3KB6wI5ADHaLaez5ynrzxR6lAswuNfhlXdcdhxsvOUghvf02zU1dAsOC6JrBTWbkE1WNDNs5Dcfz493fDMhA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css" integrity="sha512-ZH3KB6wI5ADHaLaez5ynrzxR6lAswuNfhlXdcdhxsvOUghvf02zU1dAsOC6JrBTWbkE1WNDNs5Dcfz493fDMhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
 </head>
 
 <body>
@@ -42,12 +38,12 @@ unset($_SESSION['target_email']);
           <div class="useraccount">
             <div class="U-photo">
               <!-- user photo in navbar at right side -->
-              <div class="photo"><img src= "../<?php echo "$adminImage";?>" alt="admin photo"></div>
+              <div class="photo"><img src="../<?php echo "$adminImage"; ?>" alt="admin photo"></div>
             </div>
             <div class="name-n-role">
               <!-- name and roll -->
-              <div class="u-name" name="a-id"><?php if(isset($adminName)) echo "$adminName";?></div>
-              <div class="role" name="role"><?php if(isset($userType)) echo "$userType";?></div>
+              <div class="u-name" name="a-id"><?php if (isset($adminName)) echo "$adminName"; ?></div>
+              <div class="role" name="role"><?php if (isset($userType)) echo "$userType"; ?></div>
             </div>
           </div>
         </a>
@@ -68,7 +64,7 @@ unset($_SESSION['target_email']);
     <div class="leftside-contents">
       <div class="side-bar-titles">
         <button class="active" id="button1" onclick="toggleButton(1); dashboardCall();">
-          <span><i class="ri-dashboard-line"></i></span >Dashboard
+          <span><i class="ri-dashboard-line"></i></span>Dashboard
         </button>
       </div>
       <div class="side-bar-titles">
@@ -128,15 +124,14 @@ unset($_SESSION['target_email']);
           <span class="last"><i class="ri-arrow-down-s-line"></i></span>
         </button>
         <div class="subclass">
-          <a href="#" class="subclass-content"><button id="button11"
-              onclick="toggleButton(11);announcement1(); ">Announcement</button></a>
+          <a href="#" class="subclass-content"><button id="button11" onclick="toggleButton(11);announcement1(); ">Announcement</button></a>
           <a href="#" class="subclass-content"><button id="button12" onclick="toggleButton(12); events1();">Events</button></a>
         </div>
         <div class="side-bar-titles">
-        <a class="side-panel-title"><button id="button13" onclick="logoutPopup();">
-            <span><i class="ri-logout-box-r-line"></i></span>Logout
-          </button></a>
-      </div>
+          <a class="side-panel-title"><button id="button13" onclick="logoutPopup();">
+              <span><i class="ri-logout-box-r-line"></i></span>Logout
+            </button></a>
+        </div>
       </div>
     </div>
     <!-- sidebar end -->
@@ -178,11 +173,11 @@ unset($_SESSION['target_email']);
       </div>
       <div class="event-notif">
         <div class="event-show" id="event-show">
-        
-      </div>
+
+        </div>
 
         <div class="announcement-show" id="announcement-show">
-        
+
 
         </div>
       </div>
@@ -202,22 +197,22 @@ unset($_SESSION['target_email']);
     <div class="popup-log" id="popup-log">
       <div class="popupbox-log">
       </div>
-        <div class="question">
+      <div class="question">
         <i class="ri-question-line"></i>
-        </div>
-        <div class="text-message">
-          Are you sure you want to Logout?
-        </div>
-        <div class="btn-logout">
-          <a href="../php/validate/logout.php"><button>Yes</button></a>
-          <button onclick="cancelLogoutPopup();">No</button>
-        </div>
+      </div>
+      <div class="text-message">
+        Are you sure you want to Logout?
+      </div>
+      <div class="btn-logout">
+        <a href="../php/validate/logout.php"><button>Yes</button></a>
+        <button onclick="cancelLogoutPopup();">No</button>
       </div>
     </div>
+  </div>
 
 
 
-<!--end-->  
+  <!--end-->
 
 
   </div>
@@ -249,15 +244,11 @@ unset($_SESSION['target_email']);
   <script src="../js/admin-classRoutine-php.js"></script>
   <script src="../js/admin-result.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {  
+    document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('button1').click();
     });
-
-
-
-    
   </script>
-  
+
 </body>
 
 </html>

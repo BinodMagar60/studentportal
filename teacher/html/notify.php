@@ -86,9 +86,9 @@ require_once "../../php/loginCheck/teacherCheck.php";
 
 
             <div id="notify-table">
-              
-    </div>
-    </fieldset>
+
+            </div>
+        </fieldset>
     </div>
 
 
@@ -116,7 +116,7 @@ require_once "../../php/loginCheck/teacherCheck.php";
 
 
     <div class="update-notice" id="update-notice">
-       
+
     </div>
 
 

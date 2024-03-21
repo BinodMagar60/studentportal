@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once "../../php/config/sessionStart.php";
 require_once "../../php/loginCheck/teacherCheck.php";
 require_once "../../php/config/TeacherProfile.php";
@@ -18,12 +18,8 @@ unset($_SESSION['target_s_email']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
     <link rel="stylesheet" href="../css/dashboard-style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css"
-        integrity="sha512-ZH3KB6wI5ADHaLaez5ynrzxR6lAswuNfhlXdcdhxsvOUghvf02zU1dAsOC6JrBTWbkE1WNDNs5Dcfz493fDMhA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css" integrity="sha512-ZH3KB6wI5ADHaLaez5ynrzxR6lAswuNfhlXdcdhxsvOUghvf02zU1dAsOC6JrBTWbkE1WNDNs5Dcfz493fDMhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
 </head>
@@ -40,11 +36,11 @@ unset($_SESSION['target_s_email']);
                     <div class="useraccount">
                         <div class="U-photo">
                             <!-- user photo in navbar at right side -->
-                            <div class="photo"><img src="../../<?php if(isset($teacherImage)) echo $teacherImage; ?>" alt="student photo"></div>
+                            <div class="photo"><img src="../../<?php if (isset($teacherImage)) echo $teacherImage; ?>" alt="student photo"></div>
                         </div>
                         <div class="name-n-role">
                             <!-- name and roll -->
-                            <div class="u-name" name="a-id"><?php if(isset($teacherName)) echo $teacherName; ?></div>
+                            <div class="u-name" name="a-id"><?php if (isset($teacherName)) echo $teacherName; ?></div>
                             <div class="role" name="role">Teacher</div>
                         </div>
                     </div>
@@ -84,14 +80,14 @@ unset($_SESSION['target_s_email']);
                 </button>
                 <div class="subclass">
                     <a class="subclass-content"><button id="button3" onclick="toggleButton(3);studentAssignment()">Add
-                            </button></a>
+                        </button></a>
                     <a class="subclass-content"><button id="button4" onclick="toggleButton(4);studentAssignmentCheck()">Check
-                            </button></a>
-</div>
+                        </button></a>
+                </div>
             </div>
 
 
-<!-- 
+            <!-- 
             <div class="side-bar-titles">
                 <a class="side-panel-title"><button id="button3" onclick="toggleButton(3);">
                         <span ><i class="fa-solid fa-file-circle-exclamation" style="color: white;-webkit-text-stroke:1px #092635;"></i></span>Assignment
@@ -234,7 +230,7 @@ unset($_SESSION['target_s_email']);
 
     <script src="../js/dropdownTransition.js"></script>
     <script src="../js/notifications.js"></script>
-    <script  src="../js/studentdetail-php.js"></script>
+    <script src="../js/studentdetail-php.js"></script>
     <script src="../js/assignments.js"></script>
     <script src="../js/notify.js"></script>
     <script src="../js/attendance.js"></script>
@@ -245,15 +241,15 @@ unset($_SESSION['target_s_email']);
     <!-- <script src="../js/admin-announcement-click.js"></script>
     <script src="../js/admin-updateevents.js"></script>
     <script src="../js/admin-announcement.js"></script> -->
-    
+
 
 
 
     <script>
-    document.addEventListener('DOMContentLoaded', function() {  
-      document.getElementById('button1').click();
-    });
-  </script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('button1').click();
+        });
+    </script>
 
 </body>
 

@@ -126,7 +126,6 @@ function notifyUpdatePopup() {
   var description = $("#update-notice textarea[name='description']").val();
   var class_selected = $("#update-notice select[name='class']").val();
   var section = $("#update-notice select[name='section']").val();
- 
 
   $.ajax({
     type: "POST",
@@ -153,7 +152,6 @@ function notifyUpdatePopup() {
     popup.classList.remove("popup-Notice-submit-clicked");
     notifyList();
   }, 1500);
-
 }
 
 function confirmDelete(notifyId) {

@@ -1,105 +1,87 @@
-
-*{
-    padding: none;
-    border: none;
-    box-sizing: border-box;
-    margin: none;
+* {
+  padding: none;
+  border: none;
+  box-sizing: border-box;
+  margin: none;
 }
 
-
-
-
-form{
-    
-    background-color: white;
-    padding: 20px;
-    margin: 20px 20px 0 20px;
-    font-size: 1.125rem;
-    height: 100%;
-    
+form {
+  background-color: white;
+  padding: 20px;
+  margin: 20px 20px 0 20px;
+  font-size: 1.125rem;
+  height: 100%;
 }
 
-
-
-.basic-info{
-    padding: 20px;
+.basic-info {
+  padding: 20px;
 }
 
 .topname {
-    font-size: 35px;
-    font-weight: 500;
-    padding-bottom: 50px;
+  font-size: 35px;
+  font-weight: 500;
+  padding-bottom: 50px;
 }
 
-.myimg{
-    padding-top: 10px;
+.myimg {
+  padding-top: 10px;
 }
-.circleline{
-    height: 171px;
-    width: 171px;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 3px 3px rgb(192, 192, 192);
-}
-.myimg img{
-    width: 170px;
-    height: 170px;
-    border: 1px solid black;
-   object-fit: cover;
-}
+.circleline {
+  height: 171px;
+  width: 171px;
 
-.myinfo-container{
-    display: flex;
-    gap: 100px;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 3px 3px rgb(192, 192, 192);
+}
+.myimg img {
+  width: 170px;
+  height: 170px;
+  border: 1px solid black;
+  object-fit: cover;
 }
 
-
-.info-photo{
-    width: 20%;
-    min-width: 170px;
-}
-.info-me{
-    width: 80%;
-}
-.info-me table{
-    width: 80%;
-    /* margin-top: 20px; */
-    border-spacing: 20px;
+.myinfo-container {
+  display: flex;
+  gap: 100px;
+  width: 100%;
 }
 
-.info-me table tr{
-    height: 30px;
+.info-photo {
+  width: 20%;
+  min-width: 170px;
+}
+.info-me {
+  width: 80%;
+}
+.info-me table {
+  width: 80%;
+  /* margin-top: 20px; */
+  border-spacing: 20px;
 }
 
-
-.info-me table tr td:nth-child(2){
-    
-    width: 75%;
-    
+.info-me table tr {
+  height: 30px;
 }
 
-.info-me table tr td:nth-child(2):not(#email){
-    text-transform: capitalize;
+.info-me table tr td:nth-child(2) {
+  width: 75%;
 }
 
-.info-me table tr td:nth-child(1){
-    font-size: 1.375rem;
-    font-weight: 400;
-    margin-right: 20px;
-    width: 25%;
-    min-width: 144px;
+.info-me table tr td:nth-child(2):not(#email) {
+  text-transform: capitalize;
 }
 
-.intro{
-    font-size: 1.563rem;
-    margin-bottom: 10px;
+.info-me table tr td:nth-child(1) {
+  font-size: 1.375rem;
+  font-weight: 400;
+  margin-right: 20px;
+  width: 25%;
+  min-width: 144px;
 }
 
-
-
-
-
-
+.intro {
+  font-size: 1.563rem;
+  margin-bottom: 10px;
+}

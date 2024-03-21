@@ -14,7 +14,7 @@ require_once "../../php/loginCheck/studentCheck.php";
 </head>
 
 <body>
-  
+
   <form action="../../php/studentPHP/studentProfile/updateStudentPassword.php" method="post" enctype="multipart/form-data" novalidate autocomplete="off">
     <div class="change-password">
       <div class="topname">
@@ -23,19 +23,19 @@ require_once "../../php/loginCheck/studentCheck.php";
       <div class="password-contents">
         <div class="label-password">New Password</div>
         <div class="changepassword"><input id="new-password" type="Text" name="npassword">
-      </div>
+        </div>
         <div class="label-password label-password2">Re-enter Password</div>
         <div class="changepassword"><input id="re-enterpassword" type="text" name="rnpassword"></div>
-        <div class="update-btn"><button type="submit" id="updateButton" onclick="updatePassword(event)" >Confirm</button></div>
+        <div class="update-btn"><button type="submit" id="updateButton" onclick="updatePassword(event)">Confirm</button></div>
         <div class="error"></div>
         <div class="error2"></div>
       </div>
     </div>
 
-   
+
   </form>
 
-<script src="../js/student-profile-ajax.js"></script>
+  <script src="../js/student-profile-ajax.js"></script>
 
 
 </body>

@@ -1,9 +1,10 @@
 <?php
-    require_once "../php/config/sessionStart.php";
-    require_once "../php/loginCheck/adminCheck.php";
+require_once "../php/config/sessionStart.php";
+require_once "../php/loginCheck/adminCheck.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css" integrity="sha512-ZH3KB6wI5ADHaLaez5ynrzxR6lAswuNfhlXdcdhxsvOUghvf02zU1dAsOC6JrBTWbkE1WNDNs5Dcfz493fDMhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <div class="adminadd">
         <form id="adminForm" enctype="multipart/form-data" novalidate>
@@ -45,7 +47,7 @@
                     </tr>
                     <tr>
                         <td>Contact No.</td>
-                        <td><input type="number" id="a-contact" name="a-contact" class="a-contact" placeholder="Contact" ></td>
+                        <td><input type="number" id="a-contact" name="a-contact" class="a-contact" placeholder="Contact"></td>
                         <td class="error e-contact"></td>
                     </tr>
                     <tr>
@@ -65,19 +67,20 @@
                         <td><input type="file" accept="image/*" id="a-photo" name="photo"></td>
                         <td class="error e-image"></td>
                     </tr>
-                    
+
 
                 </table>
                 <button type="submit" class="submit-btn" name="a_submit" onclick="submitAdminForm(event);">submit</button>
-                
+
             </fieldset>
         </form>
     </div>
     <div class="popupbox2" id="popupbox2">
         <div class="logo-update"><i class="fa-regular fa-circle-check" style="color: #00ff40;"></i></div>
-                <div class="successfullyUpdated">Successfully Added</div>
+        <div class="successfullyUpdated">Successfully Added</div>
     </div>
 
     <script src="../js/admin-adminadd-php.js"></script>
 </body>
+
 </html>

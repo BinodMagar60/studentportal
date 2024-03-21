@@ -1,73 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-:root{
-    --primary-color1: #092635;
-    --primary-color2: #1B4242;
-    --primary-color3: #5C8374;
-    --primary-color4: #9EC8B9;
-    --primary-text1: rgb(255, 255, 255); 
+:root {
+  --primary-color1: #092635;
+  --primary-color2: #1b4242;
+  --primary-color3: #5c8374;
+  --primary-color4: #9ec8b9;
+  --primary-text1: rgb(255, 255, 255);
 }
 
-
-*{
-    margin: 0;
-    border: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
- 
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
-.updatepopup{
-    max-width: 500px;
-    width: 100%;
-    font-size: 1.25rem;
-    padding: 70px 50px;
-    display: flex;
-    justify-self: center;
-    box-shadow: 0 0 3px 2px rgb(233, 233, 233);
-    border-radius: 8px;
-    
-
+.updatepopup {
+  max-width: 500px;
+  width: 100%;
+  font-size: 1.25rem;
+  padding: 70px 50px;
+  display: flex;
+  justify-self: center;
+  box-shadow: 0 0 3px 2px rgb(233, 233, 233);
+  border-radius: 8px;
 }
-.updatepopup div, .updatepopup div table{
-    width: 100%;
-}
-
-
-.updatepopup div table tr td input{
-    border: 1px solid black;
-    outline: none;
-    background-color: white;
-    /* max-width: 350px; */
-    width: 100%;
-    font-size: 1.125rem;
-    height: 40px;
-
+.updatepopup div,
+.updatepopup div table {
+  width: 100%;
 }
 
-.updatepopup div table{
-    margin-bottom: 40px;
+.updatepopup div table tr td input {
+  border: 1px solid black;
+  outline: none;
+  background-color: white;
+  /* max-width: 350px; */
+  width: 100%;
+  font-size: 1.125rem;
+  height: 40px;
 }
 
-.btn-updates-event{
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+.updatepopup div table {
+  margin-bottom: 40px;
 }
 
-.btn-updates-event a, .btn-updates-event a button{
-    width: 100%;
-    font-size: 1.25rem;
-    color: white;
+.btn-updates-event {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
-
-.btn-updates-event a button{
-    padding: 10px 15px;
-    border-radius: 5px;
+.btn-updates-event a,
+.btn-updates-event a button {
+  width: 100%;
+  font-size: 1.25rem;
+  color: white;
 }
 
+.btn-updates-event a button {
+  padding: 10px 15px;
+  border-radius: 5px;
+}

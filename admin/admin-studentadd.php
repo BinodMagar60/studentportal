@@ -1,9 +1,10 @@
 <?php
-    require_once "../php/config/sessionStart.php";
-    require_once "../php/loginCheck/adminCheck.php";
+require_once "../php/config/sessionStart.php";
+require_once "../php/loginCheck/adminCheck.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,14 +14,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css" integrity="sha512-ZH3KB6wI5ADHaLaez5ynrzxR6lAswuNfhlXdcdhxsvOUghvf02zU1dAsOC6JrBTWbkE1WNDNs5Dcfz493fDMhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
+
 <body>
-  <!-- error putting onsubmit -->
+    <!-- error putting onsubmit -->
     <!-- onsubmit="adminStudentAdd(event)" -->
     <div class="studentadd">
         <form id="studentForm" enctype="multipart/form-data" novalidate autocomplete="off">
             <fieldset>
                 <legend>Add New Profile</legend>
-                
+
                 <table id="tablebox">
                     <tr>
                         <td colspan="3" class="title title1">Student Details</td>
@@ -49,7 +51,7 @@
                     </tr>
                     <tr>
                         <td>Contact No.</td>
-                        <td><input type="number" id="s-contact" name="s-contact" class="s-contact" placeholder="Contact" ></td>
+                        <td><input type="number" id="s-contact" name="s-contact" class="s-contact" placeholder="Contact"></td>
                         <td class="error e-contact"></td>
                     </tr>
                     <tr>
@@ -120,16 +122,17 @@
 
                 </table>
                 <button type="submit" class="submit-btn" name="s_submit" onclick="submitForm(event);">submit</button>
-                
+
             </fieldset>
         </form>
     </div>
     <div class="popupbox" id="popupbox">
         <div class="logo-update"><i class="fa-regular fa-circle-check" style="color: #00ff40;"></i></div>
-                <div class="successfullyUpdated">Successfully Added</div>
+        <div class="successfullyUpdated">Successfully Added</div>
     </div>
 
     <script src="../js/admin-studentadd-php.js"></script>
-    
+
 </body>
+
 </html>

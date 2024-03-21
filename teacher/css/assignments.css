@@ -1,173 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-:root{
-    
-    
-    --primary-color1: #092635;
-    --primary-color2: #1B4242;
-    --primary-color3: #5C8374;
-    --primary-color4: #9EC8B9;
-    --primary-text1: rgb(255, 255, 255); 
-}
-    
-*{
-    margin: 0;
-    border: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-    -ms-overflow-style: none;  
-    scrollbar-width: none;  
+:root {
+  --primary-color1: #092635;
+  --primary-color2: #1b4242;
+  --primary-color3: #5c8374;
+  --primary-color4: #9ec8b9;
+  --primary-text1: rgb(255, 255, 255);
 }
 
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 *::-webkit-scrollbar {
-    display: none;
-  }
-
-
-
-  .assignment-container{
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    margin-left: 20px;
-  }
-
-
-
-fieldset{
-    border: 1px solid black;
-    padding: 40px 30px;
-    border-radius: 5px;
-    font-size: 1.125rem;
-    padding-bottom: 20px !important;
-    
-}
-legend{
-    font-size: 1.25rem;
-    font-weight: 500;
+  display: none;
 }
 
+.assignment-container {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  margin-left: 20px;
+}
 
+fieldset {
+  border: 1px solid black;
+  padding: 40px 30px;
+  border-radius: 5px;
+  font-size: 1.125rem;
+  padding-bottom: 20px !important;
+}
+legend {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
 
+fieldset {
+  border: 1px solid black;
+  border-radius: 8px;
+  font-size: 1.125rem;
+}
 
-  fieldset{
-    border: 1px solid black;
-    border-radius: 8px;
-    font-size: 1.125rem;
-  }
+legend {
+  font-weight: 400;
+  margin-left: 20px;
+}
 
-  legend{
-    font-weight: 400;
-    margin-left: 20px;
-  }
+#assignment-table {
+  border-collapse: collapse;
+}
 
-  #assignment-table{
-    border-collapse: collapse;
-  }
+#assignment-table tr td input,
+#assignment-table tr td textarea {
+  margin: 5px 20px;
+  width: 300px;
+  font-size: 1.125rem;
+}
 
-  #assignment-table tr td input, #assignment-table tr td textarea{
-    margin: 5px 20px ;
-    width: 300px;
-    font-size: 1.125rem;
-    
-  }
+#assignment-table tr td textarea {
+  resize: vertical;
+}
 
-  #assignment-table tr td textarea{
-    resize: vertical;
-  }
+.assignment-btn-submit {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+}
 
-  .assignment-btn-submit{
-    width: 100%;
-    display: flex;
-    justify-content: left;
-    
-  }
- 
+.assignment-btn {
+  padding: 5px 10px;
+  color: white;
+  background-color: green;
+  font-size: 1.125rem;
+  margin-top: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+}
 
-  .assignment-btn{
-    padding: 5px 10px;
-    color: white;
-    background-color: green;
-    font-size: 1.125rem;
-    margin-top: 20px;
-    margin-left: 20px;
-    cursor: pointer;
-  }
-
-
-
-
-
-
-.error{
+.error {
   color: red;
   font-size: 1rem;
   font-style: italic;
   font-weight: 300;
 }
 
-
-.assignment-table-show{
+.assignment-table-show {
   border-collapse: collapse;
   width: 100%;
   margin-top: 40px;
   margin-bottom: 20px;
 }
 
-
-.assignment-table-show tr td{
+.assignment-table-show tr td {
   padding: 8px;
   font-size: 1.125rem;
 }
- 
 
-.assignment-table-show tr td:nth-child(1){
+.assignment-table-show tr td:nth-child(1) {
   width: 45px;
   text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.assignment-table-show tr td:nth-child(2){
+.assignment-table-show tr td:nth-child(2) {
   padding-left: 20px;
   overflow-wrap: break-word;
   width: 500px;
 }
 
-.assignment-table-show tr td:nth-child(5){
+.assignment-table-show tr td:nth-child(5) {
   width: 180px;
   text-align: center;
 }
 
-.assignment-table-show tr td:nth-child(3),.assignment-table-show tr td:nth-child(4){
+.assignment-table-show tr td:nth-child(3),
+.assignment-table-show tr td:nth-child(4) {
   width: 130px;
   text-align: center;
 }
 
-
-
-.assignment-table-show tr td:nth-child(6){
+.assignment-table-show tr td:nth-child(6) {
   width: 200px;
-text-align: center;
+  text-align: center;
 }
 
-
-#selectSectionAssignment, #selectClassAssignment, #selectSubjectAssignment{
+#selectSectionAssignment,
+#selectClassAssignment,
+#selectSubjectAssignment {
   border: 1px solid black;
   outline: none;
   padding: 5px;
@@ -176,31 +141,30 @@ text-align: center;
   font-size: 1.125rem;
 }
 
-#selectClassAssignment,#selectSectionAssignment{
+#selectClassAssignment,
+#selectSectionAssignment {
   margin-bottom: 10px;
 }
 
-
-#selectClassAssignmentUpdate, #selectSelectAssignmentUpdate,#selectSubjectAssignmentUpdate{
+#selectClassAssignmentUpdate,
+#selectSelectAssignmentUpdate,
+#selectSubjectAssignmentUpdate {
   border: 1px solid black;
   outline: none;
   padding: 5px;
   width: 130px;
   font-size: 1.125rem;
 }
-#selectClassAssignmentUpdate{
+#selectClassAssignmentUpdate {
   margin-bottom: 5px;
 }
 
-
-.btn-assignments{
+.btn-assignments {
   display: flex;
   gap: 10px;
 }
 
-
-
-.btn-assign{
+.btn-assign {
   font-size: 1.125rem;
   padding: 4px 8px;
   border-radius: 5px;
@@ -208,23 +172,18 @@ text-align: center;
   cursor: pointer;
 }
 
-.assignment-table-show tr:nth-child(1){
+.assignment-table-show tr:nth-child(1) {
   background-color: #4591b8 !important;
   font-weight: 400;
 }
 
-
-.assignment-table-show tr:nth-child(odd)
-{
+.assignment-table-show tr:nth-child(odd) {
   background-color: #f7f7f7;
 }
 
-
-
-
 /* popups */
 
-.popup-assignment-submit{
+.popup-assignment-submit {
   box-shadow: 0 0 2px 2px rgb(173, 173, 173);
   background-color: white;
   width: 350px;
@@ -238,28 +197,24 @@ text-align: center;
   transition: top 500ms;
 }
 
-
-.title-logo{
+.title-logo {
   color: rgb(32, 231, 32);
   font-size: 5rem;
   margin-top: 20px;
 }
 
-.popup-assignment-submit .title{
+.popup-assignment-submit .title {
   font-size: 1.125rem;
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
-
-.popup-assignment-submit-clicked{
+.popup-assignment-submit-clicked {
   top: 120px !important;
   transform: top 250ms !important;
 }
 
-
-
-.popup-assignment-update-successfully{
+.popup-assignment-update-successfully {
   box-shadow: 0 0 2px 2px rgb(173, 173, 173);
   background-color: white;
   width: 350px;
@@ -273,15 +228,13 @@ text-align: center;
   transition: top 500ms;
 }
 
-
-.popup-assignment-update-successfully .title{
+.popup-assignment-update-successfully .title {
   font-size: 1.125rem;
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
-
-.popup-assignment-delete-successfully{
+.popup-assignment-delete-successfully {
   box-shadow: 0 0 2px 2px rgb(173, 173, 173);
   background-color: white;
   width: 350px;
@@ -295,23 +248,17 @@ text-align: center;
   transition: top 500ms;
 }
 
-.popup-assignment-delete-successfully .title-logo{
+.popup-assignment-delete-successfully .title-logo {
   color: rgb(255, 22, 22);
 }
 
-
-.popup-assignment-delete-successfully .title{
+.popup-assignment-delete-successfully .title {
   font-size: 1.125rem;
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
-
-
-
-
-
-.assignment-delete{
+.assignment-delete {
   box-shadow: 0 0 2px 2px rgb(173, 173, 173);
   background-color: white;
   width: 350px;
@@ -327,27 +274,24 @@ text-align: center;
   transform: scale(0);
 }
 
-
-
-.title-logo-delete{
+.title-logo-delete {
   color: red;
   font-size: 5rem;
   margin-top: 20px;
 }
 
-.assignment-delete .title{
+.assignment-delete .title {
   font-size: 1.125rem;
   margin-top: 30px;
   margin-bottom: 20px;
 }
 
-.btn-delete-assignment{
+.btn-delete-assignment {
   display: flex;
   gap: 50px;
 }
 
-
-.delete-btn-assignment{
+.delete-btn-assignment {
   font-size: 1.125rem;
   padding: 5px 15px;
   border-radius: 8px;
@@ -356,7 +300,7 @@ text-align: center;
   margin-bottom: 30px;
 }
 
-.overlay{
+.overlay {
   position: fixed;
   height: 10000px;
   width: 10000px;
@@ -366,31 +310,13 @@ text-align: center;
   display: none;
 }
 
-
-.assignment-delete-popup{
+.assignment-delete-popup {
   visibility: visible !important;
   transform: scale(1) !important;
   transition: transform 350ms;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.update-assignment{
+.update-assignment {
   box-shadow: 0 0 2px 2px rgb(173, 173, 173);
   background-color: white;
   width: 450px;
@@ -401,7 +327,7 @@ text-align: center;
   transition: top 100ms;
 }
 
-.update-assignment form{
+.update-assignment form {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 20px;
@@ -409,12 +335,13 @@ text-align: center;
   padding-left: 70px;
 }
 
-#update-assignment-table{
+#update-assignment-table {
   width: 100%;
   font-size: 1.125rem;
 }
 
-#update-assignment-table tr td input, #description-textarea{
+#update-assignment-table tr td input,
+#description-textarea {
   border: 1px solid black;
   width: 300px;
   padding: 8px;
@@ -425,40 +352,25 @@ text-align: center;
   margin-bottom: 10px;
 }
 
-#description-textarea{
+#description-textarea {
   height: 222px;
 }
 
-.btn-update-assignments{
+.btn-update-assignments {
   display: flex;
   justify-content: space-evenly;
   width: 300px;
   margin-top: 30px;
 }
 
-.update-btn-assingments{
+.update-btn-assingments {
   color: white;
   padding: 8px 15px;
   font-size: 1.25rem;
   cursor: pointer;
 }
 
-
-.update-assignment-show{
+.update-assignment-show {
   top: 140px;
   transition: top 350ms;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

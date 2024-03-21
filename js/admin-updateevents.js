@@ -1,36 +1,32 @@
-
-function updateEventsPopup(noticeId){
+function updateEventsPopup(noticeId) {
   var popupBox = document.getElementById("updatepopup-change");
   var overlay = document.getElementById("overlay");
   popupBox.classList.add("updatepopup-change-down");
-  overlay.style.display = "block"
-  setTimeout(callData(noticeId),20);
+  overlay.style.display = "block";
+  setTimeout(callData(noticeId), 20);
 }
 
-
-function updateEventsPopupCancel(){
+function updateEventsPopupCancel() {
   var popupBox = document.getElementById("updatepopup-change");
   var overlay = document.getElementById("overlay");
   popupBox.classList.remove("updatepopup-change-down");
-  overlay.style.display = "none"
+  overlay.style.display = "none";
 }
 
-
-function callData(noticeId){
+function callData(noticeId) {
   const xhr = new XMLHttpRequest();
-    const container = document.getElementById('updatepopup-change');
-    
-    xhr.onload = function() {
-      if (this.status === 200) {
-        container.innerHTML = xhr.responseText;
-      } else {
-        console.warn("Did not receive 200 OK from response!");
-      }
-    };
-    xhr.open('GET', 'admin-eventupdate.php?id='+noticeId);
-    xhr.send();
-}
+  const container = document.getElementById("updatepopup-change");
 
+  xhr.onload = function () {
+    if (this.status === 200) {
+      container.innerHTML = xhr.responseText;
+    } else {
+      console.warn("Did not receive 200 OK from response!");
+    }
+  };
+  xhr.open("GET", "admin-eventupdate.php?id=" + noticeId);
+  xhr.send();
+}
 
 function deleteEvents() {
   var popupBox = document.getElementById("deleteevent");
@@ -54,7 +50,6 @@ function eventLists() {
       dataType: "html",
       success: function (response) {
         $("#eventlist").html(response);
-        
       },
       error: function () {
         alert("Error loading table data.");
@@ -63,53 +58,44 @@ function eventLists() {
   });
 }
 
-function addPopupEvent(){
+function addPopupEvent() {
   var popup = document.getElementById("successfull-updated");
-  popup.classList.add("successfull-updated-pop")
-  setTimeout(function(){
+  popup.classList.add("successfull-updated-pop");
+  setTimeout(function () {
     removePopupEvent();
-  } ,1100);
+  }, 1100);
 }
 
-
-function removePopupEvent(){
+function removePopupEvent() {
   var popup = document.getElementById("successfull-updated");
-  popup.classList.remove("successfull-updated-pop")
+  popup.classList.remove("successfull-updated-pop");
 }
 
-
-
-function deletePopupEvent(){
+function deletePopupEvent() {
   var popup1 = document.getElementById("successfull-deleted");
-  popup1.classList.add("successfull-deleted-pop")
-  setTimeout(function(){
+  popup1.classList.add("successfull-deleted-pop");
+  setTimeout(function () {
     removedeletePopupEvent();
-  } ,1100);
+  }, 1100);
 }
 
-
-function removedeletePopupEvent(){
+function removedeletePopupEvent() {
   var popup1 = document.getElementById("successfull-deleted");
-  popup1.classList.remove("successfull-deleted-pop")
+  popup1.classList.remove("successfull-deleted-pop");
 }
 
-
-function addUpdatePopupEvent(){
+function addUpdatePopupEvent() {
   var popup = document.getElementById("successfull-updated-update");
-  popup.classList.add("successfull-updated-pop")
-  setTimeout(function(){
+  popup.classList.add("successfull-updated-pop");
+  setTimeout(function () {
     removeUpdatePopupEvent();
-  } ,1100);
+  }, 1100);
 }
 
-
-function removeUpdatePopupEvent(){
+function removeUpdatePopupEvent() {
   var popup = document.getElementById("successfull-updated-update");
-  popup.classList.remove("successfull-updated-pop")
+  popup.classList.remove("successfull-updated-pop");
 }
-
-
-
 
 function deleteEvent(eventId) {
   var xhr = new XMLHttpRequest();
@@ -120,107 +106,84 @@ function deleteEvent(eventId) {
   };
   xhr.send();
   deleteCancel();
-  setTimeout(eventLists,20);
-  setTimeout(deletePopupEvent,20)
+  setTimeout(eventLists, 20);
+  setTimeout(deletePopupEvent, 20);
 }
 
-
-function submitEvents(event){
+function submitEvents(event) {
   var eventname = document.getElementById("notice").value;
   var n_date = document.getElementById("n_date").value;
   var error1 = document.getElementById("error1");
-  var error2= document.getElementById("error2");
+  var error2 = document.getElementById("error2");
 
-  if(eventname === ""){
+  if (eventname === "") {
     error1.style.display = "block";
     event.preventDefault();
-
-  }
-  else{
-    error1.style.display = "none"
+  } else {
+    error1.style.display = "none";
   }
 
-  if(n_date ===""){
+  if (n_date === "") {
     error2.style.display = "block";
     event.preventDefault();
-
-  }
-  else{
+  } else {
     error2.style.display = "none";
   }
 
-
-
-  
-  if(event.defaultPrevented){
+  if (event.defaultPrevented) {
     return false;
   }
 
   var formData = new FormData(document.getElementById("eventForm"));
 
-
   $.ajax({
-    url: '../php/event/addEvent.php',
-    type: 'POST',
+    url: "../php/event/addEvent.php",
+    type: "POST",
     data: formData,
     processData: false,
     contentType: false,
     success: function (response) {
-        document.getElementById('eventForm').reset();
+      document.getElementById("eventForm").reset();
     },
     error: function (xhr, status, error) {
-        console.error('Error:', status, error);
-        console.log('Response Text:', xhr.responseText);
-        alert('Error adding student. Please try again.');
-    }
-    
-});
+      console.error("Error:", status, error);
+      console.log("Response Text:", xhr.responseText);
+      alert("Error adding student. Please try again.");
+    },
+  });
 
-event.preventDefault();
-setTimeout(eventLists,30);
-setTimeout(addPopupEvent,30);
-
+  event.preventDefault();
+  setTimeout(eventLists, 30);
+  setTimeout(addPopupEvent, 30);
 }
 
-
 function eventUpdateLists() {
- 
-
   var id = $("#updatepopup input[name='id']").val();
   var notice = $("#updatepopup input[name='notice']").val();
   var n_date = $("#updatepopup input[name='n_date']").val();
 
-    $.ajax({
-      type: "POST",
-      url: "../php/event/updateEvent.php",
-      data: {
-          id: id,
-          notice: notice,
-          n_date: n_date
-      },
-      success: function(response) {
-        console.log("successfully updated")
-        console.log(n_date);
-        console.log(notice);
-        console.log(id);
-      },
-      error: function(error) {
-          console.log(error);
-        
-      }
+  $.ajax({
+    type: "POST",
+    url: "../php/event/updateEvent.php",
+    data: {
+      id: id,
+      notice: notice,
+      n_date: n_date,
+    },
+    success: function (response) {
+      console.log("successfully updated");
+      console.log(n_date);
+      console.log(notice);
+      console.log(id);
+    },
+    error: function (error) {
+      console.log(error);
+    },
   });
 
   updateEventsPopupCancel();
-  setTimeout(eventLists,30);
-  setTimeout(function(){
+  setTimeout(eventLists, 30);
+  setTimeout(function () {
     addUpdatePopupEvent();
-  } ,100);
+  }, 100);
 }
-
-
-
-
-
-
-
-

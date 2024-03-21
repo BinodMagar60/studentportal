@@ -1,263 +1,213 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-
-
-
-
-*{
-    margin: 0;
-    border: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-    -ms-overflow-style: none;  
-    scrollbar-width: none;  
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-
 
 *::-webkit-scrollbar {
-    display: none;
-  }
-
-
-  .assignment-container{
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    margin-left: 20px;
-  }
-
-
-
-  .container{
-    padding: 20px;
-  }
-
-
-  fieldset{
-    border: 1px solid black;
-    padding: 40px 30px;
-    border-radius: 5px;
-    font-size: 1.125rem;
-    padding-bottom: 20px !important;
-    
-}
-legend{
-    font-size: 1.25rem;
-    font-weight: 500;
+  display: none;
 }
 
-
-
-.title-assignment-check{
-    margin-top: 30px;
-    font-size: 1.35rem;
-    font-weight: 500;
-
+.assignment-container {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  margin-left: 20px;
 }
 
-
-
-
-.assignment-check-table{
-    border-collapse: collapse;
+.container {
+  padding: 20px;
 }
 
-
-.assignment-check-table tr td{
-    font-size: 1.25rem;
-    font-weight: 400;
-    padding: 5px;
+fieldset {
+  border: 1px solid black;
+  padding: 40px 30px;
+  border-radius: 5px;
+  font-size: 1.125rem;
+  padding-bottom: 20px !important;
+}
+legend {
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
-.assignment-check-table tr td select{
-    font-size: 1.125rem;
-    width: 130px;
-    border: 1px solid black;
-    padding: 5px;
-    margin-left: 20px;
-    outline: none   ;
+.title-assignment-check {
+  margin-top: 30px;
+  font-size: 1.35rem;
+  font-weight: 500;
 }
 
-
-
-
-
-.assignment-check-table-list{
-    border-collapse: collapse;
-    margin-top: 20px;
-    width: 100%;
+.assignment-check-table {
+  border-collapse: collapse;
 }
 
-
-.assignment-check-table-list tr:nth-child(1){
-    background-color: #4591b8 !important;
+.assignment-check-table tr td {
+  font-size: 1.25rem;
+  font-weight: 400;
+  padding: 5px;
 }
 
-.assignment-check-table-list tr:nth-child(odd){
-    background-color: #f7f7f7;
+.assignment-check-table tr td select {
+  font-size: 1.125rem;
+  width: 130px;
+  border: 1px solid black;
+  padding: 5px;
+  margin-left: 20px;
+  outline: none;
 }
 
-.assignment-check-table-list tr td{
-    padding: 10px;
-    font-size: 1.125rem;
-    text-transform: capitalize;
+.assignment-check-table-list {
+  border-collapse: collapse;
+  margin-top: 20px;
+  width: 100%;
 }
 
-
-.assignment-check-table-list tr td:nth-child(1){
-    width: 40px;
-    text-align: center;
+.assignment-check-table-list tr:nth-child(1) {
+  background-color: #4591b8 !important;
 }
 
-.assignment-check-table-list tr td:nth-child(2){
-    width: 600px;
+.assignment-check-table-list tr:nth-child(odd) {
+  background-color: #f7f7f7;
 }
 
-
-.assignment-check-table-list tr td:nth-child(2):hover{
-    cursor: pointer;
-}
-.assignment-check-table-list tr td:nth-child(3){
-    width: 80px;
-    text-align: center;
-}
-.assignment-check-table-list tr td:nth-child(4){
-    width: 80px;
-    text-align: center;
+.assignment-check-table-list tr td {
+  padding: 10px;
+  font-size: 1.125rem;
+  text-transform: capitalize;
 }
 
-
-
-
-
-
-
-
-.checkAssignmentsOfUsers{
-    /* border: 1px solid black; */
-    width: 1300px;
-    height: 700px;
-    background-color: white;
-    box-shadow: 0 0 2px 2px rgba(172, 172, 172, 0.747);
-    position: fixed;
-    top: -1200px;
-    left: 450px;
-    z-index: 10000;
-    transition: top 100ms ease-in-out;
+.assignment-check-table-list tr td:nth-child(1) {
+  width: 40px;
+  text-align: center;
 }
 
-
-.checkAssignmentsOfUsers-clicked{
-    top: 120px !important;
-    transition: top 250ms ease-in-out;
+.assignment-check-table-list tr td:nth-child(2) {
+  width: 600px;
 }
 
-.overlay1{
-    height: 10000px;
-    width: 10000px;
-    position: fixed;
-    top: -1000px;
-    left: -1000px;
-    z-index: 9999;
-    display: none;
+.assignment-check-table-list tr td:nth-child(2):hover {
+  cursor: pointer;
+}
+.assignment-check-table-list tr td:nth-child(3) {
+  width: 80px;
+  text-align: center;
+}
+.assignment-check-table-list tr td:nth-child(4) {
+  width: 80px;
+  text-align: center;
 }
 
-
-
-
-
-
-
-
-.userWholeContainerForAssignments{
-    padding: 30px 50px;
+.checkAssignmentsOfUsers {
+  /* border: 1px solid black; */
+  width: 1300px;
+  height: 700px;
+  background-color: white;
+  box-shadow: 0 0 2px 2px rgba(172, 172, 172, 0.747);
+  position: fixed;
+  top: -1200px;
+  left: 450px;
+  z-index: 10000;
+  transition: top 100ms ease-in-out;
 }
 
-
-.top-assignments-part{
-    display: flex;
-    justify-content: space-between;
+.checkAssignmentsOfUsers-clicked {
+  top: 120px !important;
+  transition: top 250ms ease-in-out;
 }
 
-.top-assignments-part-title, .top-assignments-part-btn button{
-    font-size: 1.7rem;
-    font-weight: 500;
-    margin-bottom: 50px;
+.overlay1 {
+  height: 10000px;
+  width: 10000px;
+  position: fixed;
+  top: -1000px;
+  left: -1000px;
+  z-index: 9999;
+  display: none;
 }
 
-.top-assignments-part-btn button{
-    background-color: transparent;
+.userWholeContainerForAssignments {
+  padding: 30px 50px;
 }
 
-
-.top-assignments-part-btn button:hover{
-    color: red;
-    cursor: pointer;
+.top-assignments-part {
+  display: flex;
+  justify-content: space-between;
 }
 
-
-
-.userContainerForAssignments{
-    /* border: 1px solid black; */
-    width: 100%;
-    max-height: 550px;
-    overflow: scroll;
-
+.top-assignments-part-title,
+.top-assignments-part-btn button {
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin-bottom: 50px;
 }
 
-
-
-.assignmentTableForUsers{
-    width: 100%;
-    border-collapse: collapse;
+.top-assignments-part-btn button {
+  background-color: transparent;
 }
 
-.assignmentTableForUsers tr:nth-child(1){
-    background-color: #4591b8 !important;
+.top-assignments-part-btn button:hover {
+  color: red;
+  cursor: pointer;
 }
 
-.assignmentTableForUsers tr:nth-child(odd){
-    background-color: #f7f7f7;
+.userContainerForAssignments {
+  /* border: 1px solid black; */
+  width: 100%;
+  max-height: 550px;
+  overflow: scroll;
 }
 
-
-.assignmentTableForUsers tr td{
-    padding: 10px;
-    font-size: 1.125rem;
-    font-weight: 400;
-    text-transform: capitalize;
+.assignmentTableForUsers {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.assignmentTableForUsers tr td:not(td:nth-child(2)){
-    text-align: center;
+.assignmentTableForUsers tr:nth-child(1) {
+  background-color: #4591b8 !important;
 }
 
-.assignmentTableForUsers tr td:nth-child(1){
-    width: 40px;
+.assignmentTableForUsers tr:nth-child(odd) {
+  background-color: #f7f7f7;
 }
 
-.assignmentTableForUsers tr td:nth-child(2){
-    width: 500px !important;
+.assignmentTableForUsers tr td {
+  padding: 10px;
+  font-size: 1.125rem;
+  font-weight: 400;
+  text-transform: capitalize;
 }
 
-.assignmentTableForUsers tr td:nth-child(3){
-    width: 150px ;
-}
-.assignmentTableForUsers tr td:nth-child(4){
-    width: 150px ;
+.assignmentTableForUsers tr td:not(td:nth-child(2)) {
+  text-align: center;
 }
 
-
-.assignmentTableForUsers tr td button{
-    cursor: pointer;
+.assignmentTableForUsers tr td:nth-child(1) {
+  width: 40px;
 }
 
+.assignmentTableForUsers tr td:nth-child(2) {
+  width: 500px !important;
+}
 
+.assignmentTableForUsers tr td:nth-child(3) {
+  width: 150px;
+}
+.assignmentTableForUsers tr td:nth-child(4) {
+  width: 150px;
+}
 
+.assignmentTableForUsers tr td button {
+  cursor: pointer;
+}
 
-.approved{
-    display: none   ;
-    cursor: default !important;
+.approved {
+  display: none;
+  cursor: default !important;
 }

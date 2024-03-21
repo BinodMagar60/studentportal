@@ -20,15 +20,11 @@ fileInput.addEventListener("change", () => {
   }
 });
 
+function addNotes() {
+  // var files = document.getElementById("submit-btn");
+  let fileList = document.getElementById("files-list");
+  let numOfFiles = document.getElementById("num-of-files");
 
-
-function addNotes(){
-    // var files = document.getElementById("submit-btn");
-    let fileList = document.getElementById("files-list");
-    let numOfFiles = document.getElementById("num-of-files");
-
-    fileList.reset();
-    numOfFiles.reset();
-
-
+  fileList.reset();
+  numOfFiles.reset();
 }

@@ -7,6 +7,7 @@ $section = isset($_GET['sections']) ? $_GET['sections'] : 'A';
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,14 +15,15 @@ $section = isset($_GET['sections']) ? $_GET['sections'] : 'A';
     <link rel="stylesheet" href="../css/attendance.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
+
 <body>
 
     <div class="attendance-container">
         <fieldset>
             <legend>Student Attendance</legend>
 
-           
-                <div class="attendance-select-class">
+
+            <div class="attendance-select-class">
                 <span class="class-attendance">
                     <label for="classAttendance">Class</label>
                     <select name="classAttendance" id="classAttendance" onchange="tableDataAttendance();">
@@ -45,18 +47,19 @@ $section = isset($_GET['sections']) ? $_GET['sections'] : 'A';
                         <option value="C" <?php echo ($section == 'C' ? 'selected' : ''); ?>>Section C</option>
                     </select>
                 </span>
-                </div>
-            
+            </div>
 
 
-                <div class="attendance-list-container" id="attendance-list-container"></div>
 
-            
-                    
+            <div class="attendance-list-container" id="attendance-list-container"></div>
+
+
+
 
 
         </fieldset>
     </div>
     <script src="../js/attendance.js"></script>
 </body>
+
 </html>
