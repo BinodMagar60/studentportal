@@ -1,4 +1,6 @@
 <?php
+require_once "../../php/config/sessionStart.php";
+require_once "../../php/loginCheck/teacherCheck.php";
 if(isset($_GET['id'])){
 $uid=$_GET['id'];
 require_once "../../php/config/db.php";

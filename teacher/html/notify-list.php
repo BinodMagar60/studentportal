@@ -1,4 +1,8 @@
-  <table class="notify-table-show">
+ <?php
+require_once "../../php/config/sessionStart.php";
+require_once "../../php/loginCheck/teacherCheck.php";
+ ?>
+ <table class="notify-table-show">
       <tr>
           <td>S.N.</td>
           <td>Title</td>
@@ -6,7 +10,6 @@
           <td>Action</td>
       </tr>
       <?php
-        require_once "../../php/config/sessionStart.php";
         if(isset($_SESSION['userEmail'])){
             $userEmail=$_SESSION['userEmail'];
         require_once "../../php/config/db.php";

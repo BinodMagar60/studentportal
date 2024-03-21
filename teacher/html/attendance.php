@@ -1,9 +1,11 @@
-<!DOCTYPE html>
 <?php
+require_once "../../php/config/sessionStart.php";
+require_once "../../php/loginCheck/teacherCheck.php";
 require_once "../../php/config/db.php";
 $class = isset($_GET['classes']) ? $_GET['classes'] : 'one';
 $section = isset($_GET['sections']) ? $_GET['sections'] : 'A';
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

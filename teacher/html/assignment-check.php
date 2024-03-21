@@ -1,5 +1,6 @@
 <?php
 require_once "../../php/config/sessionStart.php";
+require_once "../../php/loginCheck/teacherCheck.php";
 require_once "../../php/config/db.php";
 $class = isset($_GET['class']) ? $_GET['class'] : 'one';
 $section = isset($_GET['section']) ? $_GET['section'] : 'everyone';

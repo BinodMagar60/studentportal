@@ -1,6 +1,7 @@
 <?php
-require_once "../../php/config/TeacherProfile.php";
 require_once "../../php/config/sessionStart.php";
+require_once "../../php/loginCheck/teacherCheck.php";
+require_once "../../php/config/TeacherProfile.php";
 if(isset($_GET['s_email'])){
   $target_s_email=$_GET['s_email'];
   $_SESSION['target_s_email']= $target_s_email;
