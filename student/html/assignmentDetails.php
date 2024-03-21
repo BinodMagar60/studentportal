@@ -1,5 +1,7 @@
-
-
+<?php
+require_once "../../php/config/sessionStart.php";
+require_once "../../php/loginCheck/studentCheck.php";
+?>
 <div class="assignment-details-container">
     <div class="top">
         <div></div>
@@ -7,7 +9,6 @@
         <div><button class="close-btn-assignment" onclick="assignmentDetailsHide()"><i class="ri-close-circle-line"></i></button></div>
     </div>
     <?php
-    require_once "../../php/config/sessionStart.php";
 if(isset($_GET['id'])){
     $uid=$_GET['id'];
     // $uid=25;

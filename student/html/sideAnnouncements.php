@@ -1,3 +1,7 @@
+<?php
+require_once "../../php/config/sessionStart.php";
+require_once "../../php/loginCheck/studentCheck.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +16,6 @@
 <?php
 require_once "../../php/config/db.php";
 require_once "../../php/announcement/expiry_announcement.php";
-require_once "../../php/config/sessionStart.php";
 $userType=$_SESSION['userType'];
 $userClass=$_SESSION['userClass'];
 $userSection=$_SESSION['userSection'];

@@ -1,3 +1,7 @@
+<?php
+require_once "../../php/config/sessionStart.php";
+require_once "../../php/loginCheck/studentCheck.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +31,6 @@
             <tr>
 
                 <?php
-                require_once "../../php/config/sessionStart.php";
                 if(isset($_SESSION['userClass'],$_SESSION['userSection'])){
                     require_once "../../php/config/db.php";
                 $class = $_SESSION['userClass'];
