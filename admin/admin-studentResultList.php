@@ -53,11 +53,12 @@ if(isset($_SESSION['target_s_email'])){
 <td><?php if(isset($publishDate)) echo $publishDate." A.D" ?></td>
                     </tr>
                     <?php
+                    $i++;
                 }
             }else{
                 $error="no results";
             }
-        $i++;
+        
         }
     }
     // if(!empty($error)){

@@ -34,7 +34,7 @@ $newPublishDate= date("Y/m/d",strtotime($studentResult['published_date']));
                 <div class="schoolname">Chitwan Higher Secondary School</div>
                 <div class="schooladdress">Bharatpur-10, Chitwan</div>
                 <div class="contactinfo">056-676767, 9877777777</div>
-                <div class="whichResult"><?php if(isset($row_inner['exam_title'])) echo $row_inner['exam_title'] ?></div>
+                <div class="whichResult"><?php if(isset($studentResult['exam_title'])) echo $studentResult['exam_title'] ?></div>
                 <div class="marksheet">Marksheet</div>
             </div>
         
