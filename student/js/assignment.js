@@ -22,7 +22,11 @@ const assignmentstableData = () => {
     }
 
     updateAssignmentList();
+    setTimeout(() => {
+      checkStudentAssignmentStatus();
+    }, 50);
   });
+  
 };
 
 function assignmentDetailsShow(id) {

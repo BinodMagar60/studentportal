@@ -60,7 +60,7 @@ $subject = isset($_GET['subject']) ? $_GET['subject'] : 'English';
                                 <option value="Science">Science</option>
                                 <option value="Social">Social</option>
                                 <option value="Computer">Computer</option>
-                                <option value="Accont">Account</option>
+                                <option value="Account">Account</option>
                             </select>
                         </td>
                     </tr>
