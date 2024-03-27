@@ -42,19 +42,19 @@ if($checkAttendanceExe=mysqli_query($con,$checkAttendance)){
 $checkAttendanceResult=mysqli_fetch_assoc($checkAttendanceExe);
   }
                         ?>
-                        <td><input type="checkbox" name="attendance<?php if(isset($i)) echo $i;?>" value="P" <?php if(isset($checkAttendanceResult['s_attendance'])){echo $checkAttendanceResult['s_attendance']=="P" ? "checked" : "";}else{echo "";} ?> style="margin-left: 50px"></td>
+                        <td><input onchange="addAttendance()" type="checkbox" name="attendance<?php if(isset($i)) echo $i;?>" value="P" <?php if(isset($checkAttendanceResult['s_attendance'])){echo $checkAttendanceResult['s_attendance']=="P" ? "checked" : "";}else{echo "";} ?> style="margin-left: 50px"></td>
                     </tr>
                    <?php
             }
            ?> 
            <input type="hidden" name="numofData" value="<?php if(isset($i)) echo $i;?>">
-        <tr>
+        <!-- <tr>
             <td colspan="4" style="border: none; background-color:white;">
                 <div class="attendance-btn-div">
                     <button type="button" onclick="addAttendance()" class="attendanceSubmit">Submit</button>
                 </div>
             </td>
-        </tr>
+        </tr> -->
     </table>
 </form>
         <?php

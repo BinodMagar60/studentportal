@@ -63,6 +63,7 @@ function submitPublishResult() {
 
   setTimeout(() => {
     resultStatusTeacher();
+    resultAdmin();
   }, 100);
 }
 
