@@ -22,10 +22,11 @@ if ($exesql = mysqli_query($con, $sql)) {
             while ($searchResult = mysqli_fetch_assoc($exesql)) {
                 $i += 1;
         ?>
+            
                     <tr>
-                        <td><?php if(isset($i)) echo $i;?></td>
-                        <td><?php if(isset($searchResult['name'])) echo $searchResult['name'];?></td>
-                        <td><?php if(isset($searchResult['email'])) echo$searchResult['email'];?></td>
+                        <td><label for="attendanceNo<?php echo $i; ?>"><?php if(isset($i)) echo $i;?></label></td>
+                        <td><label for="attendanceNo<?php echo $i; ?>"><?php if(isset($searchResult['name'])) echo $searchResult['name'];?></label></td>
+                        <td><label for="attendanceNo<?php echo $i; ?>"><?php if(isset($searchResult['email'])) echo$searchResult['email'];?></label></td>
                         <!-- <input type="hidden" name="i<?php //if(isset($i)) echo $i;?>" value="<?php //if(isset($i)) echo $i;?>"> -->
                         <input type="hidden" name="s_id<?php if(isset($i)) echo $i;?>" value="<?php if(isset($searchResult['id'])) echo $searchResult['id'];?>">
                         <input type="hidden" name="s_name<?php if(isset($i)) echo $i;?>" value="<?php if(isset($searchResult['name'])) echo $searchResult['name'];?>">
@@ -42,8 +43,11 @@ if($checkAttendanceExe=mysqli_query($con,$checkAttendance)){
 $checkAttendanceResult=mysqli_fetch_assoc($checkAttendanceExe);
   }
                         ?>
-                        <td><input onchange="addAttendance()" type="checkbox" name="attendance<?php if(isset($i)) echo $i;?>" value="P" <?php if(isset($checkAttendanceResult['s_attendance'])){echo $checkAttendanceResult['s_attendance']=="P" ? "checked" : "";}else{echo "";} ?> style="margin-left: 50px"></td>
+                        
+                        <td><input onchange="addAttendance()" type="checkbox" name="attendance<?php if(isset($i)) echo $i;?>" id="attendanceNo<?php echo $i; ?>" value="P" <?php if(isset($checkAttendanceResult['s_attendance'])){echo $checkAttendanceResult['s_attendance']=="P" ? "checked" : "";}else{echo "";} ?> style="margin-left: 50px"></td>
+                        
                     </tr>
+                    
                    <?php
             }
            ?> 

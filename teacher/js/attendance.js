@@ -39,7 +39,7 @@ function addAttendance() {
     processData: false,
     contentType: false,
     success: function (response) {
-      console.log("Response:", response);
+      // console.log("Response:", response);
     },
     error: function (xhr, status, error) {
       console.error("Error:", status, error);
