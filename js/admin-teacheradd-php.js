@@ -19,11 +19,15 @@ function submitTeacherForm(event) {
   var teachermail = document.getElementById("t-mail").value;
   var teacherphoto = document.getElementById("t-photo").value;
   var teacherpassword = document.getElementById("t-password").value;
+  var regex = /^[A-Za-z]/;
 
   if (teachername === "") {
     var e1 = document.getElementsByClassName("e-name")[0];
     e1.innerText = "*Full Name is Required";
     event.preventDefault();
+  } else if (!regex.test(teachername)){
+    var e1 = document.getElementsByClassName("e-name")[0];
+    e1.innerText = "*Name should start with a letter.";
   } else {
     var e1 = document.getElementsByClassName("e-name")[0];
     e1.innerText = "";

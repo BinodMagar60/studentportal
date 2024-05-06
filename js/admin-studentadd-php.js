@@ -22,10 +22,16 @@ function submitForm(event) {
   var mothername = document.getElementById("s-mother").value;
   var parentcontact = document.getElementById("s-parentcontact").value;
   var studentpassword = document.getElementById("s-password").value;
+  var regex = /^[A-Za-z]/;
 
+  
   if (studentname === "") {
     var e1 = document.getElementsByClassName("e-name")[0];
     e1.innerText = "*Full Name is Required";
+    event.preventDefault();
+  } else if (!regex.test(studentname)){
+    var e1 = document.getElementsByClassName("e-name")[0];
+    e1.innerText = "*Only Alphabets are allowed in FullName.";
     event.preventDefault();
   } else {
     var e1 = document.getElementsByClassName("e-name")[0];
@@ -91,6 +97,10 @@ function submitForm(event) {
     var e7 = document.getElementsByClassName("e-fname")[0];
     e7.innerText = "*Required";
     event.preventDefault();
+  } else if (!regex.test(fathername)){
+    var e7=document.getElementsByClassName('e-fname')[0]
+    e7.innerText='*Only Alphabets are allowed in Father Name.'
+    event.preventDefault()
   } else {
     var e7 = document.getElementsByClassName("e-fname")[0];
     e7.innerText = "";
@@ -100,6 +110,10 @@ function submitForm(event) {
     var e8 = document.getElementsByClassName("e-mname")[0];
     e8.innerText = "*Required";
     event.preventDefault();
+  } else if (!regex.test(mothername)){
+    var e8=document.getElementsByClassName('e-mname') [0]
+    e8.innerText="*Only Alphabets are allowed in Mother Name."
+    event.preventDefault()
   } else {
     var e8 = document.getElementsByClassName("e-mname")[0];
     e8.innerText = "";

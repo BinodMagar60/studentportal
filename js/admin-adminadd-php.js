@@ -19,11 +19,15 @@ function submitAdminForm(event) {
   var adminmail = document.getElementById("a-mail").value;
   var adminphoto = document.getElementById("a-photo").value;
   var adminpassword = document.getElementById("a-password").value;
+  var regex = /^[A-Za-z]/;
 
   if (adminname === "") {
     var e1 = document.getElementsByClassName("e-name")[0];
     e1.innerText = "*Full Name is Required";
     event.preventDefault();
+  } else if (!regex.test(adminname)){
+    var e1 = document.getElementsByClassName("e-name")[0];
+    e1.innerText = "*Name should start with a letter.";
   } else {
     var e1 = document.getElementsByClassName("e-name")[0];
     e1.innerText = "";
