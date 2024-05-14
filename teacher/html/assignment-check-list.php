@@ -45,15 +45,17 @@ $subject = isset($_GET['subject']) ? $_GET['subject'] : 'English';
     <?php
                 }
             }
-            // else {
-            //     echo "no data";
-            // }
+            else {
+                echo "<tr><td colspan='4'>No Assignment to check</td></tr>";
+                
+            }
         } else {
             echo "query error";
         }
     } else {
         echo "no session";
     }
+    
     ?>
 
 </table>

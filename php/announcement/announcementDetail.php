@@ -32,7 +32,7 @@
                     <td><?php if(isset($formattedDate)) echo $formattedDate;?></td>
                     <td id="btn-style-1">
                      <button type="button" style="background-color: green;" onclick="updateAnnouncementPopup(<?php echo $result_notice['id'];?>);">Update</button>
-                     <button type="button" style="background-color: red;" onclick="deleteAnnouncements();">Delete</button>
+                     <button type="button" style="background-color: red;" onclick="deleteAnnouncement(<?php echo $result_notice['id'];?>);">Delete</button>
 
 
                      <div class="deleteannouncement" id="deleteannouncement">

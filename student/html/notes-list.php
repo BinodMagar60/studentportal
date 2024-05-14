@@ -47,9 +47,9 @@ if (isset($_SESSION['userClass'], $_SESSION['userSection'])) {
                         $i++;
                     }
                 }
-                // else{
-                //     echo "no notes";
-                // }
+                else{
+                    echo "<tr><td colspan='5'>No notes available</td></tr>";
+                }
             } else {
                 echo "query error";
             }

@@ -66,10 +66,10 @@
                     </tr>
         <?php
                 }
+            } else {
+                echo "<tr><td colspan='7' style='font-weight: 500;padding-top: 10px;'>No New Assignment is Added</td></tr>";
+                
             }
-            // } else {
-            //     echo "no data";
-            // }
         } else {
             echo "query error";
         }

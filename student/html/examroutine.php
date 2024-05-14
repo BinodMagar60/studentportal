@@ -119,7 +119,7 @@ if (mysqli_num_rows($examDateExe) > 0) {
     <fieldset>
     <legend>Exam routine</legend>
 
-    <p style="font-size:1.25rem; text-align: center; font-weight: 500; margin-bottom: 20px">No Exam Right Now</p>
+    <p style="font-size:1.25rem; text-align: center; font-weight: 500; margin-bottom: 20px">No Exam Routine Available Right Now</p>
 
     </fieldset>
     </div>

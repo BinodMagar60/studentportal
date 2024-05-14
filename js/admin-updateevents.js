@@ -3,7 +3,7 @@ function updateEventsPopup(noticeId) {
   var overlay = document.getElementById("overlay");
   popupBox.classList.add("updatepopup-change-down");
   overlay.style.display = "block";
-  setTimeout(callData(noticeId), 20);
+  setTimeout(callData(noticeId), 50);
 }
 
 function updateEventsPopupCancel() {
@@ -28,12 +28,18 @@ function callData(noticeId) {
   xhr.send();
 }
 
-function deleteEvents() {
-  var popupBox = document.getElementById("deleteevent");
+
+
+
+function deleteEvents(id){
+  var popupBox = document.getElementById("eventsDelete");
   var overlay = document.getElementById("overlay");
-  popupBox.classList.add("open-popup-box");
+  popupBox.classList.add("eventsDelete-down");
   overlay.style.display = "block";
+  setTimeout(callDataDelete(id), 50);
 }
+
+
 
 function deleteCancel() {
   var popupBox = document.getElementById("deleteevent");
@@ -41,6 +47,28 @@ function deleteCancel() {
   popupBox.classList.remove("open-popup-box");
   overlay.style.display = "none";
 }
+
+
+
+function callDataDelete(id) {
+  const xhr = new XMLHttpRequest();
+  const container = document.getElementById("eventsDelete");
+
+  xhr.onload = function () {
+    if (this.status === 200) {
+      container.innerHTML = xhr.responseText;
+    } else {
+      console.warn("Did not receive 200 OK from response!");
+    }
+  };
+  xhr.open("GET", "admin-deleteEvents.php?id=" + id);
+  xhr.send();
+}
+
+
+
+
+
 
 function eventLists() {
   $(document).ready(function () {
@@ -105,8 +133,8 @@ function deleteEvent(eventId) {
     }
   };
   xhr.send();
-  deleteCancel();
-  setTimeout(eventLists, 20);
+  
+  setTimeout(eventLists, 50);
   setTimeout(deletePopupEvent, 20);
 }
 
@@ -153,7 +181,7 @@ function submitEvents(event) {
   });
 
   event.preventDefault();
-  setTimeout(eventLists, 30);
+  setTimeout(eventLists, 40);
   setTimeout(addPopupEvent, 30);
 }
 
@@ -182,7 +210,7 @@ function eventUpdateLists() {
   });
 
   updateEventsPopupCancel();
-  setTimeout(eventLists, 30);
+  setTimeout(eventLists, 50);
   setTimeout(function () {
     addUpdatePopupEvent();
   }, 100);

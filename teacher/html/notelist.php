@@ -37,6 +37,9 @@ if (isset($class, $section, $subject)) {
     <?php
                         $i++;
                     }
+                }else{
+                    echo "<tr><td colspan='4'><div style='font-weight: 400; font-size: 22px; width: 100%; text-align: center; margin-top: 20px'>No Notes Available</div></td></tr>";
+                    
                 }
             }
         }

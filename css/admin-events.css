@@ -248,7 +248,7 @@ table td:nth-child(1) {
   transition: transform 250ms;
 }
 
-.deleteevent {
+/* .deleteevent {
   box-shadow: 0 0 2px 2px rgb(190, 190, 190);
   display: flex;
   justify-content: center;
@@ -262,7 +262,7 @@ table td:nth-child(1) {
   background-color: white;
   visibility: none;
   transform: scale(0);
-}
+} */
 
 .deletelogo {
   font-size: 5rem;
@@ -377,36 +377,3 @@ table td:nth-child(1) {
   transition: top 250ms !important;
 }
 
-/* 
-.popupbox{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-   
-}
-
-.popup{
-    margin-top: 10px;
-    display: flex;
-    box-shadow: 0 0 1px 1px rgb(194, 194, 194);
-    background-color: white;
-    width: 300px;
-    gap: 20px;
-    font-weight: 500;
-    padding: 10px;
-    border-radius: 5px;
-   
-    justify-content: space-between;
-    position: fixed;
-    right: -400px;
-    top: 140px;
-    visibility: hidden;
-}
-
-
-.open-popup{
-    visibility: visible;
-    right: 150px;
-    transition: right 0.5s;
-    
-} */

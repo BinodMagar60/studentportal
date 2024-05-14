@@ -14,7 +14,7 @@ if (isset($_SESSION['userClass'], $_SESSION['userSection'])) {
 
 
 
-
+<table class="note-list-here" id="note-list-here">
 
     <?php
     $current_date = date("Y-m-d");
@@ -25,7 +25,7 @@ if (isset($_SESSION['userClass'], $_SESSION['userSection'])) {
             if (mysqli_num_rows($exesql) > 0) {
                 $i = 0;
     ?>
-                <table class="note-list-here" id="note-list-here">
+                
                     <tr>
                         <td>S.N</td>
                         <td>Title</td>
@@ -75,9 +75,9 @@ if (isset($_SESSION['userClass'], $_SESSION['userSection'])) {
                             }
                         }
                     }
-                    // else{
-                    //     echo "no assignments";
-                    // }
+                    else{
+                        echo "<tr><td colspan='6' style='background-color: white;'>No Assignments Available</td></tr>";
+                    }
                 } else {
                     echo "query error";
                 }
@@ -89,7 +89,8 @@ if (isset($_SESSION['userClass'], $_SESSION['userSection'])) {
 
 
 
-
+</table>
 <?php
 }
 ?>
+

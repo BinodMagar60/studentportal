@@ -101,7 +101,7 @@ function studentDetail() {
   xhr.open("GET", "admin-studentdetail.php");
   xhr.send();
 
-  setTimeout(tableData, 50);
+  setTimeout(tableData, 70);
   // tableData();
 }
 
@@ -136,7 +136,7 @@ function teacherDetail() {
   xhr.open("GET", "admin-teacherdetail.php");
   xhr.send();
 
-  setTimeout(teacherList, 30);
+  setTimeout(teacherList, 70);
   // teacherList();
 }
 
@@ -171,7 +171,7 @@ function adminDetail() {
   xhr.open("GET", "admin-admindetail.php");
   xhr.send();
 
-  setTimeout(adminList, 30);
+  setTimeout(adminList, 70);
   // adminList();
 }
 
@@ -204,7 +204,7 @@ function events1() {
   xhr.open("GET", "admin-events.php");
   xhr.send();
 
-  setTimeout(eventLists, 30);
+  setTimeout(eventLists, 70);
 }
 
 function announcement1() {
@@ -239,7 +239,7 @@ function classRoutine() {
   };
   xhr.open("GET", "admin-classroutine.php");
   xhr.send();
-  setTimeout(tableDataClassRoutine, 40);
+  setTimeout(tableDataClassRoutine, 70);
 }
 
 function examRoutine() {
@@ -256,5 +256,5 @@ function examRoutine() {
   xhr.open("GET", "admin-examroutine.php");
   xhr.send();
 
-  setTimeout(examRoutineListCall, 50);
+  setTimeout(examRoutineListCall, 70);
 }

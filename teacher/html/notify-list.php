@@ -59,8 +59,12 @@
      <?php
                         $i++;
                     }
+                }else{
+                    echo "<tr><td colspan='4'>No Notifications Added</td></tr>";
+                    
                 }
             }
+            
         }
         ?>
  </table>

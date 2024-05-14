@@ -57,8 +57,8 @@ function announcementUpdateLists(event) {
   });
 
   event.preventDefault();
-  setTimeout(announcementLists, 30);
-  setTimeout(addPopupEvent, 30);
+  setTimeout(announcementLists, 50);
+  setTimeout(addPopupEvent, 50);
 }
 
 function addPopupEvent() {
@@ -100,23 +100,23 @@ function deleteAnnouncement(announcementId) {
   };
   xhr.send();
   deleteAnnouncementCancel();
-  setTimeout(announcementLists, 20);
-  setTimeout(deletePopupAnnouncement, 20);
+  setTimeout(announcementLists, 50);
+  setTimeout(deletePopupAnnouncement, 50);
 }
 
-function deleteAnnouncements() {
-  var popupBox = document.getElementById("deleteannouncement");
-  var overlay = document.getElementById("overlay");
-  popupBox.classList.add("open-popup-box");
-  overlay.style.display = "block";
-}
+// function deleteAnnouncements() {
+//   var popupBox = document.getElementById("deleteannouncement");
+//   var overlay = document.getElementById("overlay");
+//   popupBox.classList.add("open-popup-box");
+//   overlay.style.display = "block";
+// }
 
-function deleteAnnouncementCancel() {
-  var popupBox = document.getElementById("deleteannouncement");
-  var overlay = document.getElementById("overlay");
-  popupBox.classList.remove("open-popup-box");
-  overlay.style.display = "none";
-}
+// function deleteAnnouncementCancel() {
+//   var popupBox = document.getElementById("deleteannouncement");
+//   var overlay = document.getElementById("overlay");
+//   popupBox.classList.remove("open-popup-box");
+//   overlay.style.display = "none";
+// }
 
 function updateAnnouncementPopup(announcementId) {
   var popupBox = document.getElementById("updatepopup-change-announcement");
@@ -182,7 +182,7 @@ function announcementUpdatePopupBox() {
   });
 
   updateAnnouncementPopupCancel();
-  setTimeout(announcementLists, 30);
+  setTimeout(announcementLists, 50);
   setTimeout(function () {
     addUpdatePopupAnnouncement();
   }, 100);

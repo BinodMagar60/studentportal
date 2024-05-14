@@ -64,7 +64,7 @@ if (isset($_SESSION['userEmail'])) {
                                 $i++;
                             }
                         } else {
-                            echo "<p>not assigned</p>";
+                            echo "<p style='width: 100%; text-align: center; font-weight: 400; font-size: 22px;'>Not Available at the moment</p>";
                         }
                     }
 

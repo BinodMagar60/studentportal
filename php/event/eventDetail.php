@@ -25,45 +25,12 @@
                     <td><?php if(isset($formattedDate)) echo $formattedDate;?></td>
                     <td id="btn-style">
                      <button type="button" style="background-color: green;" onclick="updateEventsPopup(<?php echo $result_notice['id'];?>)">Update</button>
-                     <button type="button" style="background-color: red;" onclick="deleteEvents();">Delete</button>
+                     <button type="button" style="background-color: red;" onclick="deleteEvent(<?php echo $result_notice['id'];?>);">Delete</button>
 
 
                      
-                     
-                <div class="deleteevent" id="deleteevent">
-                    <div>
-                        <div class="deletelogo"><i class="fa-regular fa-circle-question" style="color: #ff0000;"></i></div>
-                        <div class="confirmation">Are you sure you want to delete it?</div>
-                        <div class="btn-delete-event">
-                           <button style="background-color: red; padding: 10px 30px" type="button" onclick="deleteEvent(<?php echo $result_notice['id'];?>);">Yes</button></a>
-                            <button type="button" style="background-color: gray; padding: 10px 30px" onclick="deleteCancel();">No</button>
-                        </div>
-                    </div>
-                </div>
-<!--
-                <div class="updatepopup" id="updatepopup">
-                    <div>
-                    <table>
-                       <tr>
-                        <td style="background-color: white;"><label for="title">Event Title:</label></td>
-                       </tr>
-                       <tr>
-                        <td><input type="text" id="title"></td>
-                       </tr>
-                       <tr>
-                        <td><label for="date">Date</label></td>
-                       </tr>
-                       <tr>
-                        <td><input type="date" id="date"></td>
-                       </tr>
-                       
-                    </table>
-                    <div class="btn-updates-event">
-                        <a ><button style="background-color: green" type="button">Update</button></a>
-                        <a ><button style="background-color: red" type="button" onclick="updateCancel()">Cancel</button></a>
-                    </div>
-                    </div>
-                </div> -->
+           
+
                     </td>
                       </tr>
                     <?php
