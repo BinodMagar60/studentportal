@@ -29,11 +29,20 @@ require_once "../../php/loginCheck/studentCheck.php";
         $createdDate = $result_announcement['created_date'];
         $a_created_dateObject = date_create($createdDate);
         $a_created_formattedDate = date_format($a_created_dateObject, 'M d');
+
+        $poster=$result_announcement['poster_email'];
+        
+        $sql_poster_name="SELECT * FROM admin_table where email='$poster'";
+        $exesql_check=mysqli_query($con,$sql_poster_name);
+        if(mysqli_num_rows($exesql_check)!=0){
+$result_check_poster=mysqli_fetch_assoc($exesql_check);
+$poster_name=$result_check_poster['name'];
+        }
     ?>
         <div class="announcement-show-2">
           <div class="announcement-date"><?php if (isset($a_created_formattedDate)) echo $a_created_formattedDate; ?></div>
           <div class="announcement-detail"><?php if (isset($result_announcement['a_description'])) echo $result_announcement['a_description']; ?></div>
-          <div class="announcement-who">- <?php if (isset($result_announcement['poster_name'])) echo $result_announcement['poster_name']; ?></div>
+          <div class="announcement-who">- <?php if (isset($poster_name)) echo $poster_name; ?></div>
         </div>
 
 
