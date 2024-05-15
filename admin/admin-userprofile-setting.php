@@ -30,7 +30,13 @@ require_once "../php/loginCheck/adminCheck.php";
         <div class="error2"></div>
       </div>
     </div>
-
+<?php
+if(isset($_SESSION['userEmail'])){
+  $checkEmail=$_SESSION['userEmail'];
+  if($checkEmail=="admin@gmail.com"){
+  }else{
+    ?>
+    
     <div class="toDelete">
       <a onclick="deletePopup();">Delete Account</a>
       <div class="popup_box" id="popup_box">
@@ -41,6 +47,10 @@ require_once "../php/loginCheck/adminCheck.php";
         <div class="buttons"><a style="color:white; text-decoration: none;" href="../php/delete/UserProfileDelete.php"><button type="button">Delete</button></a><button type="button" onclick="cancelPopup();">Cancel</button></div>
       </div>
     </div>
+    <?php
+  }
+}
+?>
   </form>
 
   <script src="../js/admin-userprofile-setting.js"></script>
