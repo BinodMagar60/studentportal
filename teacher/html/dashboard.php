@@ -7,6 +7,7 @@ require_once "../../php/config/folder.php";
 require_once "../php/notify/expiry_notify.php";
 require_once "../php/assignment/expiry_assignment.php";
 require_once "../php/notes/expiryNotes.php";
+require_once "../php/notes/unnecessaryNotes.php";
 unset($_SESSION['target_s_email']);
 ?>
 <!DOCTYPE html>
