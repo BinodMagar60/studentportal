@@ -1,3 +1,29 @@
+function checkDate(inputtedDate){
+  var yearOnly = inputtedDate.split("-");
+  var today = new Date();
+  var year = today.getFullYear();
+  var age = year - yearOnly[0];
+  return age;
+}
+
+
+function checkFileTypeTeacher() {
+
+  var input = document.getElementById('t-photo');
+  var file = input.files[0];
+  if (file) {
+      var fileType = file.type;
+      if (fileType !== 'image/jpeg' && fileType !== 'image/png') {
+          // alert('Please select a JPEG or PNG file.');
+          var e6 = document.getElementsByClassName("e-image")[0];
+          e6.innerText = "*Please select a JPEG or PNG file.";
+          input.value = ''; // Clear the input
+      }
+  }
+}
+
+
+
 function submitTeacherForm(event) {
   function openPopup() {
     var popup = document.getElementById("popupbox1");
@@ -45,6 +71,10 @@ function submitTeacherForm(event) {
   if (teacherdob === "") {
     var e3 = document.getElementsByClassName("e-date")[0];
     e3.innerText = "*D.O.B Required";
+    event.preventDefault();
+  }else if(checkDate(teacherdob)< 18){
+    var e3 = document.getElementsByClassName("e-date")[0];
+    e3.innerText = "*Age should be greater than 18";
     event.preventDefault();
   } else {
     var e3 = document.getElementsByClassName("e-date")[0];

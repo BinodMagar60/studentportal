@@ -1,3 +1,31 @@
+function checkDate(inputtedDate){
+  var yearOnly = inputtedDate.split("-");
+  var today = new Date();
+  var year = today.getFullYear();
+  var age = year - yearOnly[0];
+  return age;
+}
+
+function checkFileType() {
+
+  var input = document.getElementById('s-photo');
+  var file = input.files[0];
+  if (file) {
+      var fileType = file.type;
+      if (fileType !== 'image/jpeg' && fileType !== 'image/png') {
+          // alert('Please select a JPEG or PNG file.');
+          var e6 = document.getElementsByClassName("e-image")[0];
+          e6.innerText = "Please select a JPEG or PNG file.";
+          input.value = ''; // Clear the input
+      }
+  }
+}
+
+
+
+
+
+
 function submitForm(event) {
   function openPopup() {
     var popup = document.getElementById("popupbox");
@@ -25,6 +53,11 @@ function submitForm(event) {
   var regex = /^[A-Za-z]/;
 
   
+
+// console.log(studentphoto);
+
+  // checkDate(studentdob)
+  
   if (studentname === "") {
     var e1 = document.getElementsByClassName("e-name")[0];
     e1.innerText = "*Full Name is Required";
@@ -50,6 +83,10 @@ function submitForm(event) {
   if (studentdob === "") {
     var e3 = document.getElementsByClassName("e-date")[0];
     e3.innerText = "*D.O.B Required";
+    event.preventDefault();
+  } else if(checkDate(studentdob) < 4){
+    var e3 = document.getElementsByClassName("e-date")[0];
+    e3.innerText = "*Age cannot be less than 4 Year old";
     event.preventDefault();
   } else {
     var e3 = document.getElementsByClassName("e-date")[0];

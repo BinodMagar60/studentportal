@@ -1,3 +1,32 @@
+function checkDate(inputtedDate){
+  var yearOnly = inputtedDate.split("-");
+  var today = new Date();
+  var year = today.getFullYear();
+  var age = year - yearOnly[0];
+  return age;
+}
+
+function checkFileTypeAdmin() {
+
+  var input = document.getElementById('a-photo');
+  var file = input.files[0];
+  if (file) {
+    var e6 = document.getElementsByClassName("e-image")[0];
+      var fileType = file.type;
+      if (fileType !== 'image/jpeg' && fileType !== 'image/png') {
+          // alert('Please select a JPEG or PNG file.');
+          
+          e6.innerText = "*Please select a JPEG or PNG file.";
+          input.value = ''; // Clear the input
+      }
+     
+  }
+}
+
+
+
+
+
 function submitAdminForm(event) {
   function openPopup() {
     var popup = document.getElementById("popupbox2");
@@ -45,6 +74,10 @@ function submitAdminForm(event) {
   if (admindob === "") {
     var e3 = document.getElementsByClassName("e-date")[0];
     e3.innerText = "*D.O.B Required";
+    event.preventDefault();
+  }else if(checkDate(admindob) < 18){
+    var e3 = document.getElementsByClassName("e-date")[0];
+    e3.innerText = "*You must be 18 years or older to register.";
     event.preventDefault();
   } else {
     var e3 = document.getElementsByClassName("e-date")[0];

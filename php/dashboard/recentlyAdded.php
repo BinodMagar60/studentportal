@@ -18,7 +18,7 @@ if($recentlyAdded_exe=mysqli_query($con,$recentlyAdded_sql)){
 ?>
 <tr>
   <td><?php echo $i?></td>
-  <td><?php echo $recentlyAdded_row['name'];?></td>
+  <td ><?php echo $recentlyAdded_row['name'];?></td>
   <td><?php echo $recentlyAdded_row['email'];?></td>
   <td><?php 
   if($recentlyAdded_row['role']==0){

@@ -68,7 +68,7 @@ require_once "../php/loginCheck/adminCheck.php";
                     </tr>
                     <tr>
                         <td>Image</td>
-                        <td><input type="file" accept="image/*" id="s-photo" name="photo"></td>
+                        <td><input type="file" accept="image/*" id="s-photo" name="photo" onchange="checkFileType()"></td>
                         <td class="error e-image"></td>
                     </tr>
                     <tr>
@@ -132,6 +132,8 @@ require_once "../php/loginCheck/adminCheck.php";
     </div>
 
     <script src="../js/admin-studentadd-php.js"></script>
+
+   
 
 </body>
 

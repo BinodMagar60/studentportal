@@ -99,7 +99,7 @@ function deleteAnnouncement(announcementId) {
     }
   };
   xhr.send();
-  deleteAnnouncementCancel();
+
   setTimeout(announcementLists, 50);
   setTimeout(deletePopupAnnouncement, 50);
 }

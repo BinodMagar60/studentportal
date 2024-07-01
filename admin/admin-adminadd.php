@@ -64,7 +64,7 @@ require_once "../php/loginCheck/adminCheck.php";
                     </tr>
                     <tr>
                         <td>Image</td>
-                        <td><input type="file" accept="image/*" id="a-photo" name="photo"></td>
+                        <td><input type="file" accept="image/*" id="a-photo" name="photo" onchange="checkFileTypeAdmin()"></td>
                         <td class="error e-image"></td>
                     </tr>
 
